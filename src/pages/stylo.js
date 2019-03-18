@@ -25,11 +25,10 @@ export const Content = styled.div`
 
 class Index extends React.Component {
 
-
   render() {
 
     const { data } = this.props
-    const textuallyAboutHtml =  data.textuallyAbout.edges[0].node.html
+    const styloAboutHtml =  data.styloAbout.edges[0].node.html
 
     return (
       <Layout>
@@ -37,9 +36,9 @@ class Index extends React.Component {
           title="Home"
           keywords={[`textually`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
         />
-        <HeadingLevel1>This is all about text!</HeadingLevel1>
+        <HeadingLevel1>Creativity is about freedom!</HeadingLevel1>
         <HeaderDivider />
-        <Content dangerouslySetInnerHTML={{ __html: textuallyAboutHtml }} />
+        <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
       </Layout>
     )
   }
@@ -49,10 +48,10 @@ export default Index
 
 export const query = graphql`
 query {
-  textuallyAbout: allMarkdownRemark(
+  styloAbout: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { fields: { 
-      slug: { eq: "/textually-about/" } } }) {
+      slug: { eq: "/stylo-about/" } } }) {
     edges {
       node {
         html
