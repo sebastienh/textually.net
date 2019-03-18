@@ -2,17 +2,8 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 import { Flex, Box, Link, Text } from "rebass";
 import logo from '../../../content/assets/textually-logo.png'
-
-
-export const MainLink = styled(Link)`
-
-    font-family: "Avenir Next";
-    box-shadow: 0 0 0 0;
-    margin: 0px 10px 0px 10px;
-    &:hover {
-        box-shadow: 0 5px 0 0 #E69701;
-    }
-`;
+import DrawerToggleButton from "../DrawerToggleButton"
+import AppLinks from "../AppLinks"
 
 // box-shadow: 10px 5px 5px red;
 export const Header = styled(Flex)`
@@ -27,7 +18,6 @@ export const Logo = styled.img`
     margin-left: 20px;
 `;
 
-
 export default class Navigation extends React.Component {
     render() {
         return (
@@ -36,32 +26,10 @@ export default class Navigation extends React.Component {
                 color='black'
                 bg='#D6E5E3'
                 alignItems='center'>
+                <DrawerToggleButton click={this.props.drawerClickHandler}/>
                 <Logo src={logo} /> 
                 <Box mx='auto' />
-                <MainLink
-                    href='/'
-                    p={2}
-                    color='black'>
-                    About
-                </MainLink>
-                <MainLink
-                    href='blog'
-                    p={2}
-                    color='black'>
-                    Blog
-                </MainLink>
-                <MainLink
-                    href='stylo'
-                    p={2}
-                    color='black'>
-                    Stylo
-                </MainLink>
-                <MainLink
-                    href='contact'
-                    p={2}
-                    color='black'>
-                    Contact
-                </MainLink>
+                <AppLinks />
             </Header>
         );
     }

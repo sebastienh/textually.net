@@ -1,11 +1,3 @@
-// import React from "react";
-// import PropTypes from "prop-types";
-// import Link from "gatsby-link";
-// import Helmet from "react-helmet";
-// import { Provider, Container, Toolbar, Heading, Fixed, Header } from "rebass";
-// import theme from "../styles/theme.js";
-// import globalStyles from "../styles/globalStyles";
-
 import React from "react"
 import { Link } from "gatsby"
 
@@ -15,15 +7,44 @@ import Navigation from "../components/Navigation"
 import { Flex, Box, Container, Provider, Header } from "rebass";
 import theme from "../styles/theme.js";
 import { ThemeProvider } from 'styled-components'
+import SideDrawer from "../components/SideDrawer"
+import Backdrop from "../components/Backdrop"
 
 class Layout extends React.Component {
+
+  state = {
+    sideDrawerOpen: false
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {
+        sideDrawerOpen: !prevState.sideDrawerOpen
+      };
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({
+      sideDrawerOpen: false
+    })
+  }
+
   render() {
     const { location, title, children } = this.props
 
+    let backdrop;
+
+    if(this.state.sideDrawerOpen) {
+      backdrop =  <Backdrop click={this.backdropClickHandler} />;
+    }
+
     return (
       <ThemeProvider theme={theme}>
-        <Box>
-          <Navigation />
+        <Box height="100%">
+          <Navigation drawerClickHandler={this.drawerToggleClickHandler}/>
+          <SideDrawer show={this.state.sideDrawerOpen}/>
+          {backdrop}
           <div
             style={{
               marginLeft: `auto`,
