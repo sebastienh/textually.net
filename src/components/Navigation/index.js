@@ -8,13 +8,13 @@ import AppLinks from "../AppLinks"
 // box-shadow: 10px 5px 5px red;
 export const Header = styled(Flex)`
     height: 54px;
-    box-shadow: 0px 4px 4px #888;
+    box-shadow: 0px 4px 20px #ccc;
 `;
 
 export const Logo = styled.img`
     height: 30px;
-    margin-bottom: 8px;
-    margin-top: 8px;
+    margin-bottom: 6px;
+    margin-top: 10px;
     margin-left: 20px;
 `;
 
