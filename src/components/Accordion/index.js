@@ -7,6 +7,8 @@ import ExpandMoreIcon from "../../icons/expandMore";
 export const Container = styled(Box)`
     margin: 0px 0px 0px 0px;
     padding-left: 10px;
+    width: 100%;
+    height: 100%;
 `;
 
 export const Title = styled.div`

@@ -47,21 +47,49 @@ class Index extends React.Component {
           title="Home"
           keywords={[`textually`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
         />
-        <Box style={{display: "flex", alignItems: "flex-start"}} mt={100}>
-          <StickyBox offsetTop={20} offsetBottom={20}>
-            <Accordion title="Static content" openByDefault>
-              <AccordionText>Lorem ipsum dolor sit amet, </AccordionText>
-              <Accordion title="Static content">
-                <AccordionText>Lorem ipsum </AccordionText>
+        <Flex 
+          mt={100}>
+
+          <Flex 
+                // ml={40}
+                // mr={40}
+                width={[
+                    0,
+                    1/3
+                ]}
+                ml={40}
+                mr={40}
+            >
+            <Flex 
+              css={{
+                position: 'sticky',
+                top: '120px',
+                bottom: 0,
+                height: "400px",
+                width: "100%"
+              }}
+            
+              justifyContent={"center"}
+              alignItems={"center"}
+              mt={120}
+              width={[
+                1
+              ]}
+            >
+              <Accordion title="Static content" openByDefault>
+                <AccordionText>Lorem ipsum dolor sit amet, </AccordionText>
+                <Accordion title="Static content">
+                  <AccordionText>Lorem ipsum </AccordionText>
+                </Accordion>
               </Accordion>
-            </Accordion>
-          </StickyBox>
+            </Flex>
+          </Flex>
           <ContentArea>
             <HeadingLevel1>Creativity is about freedom!</HeadingLevel1>
             <HeaderDivider />
             <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
             </ContentArea>
-        </Box>
+        </Flex>
       </Layout>
     )
   }
