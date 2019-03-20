@@ -68,9 +68,27 @@ class Index extends React.Component {
                 1
               ]}
             >
-              <Accordion title="Static content" openByDefault>
+              <Accordion title="Documentation" openByDefault>
                 <AccordionText>Lorem ipsum dolor sit amet, </AccordionText>
-                <Accordion title="Static content">
+                <Accordion title="Stylo">
+                  <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
+                </Accordion>
+                <Accordion title="HTML">
+                  <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
+                </Accordion>
+                <Accordion title="Markdown">
+                  <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
+                </Accordion>
+                <Accordion title="CSS">
                   <AccordionText>Lorem ipsum </AccordionText>
                   <AccordionText>Lorem ipsum </AccordionText>
                   <AccordionText>Lorem ipsum </AccordionText>
