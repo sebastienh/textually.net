@@ -6,8 +6,8 @@ import styled from "styled-components";
 import SideArea from "../components/SideArea"
 import ContentArea from "../components/ContentArea"
 import Accordion from "../components/Accordion"
-import { Flex, Box, Text } from '@rebass/grid'
-import StickyBox from "react-sticky-box";
+import { Flex, Box } from '@rebass/grid'
+import { Text } from 'rebass'
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -48,30 +48,22 @@ class Index extends React.Component {
           keywords={[`textually`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
         />
         <Flex 
-          mt={100}>
-
-          <Flex 
-                // ml={40}
-                // mr={40}
+          mt={100}
+          mb={100}>
+          <Box 
                 width={[
                     0,
                     1/3
                 ]}
-                ml={40}
-                mr={40}
             >
             <Flex 
               css={{
+                position: '-webkit-sticky',
                 position: 'sticky',
                 top: '120px',
-                bottom: 0,
-                height: "400px",
-                width: "100%"
+                bottom: '0px'
               }}
-            
-              justifyContent={"center"}
-              alignItems={"center"}
-              mt={120}
+              flexDirection={"column"}
               width={[
                 1
               ]}
@@ -80,10 +72,33 @@ class Index extends React.Component {
                 <AccordionText>Lorem ipsum dolor sit amet, </AccordionText>
                 <Accordion title="Static content">
                   <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
+                  <AccordionText>Lorem ipsum </AccordionText>
                 </Accordion>
               </Accordion>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
+              <Text>Fff</Text>
             </Flex>
-          </Flex>
+          </Box>
           <ContentArea>
             <HeadingLevel1>Creativity is about freedom!</HeadingLevel1>
             <HeaderDivider />
