@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@rebass/grid": "^6.0.0-7",
     "gatsby": "^2.1.31",
     "gatsby-image": "^2.0.33",
     "gatsby-plugin-catch-links": "^2.0.13",
@@ -31,6 +32,8 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
+    "react-sidemenu": "^1.1.0",
+    "react-sticky-box": "^0.8.0",
     "react-typography": "^0.16.19",
     "rebass": "^3.0.1",
     "styled-components": "^4.1.3",
