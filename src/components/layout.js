@@ -11,6 +11,7 @@ import SideDrawer from "../components/SideDrawer"
 import Backdrop from "../components/Backdrop"
 import styled from "styled-components";
 import MediaQuery from 'react-responsive';
+import DrawerToggleButton from "../components/DrawerToggleButton"
 import "./layout.css"
 
 const Content = styled.div`
@@ -24,6 +25,35 @@ const Content = styled.div`
     `}
   }
 `
+
+export const BackdropDiv = styled.div`
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 100;
+`;
+
+export const DrawerToggleButtonContainer = styled(Flex)`
+
+    margin-left:20px;
+    width: 60px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    flex-direction: column;
+`;
+
+export const Logo = styled.img`
+    height: 30px;
+    margin-bottom: 6px;
+    margin-top: 10px;
+    margin-left: 20px;
+`;
 
 class Layout extends React.Component {
 
@@ -45,6 +75,7 @@ class Layout extends React.Component {
     })
   }
 
+
   render() {
     const { location, title, children } = this.props
 
@@ -56,13 +87,25 @@ class Layout extends React.Component {
 
     return (
       <ThemeProvider theme={theme}>
-          <Box height="100%">
-            <Navigation drawerClickHandler={this.drawerToggleClickHandler}/>
+        <React.Fragment>
             <SideDrawer show={this.state.sideDrawerOpen}/>
-            {backdrop}
-            <main>{children}</main>
-            <Footer />
-          </Box>
+            <Flex>
+              <Box 
+                width={[
+                    1/10,
+                ]}>
+                <DrawerToggleButtonContainer>
+                  <DrawerToggleButton click={this.drawerToggleClickHandler}/>
+                </DrawerToggleButtonContainer>
+              </Box>
+              <Box width={[
+                    9/10,
+                ]}>
+                {backdrop}
+                <main>{children}</main>
+              </Box>
+            </Flex>
+        </React.Fragment>
       </ThemeProvider>
     );
   }

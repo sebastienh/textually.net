@@ -21,9 +21,9 @@ export const ToggleButton = styled(Button)`
 `;
 
 export const ToggleButtonLine = styled.div`
-    width: 30px;
-    height: 2px;
-    background-color: white;
+    width: 40px;
+    height: 3px;
+    background-color: black;
 `;
 
 export default class DrawerToggleButton extends React.Component {
