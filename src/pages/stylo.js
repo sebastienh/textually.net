@@ -8,6 +8,9 @@ import ContentArea from "../components/ContentArea"
 import Accordion from "../components/Accordion"
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
+import StyledAccordion from "../components/StyledAccordion";
+import StyledAccordionItem from "../components/StyledAccordionItem";
+import Pointer from "../icons/pointer"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -34,6 +37,7 @@ export const AccordionText = styled.div`
   padding: 0;
 `;
 
+
 class Index extends React.Component {
 
   render() {
@@ -53,8 +57,10 @@ class Index extends React.Component {
           <Box 
                 width={[
                     0,
-                    1/3
+                    1/4
                 ]}
+                ml={40}
+                pr={40}
             >
             <Flex 
               css={{
@@ -68,53 +74,33 @@ class Index extends React.Component {
                 1
               ]}
             >
-              <Accordion title="Documentation" openByDefault>
-                <AccordionText>Lorem ipsum dolor sit amet, </AccordionText>
-                <Accordion title="Stylo">
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                </Accordion>
-                <Accordion title="HTML">
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                </Accordion>
-                <Accordion title="Markdown">
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                </Accordion>
-                <Accordion title="CSS">
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                  <AccordionText>Lorem ipsum </AccordionText>
-                </Accordion>
-              </Accordion>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
-              <Text>Fff</Text>
+              <StyledAccordion title="Documentation">
+                <StyledAccordion title="Stylo">
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                </StyledAccordion>
+                <StyledAccordion title="HTML">
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                </StyledAccordion>
+                <StyledAccordion title="Markdown">
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                </StyledAccordion>
+                <StyledAccordion title="CSS">
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                  <StyledAccordionItem title="Lorem ipsum" />
+                </StyledAccordion>
+              </StyledAccordion>
+              <Text ml={10} fontSize={"15px"} fontWeight={300}>Privacy Policy</Text>
             </Flex>
           </Box>
           <ContentArea>

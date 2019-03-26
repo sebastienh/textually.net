@@ -14,7 +14,7 @@ export default class ContentArea extends React.Component {
             <Box
                 p={0}
                 m='auto'
-                mr='40px'
+                mr={50}
                 width={[
                     1,
                     3/4,

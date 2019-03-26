@@ -12,7 +12,7 @@ export const SideDrawerDiv = styled.div`
     left: 0;
     width: 40%;
     max-width: 400px;
-    z-index: 200;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
