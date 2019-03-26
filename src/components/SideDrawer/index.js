@@ -44,14 +44,6 @@ export const SideDrawerDiv = styled.div`
     }
 `;
 
-
-
-
-
-
-
-
-
 export const MainLink = styled(Link)`
 
     font-family: "Avenir Next";
