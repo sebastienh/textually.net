@@ -13,38 +13,26 @@ export const SideDrawerDiv = styled.div`
     left: 0;
     z-index: 200;
     background-color: #FFFCF7;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 40%;
+    max-width: 400px;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+    box-shadow: 0px 0px 0px;
 
-    /* mobile mode */
-    @media (max-width: 768px) {
-
-        width: 40%;
-        max-width: 400px;
-        transform: translateX(-100%);
-        transition: transform 0.5s ease-out;
-        box-shadow: 0px 0px 0px;
-
-        ${({ open }) => open && `
-            transform: translateX(0);
-            box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
-        `}
-    }
-
-    /* desktop mode */
-    @media (min-width: 769px) {
-
-        width: 0;
-        transition: 0.5s;
-        overflow-x: hidden;
+    ${({ open }) => open && `
+        transform: translateX(0);
         box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
-
-        ${({ open }) => open && `
-            width: 300px;
-        `}
-    }
+    `}
 `;
+
+const TextuallyNavigator = styled(NavigationController)`
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #DDDDDD;
+    overflow: hidden;
+`
 
 export default class SideDrawer extends React.Component {
     
@@ -79,7 +67,7 @@ export default class SideDrawer extends React.Component {
 
         return (
             <SideDrawerDiv open={this.props.show}>
-                <NavigationController {...props} />
+                <TextuallyNavigator {...props} />
             </SideDrawerDiv>
         );
     }

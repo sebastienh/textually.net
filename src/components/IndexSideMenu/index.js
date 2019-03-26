@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import { Flex, Box, Link, Text } from "rebass";
 import styled from "styled-components";
 import StyloSideMenu from "../StyloSideMenu"
+import NavigationController from 'react-navigation-controller';
+
+const {
+    Transition
+} = NavigationController
 
 const MainLink = styled(Link)`
 
@@ -31,17 +36,26 @@ const PushLink = styled(Link)`
     }
 `
 
+const MenuContainer = styled(Box)`
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+`
+
 export default class IndexSideMenu extends Component {
 
     onStylo() {
         this.props.navigationController.pushView(
-            <StyloSideMenu />
-        );
+            <StyloSideMenu />, {
+                transition: Transition.type.PUSH_LEFT
+            })
     }
 
     render() {
         return (
-            <React.Fragment>
+            <MenuContainer>
                 <MainLink
                     href='/'
                     p={2}
@@ -67,7 +81,7 @@ export default class IndexSideMenu extends Component {
                     color='black'>
                     Contact
                 </MainLink>
-            </React.Fragment>
+            </MenuContainer>
         )
     }
 }

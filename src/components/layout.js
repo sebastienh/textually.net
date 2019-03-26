@@ -55,29 +55,13 @@ class Layout extends React.Component {
 
     return (
       <ThemeProvider theme={theme}>
-
-        <React.Fragment>
-
-          <MediaQuery query="(min-width: 769px)">
+          <Box height="100%">
+            <Navigation drawerClickHandler={this.drawerToggleClickHandler}/>
             <SideDrawer show={this.state.sideDrawerOpen}/>
-            <Content open={this.state.sideDrawerOpen} height="100%">
-              <Navigation drawerClickHandler={this.drawerToggleClickHandler}/>
-              <main>{children}</main>
-              <Footer />
-            </Content>
-          </MediaQuery>
-
-          <MediaQuery query="(max-width: 768px)">
-            <Box height="100%">
-              <Navigation drawerClickHandler={this.drawerToggleClickHandler}/>
-              <SideDrawer show={this.state.sideDrawerOpen}/>
-              {backdrop}
-              <main>{children}</main>
-              <Footer />
-            </Box>
-          </MediaQuery>
-
-        </React.Fragment>
+            {backdrop}
+            <main>{children}</main>
+            <Footer />
+          </Box>
       </ThemeProvider>
     );
   }
