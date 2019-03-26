@@ -11,6 +11,7 @@ import { Text } from 'rebass'
 import StyledAccordion from "../components/StyledAccordion";
 import StyledAccordionItem from "../components/StyledAccordionItem";
 import Pointer from "../icons/pointer"
+import CircledNumber from "../components/CircledNumber"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -62,6 +63,12 @@ const RightSideContainer = styled(Box)`
     /* flex-direction: column; */
 `;
 
+const CenterHorizontally = styled(Flex)`
+
+    height: 100%;
+    justify-content: center;
+    flex-direction: row;
+`
 
 class Index extends React.Component {
 
@@ -97,11 +104,13 @@ class Index extends React.Component {
                 0,
                 1/8
               ]}>
-              <Flex justifyContent={"center"} flexDirection={"row"}>
+              <CenterHorizontally>
                 <CircledNumbersContainer>
-                  test
+                    <CircledNumber color={"#3f4ddd"} number={"1"}/>
+                    <CircledNumber color={"#ff0000"} number={"2"}/>
+                    <CircledNumber color={"#ff0000"} number={"3"}/>
                 </CircledNumbersContainer>
-              </Flex>
+              </CenterHorizontally>
             </Box>
         </Flex>
       </Layout>
