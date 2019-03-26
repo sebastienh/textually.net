@@ -4,30 +4,51 @@ import styled from "styled-components";
 import { Flex, Box, Link, Text } from "rebass";
 
 export const SideDrawerDiv = styled.div`
+
     height: 100%;
-    background-color: #D6E5E3;
-    box-shadow: 0px 0px 0px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 40%;
-    max-width: 400px;
-    z-index: 1;
+    z-index: 200;
+    background-color: #FFFCF7;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-out;
 
-    ${({ open }) => open && `
-        transform: translateX(0);
-        box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
-    `}
+    /* mobile mode */
+    @media (max-width: 768px) {
 
+        width: 40%;
+        max-width: 400px;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-out;
+
+        ${({ open }) => open && `
+            transform: translateX(0);
+            box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
+        `}
+    }
+
+    /* desktop mode */
     @media (min-width: 769px) {
-        display: none;
+
+        width: 0;
+        transition: 0.5s;
+        overflow-x: hidden;
+
+        ${({ open }) => open && `
+            width: 300px;
+        `}
     }
 `;
+
+
+
+
+
+
+
+
 
 export const MainLink = styled(Link)`
 
