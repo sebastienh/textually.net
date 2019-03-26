@@ -31,10 +31,10 @@ export const Content = styled(Flex)`
 
     max-height: 0px;
     -webkit-transition: all 1s ease;
-        -moz-transition: all 1s ease;
-        -o-transition: all 1s ease;
-        -ms-transition: all 1s ease;
-        transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
     flex-direction: column;
     opacity: 0; 
     height: 0;

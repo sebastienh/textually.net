@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Flex, Box, Link, Text } from "rebass";
-import styled from "styled-components";
+import styled, { css } from 'styled-components';
 import StyloSideMenu from "../StyloSideMenu"
 import NavigationController from 'react-navigation-controller';
+import ExpandMoreIcon from "../../icons/expandMore";
 
 const {
     Transition
@@ -34,6 +35,16 @@ const PushLink = styled(Link)`
         box-shadow: 2px 2px 4px rgb(0,0,0,0.5);
         cursor: pointer;
     }
+`
+
+export const RightPointingIcon = styled(ExpandMoreIcon)`
+    margin-top: 6px;
+    margin-right: 0px;
+    position: absolute;
+    right: 20px;
+    /* stroke: ${(props) => { if (props.color) return props.theme.colors[props.color]; return props.theme.colors.mineShaft; }} */
+    stroke: props.color;
+    transform: rotate(-90deg);
 `
 
 const MenuContainer = styled(Box)`
@@ -82,7 +93,9 @@ export default class IndexSideMenu extends Component {
                         onClick={this.onStylo.bind(this)}
                         color='black'>
                         Stylo
+                        <RightPointingIcon color={"#000"}/>
                     </PushLink>
+                    
                     <MainLink
                         href='contact'
                         p={2}

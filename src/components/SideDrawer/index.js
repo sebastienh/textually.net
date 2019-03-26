@@ -13,8 +13,7 @@ export const SideDrawerDiv = styled.div`
     left: 0;
     z-index: 200;
     background-color: #FFFCF7;
-    width: 40%;
-    max-width: 400px;
+    width: 250px;
     transform: translateX(-100%);
     transition: transform 0.5s ease-out;
     box-shadow: 0px 0px 0px;
@@ -30,7 +29,6 @@ const TextuallyNavigator = styled(NavigationController)`
     position: relative;
     width: 100%;
     height: 100%;
-    background: #DDDDDD;
     overflow: hidden;
 `
 

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Flex, Box, Link, Text } from "rebass";
-import styled from "styled-components";
+import styled, { css } from 'styled-components';
 import NavigationController from 'react-navigation-controller';
+import ExpandMoreIcon from "../../icons/expandMore";
 
 const {
     Transition
@@ -33,6 +34,16 @@ const PushLink = styled(Link)`
         box-shadow: 2px 2px 4px rgb(0,0,0,0.5);
         cursor: pointer;
     }
+`
+
+export const LeftPointingIcon = styled(ExpandMoreIcon)`
+    margin-top: 14px;
+    margin-left: 0px;
+    position: absolute;
+    left: 20px;
+    /* stroke: ${(props) => { if (props.color) return props.theme.colors[props.color]; return props.theme.colors.mineShaft; }} */
+    stroke: props.color;
+    transform: rotate(90deg);
 `
 
 const BackLink = styled(Link)`
@@ -82,6 +93,7 @@ export default class StyloSideMenu extends Component {
     render() {
         return (
             <MenuContainer>
+                <LeftPointingIcon color={"#000"} />
                 <BackLink
                     href='#'
                     p={2}
