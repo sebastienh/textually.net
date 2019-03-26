@@ -11,6 +11,7 @@ import SideDrawer from "../components/SideDrawer"
 import Backdrop from "../components/Backdrop"
 import styled from "styled-components";
 import MediaQuery from 'react-responsive';
+import "./layout.css"
 
 const Content = styled.div`
 

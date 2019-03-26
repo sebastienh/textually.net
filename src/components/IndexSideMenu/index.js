@@ -44,6 +44,13 @@ const MenuContainer = styled(Box)`
     left: 0;
 `
 
+const LinksContainer = styled(Flex)`
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+`
+
 export default class IndexSideMenu extends Component {
 
     onStylo() {
@@ -56,31 +63,33 @@ export default class IndexSideMenu extends Component {
     render() {
         return (
             <MenuContainer>
-                <MainLink
-                    href='/'
-                    p={2}
-                    color='black'>
-                    About
-                </MainLink>
-                <MainLink
-                    href='blog'
-                    p={2}
-                    color='black'>
-                    Blog
-                </MainLink>
-                <PushLink
-                    href='#'
-                    p={2}
-                    onClick={this.onStylo.bind(this)}
-                    color='black'>
-                    Stylo
-                </PushLink>
-                <MainLink
-                    href='contact'
-                    p={2}
-                    color='black'>
-                    Contact
-                </MainLink>
+                <LinksContainer>
+                    <MainLink
+                        href='/'
+                        p={2}
+                        color='black'>
+                        About
+                    </MainLink>
+                    <MainLink
+                        href='blog'
+                        p={2}
+                        color='black'>
+                        Blog
+                    </MainLink>
+                    <PushLink
+                        href='#'
+                        p={2}
+                        onClick={this.onStylo.bind(this)}
+                        color='black'>
+                        Stylo
+                    </PushLink>
+                    <MainLink
+                        href='contact'
+                        p={2}
+                        color='black'>
+                        Contact
+                    </MainLink>
+                </LinksContainer>
             </MenuContainer>
         )
     }

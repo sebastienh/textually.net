@@ -57,6 +57,14 @@ const MenuContainer = styled(Box)`
     left: 0;
 `
 
+const LinksContainer = styled(Flex)`
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+`
+
 export default class StyloSideMenu extends Component {
 
     onStylo() {
@@ -81,31 +89,33 @@ export default class StyloSideMenu extends Component {
                     color='black'>
                     Back
                 </BackLink>
-                <MainLink
-                    href='/'
-                    p={2}
-                    color='black'>
-                    About
-                </MainLink>
-                <MainLink
-                    href='blog'
-                    p={2}
-                    color='black'>
-                    Documentation
-                </MainLink>
-                <PushLink
-                    href='#'
-                    p={2}
-                    onClick={this.onStylo.bind(this)}
-                    color='black'>
-                    Release Notes
-                </PushLink>
-                <MainLink
-                    href='contact'
-                    p={2}
-                    color='black'>
-                    Privacy Policy
-                </MainLink>
+                <LinksContainer>
+                    <MainLink
+                        href='/'
+                        p={2}
+                        color='black'>
+                        About
+                    </MainLink>
+                    <MainLink
+                        href='blog'
+                        p={2}
+                        color='black'>
+                        Documentation
+                    </MainLink>
+                    <PushLink
+                        href='#'
+                        p={2}
+                        onClick={this.onStylo.bind(this)}
+                        color='black'>
+                        Release Notes
+                    </PushLink>
+                    <MainLink
+                        href='contact'
+                        p={2}
+                        color='black'>
+                        Privacy Policy
+                    </MainLink>
+                </LinksContainer>
             </MenuContainer>
         )
     }
