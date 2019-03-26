@@ -103,7 +103,7 @@ export default class StyloSideMenu extends Component {
                 </BackLink>
                 <LinksContainer>
                     <MainLink
-                        href='/'
+                        href='stylo'
                         p={2}
                         color='black'>
                         About

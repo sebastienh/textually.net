@@ -37,6 +37,31 @@ export const AccordionText = styled.div`
   padding: 0;
 `;
 
+const CircledNumbersContainer = styled(Flex)`
+    margin:0px;
+    padding: 0px;
+    width: 60px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    flex-direction: column;
+`;
+
+const RightSideContainer = styled(Box)`
+
+    margin:0px;
+    padding: 0px;
+    width: 60px;
+    height: 100%;
+    /* position: fixed; */
+    /* top: 0; */
+    /* bottom: 0; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+`;
+
 
 class Index extends React.Component {
 
@@ -49,65 +74,35 @@ class Index extends React.Component {
       <Layout>
         <SEO
           title="Home"
-          keywords={[`textually`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
-        />
+          keywords={[
+            `textually`, 
+            `text editor`, 
+            `stylo`, 
+            `markdown`, 
+            `md`, 
+            `commonmark`, 
+            `css`, 
+            `html`]}
+        />  
         <Flex 
           mt={100}
           mb={100}>
-          <Box 
-                width={[
-                    0,
-                    1/4
-                ]}
-                ml={40}
-                pr={40}
-            >
-            <Flex 
-              css={{
-                position: '-webkit-sticky',
-                position: 'sticky',
-                top: '120px',
-                bottom: '0px'
-              }}
-              flexDirection={"column"}
-              width={[
-                1
-              ]}
-            >
-              <StyledAccordion title="Documentation">
-                <StyledAccordion title="Stylo">
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                </StyledAccordion>
-                <StyledAccordion title="HTML">
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                </StyledAccordion>
-                <StyledAccordion title="Markdown">
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                </StyledAccordion>
-                <StyledAccordion title="CSS">
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                  <StyledAccordionItem title="Lorem ipsum" />
-                </StyledAccordion>
-              </StyledAccordion>
-              <Text ml={10} fontSize={"15px"} fontWeight={300}>Privacy Policy</Text>
-            </Flex>
-          </Box>
           <ContentArea>
             <HeadingLevel1>Creativity is about freedom!</HeadingLevel1>
             <HeaderDivider />
             <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
-            </ContentArea>
+          </ContentArea>
+          <Box                 
+            width={[
+                0,
+                1/8
+              ]}>
+              <Flex justifyContent={"center"} flexDirection={"row"}>
+                <CircledNumbersContainer>
+                  test
+                </CircledNumbersContainer>
+              </Flex>
+            </Box>
         </Flex>
       </Layout>
     )
