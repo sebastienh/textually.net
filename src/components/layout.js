@@ -14,14 +14,14 @@ import MediaQuery from 'react-responsive';
 import DrawerToggleButton from "../components/DrawerToggleButton"
 import "./layout.css"
 
-const Content = styled.div`
+const Content = styled(Flex)`
 
   transition: 0.5s;
 
   /* desktop mode */
   @media (min-width: 769px) {
     ${({ open }) => open && `
-      margin-left: 300px;
+      margin-left: 250px;
     `}
   }
 `
@@ -46,6 +46,15 @@ export const DrawerToggleButtonContainer = styled(Flex)`
     left: 0;
     justify-content: center;
     flex-direction: column;
+
+    transition: 0.5s;
+
+    /* desktop mode */
+    @media (min-width: 769px) {
+    ${({ open }) => open && `
+      margin-left: 270px;
+    `}
+}
 `;
 
 export const Logo = styled.img`
@@ -88,6 +97,29 @@ class Layout extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
+
+          {/* desktop */}
+          <MediaQuery query="(min-width: 769px)">
+            <SideDrawer show={this.state.sideDrawerOpen}/>
+            <Content open={this.state.sideDrawerOpen}>
+              <Box 
+                width={[
+                    1/10,
+                ]}>
+                <DrawerToggleButtonContainer open={this.state.sideDrawerOpen}>
+                  <DrawerToggleButton click={this.drawerToggleClickHandler}/>
+                </DrawerToggleButtonContainer>
+              </Box>
+              <Box width={[
+                    9/10,
+                ]}>
+                {/* {backdrop} */}
+                <main>{children}</main>
+              </Box>
+            </Content>
+          </MediaQuery>
+
+          <MediaQuery query="(max-width: 768px)">
             <SideDrawer show={this.state.sideDrawerOpen}/>
             <Flex>
               <Box 
@@ -105,6 +137,7 @@ class Layout extends React.Component {
                 <main>{children}</main>
               </Box>
             </Flex>
+          </MediaQuery>
         </React.Fragment>
       </ThemeProvider>
     );

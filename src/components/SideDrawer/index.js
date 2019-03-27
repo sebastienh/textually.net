@@ -18,10 +18,27 @@ export const SideDrawerDiv = styled.div`
     transition: transform 0.5s ease-out;
     box-shadow: 0px 0px 0px;
 
-    ${({ open }) => open && `
-        transform: translateX(0);
+    /* mobile mode */
+    @media (max-width: 768px) {
+
+        ${({ open }) => open && `
+            transform: translateX(0);
+            box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
+        `}
+    }
+
+    /* desktop mode */
+    @media (min-width: 769px) {
+
+        transition: 0.5s;
+        overflow-x: hidden;
         box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
-    `}
+
+        ${({ open }) => open && `
+            transform: translateX(0);
+            box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
+        `}
+    }
 `;
 
 const TextuallyNavigator = styled(NavigationController)`
