@@ -82,6 +82,24 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-catch-links`
+    `gatsby-plugin-catch-links`,
+    // This configuration assumes images are all stored in the "images" directory
+    // in your project root. Configure gatsby-source-filesystem multiple times if
+    // you have images in many places.
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/images`,
+        name: 'images',
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/ // See below to configure properly
+        }
+      }
+    }
   ],
 }

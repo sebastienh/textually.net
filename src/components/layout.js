@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 import Footer from "../components/Footer"
 import Navigation from "../components/Navigation"
-import { Flex, Box, Container, Provider, Header } from "rebass";
+import { Flex, Box, Text, Container, Provider, Header } from "rebass";
 import theme from "../styles/theme.js";
 import { ThemeProvider } from 'styled-components'
 import SideDrawer from "../components/SideDrawer"
@@ -97,11 +97,10 @@ class Layout extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
-
           {/* desktop */}
           <MediaQuery query="(min-width: 769px)">
             <SideDrawer show={this.state.sideDrawerOpen}/>
-            <Content open={this.state.sideDrawerOpen}>
+            <Content open={this.state.sideDrawerOpen} theme={theme}>
               <Box 
                 width={[
                     1/10,

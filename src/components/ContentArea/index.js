@@ -13,7 +13,8 @@ export default class ContentArea extends React.Component {
         return (
             <Box
                 p={0}
-                m='auto'
+                m={0}
+                style={{height: "100%", width: "100%"}}
                 width={[
                     1,
                     3/4,

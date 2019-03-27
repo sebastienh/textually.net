@@ -41,6 +41,7 @@ const theme = {
   fourth: "rgba(238, 108, 77, 1)",
   fifth: "rgba(41, 50, 65, 1)",
   media,
+  mainFontFamily: "HurmeGeometricSans3-Regular"
 };
 
 export default theme;
