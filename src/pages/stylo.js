@@ -106,9 +106,22 @@ class Index extends React.Component {
               ]}>
               <CenterHorizontally>
                 <CircledNumbersContainer>
-                    <CircledNumber color={"#3f4ddd"} number={"1"}/>
-                    <CircledNumber color={"#ff0000"} number={"2"}/>
-                    <CircledNumber color={"#ff0000"} number={"3"}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={1}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#FFA701"} number={2}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={3}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={4}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={5}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={6}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={7}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={8}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={9}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={10}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={11}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={12}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={13}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={14}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={15}/>
+                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={16}/>
                 </CircledNumbersContainer>
               </CenterHorizontally>
             </Box>

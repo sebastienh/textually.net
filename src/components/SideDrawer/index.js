@@ -32,7 +32,7 @@ export const SideDrawerDiv = styled.div`
 
         transition: 0.5s;
         overflow-x: hidden;
-        box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 0px;
 
         ${({ open }) => open && `
             transform: translateX(0);
