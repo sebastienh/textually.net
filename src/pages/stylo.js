@@ -182,16 +182,22 @@ class Index extends React.Component {
             width={"60px"}>
               <CenterHorizontally>
                 <CircledNumbersContainer>
-                    <CircledNumber style={{marginTop:"10px"}} width={"24px"} height={"24px"} color={"#000"} number={1}/>
-                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#FFA701"} number={2}/>
-                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={3}/>
-                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={4}/>
-                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={5}/>
-                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={6}/>
-                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={7}/>
-                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={8}/>
-                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={9}/>
-                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={10}/>
+                    <CircledNumber 
+                      link={"#four-colored-screenshots-page"}
+                      style={{marginTop:"10px"}} 
+                      width={"24px"} 
+                      height={"24px"} 
+                      color={"#000"} 
+                      number={1}/>
+                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#FFA701"} number={2}/>
+                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={3}/>
+                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={4}/>
+                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={5}/>
+                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={6}/>
+                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={7}/>
+                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={8}/>
+                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={9}/>
+                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={10}/>
                 </CircledNumbersContainer>
               </CenterHorizontally>
             </Box>
@@ -221,12 +227,12 @@ query {
     }
   }
   bgTablet: imageSharp(fluid: { originalName: { regex: "/colored-four-screens/" } }) {
-    resize(width: 800, height: 1100, quality: 90, cropFocus: CENTER) {
+    resize(width: 800, quality: 90, cropFocus: CENTER) {
       src
     }
   }
   bgMobile: imageSharp(fluid: { originalName: { regex: "/colored-four-screens/" } }) {
-    resize(width: 450, height: 850, quality: 90, cropFocus: CENTER) {
+    resize(width: 450, quality: 90, cropFocus: CENTER) {
       src
     }
   }

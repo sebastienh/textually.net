@@ -23,7 +23,7 @@ export default class StyloFourColoredScreenshots extends Component {
 
     return (
 
-        <WhitePage>
+        <WhitePage id="four-colored-screenshots-page">
             <Flex>
                 <Box width={1/10} />
                 <Box width={8/10}>
