@@ -15,6 +15,8 @@ import CircledNumber from "../components/CircledNumber"
 import Image from 'gatsby-image';
 import StyloLogo from "../../images/logo-green.svg"
 import theme from "../styles/theme.js";
+import PageHeaderSection from "../components/PageHeaderSection"
+import StyloFourColoredScreenshots from "../components/StyloFourColoredScreenshots"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -48,7 +50,7 @@ export const AccordionText = styled.div`
 const CircledNumbersContainer = styled(Flex)`
     margin:0px;
     padding: 0px;
-    width: 60px;
+    width: 10%;
     height: 100%;
     position: fixed;
     top: 0;
@@ -81,14 +83,28 @@ const WhitePage = styled.section`
   background-color: #fff;
   position: relative;
   width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 `
 
 const GreyPage = styled.section`
   background-color: #fafafa;
   position: relative;
   width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+`
+
+const ContentResizer = styled(Flex)`
+  width: 100%;
   height: 100%;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100px;
 `
 
 class Index extends React.Component {
@@ -97,6 +113,26 @@ class Index extends React.Component {
 
     const { data } = this.props
     const styloAboutHtml =  data.styloAbout.edges[0].node.html
+
+    const {
+        data: {
+            bgDesktop: {
+              resize: { src: desktop }
+            },
+            bgTablet: {
+              resize: { src: tablet }
+            },
+            bgMobile: {
+              resize: { src: mobile }
+            }
+        }
+    } = this.props;
+
+    const images = {
+        desktop,
+        tablet,
+        mobile
+    };
 
     return (
       <Layout>
@@ -113,63 +149,49 @@ class Index extends React.Component {
             `html`]}
         />  
         <Flex p={0}
-                m={0}
-                style={{height: "100%", width: "100%"}}>
+                m={0}>
           <ContentArea>
-            <GreyPage>
-              <Flex justifyContent={"center"} flexDirection={"row"}>
-                <StyloLogo width={"500px"}/>
-              </Flex>
-              <Flex justifyContent={"center"} flexDirection={"row"}>
-                <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                  Stylo
-                </Text>
-              </Flex>
-            </GreyPage>  
+            <PageHeaderSection>
+              <ContentResizer>
+                <Flex justifyContent={"center"} flexDirection={"row"}>
+                  <StyloLogo width={[
+                    "200px",
+                    "300px",
+                    "500px"]}/>
+                </Flex>
+                <Flex justifyContent={"center"} flexDirection={"row"}>
+                  <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                    Stylo
+                  </Text>
+                </Flex>
+              </ContentResizer>
+            </PageHeaderSection>  
+            <StyloFourColoredScreenshots images={images}/>
             <WhitePage>
-              <Flex justifyContent={"center"} flexDirection={"row"} mt={100}>
-                <Text fontSize={[ 20, 35, 50 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                  Markdown the way you want
-                </Text>
+              <Flex>
+                <Box width={1/10} />
+                <Box width={8/10}>
+                  <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
+                </Box>
+                <Box width={1/10} />
               </Flex>
-              <Text fontSize={[ 12, 16, 20 ]} mt={20} fontFamily={"HurmeGeometricSans3-Regular"}>
-                  Theming in Stylo is a first class citizen, because it is a lot more than just colors or fonts… it’s a creative mood!
-              </Text>
             </WhitePage>
-
-
-
-
-
-
-
-
-
-
-
-            <Flex justifyContent={"center"} flexDirection={"row"} mt={100}>
-
-            </Flex>
-            
-            <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
           </ContentArea>
-          <Box                 
-            width={[
-                0,
-                1/8
-              ]}>
+          <Box            
+            zIndex={100}     
+            width={"60px"}>
               <CenterHorizontally>
                 <CircledNumbersContainer>
-                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={1}/>
-                    <CircledNumber width={"32px"} height={"32px"} color={"#FFA701"} number={2}/>
-                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={3}/>
-                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={4}/>
-                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={5}/>
-                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={6}/>
-                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={7}/>
-                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={8}/>
-                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={9}/>
-                    <CircledNumber width={"32px"} height={"32px"} color={"#000"} number={10}/>
+                    <CircledNumber style={{marginTop:"10px"}} width={"24px"} height={"24px"} color={"#000"} number={1}/>
+                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#FFA701"} number={2}/>
+                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={3}/>
+                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={4}/>
+                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={5}/>
+                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={6}/>
+                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={7}/>
+                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={8}/>
+                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={9}/>
+                    <CircledNumber style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={10}/>
                 </CircledNumbersContainer>
               </CenterHorizontally>
             </Box>
@@ -191,6 +213,21 @@ query {
       node {
         html
       }
+    }
+  }
+  bgDesktop: imageSharp(fluid: { originalName: { regex: "/colored-four-screens/" } }) {
+    resize(width: 1200, quality: 90, cropFocus: CENTER) {
+      src
+    }
+  }
+  bgTablet: imageSharp(fluid: { originalName: { regex: "/colored-four-screens/" } }) {
+    resize(width: 800, height: 1100, quality: 90, cropFocus: CENTER) {
+      src
+    }
+  }
+  bgMobile: imageSharp(fluid: { originalName: { regex: "/colored-four-screens/" } }) {
+    resize(width: 450, height: 850, quality: 90, cropFocus: CENTER) {
+      src
     }
   }
 }

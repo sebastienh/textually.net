@@ -19,6 +19,20 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/src/images`,
+        name: `images-2`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/images`,
+        name: `images-1`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
@@ -37,7 +51,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 1200,
+              backgroundColor: "transparent"
             },
           },
           {
@@ -83,16 +98,6 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,
-    // This configuration assumes images are all stored in the "images" directory
-    // in your project root. Configure gatsby-source-filesystem multiple times if
-    // you have images in many places.
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/images`,
-        name: 'images',
-      },
-    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

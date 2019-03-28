@@ -46,7 +46,7 @@ export const DrawerToggleButtonContainer = styled(Flex)`
     left: 0;
     justify-content: center;
     flex-direction: column;
-
+    z-index: 100;
     transition: 0.5s;
 
     /* desktop mode */
@@ -100,8 +100,8 @@ class Layout extends React.Component {
           {/* desktop */}
           <MediaQuery query="(min-width: 769px)">
             <SideDrawer show={this.state.sideDrawerOpen}/>
-            <Content open={this.state.sideDrawerOpen} theme={theme}>
-              <Box 
+            <Box 
+                style={{zIndex:"1000"}}
                 width={[
                     1/10,
                 ]}>
@@ -109,8 +109,9 @@ class Layout extends React.Component {
                   <DrawerToggleButton click={this.drawerToggleClickHandler}/>
                 </DrawerToggleButtonContainer>
               </Box>
+            <Content open={this.state.sideDrawerOpen} theme={theme}>
               <Box width={[
-                    9/10,
+                    10/10,
                 ]}>
                 {/* {backdrop} */}
                 <main>{children}</main>

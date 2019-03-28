@@ -14,6 +14,7 @@ export const ToggleButton = styled(Button)`
     padding: 0; 
     box-sizing: border-box;
     justify-content: space-around;
+    z-index: 100;
 
     &:focus {
         outline: none;
@@ -24,6 +25,7 @@ export const ToggleButtonLine = styled.div`
     width: 40px;
     height: 3px;
     background-color: black;
+    z-index: 100;
 `;
 
 export default class DrawerToggleButton extends React.Component {
