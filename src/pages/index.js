@@ -29,7 +29,7 @@ class Index extends React.Component {
   componentDidMount() {
 
     console.log("Trying to update location context");
-    this.context.updatePagePath(["/"]);
+    this.context.updatePagePath(["/", "about"]);
   }
 
   render() {

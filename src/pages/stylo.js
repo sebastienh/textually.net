@@ -111,12 +111,12 @@ const ContentResizer = styled(Flex)`
   height: 100px;
 `
 
-class Index extends React.Component {
+class StyloIndex extends React.Component {
 
   componentDidMount() {
 
-      console.log("Trying to update location context");
-      this.context.updatePagePath(["/", "stylo"]);
+      console.log("Trying to update location context to" + "/stylo/about" );
+      this.context.updatePagePath(["/", "stylo", "about"]);
   }
 
   render() {
@@ -212,8 +212,8 @@ class Index extends React.Component {
     )
   }
 }
-Index.contextType = LocationContext; 
-export default Index
+StyloIndex.contextType = LocationContext; 
+export default StyloIndex
 
 export const query = graphql`
 query {

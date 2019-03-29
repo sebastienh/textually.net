@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
-import { Flex, Box, Link, Text } from "rebass";
+import { Flex, Box, Text, Link } from "rebass";
 import styled, { css } from 'styled-components';
 import StyloSideMenu from "../StyloSideMenu"
 import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
+import NavigationLink from "../NavigationLink"
 
 const {
     Transition
 } = NavigationController
 
-const MainLink = styled(Link)`
+const MainLink = styled(NavigationLink)`
 
-    font-family: "Avenir Next";
     box-shadow: 0px 0px 0px;
     display: flex;
     flex-direction: row;
@@ -23,9 +23,8 @@ const MainLink = styled(Link)`
     }
 `;
 
-const PushLink = styled(Link)`
+const PushLink = styled(NavigationLink)`
 
-    font-family: "Avenir Next";
     box-shadow: 0px 0px 0px;
     display: flex;
     flex-direction: row;
@@ -76,12 +75,14 @@ export default class IndexSideMenu extends Component {
             <MenuContainer>
                 <LinksContainer>
                     <MainLink
+                        path={["/", "about"]}
                         href='/'
                         p={2}
                         color='black'>
                         About
                     </MainLink>
                     <MainLink
+                        path={["/", "blog"]}
                         href='blog'
                         p={2}
                         color='black'>
@@ -89,14 +90,15 @@ export default class IndexSideMenu extends Component {
                     </MainLink>
                     <PushLink
                         href='#'
+                        path={["/", "stylo"]}
                         p={2}
                         onClick={this.onStylo.bind(this)}
                         color='black'>
                         Stylo
                         <RightPointingIcon color={"#000"}/>
                     </PushLink>
-                    
                     <MainLink
+                        path={["/", "contact"]}
                         href='contact'
                         p={2}
                         color='black'>

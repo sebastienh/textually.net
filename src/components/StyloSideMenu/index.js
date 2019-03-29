@@ -3,14 +3,14 @@ import { Flex, Box, Link, Text } from "rebass";
 import styled, { css } from 'styled-components';
 import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
+import NavigationLink from "../NavigationLink"
 
 const {
     Transition
 } = NavigationController
 
-const MainLink = styled(Link)`
+const MainLink = styled(NavigationLink)`
 
-    font-family: "Avenir Next";
     box-shadow: 0px 0px 0px;
     display: flex;
     flex-direction: row;
@@ -22,9 +22,8 @@ const MainLink = styled(Link)`
     }
 `;
 
-const PushLink = styled(Link)`
+const PushLink = styled(NavigationLink)`
 
-    font-family: "Avenir Next";
     box-shadow: 0px 0px 0px;
     display: flex;
     flex-direction: row;
@@ -48,7 +47,6 @@ export const LeftPointingIcon = styled(ExpandMoreIcon)`
 
 const BackLink = styled(Link)`
 
-    font-family: "Avenir Next";
     box-shadow: 0px 0px 0px;
     display: flex;
     flex-direction: row;
@@ -78,10 +76,10 @@ const LinksContainer = styled(Flex)`
 
 export default class StyloSideMenu extends Component {
 
-    onStylo() {
-        this.props.navigationController.pushView(
-            <div>Welcome Stylo!</div>
-        );
+    onReleaseNotes() {
+        // this.props.navigationController.pushView(
+        //     <div>Welcome Stylo!</div>
+        // );
     }
 
     back() {
@@ -103,26 +101,30 @@ export default class StyloSideMenu extends Component {
                 </BackLink>
                 <LinksContainer>
                     <MainLink
+                        path={["/", "stylo", "about"]}
                         href='stylo'
                         p={2}
                         color='black'>
                         About
                     </MainLink>
                     <MainLink
-                        href='blog'
+                        path={["/", "stylo", "documentation"]}
+                        href='#'
                         p={2}
                         color='black'>
                         Documentation
                     </MainLink>
                     <PushLink
-                        href='#'
+                        path={["/", "stylo", "release-notes"]}
+                        href='stylo-release-notes'
                         p={2}
-                        onClick={this.onStylo.bind(this)}
+                        onClick={this.onReleaseNotes.bind(this)}
                         color='black'>
                         Release Notes
                     </PushLink>
                     <MainLink
-                        href='contact'
+                        path={["/", "stylo", "privacy-policy"]}
+                        href='#'
                         p={2}
                         color='black'>
                         Privacy Policy
