@@ -38,7 +38,7 @@ class Index extends React.Component {
     const textuallyAboutHtml =  data.textuallyAbout.edges[0].node.html
 
     return (
-      <Layout>
+      <React.Fragment>
         <SEO
           title="Home"
           keywords={[`textually`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
@@ -46,7 +46,7 @@ class Index extends React.Component {
         <HeadingLevel1>This is all about text!</HeadingLevel1>
         <HeaderDivider />
         <Content dangerouslySetInnerHTML={{ __html: textuallyAboutHtml }} />
-      </Layout>
+      </React.Fragment>
     )
   }
 }

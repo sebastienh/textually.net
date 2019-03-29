@@ -1,9 +1,9 @@
 import React from 'react'
-import AppLinks from "../AppLinks"
 import styled from "styled-components";
-import { Flex, Box, Link, Text } from "rebass";
 import IndexSideMenu from "../IndexSideMenu"
+import StyloSideMenu from "../StyloSideMenu"
 import NavigationController from 'react-navigation-controller';
+import LocationContext from "../../context/LocationContext"
 
 export const SideDrawerDiv = styled.div`
 
@@ -50,8 +50,35 @@ const TextuallyNavigator = styled(NavigationController)`
 `
 
 export default class SideDrawer extends React.Component {
-    
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            rendered: false
+        }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+
+        if(nextProps.show != this.props.show) {
+            return true;
+        } 
+        return false;
+    }
+
     render() {
+
+        var views = [<IndexSideMenu />];
+
+        // let pagePath = this.context.pagePath;
+        // for(var i = 0; i < pagePath.length; i++) {
+
+        //     let pathComponent = pagePath[i];
+            
+        //     if(pathComponent == "stylo") {
+        //         views.push(<StyloSideMenu />);
+        //     }
+        // }
 
         const props = {
             // The views to place in the stack. The front-to-back order
@@ -59,9 +86,7 @@ export default class SideDrawer extends React.Component {
             // order of the navigation stack. Thus, the last item added to
             // the array becomes the top item of the navigation stack.
             // NOTE: This can only be updated via `setViews()`
-            views: [
-                <IndexSideMenu />
-            ],
+            views: views,
       
             // If set to true, the navigation will save the state of each view that
             // pushed onto the stack. When `popView()` is called, the navigationController
@@ -87,3 +112,5 @@ export default class SideDrawer extends React.Component {
         );
     }
 }
+
+SideDrawer.contextType = LocationContext; 

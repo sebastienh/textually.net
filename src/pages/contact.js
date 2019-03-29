@@ -15,8 +15,7 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <Layout>
-  
+      <React.Fragment>
           <Flex>
               <Box 
                 width={[
@@ -29,7 +28,7 @@ export default class Contact extends Component {
                 ]}>
               </Box>
             </Flex> 
-      </Layout>
+      </React.Fragment>
     )
   }
 }

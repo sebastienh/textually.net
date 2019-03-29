@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
 import NavigationLink from "../NavigationLink"
+import LocationContext from "../../context/LocationContext"
 
 const {
     Transition
@@ -100,13 +101,20 @@ export default class StyloSideMenu extends Component {
                     Back
                 </BackLink>
                 <LinksContainer>
-                    <MainLink
-                        path={["/", "stylo", "about"]}
-                        href='stylo'
-                        p={2}
-                        color='black'>
-                        About
-                    </MainLink>
+                    <LocationContext.Consumer>
+                        {(context) => (
+                            <MainLink
+                                path={["/", "stylo", "about"]}
+                                onClick={() => { 
+                                    context.updatePagePath(["/", "stylo", "about"]);
+                                }}
+                                href='stylo'
+                                p={2}
+                                color='black'>
+                                About
+                            </MainLink>
+                        )}
+                    </LocationContext.Consumer>
                     <MainLink
                         path={["/", "stylo", "documentation"]}
                         href='#'

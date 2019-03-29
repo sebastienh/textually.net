@@ -125,7 +125,7 @@ class StyloReleaseNotes extends React.Component {
     const styloReleaseNotes =  data.styloReleaseNotes.edges[0].node.html;
 
     return (
-        <Layout>
+        <React.Fragment>
             <Flex p={0}
                     m={0}>
                 <WhitePage>
@@ -138,7 +138,7 @@ class StyloReleaseNotes extends React.Component {
                     </Flex>
                 </WhitePage>
             </Flex>
-        </Layout>
+        </React.Fragment>
     )
   }
 }

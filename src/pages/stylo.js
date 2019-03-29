@@ -145,7 +145,7 @@ class StyloIndex extends React.Component {
     };
 
     return (
-        <Layout>
+        <React.Fragment>
         <SEO
           title="Home"
           keywords={[
@@ -208,7 +208,7 @@ class StyloIndex extends React.Component {
               </CenterHorizontally>
             </Box>
         </Flex>
-      </Layout>
+      </React.Fragment>
     )
   }
 }
