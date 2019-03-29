@@ -2,10 +2,11 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import styled from "styled-components";
+
 import SideArea from "../components/SideArea"
 import ContentArea from "../components/ContentArea"
 import Accordion from "../components/Accordion"
+import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import StyledAccordion from "../components/StyledAccordion";
@@ -17,6 +18,9 @@ import StyloLogo from "../../images/logo-green.svg"
 import theme from "../styles/theme.js";
 import PageHeaderSection from "../components/PageHeaderSection"
 import StyloFourColoredScreenshots from "../components/StyloFourColoredScreenshots"
+import CircledNumbersSidebar from "../components/CircledNumbersSidebar"
+import LocationContext from "../context/LocationContext"
+import PageSection from "../components/PageSection"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -109,10 +113,16 @@ const ContentResizer = styled(Flex)`
 
 class Index extends React.Component {
 
+  componentDidMount() {
+
+      console.log("Trying to update location context");
+      this.context.updatePagePath(["/", "stylo"]);
+  }
+
   render() {
 
-    const { data } = this.props
-    const styloAboutHtml =  data.styloAbout.edges[0].node.html
+    const { data } = this.props;
+    const styloAboutHtml =  data.styloAbout.edges[0].node.html;
 
     const {
         data: {
@@ -135,7 +145,7 @@ class Index extends React.Component {
     };
 
     return (
-      <Layout>
+        <Layout>
         <SEO
           title="Home"
           keywords={[
@@ -166,39 +176,35 @@ class Index extends React.Component {
                 </Flex>
               </ContentResizer>
             </PageHeaderSection>  
-            <StyloFourColoredScreenshots images={images}/>
-            <WhitePage>
-              <Flex>
-                <Box width={1/10} />
-                <Box width={8/10}>
-                  <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
-                </Box>
-                <Box width={1/10} />
-              </Flex>
-            </WhitePage>
+            <PageSection number={2}>
+              <StyloFourColoredScreenshots images={images}/>
+            </PageSection>
+            <PageSection number={3}>
+              <WhitePage>
+                <Flex>
+                  <Box width={1/10} />
+                  <Box width={8/10}>
+                    <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
+                  </Box>
+                  <Box width={1/10} />
+                </Flex>
+              </WhitePage>
+            </PageSection>
           </ContentArea>
           <Box            
-            zIndex={100}     
-            width={"60px"}>
+            zIndex={100}>
               <CenterHorizontally>
-                <CircledNumbersContainer>
-                    <CircledNumber 
-                      link={"#four-colored-screenshots-page"}
-                      style={{marginTop:"10px"}} 
-                      width={"24px"} 
-                      height={"24px"} 
-                      color={"#000"} 
-                      number={1}/>
-                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#FFA701"} number={2}/>
-                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={3}/>
-                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={4}/>
-                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={5}/>
-                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={6}/>
-                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={7}/>
-                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={8}/>
-                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={9}/>
-                    <CircledNumber link={"/stylo#four-colored-screenshots-page"} style={{marginTop:"10px"}} width={"32px"} height={"32px"} color={"#000"} number={10}/>
-                </CircledNumbersContainer>
+                <CircledNumbersSidebar numbers={[
+                  {link:"/stylo#four-colored-screenshots-page", number: 1},
+                  {link:"/stylo#four-colored-screenshots-page", number: 2},
+                  {link:"/stylo#four-colored-screenshots-page", number: 3},
+                  {link:"/stylo#four-colored-screenshots-page", number: 4},
+                  {link:"/stylo#four-colored-screenshots-page", number: 5},
+                  {link:"/stylo#four-colored-screenshots-page", number: 6},
+                  {link:"/stylo#four-colored-screenshots-page", number: 7},
+                  {link:"/stylo#four-colored-screenshots-page", number: 8},
+                  {link:"/stylo#four-colored-screenshots-page", number: 9},
+                ]} />
               </CenterHorizontally>
             </Box>
         </Flex>
@@ -206,7 +212,7 @@ class Index extends React.Component {
     )
   }
 }
-
+Index.contextType = LocationContext; 
 export default Index
 
 export const query = graphql`

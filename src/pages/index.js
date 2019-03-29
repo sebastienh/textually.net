@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import styled from "styled-components";
+import LocationContext from "../context/LocationContext"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -25,6 +26,11 @@ export const Content = styled.div`
 
 class Index extends React.Component {
 
+  componentDidMount() {
+
+    console.log("Trying to update location context");
+    this.context.updatePagePath(["/"]);
+  }
 
   render() {
 
@@ -45,6 +51,7 @@ class Index extends React.Component {
   }
 }
 
+Index.contextType = LocationContext; 
 export default Index
 
 export const query = graphql`

@@ -1,11 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import LocationContext from "../context/LocationContext"
 
 class NotFoundPage extends React.Component {
+
+  componentDidMount() {
+
+    console.log("Trying to update location context");
+    this.context.updatePagePath(["/", "not-found"]);
+  }
+
   render() {
+    
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
 
@@ -19,6 +27,7 @@ class NotFoundPage extends React.Component {
   }
 }
 
+NotFoundPage.contextType = LocationContext; 
 export default NotFoundPage
 
 export const pageQuery = graphql`

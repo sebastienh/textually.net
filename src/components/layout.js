@@ -13,6 +13,7 @@ import styled from "styled-components";
 import MediaQuery from 'react-responsive';
 import DrawerToggleButton from "../components/DrawerToggleButton"
 import "./layout.css"
+import DrawerContext from "../context/DrawerContext"
 
 const Content = styled(Flex)`
 
@@ -66,24 +67,37 @@ export const Logo = styled.img`
 
 class Layout extends React.Component {
 
-  state = {
-    sideDrawerOpen: false
-  };
-
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {
-        sideDrawerOpen: !prevState.sideDrawerOpen
-      };
-    });
-  };
-
-  backdropClickHandler = () => {
-    this.setState({
-      sideDrawerOpen: false
-    })
+  constructor(props) {
+    super(props);
+    this.handleDrawerToggle = this.handleDrawerToggle.bind(this);
+    this.drawerToggleClickHandler = this.drawerToggleClickHandler.bind(this);
+    this.backdropClickHandler = this.backdropClickHandler.bind(this);
   }
 
+  componentWillMount() {
+    this.setState(() => {
+      return {
+        sideDrawerOpen: this.context.open
+      };
+    });
+  }
+
+  drawerToggleClickHandler() {
+    this.handleDrawerToggle();
+  };
+
+  backdropClickHandler() {
+    this.handleDrawerToggle();
+  }
+
+  handleDrawerToggle() {
+    this.context.toggleDrawer();
+    this.setState(() => {
+      return {
+        sideDrawerOpen: !this.state.sideDrawerOpen
+      };
+    });
+  }
 
   render() {
     const { location, title, children } = this.props
@@ -97,51 +111,55 @@ class Layout extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
-          {/* desktop */}
-          <MediaQuery query="(min-width: 769px)">
-            <SideDrawer show={this.state.sideDrawerOpen}/>
-            <Box 
-                style={{zIndex:"1000"}}
-                width={[
-                    1/10,
-                ]}>
-                <DrawerToggleButtonContainer open={this.state.sideDrawerOpen}>
-                  <DrawerToggleButton click={this.drawerToggleClickHandler}/>
-                </DrawerToggleButtonContainer>
-              </Box>
-            <Content open={this.state.sideDrawerOpen} theme={theme}>
-              <Box width={[
-                    10/10,
-                ]}>
-                {/* {backdrop} */}
-                <main>{children}</main>
-              </Box>
-            </Content>
-          </MediaQuery>
-
-          <MediaQuery query="(max-width: 768px)">
-            <SideDrawer show={this.state.sideDrawerOpen}/>
-            <Flex>
-              <Box 
-                width={[
-                    1/10,
-                ]}>
-                <DrawerToggleButtonContainer>
-                  <DrawerToggleButton click={this.drawerToggleClickHandler}/>
-                </DrawerToggleButtonContainer>
-              </Box>
-              <Box width={[
-                    9/10,
-                ]}>
-                {backdrop}
-                <main>{children}</main>
-              </Box>
-            </Flex>
-          </MediaQuery>
+          <DrawerContext.Consumer>
+            {(context) => (
+                <React.Fragment>
+                    <MediaQuery query="(min-width: 769px)">
+                      <SideDrawer show={context.open}/>
+                      <Box 
+                          style={{zIndex:"1000"}}
+                          width={[
+                              1/10,
+                          ]}>
+                          <DrawerToggleButtonContainer open={context.open}>
+                            <DrawerToggleButton click={this.drawerToggleClickHandler}/>
+                          </DrawerToggleButtonContainer>
+                      </Box>
+                      <Content open={context.open} theme={theme}>
+                        <Box width={[
+                              10/10,
+                          ]}>
+                          <main>{children}</main>
+                        </Box>
+                      </Content>
+                    </MediaQuery>
+                    <MediaQuery query="(max-width: 768px)">
+                      <SideDrawer show={context.open}/>
+                      <Flex>
+                        <Box 
+                          width={[
+                              1/10,
+                          ]}>
+                          <DrawerToggleButtonContainer>
+                            <DrawerToggleButton click={this.drawerToggleClickHandler}/>
+                          </DrawerToggleButtonContainer>
+                        </Box>
+                        <Box width={[
+                              9/10,
+                          ]}>
+                          {backdrop}
+                          <main>{children}</main>
+                        </Box>
+                      </Flex>
+                    </MediaQuery>
+                </React.Fragment>
+            )}
+          </DrawerContext.Consumer>
         </React.Fragment>
       </ThemeProvider>
     );
   }
 }
 
+Layout.contextType = DrawerContext; 
 export default Layout;

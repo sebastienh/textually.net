@@ -6,8 +6,16 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import ContentArea from "../components/ContentArea"
+import LocationContext from "../context/LocationContext"
 
 class BlogIndex extends React.Component {
+
+  componentDidMount() {
+
+    console.log("Trying to update location context");
+    this.context.updatePagePath(["/", "blog"]);
+  }
+
   render() {
     const { data } = this.props
     const posts = data.allMarkdownRemark.edges
@@ -48,6 +56,7 @@ class BlogIndex extends React.Component {
   }
 }
 
+BlogIndex.contextType = LocationContext; 
 export default BlogIndex
 
 export const pageQuery = graphql`

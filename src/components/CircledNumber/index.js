@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from "styled-components";
 import { Link } from "gatsby"
+import LocationContext from "../../context/LocationContext"
+import { Flex, Box, Text, Container, Provider, Header } from "rebass";
 
 // 3: x="200.371px" y="331.57px"
 // 4: x="194.541px" y="325.122px"
@@ -98,7 +100,7 @@ const PlainLink = styled(Link)`
     box-shadow: 0 0 0;
     text-decoration: none;
 `
-
+// context.state.index == number ? "#f00" : color}
 export default class CircledNumber extends Component {
 
     render() {
@@ -114,10 +116,16 @@ export default class CircledNumber extends Component {
         return (
 
             <PlainLink to={link}>
-                <svg width={width} height={height} viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.41421">
-                    <path d="M259.441,14.443c129.153,0 234.009,104.856 234.009,234.009c0,129.152 -104.856,234.008 -234.009,234.008c-129.153,0 -234.008,-104.856 -234.008,-234.008c0,-129.153 104.855,-234.009 234.008,-234.009Zm0,58.502c96.865,0 175.507,78.642 175.507,175.507c0,96.864 -78.642,175.506 -175.507,175.506c-96.864,0 -175.506,-78.642 -175.506,-175.506c0,-96.865 78.642,-175.507 175.506,-175.507Z" fill={color}/>
-                    <text x={getX(number)} y={getY(number)} font-family="HurmeGeometricSans3W03-Bold, sans-serif" font-weight="700" font-size="220px" fill={color}>{number}</text>
-                </svg>
+                <LocationContext.Consumer>
+                    {(context) => (
+                        <React.Fragment>
+                            <svg width={width} height={height} viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.41421">
+                                <path d="M259.441,14.443c129.153,0 234.009,104.856 234.009,234.009c0,129.152 -104.856,234.008 -234.009,234.008c-129.153,0 -234.008,-104.856 -234.008,-234.008c0,-129.153 104.855,-234.009 234.008,-234.009Zm0,58.502c96.865,0 175.507,78.642 175.507,175.507c0,96.864 -78.642,175.506 -175.507,175.506c-96.864,0 -175.506,-78.642 -175.506,-175.506c0,-96.865 78.642,-175.507 175.506,-175.507Z" fill={context.index == number ? "#f00" : color}/>
+                                <text x={getX(number)} y={getY(number)} font-family="HurmeGeometricSans3W03-Bold, sans-serif" font-weight="700" font-size="220px" fill={context.index == number ? "#f00" : color}>{number}</text>
+                            </svg>
+                        </React.Fragment>
+                    )}
+                </LocationContext.Consumer>
             </PlainLink>
         )
     }
