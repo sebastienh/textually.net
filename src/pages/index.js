@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import styled from "styled-components";
-import LocationContext from "../context/LocationContext"
+import PageLocation from "../components/PageLocation"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -26,19 +26,13 @@ export const Content = styled.div`
 
 class Index extends React.Component {
 
-  componentDidMount() {
-
-    console.log("Trying to update location context");
-    this.context.updatePagePath(["/", "about"]);
-  }
-
   render() {
 
     const { data } = this.props
     const textuallyAboutHtml =  data.textuallyAbout.edges[0].node.html
 
     return (
-      <React.Fragment>
+      <PageLocation path={["/", "about"]}>
         <SEO
           title="Home"
           keywords={[`textually`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
@@ -46,12 +40,11 @@ class Index extends React.Component {
         <HeadingLevel1>This is all about text!</HeadingLevel1>
         <HeaderDivider />
         <Content dangerouslySetInnerHTML={{ __html: textuallyAboutHtml }} />
-      </React.Fragment>
+      </PageLocation>
     )
   }
 }
 
-Index.contextType = LocationContext; 
 export default Index
 
 export const query = graphql`

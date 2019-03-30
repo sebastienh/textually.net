@@ -18,9 +18,8 @@ import StyloLogo from "../../images/logo-green.svg"
 import theme from "../styles/theme.js";
 import PageHeaderSection from "../components/PageHeaderSection"
 import StyloFourColoredScreenshots from "../components/StyloFourColoredScreenshots"
-import CircledNumbersSidebar from "../components/CircledNumbersSidebar"
-import LocationContext from "../context/LocationContext"
 import PageSection from "../components/PageSection"
+import PageLocation from "../components/PageLocation"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -113,36 +112,29 @@ const ContentResizer = styled(Flex)`
 
 class StyloReleaseNotes extends React.Component {
 
-  componentDidMount() {
-
-      console.log("Trying to update location context to" + "/stylo/release-notes" );
-      this.context.updatePagePath(["/", "stylo", "release-notes"]);
-  }
-
   render() {
 
     const { data } = this.props;
     const styloReleaseNotes =  data.styloReleaseNotes.edges[0].node.html;
 
     return (
-        <React.Fragment>
-            <Flex p={0}
-                    m={0}>
-                <WhitePage>
-                    <Flex>
-                        <Box width={1/10} />
-                        <Box width={8/10}>
-                            <Text>Text</Text>
-                        </Box>
-                        <Box width={1/10} />
-                    </Flex>
-                </WhitePage>
-            </Flex>
-        </React.Fragment>
+      <PageLocation path={["/", "stylo", "release-notes"]}>
+          <Flex p={0}
+                  m={0}>
+              <WhitePage>
+                  <Flex>
+                      <Box width={1/10} />
+                      <Box width={8/10}>
+                          <Text>Text</Text>
+                      </Box>
+                      <Box width={1/10} />
+                  </Flex>
+              </WhitePage>
+          </Flex>
+      </PageLocation>
     )
   }
 }
-StyloReleaseNotes.contextType = LocationContext; 
 export default StyloReleaseNotes
 
 export const query = graphql`

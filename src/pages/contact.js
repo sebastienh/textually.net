@@ -3,19 +3,13 @@ import ContactForm from '../components/ContactForm';
 import Layout from '../components/Layout';
 import SEO from "../components/seo"
 import { Flex, Box, Text, Container, Provider, Header } from "rebass";
-import LocationContext from "../context/LocationContext"
+import PageLocation from "../components/PageLocation"
 
 export default class Contact extends Component {
 
-  componentDidMount() {
-
-    console.log("Trying to update location context");
-    this.context.updatePagePath(["/", "contact"]);
-  }
-
   render() {
     return (
-      <React.Fragment>
+      <PageLocation path={["/", "contact"]}>
           <Flex>
               <Box 
                 width={[
@@ -27,10 +21,8 @@ export default class Contact extends Component {
                     1/9,
                 ]}>
               </Box>
-            </Flex> 
-      </React.Fragment>
+          </Flex> 
+      </PageLocation>
     )
   }
 }
-
-Contact.contextType = LocationContext; 
