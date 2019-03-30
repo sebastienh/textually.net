@@ -141,9 +141,9 @@ class StyloIndex extends React.Component {
     return (
         <PageLocation path={["/", "stylo", "about"]}>
           <PageScrollingNumbers links={[
+              "/stylo#intro",
               "/stylo#four-colored-screenshots-page",
-              "/stylo#four-colored-screenshots-page",
-              "/stylo#four-colored-screenshots-page"
+              "/stylo#last"
             ]}>
             <SEO
               title="Home"
@@ -160,7 +160,7 @@ class StyloIndex extends React.Component {
             <Flex p={0}
                     m={0}>
               <ContentArea>
-                <PageHeaderSection>
+                <PageHeaderSection id={"intro"}>
                   <ContentResizer>
                     <Flex justifyContent={"center"} flexDirection={"row"}>
                       <StyloLogo width={[
@@ -175,10 +175,10 @@ class StyloIndex extends React.Component {
                     </Flex>
                   </ContentResizer>
                 </PageHeaderSection>  
-                <PageSection number={2}>
+                <PageSection id={"four-colored-screenshots-page"} number={2}>
                   <StyloFourColoredScreenshots images={images}/>
                 </PageSection>
-                <PageSection number={3}>
+                <PageSection id={"last"} number={3}>
                   <WhitePage>
                     <Flex>
                       <Box width={1/10} />

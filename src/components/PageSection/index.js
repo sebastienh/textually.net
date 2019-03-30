@@ -43,10 +43,10 @@ export default class PageSection extends Component {
 
     render() {
 
-        const { children } = this.props
+        const { children, id } = this.props
 
         return (
-            <div>
+            <div id={id}>
                 {children}
             </div>
         )
