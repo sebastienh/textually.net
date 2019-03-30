@@ -68,25 +68,13 @@ export default class SideDrawer extends React.Component {
 
     render() {
 
-        var views = [<IndexSideMenu />];
-
-        // let pagePath = this.context.pagePath;
-        // for(var i = 0; i < pagePath.length; i++) {
-
-        //     let pathComponent = pagePath[i];
-            
-        //     if(pathComponent == "stylo") {
-        //         views.push(<StyloSideMenu />);
-        //     }
-        // }
-
         const props = {
             // The views to place in the stack. The front-to-back order
             // of the views in this array represents the new bottom-to-top
             // order of the navigation stack. Thus, the last item added to
             // the array becomes the top item of the navigation stack.
             // NOTE: This can only be updated via `setViews()`
-            views: views,
+            views: [<IndexSideMenu />],
       
             // If set to true, the navigation will save the state of each view that
             // pushed onto the stack. When `popView()` is called, the navigationController

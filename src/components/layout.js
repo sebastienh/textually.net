@@ -14,15 +14,16 @@ import MediaQuery from 'react-responsive';
 import DrawerToggleButton from "../components/DrawerToggleButton"
 import "./layout.css"
 import DrawerContext from "../context/DrawerContext"
+import CircledNumbersSidebar from "../components/CircledNumbersSidebar"
 
-const Content = styled(Flex)`
+const Content = styled(Box)`
 
   transition: 0.5s;
 
   /* desktop mode */
   @media (min-width: 769px) {
     ${({ open }) => open && `
-      margin-left: 250px;
+      transform: translate(250px, 0px);
     `}
   }
 `
@@ -39,8 +40,8 @@ export const BackdropDiv = styled.div`
 
 export const DrawerToggleButtonContainer = styled(Flex)`
 
-    margin-left:20px;
-    width: 60px;
+    /* margin-left:20px; */
+    /* width: 60px; */
     position: fixed;
     top: 0;
     bottom: 0;
@@ -132,25 +133,47 @@ class Layout extends React.Component {
                           <main>{children}</main>
                         </Box>
                       </Content>
+
+                      <Flex style={{zIndex:"1000"}}>
+                        <Box mx='auto' style={{zIndex:"1000"}}/>
+                        <Box       
+                        width={[
+                          1/10,
+                        ]}     
+                        zIndex={100}
+                        style={{zIndex:"1000"}}
+                        alignSelf={"right"}>
+                        <CircledNumbersSidebar numbers={[
+                          {link:"/stylo#four-colored-screenshots-page", number: 1},
+                          {link:"/stylo#four-colored-screenshots-page", number: 2},
+                          {link:"/stylo#four-colored-screenshots-page", number: 3},
+                          {link:"/stylo#four-colored-screenshots-page", number: 4},
+                          {link:"/stylo#four-colored-screenshots-page", number: 5},
+                          {link:"/stylo#four-colored-screenshots-page", number: 6},
+                          {link:"/stylo#four-colored-screenshots-page", number: 7},
+                          {link:"/stylo#four-colored-screenshots-page", number: 8},
+                          {link:"/stylo#four-colored-screenshots-page", number: 9},
+                        ]} />
+                        </Box>
+                      </Flex>
                     </MediaQuery>
                     <MediaQuery query="(max-width: 768px)">
                       <SideDrawer show={context.open}/>
-                      <Flex>
-                        <Box 
-                          width={[
-                              1/10,
-                          ]}>
-                          <DrawerToggleButtonContainer>
-                            <DrawerToggleButton click={this.drawerToggleClickHandler}/>
-                          </DrawerToggleButtonContainer>
-                        </Box>
-                        <Box width={[
-                              9/10,
-                          ]}>
-                          {backdrop}
-                          <main>{children}</main>
-                        </Box>
-                      </Flex>
+                      <Box 
+                        style={{zIndex:"1000"}}
+                        width={[
+                            1/10,
+                        ]}>
+                        <DrawerToggleButtonContainer>
+                          <DrawerToggleButton click={this.drawerToggleClickHandler}/>
+                        </DrawerToggleButtonContainer>
+                      </Box>
+                      <Box width={[
+                            10/10,
+                        ]}>
+                        {backdrop}
+                        <main>{children}</main>
+                      </Box>
                     </MediaQuery>
                 </React.Fragment>
             )}

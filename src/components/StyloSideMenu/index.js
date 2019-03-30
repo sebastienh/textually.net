@@ -105,9 +105,6 @@ export default class StyloSideMenu extends Component {
                         {(context) => (
                             <MainLink
                                 path={["/", "stylo", "about"]}
-                                onClick={() => { 
-                                    context.updatePagePath(["/", "stylo", "about"]);
-                                }}
                                 href='stylo'
                                 p={2}
                                 color='black'>

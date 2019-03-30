@@ -18,7 +18,6 @@ import StyloLogo from "../../images/logo-green.svg"
 import theme from "../styles/theme.js";
 import PageHeaderSection from "../components/PageHeaderSection"
 import StyloFourColoredScreenshots from "../components/StyloFourColoredScreenshots"
-import CircledNumbersSidebar from "../components/CircledNumbersSidebar"
 import LocationContext from "../context/LocationContext"
 import PageSection from "../components/PageSection"
 
@@ -191,22 +190,6 @@ class StyloIndex extends React.Component {
               </WhitePage>
             </PageSection>
           </ContentArea>
-          <Box            
-            zIndex={100}>
-              <CenterHorizontally>
-                <CircledNumbersSidebar numbers={[
-                  {link:"/stylo#four-colored-screenshots-page", number: 1},
-                  {link:"/stylo#four-colored-screenshots-page", number: 2},
-                  {link:"/stylo#four-colored-screenshots-page", number: 3},
-                  {link:"/stylo#four-colored-screenshots-page", number: 4},
-                  {link:"/stylo#four-colored-screenshots-page", number: 5},
-                  {link:"/stylo#four-colored-screenshots-page", number: 6},
-                  {link:"/stylo#four-colored-screenshots-page", number: 7},
-                  {link:"/stylo#four-colored-screenshots-page", number: 8},
-                  {link:"/stylo#four-colored-screenshots-page", number: 9},
-                ]} />
-              </CenterHorizontally>
-            </Box>
         </Flex>
       </React.Fragment>
     )

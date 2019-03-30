@@ -99,7 +99,20 @@ const getY = (number) => {
 const PlainLink = styled(Link)`
     box-shadow: 0 0 0;
     text-decoration: none;
+    z-index: 1000;
 `
+
+const CenterHorizontally = styled(Flex)`
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    flex-direction: row;
+`
+
 // context.state.index == number ? "#f00" : color}
 export default class CircledNumber extends Component {
 
@@ -115,18 +128,19 @@ export default class CircledNumber extends Component {
 
         return (
 
-            <PlainLink to={link}>
-                <LocationContext.Consumer>
-                    {(context) => (
-                        <React.Fragment>
-                            <svg width={width} height={height} viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.41421">
-                                <path d="M259.441,14.443c129.153,0 234.009,104.856 234.009,234.009c0,129.152 -104.856,234.008 -234.009,234.008c-129.153,0 -234.008,-104.856 -234.008,-234.008c0,-129.153 104.855,-234.009 234.008,-234.009Zm0,58.502c96.865,0 175.507,78.642 175.507,175.507c0,96.864 -78.642,175.506 -175.507,175.506c-96.864,0 -175.506,-78.642 -175.506,-175.506c0,-96.865 78.642,-175.507 175.506,-175.507Z" fill={context.index == number ? "#f00" : color}/>
-                                <text x={getX(number)} y={getY(number)} font-family="HurmeGeometricSans3W03-Bold, sans-serif" font-weight="700" font-size="220px" fill={context.index == number ? "#f00" : color}>{number}</text>
-                            </svg>
-                        </React.Fragment>
-                    )}
-                </LocationContext.Consumer>
-            </PlainLink>
+                <PlainLink to={link}>
+                    <LocationContext.Consumer>
+                        {(context) => (
+                            <React.Fragment>
+                                <svg width={width} height={height} viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.41421">
+                                    <path d="M259.441,14.443c129.153,0 234.009,104.856 234.009,234.009c0,129.152 -104.856,234.008 -234.009,234.008c-129.153,0 -234.008,-104.856 -234.008,-234.008c0,-129.153 104.855,-234.009 234.008,-234.009Zm0,58.502c96.865,0 175.507,78.642 175.507,175.507c0,96.864 -78.642,175.506 -175.507,175.506c-96.864,0 -175.506,-78.642 -175.506,-175.506c0,-96.865 78.642,-175.507 175.506,-175.507Z" fill={context.index == number ? "#f00" : color}/>
+                                    <text x={getX(number)} y={getY(number)} font-family="HurmeGeometricSans3W03-Bold, sans-serif" font-weight="700" font-size="220px" fill={context.index == number ? "#f00" : color}>{number}</text>
+                                </svg>
+                            </React.Fragment>
+                        )}
+                    </LocationContext.Consumer>
+                </PlainLink>
+
         )
     }
 }
