@@ -15,6 +15,7 @@ import DrawerToggleButton from "../components/DrawerToggleButton"
 import "./layout.css"
 import DrawerContext from "../context/DrawerContext"
 import CircledNumbersSidebar from "../components/CircledNumbersSidebar"
+import ScrollingNumbersSidebarContext from "../context/ScrollingNumbersSidebarContext"
 
 const Content = styled(Box)`
 
@@ -113,20 +114,20 @@ class Layout extends React.Component {
       <ThemeProvider theme={theme}>
         <React.Fragment>
           <DrawerContext.Consumer>
-            {(context) => (
+            {(drawerContext) => (
                 <React.Fragment>
                     <MediaQuery query="(min-width: 769px)">
-                      <SideDrawer show={context.open}/>
+                      <SideDrawer show={drawerContext.open}/>
                       <Box 
                           style={{zIndex:"1000"}}
                           width={[
                               1/10,
                           ]}>
-                          <DrawerToggleButtonContainer open={context.open}>
+                          <DrawerToggleButtonContainer open={drawerContext.open}>
                             <DrawerToggleButton click={this.drawerToggleClickHandler}/>
                           </DrawerToggleButtonContainer>
                       </Box>
-                      <Content open={context.open} theme={theme}>
+                      <Content open={drawerContext.open} theme={theme}>
                         <Box width={[
                               10/10,
                           ]}>
@@ -143,22 +144,12 @@ class Layout extends React.Component {
                         zIndex={100}
                         style={{zIndex:"1000"}}
                         alignSelf={"right"}>
-                        <CircledNumbersSidebar numbers={[
-                          {link:"/stylo#four-colored-screenshots-page", number: 1},
-                          {link:"/stylo#four-colored-screenshots-page", number: 2},
-                          {link:"/stylo#four-colored-screenshots-page", number: 3},
-                          {link:"/stylo#four-colored-screenshots-page", number: 4},
-                          {link:"/stylo#four-colored-screenshots-page", number: 5},
-                          {link:"/stylo#four-colored-screenshots-page", number: 6},
-                          {link:"/stylo#four-colored-screenshots-page", number: 7},
-                          {link:"/stylo#four-colored-screenshots-page", number: 8},
-                          {link:"/stylo#four-colored-screenshots-page", number: 9},
-                        ]} />
+                          <CircledNumbersSidebar />
                         </Box>
                       </Flex>
                     </MediaQuery>
                     <MediaQuery query="(max-width: 768px)">
-                      <SideDrawer show={context.open}/>
+                      <SideDrawer show={drawerContext.open}/>
                       <Box 
                         style={{zIndex:"1000"}}
                         width={[
@@ -174,6 +165,18 @@ class Layout extends React.Component {
                         {backdrop}
                         <main>{children}</main>
                       </Box>
+                      <Flex style={{zIndex:"1000"}}>
+                        <Box mx='auto' style={{zIndex:"1000"}}/>
+                        <Box       
+                        width={[
+                          1/10,
+                        ]}     
+                        zIndex={100}
+                        style={{zIndex:"1000"}}
+                        alignSelf={"right"}>
+                          <CircledNumbersSidebar /> 
+                        </Box>
+                      </Flex>
                     </MediaQuery>
                 </React.Fragment>
             )}

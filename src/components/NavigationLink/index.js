@@ -18,22 +18,25 @@ export default class NavigationLink extends Component {
             path
         } = this.state;
 
-        var equal = true;
-        for(var i = 0; i < path.length; i++) {
+        if(contextPagePath !== undefined) {
+            var equal = true;
+            for(var i = 0; i < path.length; i++) {
 
-            let element = path[i];
-            if(i < contextPagePath.length) {
-                let contextElement = contextPagePath[i];
-                if(element != contextElement) {
-                    equal = false;   
+                let element = path[i];
+                if(i < contextPagePath.length) {
+                    let contextElement = contextPagePath[i];
+                    if(element != contextElement) {
+                        equal = false;   
+                    }
+                }
+                else {
+                    equal = false;
+                    break;
                 }
             }
-            else {
-                equal = false;
-                break;
-            }
+            return equal;
         }
-        return equal;
+        return false;
     }
 
     render() {

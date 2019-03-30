@@ -4,6 +4,7 @@ import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import CircledNumber from "../CircledNumber"
 import DrawerContext from "../../context/DrawerContext"
+import ScrollingNumbersSidebarContext from "../../context/ScrollingNumbersSidebarContext"
 
 const CircledNumbersContainer = styled(Flex)`
     margin:0px;
@@ -16,6 +17,7 @@ const CircledNumbersContainer = styled(Flex)`
     flex-direction: column;
     transition: 0.5s;
     z-index: 1000;
+    display: ${props => props.display ? "flex" : "none"};
 
     /* ${({ open }) => open && `
         backdrop-filter: blur(10px);
@@ -40,6 +42,24 @@ export default class CircledNumbersSidebar extends Component {
         super(props);
     }
   
+    createNumbers(links) {
+
+        let children = []
+
+        for(var i = 0; i < links.length; i++) {
+
+            let child = <CircledNumber 
+                link={links[i]} 
+                style={{marginTop:"10px"}} 
+                width={"32px"} 
+                height={"32px"} 
+                color={"#000"} 
+                number={i+1}/>
+            children.push(child)
+        }
+        return children
+    }
+
     render() {
 
         const { 
@@ -49,23 +69,16 @@ export default class CircledNumbersSidebar extends Component {
         return (
 
             <React.Fragment>
-
                 <DrawerContext.Consumer>
-                    {(context) => (
+                    {(drawerContext) => (
                         <CenterHorizontally>
-                            <CircledNumbersContainer open={context.open}>
-                            {
-                                numbers.map ( (number) => {
-                                    return <CircledNumber 
-                                            link={number.link} 
-                                            style={{marginTop:"10px"}} 
-                                            width={"32px"} 
-                                            height={"32px"} 
-                                            color={"#000"} 
-                                            number={number.number}/>
-                                })
-                            }
-                            </CircledNumbersContainer>
+                            <ScrollingNumbersSidebarContext>
+                                {(srollingNumbersContext) => (
+                                    <CircledNumbersContainer open={drawerContext.open} display={srollingNumbersContext.display}>
+                                        {this.createNumbers(srollingNumbersContext.links)}
+                                    </CircledNumbersContainer>
+                                )}
+                            </ScrollingNumbersSidebarContext>
                         </CenterHorizontally>
                     )}
                 </DrawerContext.Consumer>

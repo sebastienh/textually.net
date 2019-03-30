@@ -18,8 +18,9 @@ import StyloLogo from "../../images/logo-green.svg"
 import theme from "../styles/theme.js";
 import PageHeaderSection from "../components/PageHeaderSection"
 import StyloFourColoredScreenshots from "../components/StyloFourColoredScreenshots"
-import LocationContext from "../context/LocationContext"
 import PageSection from "../components/PageSection"
+import PageLocation from "../components/PageLocation"
+import PageScrollingNumbers from "../components/PageScrollingNumbers"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -112,12 +113,6 @@ const ContentResizer = styled(Flex)`
 
 class StyloIndex extends React.Component {
 
-  componentDidMount() {
-
-      console.log("Trying to update location context to" + "/stylo/about" );
-      this.context.updatePagePath(["/", "stylo", "about"]);
-  }
-
   render() {
 
     const { data } = this.props;
@@ -144,58 +139,63 @@ class StyloIndex extends React.Component {
     };
 
     return (
-        <React.Fragment>
-        <SEO
-          title="Home"
-          keywords={[
-            `textually`, 
-            `text editor`, 
-            `stylo`, 
-            `markdown`, 
-            `md`, 
-            `commonmark`, 
-            `css`, 
-            `html`]}
-        />  
-        <Flex p={0}
-                m={0}>
-          <ContentArea>
-            <PageHeaderSection>
-              <ContentResizer>
-                <Flex justifyContent={"center"} flexDirection={"row"}>
-                  <StyloLogo width={[
-                    "200px",
-                    "300px",
-                    "500px"]}/>
-                </Flex>
-                <Flex justifyContent={"center"} flexDirection={"row"}>
-                  <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                    Stylo
-                  </Text>
-                </Flex>
-              </ContentResizer>
-            </PageHeaderSection>  
-            <PageSection number={2}>
-              <StyloFourColoredScreenshots images={images}/>
-            </PageSection>
-            <PageSection number={3}>
-              <WhitePage>
-                <Flex>
-                  <Box width={1/10} />
-                  <Box width={8/10}>
-                    <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
-                  </Box>
-                  <Box width={1/10} />
-                </Flex>
-              </WhitePage>
-            </PageSection>
-          </ContentArea>
-        </Flex>
-      </React.Fragment>
+        <PageLocation path={["/", "stylo", "about"]}>
+          <PageScrollingNumbers links={[
+              "/stylo#four-colored-screenshots-page",
+              "/stylo#four-colored-screenshots-page",
+              "/stylo#four-colored-screenshots-page"
+            ]}>
+            <SEO
+              title="Home"
+              keywords={[
+                `textually`, 
+                `text editor`, 
+                `stylo`, 
+                `markdown`, 
+                `md`, 
+                `commonmark`, 
+                `css`, 
+                `html`]}
+            />  
+            <Flex p={0}
+                    m={0}>
+              <ContentArea>
+                <PageHeaderSection>
+                  <ContentResizer>
+                    <Flex justifyContent={"center"} flexDirection={"row"}>
+                      <StyloLogo width={[
+                        "200px",
+                        "300px",
+                        "500px"]}/>
+                    </Flex>
+                    <Flex justifyContent={"center"} flexDirection={"row"}>
+                      <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                        Stylo
+                      </Text>
+                    </Flex>
+                  </ContentResizer>
+                </PageHeaderSection>  
+                <PageSection number={2}>
+                  <StyloFourColoredScreenshots images={images}/>
+                </PageSection>
+                <PageSection number={3}>
+                  <WhitePage>
+                    <Flex>
+                      <Box width={1/10} />
+                      <Box width={8/10}>
+                        <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
+                      </Box>
+                      <Box width={1/10} />
+                    </Flex>
+                  </WhitePage>
+                </PageSection>
+              </ContentArea>
+            </Flex>
+          </PageScrollingNumbers>
+      </PageLocation>
     )
   }
 }
-StyloIndex.contextType = LocationContext; 
 export default StyloIndex
 
 export const query = graphql`
