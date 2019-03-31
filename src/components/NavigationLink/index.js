@@ -2,6 +2,39 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 import { Link } from "rebass";
 import LocationContext from "../../context/LocationContext"
+import Pointer from '../../icons/pointer';
+import { Flex, Box, Text, Container, Provider, Header } from "rebass";
+
+export const HoverLink = styled(Link)`
+
+    padding-top: 16px;
+    padding-bottom: 12px;
+    color: ${props => props.selected ? "#FFA701" : "#aaa"};
+    font-weight: ${props => props.selected ? "bold" : "regular"};
+
+    &:after {
+        
+        left: 0px;
+        position: absolute;
+        margin-top: 40px;
+        width: 0;
+        height: 1px;
+        background: #aaa8;
+        content: '';
+        transition: width 0.35s ease-in-out;
+
+        ${({ selected }) => selected && `
+            height: 1px;
+            width: 75%;
+            background: #FFA70188;
+        `}
+    }
+     
+    &:hover:after {
+        height: 1px;
+        width: 75%;
+    }
+`
 
 export default class NavigationLink extends Component {
 
@@ -52,9 +85,9 @@ export default class NavigationLink extends Component {
             <React.Fragment>
                 <LocationContext.Consumer>
                     {(context) => (
-                        <Link {...other} color={this.isSelected(context.pagePath) ? "#f00" : color}  >
+                        <HoverLink selected={this.isSelected(context.pagePath)} {...other}>
                             {children}
-                        </Link> 
+                        </HoverLink> 
                     )}
                 </LocationContext.Consumer>
             </React.Fragment>

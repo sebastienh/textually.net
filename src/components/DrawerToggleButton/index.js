@@ -7,7 +7,7 @@ export const ToggleButton = styled(Button)`
     width: 36px;
     background-color: transparent;
     border: none;
-    margin-left: 15px;
+    margin-left: 28px;
     cursor: pointer;
     display: flex;
     flex-direction: column;

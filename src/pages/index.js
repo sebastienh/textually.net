@@ -1,10 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
-import Layout from "../components/layout"
+import { Flex, Box } from '@rebass/grid'
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 import styled from "styled-components";
 import PageLocation from "../components/PageLocation"
 
@@ -19,9 +16,13 @@ export const HeadingLevel1 = styled.h1`
   font-style: italic;
 `;
 
-export const Content = styled.div`
-  font-family: "Avenir Next";
+export const MarkdownContent = styled.div`
   font-weight: 400;
+
+  h1 {
+    color: #777;
+  }
+
 `;
 
 class Index extends React.Component {
@@ -32,15 +33,22 @@ class Index extends React.Component {
     const textuallyAboutHtml =  data.textuallyAbout.edges[0].node.html
 
     return (
-      <PageLocation path={["/", "about"]}>
+      <React.Fragment>
         <SEO
           title="Home"
           keywords={[`textually`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
         />
-        <HeadingLevel1>This is all about text!</HeadingLevel1>
-        <HeaderDivider />
-        <Content dangerouslySetInnerHTML={{ __html: textuallyAboutHtml }} />
-      </PageLocation>
+        <PageLocation path={["/", "about"]}>
+
+          <Flex>
+            <Box width={1/10} />
+            <Box width={8/10}>
+              <MarkdownContent dangerouslySetInnerHTML={{ __html: textuallyAboutHtml }} />
+            </Box>
+            <Box width={1/10} />
+          </Flex>        
+        </PageLocation>
+      </React.Fragment>
     )
   }
 }

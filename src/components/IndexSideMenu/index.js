@@ -5,6 +5,8 @@ import StyloSideMenu from "../StyloSideMenu"
 import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
 import NavigationLink from "../NavigationLink"
+import Pointer from '../../icons/pointer';
+import PushLink from "../PushLink"
 
 const {
     Transition
@@ -13,28 +15,27 @@ const {
 const MainLink = styled(NavigationLink)`
 
     box-shadow: 0px 0px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin-left: 60px;
 
     &:hover {
-        box-shadow: 2px 2px 4px rgb(0,0,0,0.5);
+
         cursor: pointer;
     }
 `;
 
-const PushLink = styled(NavigationLink)`
+// const PushLink = styled(NavigationLink)`
 
-    box-shadow: 0px 0px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+//     box-shadow: 0px 0px 0px;
+//     margin-left: 60px;
+//     /* display: flex;
+//     flex-direction: row;
+//     justify-content: center; */
 
-    &:hover {
-        box-shadow: 2px 2px 4px rgb(0,0,0,0.5);
-        cursor: pointer;
-    }
-`
+//     &:hover {
+//         /* box-shadow: 2px 2px 4px rgb(0,0,0,0.5); */
+//         cursor: pointer;
+//     }
+// `
 
 export const RightPointingIcon = styled(ExpandMoreIcon)`
     margin-top: 6px;
@@ -61,6 +62,20 @@ const LinksContainer = styled(Flex)`
     justify-content: center;
 `
 
+const MenuTitleContainer = styled(Flex)`
+    left: 60px;
+    height: 60px;
+    box-shadow: 0px 1px 0px #B1000D;
+    flex-direction: row;
+    justify-content: center;
+`
+
+const SectionTitle = styled(Box)`
+    left: 60px;
+    height: 50px;
+    /* box-shadow: 0px 1px 0px #777; */
+`
+
 export default class IndexSideMenu extends Component {
 
     onStylo() {
@@ -74,34 +89,39 @@ export default class IndexSideMenu extends Component {
         return (
             <MenuContainer>
                 <LinksContainer>
+                    <SectionTitle>
+                        <Text 
+                            ml={44} 
+                            fontSize={[4]} 
+                            fontWeight={"bold"} 
+                            color={"#777"}>
+                            Textually
+                        </Text>
+                    </SectionTitle>
                     <MainLink
                         path={["/", "about"]}
                         href='/'
-                        p={2}
-                        color='black'>
+                        p={2}>
                         About
                     </MainLink>
                     <MainLink
                         path={["/", "blog"]}
                         href='blog'
-                        p={2}
-                        color='black'>
+                        p={2}>
                         Blog
                     </MainLink>
                     <PushLink
                         href='#'
                         path={["/", "stylo"]}
-                        p={2}
-                        onClick={this.onStylo.bind(this)}
-                        color='black'>
+                        menu={<StyloSideMenu />}
+                        navigationController={this.props.navigationController}
+                        p={2}>
                         Stylo
-                        <RightPointingIcon color={"#000"}/>
                     </PushLink>
                     <MainLink
                         path={["/", "contact"]}
                         href='contact'
-                        p={2}
-                        color='black'>
+                        p={2}>
                         Contact
                     </MainLink>
                 </LinksContainer>

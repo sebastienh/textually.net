@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
 import NavigationLink from "../NavigationLink"
-import LocationContext from "../../context/LocationContext"
 
 const {
     Transition
@@ -13,12 +12,13 @@ const {
 const MainLink = styled(NavigationLink)`
 
     box-shadow: 0px 0px 0px;
-    display: flex;
+    margin-left: 60px;
+    /* display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; */
 
     &:hover {
-        box-shadow: 2px 2px 4px rgb(0,0,0,0.5);
+        /* box-shadow: 2px 2px 4px rgb(0,0,0,0.5); */
         cursor: pointer;
     }
 `;
@@ -26,18 +26,19 @@ const MainLink = styled(NavigationLink)`
 const PushLink = styled(NavigationLink)`
 
     box-shadow: 0px 0px 0px;
-    display: flex;
+    margin-left: 60px;
+    /* display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; */
 
     &:hover {
-        box-shadow: 2px 2px 4px rgb(0,0,0,0.5);
+        /* box-shadow: 2px 2px 4px rgb(0,0,0,0.5); */
         cursor: pointer;
     }
 `
 
 export const LeftPointingIcon = styled(ExpandMoreIcon)`
-    margin-top: 14px;
+    margin-top: 6px;
     margin-left: 0px;
     position: absolute;
     left: 20px;
@@ -49,12 +50,13 @@ export const LeftPointingIcon = styled(ExpandMoreIcon)`
 const BackLink = styled(Link)`
 
     box-shadow: 0px 0px 0px;
-    display: flex;
+    margin-left: 60px;
+    /* display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; */
 
     &:hover {
-        box-shadow: 2px 2px 4px rgb(0,0,0,0.5);
+        /* box-shadow: 2px 2px 4px rgb(0,0,0,0.5); */
         cursor: pointer;
     }
 `
@@ -75,6 +77,20 @@ const LinksContainer = styled(Flex)`
     justify-content: center;
 `
 
+const SectionTitle = styled(Box)`
+    left: 60px;
+    height: 50px;
+    /* box-shadow: 0px 1px 0px #777; */
+`
+
+const MenuTitleContainer = styled(Flex)`
+    left: 60px;
+    height: 60px;
+    box-shadow: 0px 1px 0px #B1000D;
+    flex-direction: row;
+    justify-content: center;
+`
+
 export default class StyloSideMenu extends Component {
 
     onReleaseNotes() {
@@ -92,46 +108,51 @@ export default class StyloSideMenu extends Component {
     render() {
         return (
             <MenuContainer>
-                <LeftPointingIcon color={"#000"} />
-                <BackLink
-                    href='#'
-                    p={2}
-                    onClick={this.back.bind(this)}
-                    color='black'>
-                    Back
-                </BackLink>
+                <Flex style={{height: "60px"}} justifyContent={"center"} flexDirection={"column"}>
+                    <MenuTitleContainer>
+                        <LeftPointingIcon color={"#000"} />
+                        <BackLink
+                            href='#'
+                            p={2}
+                            onClick={this.back.bind(this)}
+                            color='black'>
+                            Back
+                        </BackLink>
+                    </MenuTitleContainer>
+                </Flex>
                 <LinksContainer>
-                    <LocationContext.Consumer>
-                        {(context) => (
-                            <MainLink
-                                path={["/", "stylo", "about"]}
-                                href='stylo'
-                                p={2}
-                                color='black'>
-                                About
-                            </MainLink>
-                        )}
-                    </LocationContext.Consumer>
+                    <SectionTitle>
+                        <Text 
+                            ml={44} 
+                            fontSize={[4]} 
+                            fontWeight={"bold"} 
+                            color={"#777"}>
+                            Stylo
+                        </Text>
+                    </SectionTitle>
+                    <MainLink
+                        path={["/", "stylo", "about"]}
+                        href='stylo'
+                        p={2}>
+                        About
+                    </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation"]}
                         href='#'
-                        p={2}
-                        color='black'>
+                        p={2}>
                         Documentation
                     </MainLink>
                     <PushLink
                         path={["/", "stylo", "release-notes"]}
                         href='stylo-release-notes'
                         p={2}
-                        onClick={this.onReleaseNotes.bind(this)}
-                        color='black'>
+                        onClick={this.onReleaseNotes.bind(this)}>
                         Release Notes
                     </PushLink>
                     <MainLink
                         path={["/", "stylo", "privacy-policy"]}
                         href='#'
-                        p={2}
-                        color='black'>
+                        p={2}>
                         Privacy Policy
                     </MainLink>
                 </LinksContainer>

@@ -20,6 +20,7 @@ import PageHeaderSection from "../components/PageHeaderSection"
 import StyloFourColoredScreenshots from "../components/StyloFourColoredScreenshots"
 import PageSection from "../components/PageSection"
 import PageLocation from "../components/PageLocation"
+import PageScrollingNumbers from "../components/PageScrollingNumbers"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -119,6 +120,11 @@ class StyloReleaseNotes extends React.Component {
 
     return (
       <PageLocation path={["/", "stylo", "release-notes"]}>
+                {/* <PageScrollingNumbers links={[
+              "/stylo#intro",
+              "/stylo#four-colored-screenshots-page",
+              "/stylo#last"
+            ]}> */}
           <Flex p={0}
                   m={0}>
               <WhitePage>
@@ -131,6 +137,7 @@ class StyloReleaseNotes extends React.Component {
                   </Flex>
               </WhitePage>
           </Flex>
+          {/* </PageScrollingNumbers> */}
       </PageLocation>
     )
   }

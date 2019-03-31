@@ -23,7 +23,7 @@ export const SideDrawerDiv = styled.div`
 
         ${({ open }) => open && `
             transform: translateX(0);
-            box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
+            box-shadow: 1px 0px 7px rgba(70,70,70,0.5);
         `}
     }
 
@@ -36,7 +36,7 @@ export const SideDrawerDiv = styled.div`
 
         ${({ open }) => open && `
             transform: translateX(0);
-            box-shadow: 1px 4px 3px rgba(0,0,0,0.5);
+            box-shadow: 1px 4px 3px rgba(70,70,70,0.5);
         `}
     }
 `;

@@ -1,1 +1,5 @@
+---
+type: page
+---
+
 # Release notes
