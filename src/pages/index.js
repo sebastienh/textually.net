@@ -4,6 +4,8 @@ import { Flex, Box } from '@rebass/grid'
 import SEO from "../components/seo"
 import styled from "styled-components";
 import PageLocation from "../components/PageLocation"
+import PageTemplate from "../components/PageTemplate"
+import MarkdownContent from "../components/MarkdownContent"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -16,21 +18,12 @@ export const HeadingLevel1 = styled.h1`
   font-style: italic;
 `;
 
-export const MarkdownContent = styled.div`
-  font-weight: 400;
-
-  h1 {
-    color: #777;
-  }
-
-`;
-
 class Index extends React.Component {
 
   render() {
 
     const { data } = this.props
-    const textuallyAboutHtml =  data.textuallyAbout.edges[0].node.html
+    const textuallyAbout =  data.textuallyAbout.edges[0].node
 
     return (
       <React.Fragment>
@@ -39,14 +32,9 @@ class Index extends React.Component {
           keywords={[`textually`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
         />
         <PageLocation path={["/", "about"]}>
-
-          <Flex>
-            <Box width={1/10} />
-            <Box width={8/10}>
-              <MarkdownContent dangerouslySetInnerHTML={{ __html: textuallyAboutHtml }} />
-            </Box>
-            <Box width={1/10} />
-          </Flex>        
+          <PageTemplate>
+              <MarkdownContent post={textuallyAbout} />
+          </PageTemplate>  
         </PageLocation>
       </React.Fragment>
     )
@@ -63,7 +51,7 @@ query {
       slug: { eq: "/textually-about/" } } }) {
     edges {
       node {
-        html
+        htmlAst
       }
     }
   }

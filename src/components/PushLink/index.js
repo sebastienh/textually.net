@@ -16,17 +16,28 @@ const StyledLink = styled(HoverLink)`
 
     box-shadow: 0px 0px 0px;
     margin-left: 60px;
+    padding-right: 2px;
 
     &:hover {
         cursor: pointer;
     }
 `
 export const RightPointingIcon = styled(ExpandMoreIcon)`
-    margin-top: 6px;
-    margin-right: 0px;
-    position: absolute;
-    right: 20px;
+    /* margin-top: 6px; */
+    /* margin-right: 0px; */
+    /* position: absolute; */
+    /* right: 20px; */
     fill: ${props => props.selected ? "#FFA701" : "#aaa"};
+`
+
+const ThreeDots = styled(Text)`
+
+    font-size: 25pt;
+    margin-top: -3px;
+    margin-left: 2px;
+    /* margin-top:4px; */
+    /* margin-left: 100px; */
+    color: ${props => props.selected ? "#FFA701" : "#aaa"};
 `
 
 export default class PushLink extends Component {
@@ -52,14 +63,20 @@ export default class PushLink extends Component {
             <React.Fragment>
                 <LocationContext.Consumer>
                     {(context) => (
-                        <StyledLink
-                            selected={this.isSelected(context.pagePath)}
-                            href='#'
-                            p={2}
-                            onClick={this.push.bind(this)}>
-                            Stylo
-                            <RightPointingIcon selected={this.isSelected(context.pagePath)}/>
-                        </StyledLink>
+                        <Flex flexDirection={"row"}>
+                            
+                            <StyledLink
+                                selected={this.isSelected(context.pagePath)}
+                                href='#'
+                                p={2}
+                                onClick={this.push.bind(this)}>
+                                Stylo
+                            </StyledLink>
+                            <ThreeDots selected={this.isSelected(context.pagePath)}>
+                                ...
+                            </ThreeDots>
+                        </Flex> 
+
                     )}
                 </LocationContext.Consumer>
             </React.Fragment>

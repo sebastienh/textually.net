@@ -21,6 +21,7 @@ import StyloFourColoredScreenshots from "../components/StyloFourColoredScreensho
 import PageSection from "../components/PageSection"
 import PageLocation from "../components/PageLocation"
 import PageScrollingNumbers from "../components/PageScrollingNumbers"
+import StyleUsingCSS from "../components/StyleUsingCSS"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -143,6 +144,7 @@ class StyloIndex extends React.Component {
           <PageScrollingNumbers links={[
               "/stylo#intro",
               "/stylo#four-colored-screenshots-page",
+              "/stylo#style-using-css",
               "/stylo#last"
             ]}>
             <SEO
@@ -178,7 +180,10 @@ class StyloIndex extends React.Component {
                 <PageSection id={"four-colored-screenshots-page"} number={2}>
                   <StyloFourColoredScreenshots images={images}/>
                 </PageSection>
-                <PageSection id={"last"} number={3}>
+                <PageSection id={"style-using-css"} number={3}>
+                    <StyleUsingCSS images={images}/>
+                </PageSection>
+                <PageSection id={"last"} number={4}>
                   <WhitePage>
                     <Flex>
                       <Box width={1/10} />
@@ -202,26 +207,29 @@ export const query = graphql`
 query {
   styloAbout: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { fields: { 
-      slug: { eq: "/stylo-about/" } } }) {
+    filter: { 
+      fields: { 
+        slug: { eq: "/stylo-about/" } 
+      } 
+    }) {
     edges {
       node {
         html
       }
     }
   }
-  bgDesktop: imageSharp(fluid: { originalName: { regex: "/colored-four-screens/" } }) {
-    resize(width: 1200, quality: 90, cropFocus: CENTER) {
+  bgDesktop: imageSharp(fixed: { originalName: { regex: "/colored-four-screens/" } }) {
+    resize(width: 1200, height: 750, quality: 100, cropFocus: CENTER) {
       src
     }
   }
-  bgTablet: imageSharp(fluid: { originalName: { regex: "/colored-four-screens/" } }) {
-    resize(width: 800, quality: 90, cropFocus: CENTER) {
+  bgTablet: imageSharp(fixed: { originalName: { regex: "/colored-four-screens/" } }) {
+    resize(width: 800, height: 500, quality: 100, cropFocus: CENTER) {
       src
     }
   }
-  bgMobile: imageSharp(fluid: { originalName: { regex: "/colored-four-screens/" } }) {
-    resize(width: 450, quality: 90, cropFocus: CENTER) {
+  bgMobile: imageSharp(fixed: { originalName: { regex: "/colored-four-screens/" } }) {
+    resize(width: 450, height: 281, quality: 100, cropFocus: CENTER) {
       src
     }
   }

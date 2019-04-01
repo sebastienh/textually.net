@@ -53,7 +53,7 @@ export default class CircledNumbersSidebar extends Component {
                 style={{marginTop:"10px"}} 
                 width={"32px"} 
                 height={"32px"} 
-                color={"#000"} 
+                color={"#777"} 
                 number={i+1}/>
             children.push(child)
         }

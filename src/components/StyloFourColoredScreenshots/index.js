@@ -32,12 +32,10 @@ export default class StyloFourColoredScreenshots extends Component {
                         Markdown the way you want
                     </Text>
                     </Flex>
-                    <Text fontSize={[ 12, 16, 20 ]} mt={20} fontFamily={"HurmeGeometricSans3-Regular"}>
+                    <Text fontSize={[ 12, 16, 20 ]} mt={20} mb={40} fontFamily={"HurmeGeometricSans3-Regular"}>
                         Theming in Stylo is a first class citizen, because it is a lot more than just colors or fonts… it’s a creative mood!
                     </Text>
-                    <Flex justifyContent={"center"} flexDirection={"row"} mt={10}>
-                        <ResponsiveImage images={images} />
-                    </Flex>
+                    <ResponsiveImage images={images} />
                 </Box>
                 <Box width={1/10} />
             </Flex>

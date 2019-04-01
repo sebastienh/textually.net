@@ -5,11 +5,12 @@ import { rhythm, scale } from "../utils/typography"
 import Footer from "../components/Footer"
 import Navigation from "../components/Navigation"
 import { Flex, Box, Text, Container, Provider, Header } from "rebass";
+import styled from "styled-components";
 import theme from "../styles/theme.js";
 import { ThemeProvider } from 'styled-components'
 import SideDrawer from "../components/SideDrawer"
 import Backdrop from "../components/Backdrop"
-import styled from "styled-components";
+
 import MediaQuery from 'react-responsive';
 import DrawerToggleButton from "../components/DrawerToggleButton"
 import "./layout.css"

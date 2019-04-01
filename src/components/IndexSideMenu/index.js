@@ -92,9 +92,9 @@ export default class IndexSideMenu extends Component {
                     <SectionTitle>
                         <Text 
                             ml={44} 
-                            fontSize={[4]} 
+                            fontSize={[5]} 
                             fontWeight={"bold"} 
-                            color={"#777"}>
+                            color={"#444"}>
                             Textually
                         </Text>
                     </SectionTitle>

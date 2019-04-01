@@ -6,6 +6,12 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import ContentArea from "../components/ContentArea"
 import PageLocation from "../components/PageLocation"
+import styled from "styled-components";
+import PageTemplate from "../components/PageTemplate"
+
+const BlogLink = styled(Link)`
+  color: black;
+`
 
 class BlogIndex extends React.Component {
 
@@ -16,15 +22,14 @@ class BlogIndex extends React.Component {
 
     return (
       <PageLocation path={["/", "blog"]}>
-        <Flex>
-          <Box width={1/10} />
-          <Box width={8/10}>
-            <ContentArea>
-            <SEO
+        <SEO
               title="All posts"
-              keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+              keywords={[`blog`, `html`, `css`, `markdown`, `md`]}
             />
-            <Bio />
+          <PageTemplate>
+            
+            <h1>Blog</h1>
+            <ContentArea>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
@@ -34,9 +39,9 @@ class BlogIndex extends React.Component {
                         marginBottom: rhythm(1 / 4),
                       }}
                     >
-                      <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                      <BlogLink style={{ boxShadow: `none` }} to={node.fields.slug}>
                         {title}
-                      </Link>
+                      </BlogLink>
                     </h3>
                     <small>{node.frontmatter.date}</small>
                     <p
@@ -48,9 +53,7 @@ class BlogIndex extends React.Component {
                 )
               })}
             </ContentArea>       
-          </Box>
-          <Box width={1/10} />
-        </Flex>
+          </PageTemplate>
       </PageLocation>
     )
   }

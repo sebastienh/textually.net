@@ -13,12 +13,8 @@ const MainLink = styled(NavigationLink)`
 
     box-shadow: 0px 0px 0px;
     margin-left: 60px;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center; */
 
     &:hover {
-        /* box-shadow: 2px 2px 4px rgb(0,0,0,0.5); */
         cursor: pointer;
     }
 `;
@@ -27,36 +23,29 @@ const PushLink = styled(NavigationLink)`
 
     box-shadow: 0px 0px 0px;
     margin-left: 60px;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center; */
 
     &:hover {
-        /* box-shadow: 2px 2px 4px rgb(0,0,0,0.5); */
         cursor: pointer;
     }
 `
 
 export const LeftPointingIcon = styled(ExpandMoreIcon)`
-    margin-top: 6px;
+    margin-top: 20px;
     margin-left: 0px;
     position: absolute;
     left: 20px;
-    /* stroke: ${(props) => { if (props.color) return props.theme.colors[props.color]; return props.theme.colors.mineShaft; }} */
     stroke: props.color;
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 `
 
 const BackLink = styled(Link)`
 
     box-shadow: 0px 0px 0px;
-    margin-left: 60px;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center; */
+    margin-left: 44px;
+    padding: 0;
+    color: #aaa;
 
     &:hover {
-        /* box-shadow: 2px 2px 4px rgb(0,0,0,0.5); */
         cursor: pointer;
     }
 `
@@ -80,15 +69,12 @@ const LinksContainer = styled(Flex)`
 const SectionTitle = styled(Box)`
     left: 60px;
     height: 50px;
-    /* box-shadow: 0px 1px 0px #777; */
 `
 
-const MenuTitleContainer = styled(Flex)`
-    left: 60px;
+const MenuTitleContainer = styled(Box)`
     height: 60px;
-    box-shadow: 0px 1px 0px #B1000D;
-    flex-direction: row;
-    justify-content: center;
+    box-shadow: 0px 1px 0px #aaa8;
+    font-weight: bold;
 `
 
 export default class StyloSideMenu extends Component {
@@ -110,21 +96,26 @@ export default class StyloSideMenu extends Component {
             <MenuContainer>
                 <Flex style={{height: "60px"}} justifyContent={"center"} flexDirection={"column"}>
                     <MenuTitleContainer>
-                        <LeftPointingIcon color={"#000"} />
-                        <BackLink
-                            href='#'
-                            p={2}
-                            onClick={this.back.bind(this)}
-                            color='black'>
-                            Back
-                        </BackLink>
+                        <LeftPointingIcon color={"#aaa"} />
+                        <Flex 
+                            justifyContent={"center"} 
+                            flexDirection={"column"}
+                            style={{height:"100%"}}>
+                            <BackLink
+                                href='#'
+                                p={2}
+                                onClick={this.back.bind(this)}
+                                color='black'>
+                                Textually
+                            </BackLink>
+                        </Flex>
                     </MenuTitleContainer>
                 </Flex>
                 <LinksContainer>
                     <SectionTitle>
                         <Text 
                             ml={44} 
-                            fontSize={[4]} 
+                            fontSize={[5]} 
                             fontWeight={"bold"} 
                             color={"#777"}>
                             Stylo
