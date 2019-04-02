@@ -1,26 +1,16 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-import SideArea from "../components/SideArea"
-import ContentArea from "../components/ContentArea"
-import Accordion from "../components/Accordion"
+import SEO from "../../components/seo"
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
-import StyledAccordion from "../components/StyledAccordion";
-import StyledAccordionItem from "../components/StyledAccordionItem";
-import Pointer from "../icons/pointer"
-import CircledNumber from "../components/CircledNumber"
-import Image from 'gatsby-image';
-import StyloLogo from "../../images/logo-green.svg"
-import theme from "../styles/theme.js";
-import PageHeaderSection from "../components/PageHeaderSection"
-import StyloFourColoredScreenshots from "../components/StyloFourColoredScreenshots"
-import PageSection from "../components/PageSection"
-import PageLocation from "../components/PageLocation"
-import PageScrollingNumbers from "../components/PageScrollingNumbers"
+import theme from "../../styles/theme.js";
+import PageHeaderSection from "../../components/PageHeaderSection"
+import PageSection from "../../components/PageSection"
+import PageLocation from "../../components/PageLocation"
+import PageScrollingNumbers from "../../components/PageScrollingNumbers"
+import MarkdownContent from "../../components/MarkdownContent"
+import PageTemplate from "../../components/PageTemplate"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -111,15 +101,15 @@ const ContentResizer = styled(Flex)`
   height: 100px;
 `
 
-class StyloReleaseNotes extends React.Component {
+class StyloPrivacyPolicy extends React.Component {
 
   render() {
 
     const { data } = this.props;
-    const styloReleaseNotes =  data.styloReleaseNotes.edges[0].node.html;
+    const styloPrivacyPolicy =  data.styloPrivacyPolicy.edges[0].node
 
     return (
-      <PageLocation path={["/", "stylo", "release-notes"]}>
+      <PageLocation path={["/", "stylo", "privacy-policy"]}>
                 {/* <PageScrollingNumbers links={[
               "/stylo#intro",
               "/stylo#four-colored-screenshots-page",
@@ -129,34 +119,24 @@ class StyloReleaseNotes extends React.Component {
               title="Release Notes"
               keywords={[`stylo`, `releases`, `notes`]}
             />
-          <Flex p={0}
-                  m={0}>
-              <WhitePage>
-                  <Flex>
-                      <Box width={1/10} />
-                      <Box width={8/10}>
-                          <Text>Text</Text>
-                      </Box>
-                      <Box width={1/10} />
-                  </Flex>
-              </WhitePage>
-          </Flex>
-          {/* </PageScrollingNumbers> */}
+            <PageTemplate>
+                <MarkdownContent post={styloPrivacyPolicy} />
+            </PageTemplate>
       </PageLocation>
     )
   }
 }
-export default StyloReleaseNotes
+export default StyloPrivacyPolicy
 
 export const query = graphql`
 query {
-  styloReleaseNotes: allMarkdownRemark(
+  styloPrivacyPolicy: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { fields: { 
-      slug: { eq: "/stylo-release-notes/" } } }) {
+      slug: { eq: "/stylo-privacy-policy/" } } }) {
     edges {
       node {
-        html
+        htmlAst
       }
     }
   }

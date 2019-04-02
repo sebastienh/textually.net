@@ -10,12 +10,10 @@ class LocationProvider extends React.Component {
   }
 
   updatePagePath = (pagePath) => {
-    console.log("Updating location page path to: " + pagePath);
     this.setState({ pagePath: pagePath, index: 1});
   }
 
   updateIndexInPage = (index) => {
-    console.log("Updating location index to: " + index);
     this.setState({ index });
   }
 

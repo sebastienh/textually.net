@@ -57,7 +57,7 @@ const MenuContainer = styled(Box)`
 
 const LinksContainer = styled(Flex)`
     width: 100%;
-    height: 100%;
+    margin-top: 160px;
     flex-direction: column;
     justify-content: center;
 `
@@ -73,6 +73,7 @@ const MenuTitleContainer = styled(Flex)`
 const SectionTitle = styled(Box)`
     left: 60px;
     height: 50px;
+    margin-bottom: 10px;
     /* box-shadow: 0px 1px 0px #777; */
 `
 
@@ -94,7 +95,7 @@ export default class IndexSideMenu extends Component {
                             ml={44} 
                             fontSize={[5]} 
                             fontWeight={"bold"} 
-                            color={"#444"}>
+                            color={"#D74E09"}>
                             Textually
                         </Text>
                     </SectionTitle>
@@ -106,7 +107,7 @@ export default class IndexSideMenu extends Component {
                     </MainLink>
                     <MainLink
                         path={["/", "blog"]}
-                        href='blog'
+                        href='/blog'
                         p={2}>
                         Blog
                     </MainLink>
@@ -116,11 +117,11 @@ export default class IndexSideMenu extends Component {
                         menu={<StyloSideMenu />}
                         navigationController={this.props.navigationController}
                         p={2}>
-                        Stylo
+                        Stylo...
                     </PushLink>
                     <MainLink
                         path={["/", "contact"]}
-                        href='contact'
+                        href='/contact'
                         p={2}>
                         Contact
                     </MainLink>

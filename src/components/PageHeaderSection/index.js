@@ -8,7 +8,7 @@ const HeaderBox = styled.div`
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: #f9f9f9;
+    background-color: #E0E0E0;
     height: ${props => props.height ?  props.height : "100%"};
     width: ${props => props.width ?  props.width : "100%"};
 `
@@ -36,8 +36,6 @@ export default class PageHeaderSection extends Component {
     }
 
     handleScrollPositionChange(e) {
-        console.log("handling scroll position change in PageHeaderSection:" + window.scrollY);
-
         const node = ReactDOM.findDOMNode(this);
         const boundingRect = node.getBoundingClientRect();
         if( boundingRect.top >= window.scrollY && window.scrollY <= boundingRect.bottom) {
@@ -46,8 +44,6 @@ export default class PageHeaderSection extends Component {
     }
 
     handleWindowResize(e) {
-        console.log("handling width:" + window.innerWidth)
-        console.log("handling height:" + window.innerHeight)
         this.setState({
             width: window.innerWidth,
             height: window.innerHeight
@@ -58,9 +54,6 @@ export default class PageHeaderSection extends Component {
 
         const { children } = this.props
         const { width, height } = this.state
-
-        console.log("changing width:" + window.innerWidth)
-        console.log("changing height:" + window.innerHeight)
 
         return (
             <HeaderBox height={height+"px"} width={width+"px"}>

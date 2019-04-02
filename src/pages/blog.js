@@ -22,7 +22,7 @@ class BlogIndex extends React.Component {
 
     return (
       <PageLocation path={["/", "blog"]}>
-        <SEO
+          <SEO
               title="All posts"
               keywords={[`blog`, `html`, `css`, `markdown`, `md`]}
             />

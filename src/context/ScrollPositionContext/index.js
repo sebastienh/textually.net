@@ -21,14 +21,12 @@ class ScrollPositionProvider extends React.Component {
   }
 
   handleScrollPositionChange(e) {
-    console.log("handling scroll position change:" + window.scrollY);
     this.setState({
       position: window.scrollY
     })
   }
 
   updatePosition = (position) => {
-    console.log("Updating scroll position to: " + position);
     this.setState({position});
   }
 

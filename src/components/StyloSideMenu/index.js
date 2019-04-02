@@ -30,7 +30,7 @@ const PushLink = styled(NavigationLink)`
 `
 
 export const LeftPointingIcon = styled(ExpandMoreIcon)`
-    margin-top: 20px;
+    margin-top: 21px;
     margin-left: 0px;
     position: absolute;
     left: 20px;
@@ -61,7 +61,7 @@ const MenuContainer = styled(Box)`
 const LinksContainer = styled(Flex)`
     position: relative;
     width: 100%;
-    height: 100%;
+    margin-top: 100px;
     flex-direction: column;
     justify-content: center;
 `
@@ -69,12 +69,13 @@ const LinksContainer = styled(Flex)`
 const SectionTitle = styled(Box)`
     left: 60px;
     height: 50px;
+    margin-bottom: 10px;
 `
 
 const MenuTitleContainer = styled(Box)`
     height: 60px;
-    box-shadow: 0px 1px 0px #aaa8;
-    font-weight: bold;
+    /* box-shadow: 0px 1px 0px #aaa8; */
+    /* font-weight: bold; */
 `
 
 export default class StyloSideMenu extends Component {
@@ -94,9 +95,9 @@ export default class StyloSideMenu extends Component {
     render() {
         return (
             <MenuContainer>
-                <Flex style={{height: "60px"}} justifyContent={"center"} flexDirection={"column"}>
+                <Flex style={{height: "60px", top: "0"}} justifyContent={"center"} flexDirection={"column"}>
                     <MenuTitleContainer>
-                        <LeftPointingIcon color={"#aaa"} />
+                        {/* <LeftPointingIcon color={"#aaa"} /> */}
                         <Flex 
                             justifyContent={"center"} 
                             flexDirection={"column"}
@@ -106,18 +107,21 @@ export default class StyloSideMenu extends Component {
                                 p={2}
                                 onClick={this.back.bind(this)}
                                 color='black'>
-                                Textually
+                                ...Textually
                             </BackLink>
                         </Flex>
                     </MenuTitleContainer>
                 </Flex>
                 <LinksContainer>
+
+                    <Box height={"auto"} />
                     <SectionTitle>
                         <Text 
                             ml={44} 
+                            mb={10}
                             fontSize={[5]} 
                             fontWeight={"bold"} 
-                            color={"#777"}>
+                            color={"#D74E09"}>
                             Stylo
                         </Text>
                     </SectionTitle>
@@ -142,7 +146,7 @@ export default class StyloSideMenu extends Component {
                     </PushLink>
                     <MainLink
                         path={["/", "stylo", "privacy-policy"]}
-                        href='#'
+                        href='/stylo/privacy-policy'
                         p={2}>
                         Privacy Policy
                     </MainLink>

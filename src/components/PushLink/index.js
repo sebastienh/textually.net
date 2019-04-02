@@ -34,7 +34,7 @@ const ThreeDots = styled(Text)`
 
     font-size: 25pt;
     margin-top: -3px;
-    margin-left: 2px;
+    margin-left: 0px;
     /* margin-top:4px; */
     /* margin-left: 100px; */
     color: ${props => props.selected ? "#FFA701" : "#aaa"};
@@ -70,11 +70,11 @@ export default class PushLink extends Component {
                                 href='#'
                                 p={2}
                                 onClick={this.push.bind(this)}>
-                                Stylo
+                                Stylo...
                             </StyledLink>
-                            <ThreeDots selected={this.isSelected(context.pagePath)}>
-                                ...
-                            </ThreeDots>
+                            {/* <ThreeDots selected={this.isSelected(context.pagePath)}> */}
+                                {/* ... */}
+                            {/* </ThreeDots> */}
                         </Flex> 
 
                     )}

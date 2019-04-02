@@ -1,3 +1,3 @@
-<markdown-header-1>Contact Us</markdown-header-1>
+# Contact Us
 
-<paragraph>We will be happy to help.</paragraph>
+We will be happy to help.

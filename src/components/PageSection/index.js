@@ -32,8 +32,6 @@ export default class PageSection extends Component {
     }
 
     handleScrollPositionChange(e) {
-        console.log("handling scroll position change in PageSection:" + window.scrollY);
-
         const node = ReactDOM.findDOMNode(this);
         const boundingRect = node.getBoundingClientRect();
         if( boundingRect.top <= window.scrollY && window.scrollY <= boundingRect.bottom) {

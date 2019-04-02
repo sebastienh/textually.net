@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MediaQuery from 'react-responsive';
+import Img from 'gatsby-image/withIEPolyfill'
 
 export default class ResponsiveImage extends Component {
   render() {
@@ -13,13 +14,13 @@ export default class ResponsiveImage extends Component {
     return (
         <React.Fragment>
             <MediaQuery query="(min-width: 1200px)">
-                <img src={desktop} alt="desktop"/>
+                <Img fixed={desktop} alt="desktop"/>
             </MediaQuery>
             <MediaQuery query="(min-width: 800px) and (max-width: 1200px)">
-                <img src={tablet} alt="tablet"/>
+                <Img fixed={tablet} alt="tablet"/>
             </MediaQuery>
             <MediaQuery query="(max-width: 450px)">
-                <img src={mobile} alt="mobile"/>
+                <Img fixed={mobile} alt="mobile"/>
             </MediaQuery>
         </React.Fragment>
     )

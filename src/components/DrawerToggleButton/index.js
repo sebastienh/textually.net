@@ -24,7 +24,7 @@ export const ToggleButton = styled(Button)`
 export const ToggleButtonLine = styled.div`
     width: 40px;
     height: 3px;
-    background-color: #777;
+    background-color: #000;
     z-index: 100;
 `;
 

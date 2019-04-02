@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import { Provider, Container, Toolbar, Heading, Fixed } from "rebass";
 import theme from "../styles/theme.js";
 import globalStyles from "../styles/globalStyles";
+import icon32 from "../../images/png/textually-logo-32.png"
 
 globalStyles();
 
@@ -32,6 +33,9 @@ const TemplateWrapper = ({ children }) => (
         meta={[
           { name: "description", content: "" },
           { name: "keywords", content: "react, redux, graphQl, javascript" }
+        ]}
+        link={[
+          { rel: 'shortcut icon', type: 'image/png', href: `${icon32}` }
         ]}
       />
       <Header />

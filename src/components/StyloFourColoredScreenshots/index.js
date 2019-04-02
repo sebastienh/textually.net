@@ -4,6 +4,10 @@ import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import { graphql } from "gatsby";
 import ResponsiveImage from "../ResponsiveImage"
+import FourScreenshots from "../../images/svg/colored-four-screens.svg"
+import Img from 'gatsby-image'
+
+console.log("FourScreenshots path" + FourScreenshots);
 
 const WhitePage = styled.section`
   background-color: #fff;
@@ -25,8 +29,8 @@ export default class StyloFourColoredScreenshots extends Component {
 
         <WhitePage>
             <Flex>
-                <Box width={1/10} />
-                <Box width={8/10}>
+                <Box width={[1/6, 1/10]} />
+                <Box width={[4/6, 8/10]}>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={30}>
                     <Text fontSize={[ 20, 35, 50 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
                         Markdown the way you want
@@ -35,9 +39,11 @@ export default class StyloFourColoredScreenshots extends Component {
                     <Text fontSize={[ 12, 16, 20 ]} mt={20} mb={40} fontFamily={"HurmeGeometricSans3-Regular"}>
                         Theming in Stylo is a first class citizen, because it is a lot more than just colors or fonts… it’s a creative mood!
                     </Text>
-                    <ResponsiveImage images={images} />
+                    <Flex justifyContent={"center"} flexDirection={"row"} mt={50}>
+                    <FourScreenshots width={["800px"]} height={["500px"]} />
+                    </Flex>
                 </Box>
-                <Box width={1/10} />
+                <Box width={[1/6, 1/10]} />
             </Flex>
         </WhitePage>
     )

@@ -14,7 +14,7 @@ import StyledAccordionItem from "../components/StyledAccordionItem";
 import Pointer from "../icons/pointer"
 import CircledNumber from "../components/CircledNumber"
 import Image from 'gatsby-image';
-import StyloLogo from "../../images/logo-green.svg"
+import StyloLogo from "../images/svg/logo-green.svg"
 import theme from "../styles/theme.js";
 import PageHeaderSection from "../components/PageHeaderSection"
 import StyloFourColoredScreenshots from "../components/StyloFourColoredScreenshots"
@@ -122,13 +122,13 @@ class StyloIndex extends React.Component {
     const {
         data: {
             bgDesktop: {
-              resize: { src: desktop }
+              childImageSharp: { fixed: desktop }
             },
             bgTablet: {
-              resize: { src: tablet }
+              childImageSharp: { fixed: tablet }
             },
             bgMobile: {
-              resize: { src: mobile }
+              childImageSharp: { fixed: mobile }
             }
         }
     } = this.props;
@@ -148,7 +148,7 @@ class StyloIndex extends React.Component {
               "/stylo#last"
             ]}>
             <SEO
-              title="Home"
+              title="Stylo App"
               keywords={[
                 `textually`, 
                 `text editor`, 
@@ -218,19 +218,28 @@ query {
       }
     }
   }
-  bgDesktop: imageSharp(fixed: { originalName: { regex: "/colored-four-screens/" } }) {
-    resize(width: 1200, height: 750, quality: 100, cropFocus: CENTER) {
-      src
+
+  bgDesktop: file(relativePath: { eq: "colored-four-screens.png" }) {
+    childImageSharp {
+      fixed(width: 1200, height: 750) {
+        ...GatsbyImageSharpFixed
+      }
     }
   }
-  bgTablet: imageSharp(fixed: { originalName: { regex: "/colored-four-screens/" } }) {
-    resize(width: 800, height: 500, quality: 100, cropFocus: CENTER) {
-      src
+
+  bgTablet: file(relativePath: { eq: "colored-four-screens.png" }) {
+    childImageSharp {
+      fixed(width: 800, height: 500) {
+        ...GatsbyImageSharpFixed
+      }
     }
   }
-  bgMobile: imageSharp(fixed: { originalName: { regex: "/colored-four-screens/" } }) {
-    resize(width: 450, height: 281, quality: 100, cropFocus: CENTER) {
-      src
+
+  bgMobile: file(relativePath: { eq: "colored-four-screens.png" }) {
+    childImageSharp {
+      fixed(width: 450, height: 281) {
+        ...GatsbyImageSharpFixed
+      }
     }
   }
 }

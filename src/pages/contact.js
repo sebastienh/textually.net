@@ -16,6 +16,10 @@ export default class Contact extends Component {
 
     return (
       <PageLocation path={["/", "contact"]}>
+            <SEO
+              title="Contact Us"
+              keywords={[`contact`, `textually`, `email`]}
+            />
           <PageTemplate>
             {/* <MarkdownContent post={textuallyContact} /> */}
               <Flex mt={40} flexDirection={"row"} justifyContent={"center"}>
