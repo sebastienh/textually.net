@@ -242,165 +242,165 @@ class StyloDocumentation extends React.Component {
             <PageTemplate>
                 <Flex flexDirection={"column"}>
                     <TitledSection number={1}>
-                        <PageSection id={"introduction"}>
+                        <Box id={"introduction"}>
                             <MarkdownContent post={introduction} />
-                        </PageSection>  
-                        <PageSection id={"essentials"}>
+                        </Box>  
+                        <Box id={"essentials"}>
                             <MarkdownContent post={essentials} />
-                        </PageSection>  
-                        <PageSection id={"new-document"} number={2}>
+                        </Box>  
+                        <Box id={"new-document"} number={2}>
                             <MarkdownContent post={newDocument}/>
-                        </PageSection>
-                        <PageSection id={"save-document"} number={3}>
+                        </Box>
+                        <Box id={"save-document"} number={3}>
                             <MarkdownContent post={saveDocument}/>
-                        </PageSection>
-                        <PageSection id={"open-document"} number={4}>
+                        </Box>
+                        <Box id={"open-document"} number={4}>
                             <MarkdownContent post={openDocument}/>
-                        </PageSection>
-                        <PageSection id={"save-as"} number={5}>
+                        </Box>
+                        <Box id={"save-as"} number={5}>
                             <MarkdownContent post={saveAs}/>
-                        </PageSection>
-                        <PageSection id={"rename-document"} number={6}>
+                        </Box>
+                        <Box id={"rename-document"} number={6}>
                             <MarkdownContent post={renameDocument}/>
-                        </PageSection>
-                        <PageSection id={"export-document"} number={7}>
+                        </Box>
+                        <Box id={"export-document"} number={7}>
                             <MarkdownContent post={exportDocument}/>
-                        </PageSection>
-                        <PageSection id={"print-document"} number={8}>
+                        </Box>
+                        <Box id={"print-document"} number={8}>
                             <MarkdownContent post={printDocument}/>
-                        </PageSection>
+                        </Box>
                     </TitledSection>
                     <TitledSection number={2}>
-                        <PageSection id={"markdown-editor"} number={11}>
+                        <Box id={"markdown-editor"} number={11}>
                             <MarkdownContent post={markdownEditor}/>
-                        </PageSection>
-                        <PageSection id={"html-preview"} number={12}>
+                        </Box>
+                        <Box id={"html-preview"} number={12}>
                             <MarkdownContent post={htmlPreview}/>
-                        </PageSection>
-                        <PageSection id={"reveal-hide-html-preview"} number={13}>
+                        </Box>
+                        <Box id={"reveal-hide-html-preview"} number={13}>
                             <MarkdownContent post={revealHideHtmlPreview}/>
-                        </PageSection>
+                        </Box>
                     </TitledSection>
                     <TitledSection number={3}>
-                        <PageSection id={"text-statistics"} number={14}>
+                        <Box id={"text-statistics"} number={14}>
                             <MarkdownContent post={textStatistics}/>
-                        </PageSection>
-                        <PageSection id={"total-text-statistics"} number={15}>
+                        </Box>
+                        <Box id={"total-text-statistics"} number={15}>
                             <MarkdownContent post={totalTextStatistics}/>
-                        </PageSection>
-                        <PageSection id={"session"} number={16}>
+                        </Box>
+                        <Box id={"session"} number={16}>
                             <MarkdownContent post={session}/>
-                        </PageSection>
-                        <PageSection id={"start-restart-a-session"} number={17}>
+                        </Box>
+                        <Box id={"start-restart-a-session"} number={17}>
                             <MarkdownContent post={startRestartASession}/>
-                        </PageSection>
-                        <PageSection id={"show-hide-a-session"} number={18}>
+                        </Box>
+                        <Box id={"show-hide-a-session"} number={18}>
                             <MarkdownContent post={showHideASession}/>
-                        </PageSection>
-                        <PageSection id={"enable-disable-session-tools"} number={19}>
+                        </Box>
+                        <Box id={"enable-disable-session-tools"} number={19}>
                             <MarkdownContent post={enableDisableSessionTools}/>
-                        </PageSection>
+                        </Box>
                     </TitledSection>
                     <TitledSection number={4}>
-                        <PageSection id={"sidebar"} number={20}>
+                        <Box id={"sidebar"} number={20}>
                             <MarkdownContent post={sidebar}/>
-                        </PageSection>
-                        <PageSection id={"reveal-hide-sidebar"} number={21}>
+                        </Box>
+                        <Box id={"reveal-hide-sidebar"} number={21}>
                             <MarkdownContent post={revealHideSidebar}/>
-                        </PageSection>
-                        <PageSection id={"tools"} number={22}>
+                        </Box>
+                        <Box id={"tools"} number={22}>
                             <MarkdownContent post={tools}/>
-                        </PageSection>
-                        <PageSection id={"show-hide-tools"} number={23}>
+                        </Box>
+                        <Box id={"show-hide-tools"} number={23}>
                             <MarkdownContent post={showHideTools}/>
-                        </PageSection>
-                        <PageSection id={"style-picker"} number={24}>
+                        </Box>
+                        <Box id={"style-picker"} number={24}>
                             <MarkdownContent post={stylePicker}/>
-                        </PageSection>
-                        <PageSection id={"show-hide-style-picker"} number={25}>
+                        </Box>
+                        <Box id={"show-hide-style-picker"} number={25}>
                             <MarkdownContent post={showHideStylePicker}/>
-                        </PageSection>
+                        </Box>
                     </TitledSection>
                     <TitledSection number={5}>
-                        <PageSection id={"styles-list"} number={26}>
+                        <Box id={"styles-list"} number={26}>
                             <MarkdownContent post={stylesList}/>
-                        </PageSection>
-                        <PageSection id={"show-hide-styles-list"} number={27}>
+                        </Box>
+                        <Box id={"show-hide-styles-list"} number={27}>
                             <MarkdownContent post={showHideStylesList}/>
-                        </PageSection>
-                        <PageSection id={"select-a-style"} number={28}>
+                        </Box>
+                        <Box id={"select-a-style"} number={28}>
                             <MarkdownContent post={selectAStyle}/>
-                        </PageSection>
+                        </Box>
                     </TitledSection>
                     <TitledSection number={6}>
-                        <PageSection id={"edit-a-style"} number={29}>
+                        <Box id={"edit-a-style"} number={29}>
                             <MarkdownContent post={editAStyle}/>
-                        </PageSection>
-                        <PageSection id={"copy-selector"} number={30}>
+                        </Box>
+                        <Box id={"copy-selector"} number={30}>
                             <MarkdownContent post={copySelector}/>
-                        </PageSection>
-                        <PageSection id={"add-a-style"} number={31}>
+                        </Box>
+                        <Box id={"add-a-style"} number={31}>
                             <MarkdownContent post={addAStyle}/>
-                        </PageSection>
-                        <PageSection id={"rename-a-style"} number={32}>
+                        </Box>
+                        <Box id={"rename-a-style"} number={32}>
                             <MarkdownContent post={renameAStyle}/>
-                        </PageSection>
-                        <PageSection id={"style-editor"} number={33}>
+                        </Box>
+                        <Box id={"style-editor"} number={33}>
                             <MarkdownContent post={styleEditor}/>
-                        </PageSection>                    
-                        <PageSection id={"show-hide-issues-panel"} number={34}>
+                        </Box>                    
+                        <Box id={"show-hide-issues-panel"} number={34}>
                             <MarkdownContent post={showHideIssuesPanel}/>
-                        </PageSection>
-                        <PageSection id={"reveal-single-all-issues"} number={35}>
+                        </Box>
+                        <Box id={"reveal-single-all-issues"} number={35}>
                             <MarkdownContent post={revealSingleAllIssues}/>
-                        </PageSection>
-                        <PageSection id={"apply-pending-style-changes"} number={36}>
+                        </Box>
+                        <Box id={"apply-pending-style-changes"} number={36}>
                             <MarkdownContent post={applyPendingStyleChanges}/>
-                        </PageSection>
+                        </Box>
                     </TitledSection>
                     <TitledSection number={7}>
-                        <PageSection id={"markdown-formatting"} number={37}>
+                        <Box id={"markdown-formatting"} number={37}>
                             <MarkdownContent post={markdownFormatting}/>
-                        </PageSection>
-                        <PageSection id={"header-level-1"} number={38}>
+                        </Box>
+                        <Box id={"header-level-1"} number={38}>
                             <MarkdownContent post={headerLevel1}/>
-                        </PageSection>
-                        <PageSection id={"header-level-2"} number={39}>
+                        </Box>
+                        <Box id={"header-level-2"} number={39}>
                             <MarkdownContent post={headerLevel2}/>
-                        </PageSection>
-                        <PageSection id={"header-level-3"} number={40}>
+                        </Box>
+                        <Box id={"header-level-3"} number={40}>
                             <MarkdownContent post={headerLevel3}/>
-                        </PageSection>
-                        <PageSection id={"header-level-4"} number={41}>
+                        </Box>
+                        <Box id={"header-level-4"} number={41}>
                             <MarkdownContent post={headerLevel4}/>
-                        </PageSection>
-                        <PageSection id={"header-level-5"} number={42}>
+                        </Box>
+                        <Box id={"header-level-5"} number={42}>
                             <MarkdownContent post={headerLevel5}/>
-                        </PageSection>
-                        <PageSection id={"header-level-6"} number={43}>
+                        </Box>
+                        <Box id={"header-level-6"} number={43}>
                             <MarkdownContent post={headerLevel6}/>
-                        </PageSection>
-                        <PageSection id={"blockquote"} number={44}>
+                        </Box>
+                        <Box id={"blockquote"} number={44}>
                             <MarkdownContent post={blockquote}/>
-                        </PageSection>
-                        <PageSection id={"unordered-list"} number={45}>
+                        </Box>
+                        <Box id={"unordered-list"} number={45}>
                             <MarkdownContent post={unorderedList}/>
-                        </PageSection>
-                        <PageSection id={"ordered-list"} number={46}>
+                        </Box>
+                        <Box id={"ordered-list"} number={46}>
                             <MarkdownContent post={orderedList}/>
-                        </PageSection>
-                        <PageSection id={"bold"} number={47}>
+                        </Box>
+                        <Box id={"bold"} number={47}>
                             <MarkdownContent post={bold}/>
-                        </PageSection>
-                        <PageSection id={"italic"} number={48}>
+                        </Box>
+                        <Box id={"italic"} number={48}>
                             <MarkdownContent post={italic}/>
-                        </PageSection>
-                        <PageSection id={"strikethrough"} number={49}>
+                        </Box>
+                        <Box id={"strikethrough"} number={49}>
                             <MarkdownContent post={strikethrough}/>
-                        </PageSection>
-                        <PageSection id={"link"} number={50}>
+                        </Box>
+                        <Box id={"link"} number={50}>
                             <MarkdownContent post={link}/>
-                        </PageSection>
+                        </Box>
                     </TitledSection>
                 </Flex>
             </PageTemplate>

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom"
 import { Box } from '@rebass/grid'
 import styled from "styled-components";
 import LocationContext from    "../../context/LocationContext"
+import VisibilitySensor from 'react-visibility-sensor'
 
 const HeaderBox = styled.div`
     margin: 0;
@@ -20,33 +21,35 @@ export default class PageSection extends Component {
         this.state = {
             number: props.number
         }
-        this.handleScrollPositionChange = this.handleScrollPositionChange.bind(this);
+        this.onChange = this.onChange.bind(this);
     }
 
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScrollPositionChange);
-    }
+    onChange(isVisible) {
 
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScrollPositionChange);
-    }
-
-    handleScrollPositionChange(e) {
-        const node = ReactDOM.findDOMNode(this);
-        const boundingRect = node.getBoundingClientRect();
-        if( boundingRect.top <= window.scrollY && window.scrollY <= boundingRect.bottom) {
+        if(isVisible) {
             this.context.updateIndexInPage(this.state.number);
         }
     }
 
     render() {
 
-        const { children, id } = this.props
+        const { children, id, partialVisibility, minTopValue } = this.props
+
+        let partial = (partialVisibility !== null && partialVisibility) ? partialVisibility: false;
+        let min = (minTopValue !== null) ? minTopValue : 0;
 
         return (
-            <div id={id}>
-                {children}
-            </div>
+            <VisibilitySensor 
+                key={id} 
+                onChange={this.onChange} 
+                scrollThrottle={200} 
+                scrollCheck 
+                partialVisibility={partial}
+                minTopValue={min}>
+                <div id={id}>
+                    {children}
+                </div>
+            </VisibilitySensor>
         )
     }
 }

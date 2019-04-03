@@ -144,7 +144,6 @@ class StyloIndex extends React.Component {
           <PageScrollingNumbers links={[
               "/stylo#intro",
               "/stylo#four-colored-screenshots-page",
-              "/stylo#style-using-css",
               "/stylo#last"
             ]}>
             <SEO
@@ -180,19 +179,19 @@ class StyloIndex extends React.Component {
                 <PageSection id={"four-colored-screenshots-page"} number={2}>
                   <StyloFourColoredScreenshots images={images}/>
                 </PageSection>
-                <PageSection id={"style-using-css"} number={3}>
+                {/* <PageSection id={"style-using-css"} number={3}> 
                     <StyleUsingCSS images={images}/>
-                </PageSection>
-                <PageSection id={"last"} number={4}>
-                  <WhitePage>
-                    <Flex>
-                      <Box width={1/10} />
-                      <Box width={8/10}>
+                </PageSection> */}
+                <PageSection id={"last"} number={3} partialVisibility={true} minTopValue={500}>
+                  {/* <WhitePage> */}
+                    {/* <Flex> */}
+                      {/* <Box width={1/10} /> */}
+                      {/* <Box width={8/10}> */}
                         <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
-                      </Box>
-                      <Box width={1/10} />
-                    </Flex>
-                  </WhitePage>
+                      {/* </Box> */}
+                      {/* <Box width={1/10} /> */}
+                    {/* </Flex> */}
+                  {/* </WhitePage> */}
                 </PageSection>
               </ContentArea>
             </Flex>
