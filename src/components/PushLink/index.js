@@ -67,7 +67,7 @@ export default class PushLink extends Component {
                             
                             <StyledLink
                                 selected={this.isSelected(context.pagePath)}
-                                href='#'
+                                href={this.props.href}
                                 p={2}
                                 onClick={this.push.bind(this)}>
                                 Stylo...

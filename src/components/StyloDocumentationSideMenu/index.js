@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
 import NavigationLink from "../NavigationLink"
-import StyloDocumentationSideMenu from "../StyloDocumentationSideMenu"
 
 const {
     Transition
@@ -76,29 +75,29 @@ const SectionTitle = styled(Box)`
 const MenuTitleContainer = styled(Flex)`
     height: 60px;
     flex-direction: "row";
-
     /* box-shadow: 0px 1px 0px #aaa8; */
     /* font-weight: bold; */
 `
 
-export default class StyloSideMenu extends Component {
+export default class StyloDocumentationSideMenu extends Component {
 
-    onDocumentation() {
-        this.props.navigationController.pushView(
-            <StyloDocumentationSideMenu />
-        );
+    onReleaseNotes() {
+        // this.props.navigationController.pushView(
+        //     <div>Welcome Stylo!</div>
+        // );
     }
 
     back() {
         this.props.navigationController.popView({
             transition: Transition.type.PUSH_RIGHT
-          })
+        })
     }
 
     render() {
         return (
             <MenuContainer>
                 <Flex style={{height: "60px", top: "0"}} justifyContent={"center"} flexDirection={"column"}>
+
                     <MenuTitleContainer>
                         <Text fontSize={[3]} mt={"13px"} ml={"31px"} color={"#aaa"}>...</Text>
                         <Flex 
@@ -111,7 +110,7 @@ export default class StyloSideMenu extends Component {
                                 fontSize={[3]}
                                 onClick={this.back.bind(this)}
                                 color='black'>
-                                Textually
+                                Stylo
                             </BackLink>
                         </Flex>
                     </MenuTitleContainer>
@@ -123,36 +122,35 @@ export default class StyloSideMenu extends Component {
                         <Text 
                             ml={44} 
                             mb={10}
-                            fontSize={[5]} 
+                            fontSize={[4]} 
                             fontWeight={"bold"} 
                             color={"#D74E09"}>
-                            Stylo
+                            Documentation
                         </Text>
                     </SectionTitle>
                     <MainLink
-                        path={["/", "stylo", "about"]}
-                        href='/stylo'
+                        path={["/", "stylo", "documentation", "stylo"]}
+                        href='/stylo/documentation/stylo'
                         p={2}>
-                        About
-                    </MainLink>
-                    <PushLink
-                        path={["/", "stylo", "documentation"]}
-                        href='#'
-                        p={2}
-                        onClick={this.onDocumentation.bind(this)}>
-                        Documentation...
-                    </PushLink>
-                    <MainLink
-                        path={["/", "stylo", "release-notes"]}
-                        href='#'
-                        p={2}>
-                        Release Notes
+                        Essentials
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "privacy-policy"]}
-                        href='/stylo/privacy-policy'
+                        path={["/", "stylo", "documentation", "html"]}
+                        href='/stylo/documentation/html'
                         p={2}>
-                        Privacy Policy
+                        HTML
+                    </MainLink>
+                    <MainLink
+                        path={["/", "stylo", "documentation", "css"]}
+                        href='/stylo/documentation/css'
+                        p={2}>
+                        CSS
+                    </MainLink>
+                    <MainLink
+                        path={["/", "stylo", "documentation", "markdown"]}
+                        href='/stylo/documentation/markdown'
+                        p={2}>
+                        Markdown
                     </MainLink>
                 </LinksContainer>
             </MenuContainer>

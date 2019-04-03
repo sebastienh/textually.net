@@ -38,72 +38,27 @@ function MarkdownHeader3(props) {
     )
 }
 
+
 function MarkdownParagraph(props) {
     return (
-        <Text mt={0} mb={16}>{props.children}</Text>
+        <Flex justifyContent={"center"} flexDirection={"row"}>
+            <Text>{props.children}</Text>
+        </Flex>
     )
 }
 
 const TextuallyLink = styled(Link)`
     color: gray;
-    box-shadow: 0 0 0;
 `
 
 function MarkdownLink(props) {
 
     return (
         <TextuallyLink to={props.href}>
-            {props.children}
+            <Text>{props.children}</Text>
         </TextuallyLink>
     )
 }
-
-const MarkdownUnorderedList = styled.ul`
-    padding-left: 2em;
-    margin-top: 0;
-    margin-bottom: 16px;
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-`
-
-const Code = styled.code`
-
-    margin: 0;
-    font-size: 85%;
-    background-color: rgba(27,31,35,0.05);
-    border-radius: 3px;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    tab-size: 4;
-`
-
-const MarkdownListItem = styled.li`
-    display: list-item;
-    text-align: -webkit-match-parent;
-    list-style-type: disc;
-    margin-bottom: 0px;
-`
-
-const Pre = styled.pre`
-    padding: 16px;
-    overflow: auto;
-    font-size: 85%;
-    background-color: #F2F2F2;
-    border-radius: 3px;
-    word-wrap: normal;
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    line-height: normal;
-
-    code {
-        background-color: inherit;
-    }
-`
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -112,15 +67,11 @@ const renderAst = new rehypeReact({
         "h2": MarkdownHeader2,
         "h3": MarkdownHeader3,
         "p": MarkdownParagraph,
-        "a": MarkdownLink,
-        "ul": MarkdownUnorderedList,
-        "li": MarkdownListItem,
-        "code": Code,
-        "pre": Pre
+        "a": MarkdownLink
     }
 }).Compiler
 
-export default class MarkdownContent extends Component {
+export default class MarkdownDocumentationSection extends Component {
   render() {
 
     const {

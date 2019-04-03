@@ -16,7 +16,7 @@ import DrawerToggleButton from "../components/DrawerToggleButton"
 import "./layout.css"
 import DrawerContext from "../context/DrawerContext"
 import CircledNumbersSidebar from "../components/CircledNumbersSidebar"
-import ScrollingNumbersSidebarContext from "../context/ScrollingNumbersSidebarContext"
+import TitledSidebarLinks from "../components/TitledSidebarLinks"
 
 const Content = styled(Box)`
 
@@ -146,6 +146,7 @@ class Layout extends React.Component {
                         style={{zIndex:"1000"}}
                         alignSelf={"right"}>
                           <CircledNumbersSidebar />
+                          <TitledSidebarLinks />
                         </Box>
                       </Flex>
                     </MediaQuery>
@@ -176,6 +177,7 @@ class Layout extends React.Component {
                         style={{zIndex:"1000"}}
                         alignSelf={"right"}>
                           <CircledNumbersSidebar /> 
+                          <TitledSidebarLinks />
                         </Box>
                       </Flex>
                     </MediaQuery>
