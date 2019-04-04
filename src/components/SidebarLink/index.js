@@ -9,6 +9,7 @@ const PlainLink = styled(Link)`
     text-decoration: none;
     z-index: 1000;
     color: ${props => props.selected ? "#FFA701" : "#aaa"};
+    font-weight: 600;
 `
 
 const CenterHorizontally = styled(Flex)`

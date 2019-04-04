@@ -22,6 +22,7 @@ import PageSection from "../components/PageSection"
 import PageLocation from "../components/PageLocation"
 import PageScrollingNumbers from "../components/PageScrollingNumbers"
 import StyleUsingCSS from "../components/StyleUsingCSS"
+import VisibilitySensor from 'react-visibility-sensor'
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -161,8 +162,10 @@ class StyloIndex extends React.Component {
             <Flex p={0}
                     m={0}>
               <ContentArea>
-                <PageHeaderSection id={"intro"}>
+              <PageSection id={"intro"} number={1}>
+                <PageHeaderSection>
                   <ContentResizer>
+                  
                     <Flex justifyContent={"center"} flexDirection={"row"}>
                       <StyloLogo width={[
                         "200px",
@@ -174,24 +177,33 @@ class StyloIndex extends React.Component {
                         Stylo
                       </Text>
                     </Flex>
+                    
                   </ContentResizer>
                 </PageHeaderSection>  
+                </PageSection>
                 <PageSection id={"four-colored-screenshots-page"} number={2}>
-                  <StyloFourColoredScreenshots images={images}/>
+                        <VisibilitySensor partialVisibility scrollCheck>
+                          {({ isVisible }) => (
+                            <React.Fragment>
+                              <p>Is visible: {isVisible}</p>
+                              <StyloFourColoredScreenshots images={images}/>
+                            </React.Fragment>
+                          )}
+                        </VisibilitySensor>
                 </PageSection>
                 {/* <PageSection id={"style-using-css"} number={3}> 
                     <StyleUsingCSS images={images}/>
                 </PageSection> */}
-                <PageSection id={"last"} number={3} partialVisibility={true} minTopValue={500}>
-                  {/* <WhitePage> */}
-                    {/* <Flex> */}
-                      {/* <Box width={1/10} /> */}
-                      {/* <Box width={8/10}> */}
+                <PageSection id={"last"} number={3}>
+                  <WhitePage>
+                    <Flex>
+                      <Box width={1/10} />
+                      <Box width={8/10}>
                         <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
-                      {/* </Box> */}
-                      {/* <Box width={1/10} /> */}
-                    {/* </Flex> */}
-                  {/* </WhitePage> */}
+                      </Box>
+                      <Box width={1/10} />
+                    </Flex>
+                  </WhitePage>
                 </PageSection>
               </ContentArea>
             </Flex>

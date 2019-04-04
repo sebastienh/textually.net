@@ -3,7 +3,7 @@ import ReactDOM from "react-dom"
 import { Box } from '@rebass/grid'
 import styled from "styled-components";
 import LocationContext from    "../../context/LocationContext"
-import VisibilitySensor from 'react-visibility-sensor'
+import handleViewport from 'react-in-viewport';
 
 const HeaderBox = styled.div`
     margin: 0;
@@ -12,47 +12,56 @@ const HeaderBox = styled.div`
     background-color: #f9f9f9;
     height: ${props => props.height ?  props.height : "100%"};
     width: ${props => props.width ?  props.width : "100%"};
-`
+`   
 
-export default class PageSection extends Component {
+class PageSectionInsideBlock extends Component {
+
+    render() {
+
+        return (
+            <React.Fragment>
+                {this.props.children}
+            </React.Fragment>
+        )
+    }
+}
+
+const TrackerPageSection = handleViewport(PageSectionInsideBlock, { rootMargin: '-1.0px' });
+
+class PageSection extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             number: props.number
         }
-        this.onChange = this.onChange.bind(this);
+        this.onEnterViewport = this.onEnterViewport.bind(this);
+        this.onLeaveViewport = this.onLeaveViewport.bind(this);
     }
 
-    onChange(isVisible) {
+    onEnterViewport() {
+        this.context.enteringIndex(this.state.number);
+    }
 
-        if(isVisible) {
-            this.context.updateIndexInPage(this.state.number);
-        }
+    onLeaveViewport() {
+        this.context.leavingIndex(this.state.number);
     }
 
     render() {
 
-        const { children, id, partialVisibility, minTopValue } = this.props
-
-        let partial = (partialVisibility !== null && partialVisibility) ? partialVisibility: false;
-        let min = (minTopValue !== null) ? minTopValue : 0;
+        const { children, id, partialVisibility, minTopValue, ...other } = this.props
 
         return (
-            <VisibilitySensor 
-                key={id} 
-                onChange={this.onChange} 
-                scrollThrottle={200} 
-                scrollCheck 
-                partialVisibility={partial}
-                minTopValue={min}>
-                <div id={id}>
+
+            <TrackerPageSection onEnterViewport={this.onEnterViewport} onLeaveViewport={this.onLeaveViewport}>
+                <Box {...other} id={id}>
                     {children}
-                </div>
-            </VisibilitySensor>
+                </Box>
+            </TrackerPageSection>
         )
     }
 }
 
 PageSection.contextType = LocationContext; 
 
+export default PageSection;

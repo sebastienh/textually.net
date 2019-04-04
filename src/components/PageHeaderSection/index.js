@@ -22,25 +22,15 @@ export default class PageHeaderSection extends Component {
             height: window.innerHeight
         }
         this.handleWindowResize = this.handleWindowResize.bind(this);
-        this.handleScrollPositionChange = this.handleScrollPositionChange.bind(this);
+        // this.onChange = this.onChange.bind(this);
     }
 
     componentDidMount() {
         window.addEventListener('resize', this.handleWindowResize);
-        window.addEventListener('scroll', this.handleScrollPositionChange);
     }
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.handleWindowResize);
-        window.removeEventListener('scroll', this.handleScrollPositionChange);
-    }
-
-    handleScrollPositionChange(e) {
-        const node = ReactDOM.findDOMNode(this);
-        const boundingRect = node.getBoundingClientRect();
-        if( boundingRect.top >= window.scrollY && window.scrollY <= boundingRect.bottom) {
-            this.context.updateIndexInPage(1);
-        }
     }
 
     handleWindowResize(e) {
@@ -50,9 +40,19 @@ export default class PageHeaderSection extends Component {
         })
     }
 
+    // onChange(isVisible) {
+
+    //     if(isVisible) {
+    //         this.context.enteringIndex(1);
+    //     }
+    //     else {
+    //         this.context.enteringIndex(2);
+    //     }
+    // }
+
     render() {
 
-        const { children } = this.props
+        const { id, children } = this.props
         const { width, height } = this.state
 
         return (

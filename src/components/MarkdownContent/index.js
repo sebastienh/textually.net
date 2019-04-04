@@ -4,6 +4,7 @@ import { Flex, Box } from '@rebass/grid'
 import { Link } from 'gatsby'
 import { Text } from 'rebass'
 import rehypeReact from "rehype-react"
+import FunnyQuote from '../FunnyQuote';
 
 const MarkdownContainer = styled(Box)`
 
@@ -16,7 +17,7 @@ const MarkdownContainer = styled(Box)`
 
 function MarkdownHeader1(props) {
   return (
-    <Flex justifyContent={"center"} flexDirection={"row"}>
+    <Flex justifyContent={"left"} flexDirection={"row"}>
         <h1>{props.children}</h1>
     </Flex>
   )
@@ -24,7 +25,7 @@ function MarkdownHeader1(props) {
 
 function MarkdownHeader2(props) {
     return (
-        <Flex justifyContent={"center"} flexDirection={"row"}>
+        <Flex justifyContent={"left"} flexDirection={"row"}>
             <h2>{props.children}</h2>
         </Flex>
     )
@@ -32,7 +33,7 @@ function MarkdownHeader2(props) {
 
 function MarkdownHeader3(props) {
     return (
-        <Flex justifyContent={"center"} flexDirection={"row"}>
+        <Flex justifyContent={"left"} flexDirection={"row"}>
             <h3>{props.children}</h3>
         </Flex>
     )
@@ -47,6 +48,10 @@ function MarkdownParagraph(props) {
 const TextuallyLink = styled(Link)`
     color: gray;
     box-shadow: 0 0 0;
+
+    &:hover {
+        box-shadow: 0 1px 0 #808080;
+    }
 `
 
 function MarkdownLink(props) {
@@ -105,6 +110,10 @@ const Pre = styled.pre`
     }
 `
 
+const Blockquote = styled.blockquote`
+    color: #D74E09;
+`
+
 const renderAst = new rehypeReact({
     createElement: React.createElement,
     components: { 
@@ -116,7 +125,9 @@ const renderAst = new rehypeReact({
         "ul": MarkdownUnorderedList,
         "li": MarkdownListItem,
         "code": Code,
-        "pre": Pre
+        "pre": Pre,
+        "blockquote": Blockquote,
+        "funny-quote-text": FunnyQuote
     }
 }).Compiler
 

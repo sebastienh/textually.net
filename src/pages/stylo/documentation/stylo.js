@@ -4,13 +4,13 @@ import SEO from "../../../components/seo"
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
-import StyloLogo from "../../../images/svg/logo-blue.svg"
+import StyloLogo from "../../../images/svg/logo-red.svg"
 import PageHeaderSection from "../../../components/PageHeaderSection"
 import PageSection from "../../../components/PageSection"
 import PageLocation from "../../../components/PageLocation"
 import TitledSidebar from "../../../components/TitledSidebar"
 import MarkdownContent from "../../../components/MarkdownContent";
-import PageTemplate from "../../../components/PageTemplate"
+import DocumentationPageTemplate from "../../../components/DocumentationPageTemplate"
 import TitledSection from "../../../components/TitledSection"
 
 export const HeaderDivider = styled.hr`
@@ -216,7 +216,7 @@ class StyloDocumentation extends React.Component {
                     title: "Styles List"
                 },
                 {
-                    href: "/stylo/documentation/stylo#style-editor",
+                    href: "/stylo/documentation/stylo#edit-a-style",
                     title: "Style"
                 },
                 {
@@ -239,13 +239,13 @@ class StyloDocumentation extends React.Component {
                     </Flex>
                 </ContentResizer>
             </PageHeaderSection>  
-            <PageTemplate>
+            <DocumentationPageTemplate>
                 <Flex flexDirection={"column"}>
-                    <TitledSection number={1}>
-                        <Box id={"introduction"}>
-                            <MarkdownContent post={introduction} />
-                        </Box>  
-                        <Box id={"essentials"}>
+                    <Box>
+                        <MarkdownContent post={introduction} />
+                    </Box>  
+                    <TitledSection id={"essentials"} number={1}>    
+                        <Box>
                             <MarkdownContent post={essentials} />
                         </Box>  
                         <Box id={"new-document"} number={2}>
@@ -270,8 +270,8 @@ class StyloDocumentation extends React.Component {
                             <MarkdownContent post={printDocument}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection number={2}>
-                        <Box id={"markdown-editor"} number={11}>
+                    <TitledSection id={"markdown-editor"} number={2}>
+                        <Box number={11}>
                             <MarkdownContent post={markdownEditor}/>
                         </Box>
                         <Box id={"html-preview"} number={12}>
@@ -281,8 +281,8 @@ class StyloDocumentation extends React.Component {
                             <MarkdownContent post={revealHideHtmlPreview}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection number={3}>
-                        <Box id={"text-statistics"} number={14}>
+                    <TitledSection id={"text-statistics"} number={3}>
+                        <Box number={14}>
                             <MarkdownContent post={textStatistics}/>
                         </Box>
                         <Box id={"total-text-statistics"} number={15}>
@@ -301,8 +301,8 @@ class StyloDocumentation extends React.Component {
                             <MarkdownContent post={enableDisableSessionTools}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection number={4}>
-                        <Box id={"sidebar"} number={20}>
+                    <TitledSection id={"sidebar"} number={4}>
+                        <Box number={20}>
                             <MarkdownContent post={sidebar}/>
                         </Box>
                         <Box id={"reveal-hide-sidebar"} number={21}>
@@ -321,8 +321,8 @@ class StyloDocumentation extends React.Component {
                             <MarkdownContent post={showHideStylePicker}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection number={5}>
-                        <Box id={"styles-list"} number={26}>
+                    <TitledSection id={"styles-list"} number={5}>
+                        <Box number={26}>
                             <MarkdownContent post={stylesList}/>
                         </Box>
                         <Box id={"show-hide-styles-list"} number={27}>
@@ -332,8 +332,8 @@ class StyloDocumentation extends React.Component {
                             <MarkdownContent post={selectAStyle}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection number={6}>
-                        <Box id={"edit-a-style"} number={29}>
+                    <TitledSection id={"edit-a-style"} number={6}>
+                        <Box number={29}>
                             <MarkdownContent post={editAStyle}/>
                         </Box>
                         <Box id={"copy-selector"} number={30}>
@@ -358,8 +358,8 @@ class StyloDocumentation extends React.Component {
                             <MarkdownContent post={applyPendingStyleChanges}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection number={7}>
-                        <Box id={"markdown-formatting"} number={37}>
+                    <TitledSection id={"markdown-formatting"} number={7}>
+                        <Box number={37}>
                             <MarkdownContent post={markdownFormatting}/>
                         </Box>
                         <Box id={"header-level-1"} number={38}>
@@ -403,7 +403,7 @@ class StyloDocumentation extends React.Component {
                         </Box>
                     </TitledSection>
                 </Flex>
-            </PageTemplate>
+            </DocumentationPageTemplate>
             </TitledSidebar>
         </PageLocation>
     )

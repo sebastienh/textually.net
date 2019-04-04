@@ -44,11 +44,16 @@ export default class CircledNumbersSidebar extends Component {
   
     createNumbers(links) {
 
+        let selectedColor = "#FFA700"
+        let unselectedColor = "#000"
         let children = []
 
         for(var i = 0; i < links.length; i++) {
 
             let child = <CircledNumber 
+                selectedColor={selectedColor}
+                unselectedColor={unselectedColor}
+                forceSelected={false}
                 link={links[i]} 
                 style={{marginTop:"10px"}} 
                 width={"32px"} 
@@ -74,7 +79,7 @@ export default class CircledNumbersSidebar extends Component {
                         <CenterHorizontally>
                             <ScrollingNumbersSidebarContext>
                                 {(srollingNumbersContext) => (
-                                    <CircledNumbersContainer open={drawerContext.open} display={srollingNumbersContext.display}>
+                                    <CircledNumbersContainer open={drawerContext.open} display={srollingNumbersContext.display && !drawerContext.open}>
                                         {this.createNumbers(srollingNumbersContext.links)}
                                     </CircledNumbersContainer>
                                 )}

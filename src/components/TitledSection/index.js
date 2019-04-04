@@ -1,9 +1,28 @@
 import React, { Component } from 'react'
 import ReactDOM from "react-dom"
-import { Box } from '@rebass/grid'
+import { Flex, Box } from '@rebass/grid'
 import styled from "styled-components";
 import LocationContext from    "../../context/LocationContext"
-import VisibilitySensor from 'react-visibility-sensor'
+import CircledNumber from "../CircledNumber"
+import handleViewport from 'react-in-viewport';
+
+class TitledSectionInsideBlock extends Component {
+
+    render() {
+
+        const { number, children } = this.props
+
+        return (
+            <React.Fragment>
+                <Box>
+                    {children}
+                </Box>
+            </React.Fragment>
+        )
+    }
+}
+
+const TrackerTitledSection = handleViewport(TitledSectionInsideBlock, { rootMargin: '-1.0px' });
 
 export default class TitledSection extends Component {
 
@@ -12,26 +31,40 @@ export default class TitledSection extends Component {
         this.state = {
             number: props.number
         }
-        this.onChange = this.onChange.bind(this);
+        this.onEnterViewport = this.onEnterViewport.bind(this);
+        this.onLeaveViewport = this.onLeaveViewport.bind(this);
     }
 
-    onChange(isVisible) {
-        
-        if(isVisible) {
-            this.context.updateIndexInPage(this.state.number);
-        }
+    onEnterViewport() {
+        this.context.enteringIndex(this.state.number);
+    }
+
+    onLeaveViewport() {
+        this.context.leavingIndex(this.state.number);
     }
 
     render() {
 
-        const { children } = this.props
+        const { id, number, children } = this.props
 
         return (
-            <VisibilitySensor onChange={this.onChange} scrollCheck partialVisibility={true}>
-                <div>
-                    {children}
-                </div>
-            </VisibilitySensor>
+            <TrackerTitledSection onEnterViewport={this.onEnterViewport} onLeaveViewport={this.onLeaveViewport}>
+                <Box id={id}>
+                    <Flex mt={120} mb={40} flexDirection={"row"} justifyContent={"center"}>
+                        <CircledNumber selectedColor={"#D74E09"}
+                            unselectedColor={"#D74E09"}
+                            forceSelected={true}
+                            width={"82px"} 
+                            height={"82px"} 
+                            color={"#D74E09"} 
+                            number={number}/>
+                            
+                    </Flex>
+                    <TitledSectionInsideBlock number={number}>
+                        {children}
+                    </TitledSectionInsideBlock>
+                </Box>
+            </TrackerTitledSection>
         )
     }
 }

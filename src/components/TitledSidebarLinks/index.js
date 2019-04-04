@@ -55,7 +55,7 @@ export default class TitledSidebarLinks extends Component {
                 title
             } = link;
 
-            children.push(<SidebarLink href={href} number={i+1}>{title}</SidebarLink>)
+            children.push(<SidebarLink href={href} number={i+1}>{i+1}. {title}</SidebarLink>)
         }
         return children
     }
@@ -70,16 +70,16 @@ export default class TitledSidebarLinks extends Component {
 
             <React.Fragment>
                 <DrawerContext.Consumer>
-                    {(drawerContext) => (
-                        <CenterHorizontally>
-                            <TitledSidebarContext>
-                                {(titledSidebarContext) => (
-                                    <TitledLinksContainer open={drawerContext.open} display={titledSidebarContext.display}>
+                    {(drawerContext) => (                        
+                        <TitledSidebarContext>
+                            {(titledSidebarContext) => (
+                                <CenterHorizontally>
+                                    <TitledLinksContainer open={drawerContext.open} display={titledSidebarContext.display && !drawerContext.open}>
                                         {this.createLinks(titledSidebarContext.links)}
                                     </TitledLinksContainer>
-                                )}
-                            </TitledSidebarContext>
-                        </CenterHorizontally>
+                                </CenterHorizontally>
+                            )}
+                        </TitledSidebarContext>  
                     )}
                 </DrawerContext.Consumer>
             </React.Fragment>
