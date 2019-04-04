@@ -6,21 +6,29 @@ class LocationProvider extends React.Component {
 
   state = {
     pagePath: ["/"],
-    index: 1,
-    visibleIndexes: new Set([1])
+    index: 0,
+    visibleIndexes: new Set()
   }
 
   updatePagePath = (pagePath) => {
-    // console.log("Updating location page path to: " + pagePath);
-    this.setState({ pagePath: pagePath, index: 1});
+    console.log("Updating location page path to: " + pagePath);
+    this.setState({ pagePath: pagePath, index: 0});
+  }
+
+  resetIndexContext = () => {
+    console.log("Reseting index context");
+    this.setState({ 
+      index: 0,
+      visibleIndexes: new Set()
+    })
   }
 
   enteringIndex = (index) => {
-    // console.log("Entering index to: " + index);
+    console.log("Entering index to: " + index);
     var visibleIndexes = this.state.visibleIndexes
     visibleIndexes.add(index)
 
-    // console.log("Visible index is " + index + ", and visible indexes:" +  Array.from(visibleIndexes).join(','))
+    console.log("Visible index is " + index + ", and visible indexes:" +  Array.from(visibleIndexes).join(','))
 
     this.setState({ 
       index: index, 
@@ -29,17 +37,28 @@ class LocationProvider extends React.Component {
   }
 
   leavingIndex = (index) => {
-    // console.log("Leaving index: " + index); 
+    console.log("Leaving index: " + index); 
 
     var visibleIndexes = this.state.visibleIndexes
     visibleIndexes.delete(index)
 
     let array = Array.from(visibleIndexes)
-    let entry = array[0]
 
-    // console.log("Visible index is " + entry + ", and visible indexes:" +  Array.from(visibleIndexes).join(','))
-
-    this.setState({ index: entry });
+    if(array.length == 0) {
+      visibleIndexes.clear()
+      this.setState({ 
+        index: 0, 
+        visibleIndexes: visibleIndexes 
+      });
+    }
+    else {
+      let entry = array[0]
+      console.log("Visible index is " + entry + ", and visible indexes:" +  Array.from(visibleIndexes).join(','))
+      this.setState({ 
+        index: entry, 
+        visibleIndexes: visibleIndexes 
+      });
+    }
   }
 
   render() {
@@ -52,7 +71,8 @@ class LocationProvider extends React.Component {
           index,
           updatePagePath: this.updatePagePath,
           enteringIndex: this.enteringIndex,
-          leavingIndex: this.leavingIndex
+          leavingIndex: this.leavingIndex,
+          resetIndexContext: this.resetIndexContext
         }}>
         {children}
       </LocationContext.Provider>

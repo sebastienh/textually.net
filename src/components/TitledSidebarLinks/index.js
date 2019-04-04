@@ -5,6 +5,7 @@ import CircledNumber from "../CircledNumber"
 import DrawerContext from "../../context/DrawerContext"
 import TitledSidebarContext from "../../context/TitledSidebarContext"
 import SidebarLink from "../SidebarLink"
+import LocationContext from '../../context/LocationContext';
 
 const TitledLinksContainer = styled(Flex)`
     margin:0px;
@@ -15,7 +16,6 @@ const TitledLinksContainer = styled(Flex)`
     bottom: 0;
     justify-content: center;
     flex-direction: column;
-    transition: 0.5s;
     z-index: 1000;
     display: ${props => props.display ? "flex" : "none"};
 
@@ -73,11 +73,17 @@ export default class TitledSidebarLinks extends Component {
                     {(drawerContext) => (                        
                         <TitledSidebarContext>
                             {(titledSidebarContext) => (
-                                <CenterHorizontally>
-                                    <TitledLinksContainer open={drawerContext.open} display={titledSidebarContext.display && !drawerContext.open}>
-                                        {this.createLinks(titledSidebarContext.links)}
-                                    </TitledLinksContainer>
-                                </CenterHorizontally>
+                                <LocationContext.Consumer>
+                                    {(locationContext) => (
+                                        <CenterHorizontally>
+                                            <TitledLinksContainer 
+                                                open={drawerContext.open} 
+                                                display={titledSidebarContext.display && !drawerContext.open && locationContext.index !== null && locationContext.index !== undefined && locationContext.index !== 0}>
+                                                {this.createLinks(titledSidebarContext.links)}
+                                            </TitledLinksContainer>
+                                        </CenterHorizontally>
+                                    )}
+                                </LocationContext.Consumer>
                             )}
                         </TitledSidebarContext>  
                     )}

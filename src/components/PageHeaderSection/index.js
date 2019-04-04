@@ -22,7 +22,6 @@ export default class PageHeaderSection extends Component {
             height: window.innerHeight
         }
         this.handleWindowResize = this.handleWindowResize.bind(this);
-        // this.onChange = this.onChange.bind(this);
     }
 
     componentDidMount() {
@@ -31,6 +30,7 @@ export default class PageHeaderSection extends Component {
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.handleWindowResize);
+        this.context.resetIndexContext()
     }
 
     handleWindowResize(e) {
@@ -39,16 +39,6 @@ export default class PageHeaderSection extends Component {
             height: window.innerHeight
         })
     }
-
-    // onChange(isVisible) {
-
-    //     if(isVisible) {
-    //         this.context.enteringIndex(1);
-    //     }
-    //     else {
-    //         this.context.enteringIndex(2);
-    //     }
-    // }
 
     render() {
 
