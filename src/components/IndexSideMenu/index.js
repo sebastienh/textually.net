@@ -6,7 +6,7 @@ import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
 import NavigationLink from "../NavigationLink"
 import Pointer from '../../icons/pointer';
-import PushLink from "../PushLink"
+import SidebarPushButton from "../SidebarPushButton"
 
 const {
     Transition
@@ -79,7 +79,7 @@ const SectionTitle = styled(Box)`
 
 export default class IndexSideMenu extends Component {
 
-    onStylo() {
+    onStylo = () => {
         this.props.navigationController.pushView(
             <StyloSideMenu />, {
                 transition: Transition.type.PUSH_LEFT
@@ -111,14 +111,14 @@ export default class IndexSideMenu extends Component {
                         p={2}>
                         Blog
                     </MainLink>
-                    <PushLink
-                        href='#'
+                    <SidebarPushButton
+                        onClick={this.onStylo}
                         path={["/", "stylo"]}
                         menu={<StyloSideMenu />}
                         navigationController={this.props.navigationController}
                         p={2}>
                         Stylo...
-                    </PushLink>
+                    </SidebarPushButton>
                     <MainLink
                         path={["/", "contact"]}
                         href='/contact'

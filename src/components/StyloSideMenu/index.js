@@ -5,6 +5,8 @@ import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
 import NavigationLink from "../NavigationLink"
 import StyloDocumentationSideMenu from "../StyloDocumentationSideMenu"
+import BackButton from "../BackButton"
+import SidebarPushButton from "../SidebarPushButton"
 
 const {
     Transition
@@ -20,16 +22,6 @@ const MainLink = styled(NavigationLink)`
     }
 `;
 
-const PushLink = styled(NavigationLink)`
-
-    box-shadow: 0px 0px 0px;
-    margin-left: 60px;
-
-    &:hover {
-        cursor: pointer;
-    }
-`
-
 export const LeftPointingIcon = styled(ExpandMoreIcon)`
     margin-top: 21px;
     margin-left: 0px;
@@ -37,18 +29,6 @@ export const LeftPointingIcon = styled(ExpandMoreIcon)`
     left: 20px;
     stroke: props.color;
     transform: rotate(180deg);
-`
-
-const BackLink = styled(Link)`
-
-    box-shadow: 0px 0px 0px;
-    margin-left: 0px;
-    padding: 0;
-    color: #aaa;
-
-    &:hover {
-        cursor: pointer;
-    }
 `
 
 const MenuContainer = styled(Box)`
@@ -105,14 +85,13 @@ export default class StyloSideMenu extends Component {
                             justifyContent={"center"} 
                             flexDirection={"column"}
                             style={{height:"100%"}}>
-                            <BackLink
-                                href='#'
+                            <BackButton
                                 p={2}
                                 fontSize={[3]}
                                 onClick={this.back.bind(this)}
                                 color='black'>
                                 Textually
-                            </BackLink>
+                            </BackButton>
                         </Flex>
                     </MenuTitleContainer>
                 </Flex>
@@ -135,13 +114,12 @@ export default class StyloSideMenu extends Component {
                         p={2}>
                         About
                     </MainLink>
-                    <PushLink
+                    <SidebarPushButton
                         path={["/", "stylo", "documentation"]}
-                        href='#'
                         p={2}
                         onClick={this.onDocumentation.bind(this)}>
                         Documentation...
-                    </PushLink>
+                    </SidebarPushButton>
                     <MainLink
                         path={["/", "stylo", "release-notes"]}
                         href='#'

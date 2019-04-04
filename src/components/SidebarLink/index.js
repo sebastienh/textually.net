@@ -45,9 +45,11 @@ export default class SidebarLink extends Component {
         return (
             <LocationContext.Consumer>
                 {(context) => (
-                    <PlainLink to={href} selected={context.index == number}>
-                        {children}
-                    </PlainLink>
+                    <Box pl={["5px", "0px"]} fontSize={[1,2,3]}>
+                        <PlainLink to={href} selected={context.index == number}>
+                            {children}
+                        </PlainLink>
+                    </Box>
                 )}
             </LocationContext.Consumer>
         )
