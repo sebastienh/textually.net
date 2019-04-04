@@ -49,8 +49,8 @@ export default class TitledSection extends Component {
 
         return (
             <TrackerTitledSection onEnterViewport={this.onEnterViewport} onLeaveViewport={this.onLeaveViewport}>
-                <Box id={id}>
-                    <Flex mt={120} mb={40} flexDirection={"row"} justifyContent={"center"}>
+                <Box id={id} pt={50}>
+                    <Flex mb={40} flexDirection={"row"} justifyContent={"center"}>
                         <CircledNumber selectedColor={"#D74E09"}
                             unselectedColor={"#D74E09"}
                             forceSelected={true}
