@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { Flex, Box } from '@rebass/grid'
+import { Heading } from 'rebass'
 import SEO from "../components/seo"
 import styled from "styled-components";
 import PageLocation from "../components/PageLocation"
@@ -20,10 +21,38 @@ export const HeadingLevel1 = styled.h1`
 
 class Index extends React.Component {
 
+    constructor(props) {
+      super(props);
+      this.state = {
+          width: window.innerWidth,
+          height: window.innerHeight
+      }
+      this.handleWindowResize = this.handleWindowResize.bind(this);
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.handleWindowResize);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleWindowResize);
+    }
+
+    handleWindowResize(e) {
+        this.setState({
+            width: window.innerWidth,
+            height: window.innerHeight
+        })
+    }
+
   render() {
 
     const { data } = this.props
     const textuallyAbout =  data.textuallyAbout.edges[0].node
+
+    const {
+      height
+    } = this.state;
 
     return (
       <React.Fragment>
@@ -32,8 +61,12 @@ class Index extends React.Component {
           keywords={[`textually`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
         />
         <PageLocation path={["/", "about"]}>
-          <PageTemplate>
-              <MarkdownContent post={textuallyAbout} />
+          <PageTemplate bg={"#6B9080"} height={height}>
+              <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
+              <Heading  color={"white"} bg={"black"} fontSize={[6,7,8]}>T</Heading>
+                <Heading  color={"white"} fontSize={[6,7,8]}>extually</Heading>
+              </Flex>
+              <MarkdownContent color={"white"} post={textuallyAbout} />
           </PageTemplate>  
         </PageLocation>
       </React.Fragment>

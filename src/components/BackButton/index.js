@@ -8,11 +8,11 @@ const BackButton = styled.button`
     padding: 0;
     color: #aaa;
     font-size: 15pt;
-
+    background-color: inherit;
     border-style: none;
     border-width: 0px;
     outline: none;
-    
+
     &:hover {
         cursor: pointer;
     }

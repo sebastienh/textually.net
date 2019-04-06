@@ -5,7 +5,7 @@ import styled from "styled-components";
 export default class DocumentationPageTemplate extends Component {
   render() {
     return (
-      <Flex>
+      <Flex {...this.props}>
         <Box width={3/10} />
         <Box width={4/10}>
           {this.props.children}
