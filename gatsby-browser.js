@@ -7,6 +7,7 @@ import { LocationProvider } from "./src/context/LocationContext"
 import { DrawerProvider } from "./src/context/DrawerContext"
 import { ScrollingNumbersSidebarProvider } from "./src/context/ScrollingNumbersSidebarContext" 
 import { TitledSidebarProvider } from "./src/context/TitledSidebarContext" 
+import { NavBarSeparatorProvider } from "./src/context/NavBarSeparatorContext" 
 
 export const wrapRootElement = ({ element }) => (
 
@@ -14,7 +15,9 @@ export const wrapRootElement = ({ element }) => (
         <LocationProvider>
             <ScrollingNumbersSidebarProvider>
                 <TitledSidebarProvider>
-                    {element}
+                    <NavBarSeparatorProvider>
+                        {element}
+                    </NavBarSeparatorProvider>
                 </TitledSidebarProvider>
             </ScrollingNumbersSidebarProvider>
         </LocationProvider>

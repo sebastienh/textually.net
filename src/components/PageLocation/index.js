@@ -11,7 +11,13 @@ export default class PageLocation extends Component {
     }
 
     componentDidMount() {
+
         this.context.updatePagePath(this.props.path);
+
+        // when we click on a page we really navigate there,
+        // so there is no displayed section anymore 
+        // as the section displayed reflects the actual section
+        this.context.updateDisplayedSectionPath(null);
     }
 
     render() {

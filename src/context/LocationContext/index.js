@@ -6,6 +6,7 @@ class LocationProvider extends React.Component {
 
   state = {
     pagePath: ["/"],
+    displayedSectionPath: null,
     index: 0,
     visibleIndexes: new Set()
   }
@@ -13,6 +14,11 @@ class LocationProvider extends React.Component {
   updatePagePath = (pagePath) => {
     console.log("Updating location page path to: " + pagePath);
     this.setState({ pagePath: pagePath, index: 0});
+  }
+
+  updateDisplayedSectionPath = (sectionPath) => {
+    console.log("Updating displayed section path to: " + sectionPath);
+    this.setState({ displayedSectionPath: sectionPath});
   }
 
   resetIndexContext = () => {
@@ -62,17 +68,21 @@ class LocationProvider extends React.Component {
   }
 
   render() {
+
     const { children } = this.props
-    const { pagePath, index } = this.state
+    const { pagePath, index, displayedSectionPath } = this.state
+    
     return (
       <LocationContext.Provider
         value={{
           pagePath,
           index,
+          displayedSectionPath,
           updatePagePath: this.updatePagePath,
           enteringIndex: this.enteringIndex,
           leavingIndex: this.leavingIndex,
-          resetIndexContext: this.resetIndexContext
+          resetIndexContext: this.resetIndexContext,
+          updateDisplayedSectionPath: this.updateDisplayedSectionPath
         }}>
         {children}
       </LocationContext.Provider>

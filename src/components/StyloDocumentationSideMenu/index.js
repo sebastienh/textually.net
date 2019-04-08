@@ -107,8 +107,8 @@ export default class StyloDocumentationSideMenu extends Component {
                         </Text>
                     </SectionTitle>
                     <MainLink
-                        path={["/", "stylo", "documentation", "stylo"]}
-                        href='/stylo/documentation/stylo'
+                        path={["/", "stylo", "documentation", "styloessentials"]}
+                        href='/stylo/documentation/stylo-essentials'
                         p={2}>
                         Essentials
                     </MainLink>

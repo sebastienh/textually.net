@@ -19,6 +19,10 @@ export const ToggleButton = styled(Button)`
     &:focus {
         outline: none;
     }
+
+    @media (min-width: 769px) {
+        display: none;
+    }
 `;
 
 export const ToggleButtonLine = styled.div`

@@ -181,7 +181,7 @@ class StyloDocumentation extends React.Component {
     };
 
     return (
-        <PageLocation path={["/", "stylo", "documentation", "stylo"]}>
+        <PageLocation path={["/", "stylo", "documentation", "styloessentials"]}>
             <SEO
               title="Stylo App"
               keywords={[

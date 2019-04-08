@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 import Footer from "../components/Footer"
-import Navigation from "../components/Navigation"
 import { Flex, Box, Text, Container, Provider, Header } from "rebass";
 import styled from "styled-components";
 import theme from "../styles/theme.js";
@@ -17,6 +16,8 @@ import "./layout.css"
 import DrawerContext from "../context/DrawerContext"
 import CircledNumbersSidebar from "../components/CircledNumbersSidebar"
 import TitledSidebarLinks from "../components/TitledSidebarLinks"
+import LocationContext from "../context/LocationContext"
+import NavBar from "../components/NavBar"
 
 const Content = styled(Box)`
 
@@ -118,16 +119,14 @@ class Layout extends React.Component {
             {(drawerContext) => (
                 <React.Fragment>
                     <MediaQuery query="(min-width: 769px)">
-                      <SideDrawer show={drawerContext.open}/>
-                      <Box 
-                          style={{zIndex:"1000"}}
-                          width={[
-                              1/10,
-                          ]}>
-                          <DrawerToggleButtonContainer open={drawerContext.open}>
-                            <DrawerToggleButton click={this.drawerToggleClickHandler}/>
-                          </DrawerToggleButtonContainer>
-                      </Box>
+                    <LocationContext.Consumer>
+                      {(locationContext) => (
+                          <NavBar 
+                            currentPath={locationContext.pagePath}
+                            drawerClickHandler={this.drawerToggleClickHandler} 
+                            drawerOpen={drawerContext.open}/>
+                      )}
+                      </LocationContext.Consumer>
                       <Content open={drawerContext.open} theme={theme}>
                         <Box width={[
                               10/10,
@@ -135,7 +134,6 @@ class Layout extends React.Component {
                           <main>{children}</main>
                         </Box>
                       </Content>
-
                       <Flex style={{zIndex:"1000"}}>
                         <Box mx='auto' style={{zIndex:"1000"}}/>
                         <Box       
@@ -162,16 +160,10 @@ class Layout extends React.Component {
                       </Flex>
                     </MediaQuery>
                     <MediaQuery query="(max-width: 768px)">
+                      <NavBar 
+                        drawerClickHandler={this.drawerToggleClickHandler}
+                        drawerOpen={drawerContext.open}/>
                       <SideDrawer show={drawerContext.open}/>
-                      <Box 
-                        style={{zIndex:"1000"}}
-                        width={[
-                            1/10,
-                        ]}>
-                        <DrawerToggleButtonContainer>
-                          <DrawerToggleButton click={this.drawerToggleClickHandler}/>
-                        </DrawerToggleButtonContainer>
-                      </Box>
                       <Box width={[
                             10/10,
                         ]}>

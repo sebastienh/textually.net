@@ -18,24 +18,9 @@ const MainLink = styled(NavigationLink)`
     margin-left: 60px;
 
     &:hover {
-
         cursor: pointer;
     }
 `;
-
-// const PushLink = styled(NavigationLink)`
-
-//     box-shadow: 0px 0px 0px;
-//     margin-left: 60px;
-//     /* display: flex;
-//     flex-direction: row;
-//     justify-content: center; */
-
-//     &:hover {
-//         /* box-shadow: 2px 2px 4px rgb(0,0,0,0.5); */
-//         cursor: pointer;
-//     }
-// `
 
 export const RightPointingIcon = styled(ExpandMoreIcon)`
     margin-top: 6px;

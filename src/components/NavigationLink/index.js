@@ -9,7 +9,7 @@ export const HoverLink = styled(Link)`
 
     padding-top: 16px;
     padding-bottom: 12px;
-    color: ${props => props.selected ? "#FFA700" : "#777"};
+    color: ${props => props.selected ? props.selectedColor : props.unselectedColor };
     font-weight: ${props => props.selected ? "bold" : "regular"};
 
     &:after {
@@ -26,7 +26,7 @@ export const HoverLink = styled(Link)`
         ${({ selected }) => selected && `
             height: 1px;
             width: 80%;
-            background: #FFA70088;
+            background:  ${props => props.underlineColor ? props.underlineColor : "#FFA70088" }; 
         `}
     }
      
@@ -75,9 +75,7 @@ export default class NavigationLink extends Component {
     render() {
 
         const {
-            path,
             children,
-            color,
             ...other
         } = this.props;
 
