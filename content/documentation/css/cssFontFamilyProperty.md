@@ -2,7 +2,7 @@
 
 The `font-family` property is used to specify the font of an element.
 
-Formal definition: <code>font-family: family-name | <a href="#font-family-generic">generic-family</a> | [initial](/stylo/documentation/css#css-property-values-initial) | [inherit](/stylo/documentation/css#css-property-values-inherit);</code>
+Formal definition: <code>font-family: family-name | <a href="#font-family-generic">generic-family</a> | [initial](#css-property-values-initial) | [inherit](#css-property-values-inherit);</code>
 
 To set the value of this property, we should use a comma-separated, prioritized list of specific or generic font family names, or one of the "initial" or "inherit" values, used alone.
 

@@ -22,7 +22,11 @@ export default class Acknowledgments extends Component {
     const acknowledgments = data.acknowledgments.edges[0].node;
     const fonts = data.fonts.edges[0].node;
     const libraries = data.libraries.edges[0].node;
-
+    const bitstream = data.bitstream.edges[0].node;
+    const sil = data.sil.edges[0].node;
+    const apache = data.apache.edges[0].node;
+    const licences = data.licences.edges[0].node;
+    
     return (
 
         <PageLocation path={["/", "stylo", "acknowledgments"]}>
@@ -37,7 +41,7 @@ export default class Acknowledgments extends Component {
             <TitledSidebar links={[
                 {
                     href: "/stylo/acknowledgments#index",
-                    title: "Index"
+                    title: "Acknowledgments"
                 },
                 {
                     href: "/stylo/acknowledgments#fonts",
@@ -46,6 +50,10 @@ export default class Acknowledgments extends Component {
                 {
                     href: "/stylo/acknowledgments#libraries",
                     title: "Libraries"
+                },
+                {
+                    href: "/stylo/acknowledgments#licences",
+                    title: "Licences"
                 }
             ]}>            
             <DocumentationPageTemplate>
@@ -56,13 +64,27 @@ export default class Acknowledgments extends Component {
                         </Box>  
                     </TitledSection>
                     <TitledSection id={"fonts"} number={2}>
-                        <Box number={11}>
+                        <Box number={1}>
                             <MarkdownContent post={fonts}/>
                         </Box>
                     </TitledSection>
                     <TitledSection id={"libraries"} number={3}>
-                        <Box number={14}>
+                        <Box number={2}>
                             <MarkdownContent post={libraries}/>
+                        </Box>
+                    </TitledSection>
+                    <TitledSection id={"licences"} number={4}>
+                        <Box number={3}>
+                            <MarkdownContent post={licences}/>
+                        </Box>
+                        <Box id={"sil"} number={4}>
+                            <MarkdownContent post={sil}/>
+                        </Box>
+                        <Box id={"apache"} number={5}>
+                            <MarkdownContent post={apache}/>
+                        </Box>
+                        <Box id={"bitstream"} number={6}>
+                            <MarkdownContent post={bitstream}/>
                         </Box>
                     </TitledSection>
                 </Flex>
@@ -108,6 +130,62 @@ query {
     filter: { 
       fields: { 
         slug: { eq: "/libraries/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+
+  licences: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/licences/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+
+  bitstream: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/bitstream/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+
+  sil: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/sil/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+
+  apache: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/apache/" } 
       } 
     }) {
     edges {

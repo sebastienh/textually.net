@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Flex, Box, Text, Container, Provider, Header } from "rebass";
 import styled from "styled-components";
+import MediaQuery from 'react-responsive';
 
 const DocumentationContainer = styled(Flex)`
   
@@ -13,13 +14,26 @@ export default class DocumentationPageTemplate extends Component {
 
   render() {
     return (
-      <DocumentationContainer {...this.props}>
-        <Box width={3/10} />
-        <Box width={4/10}>
-          {this.props.children}
-        </Box>
-        <Box width={3/10} />
-      </DocumentationContainer>      
+      <React.Fragment>
+        <MediaQuery query="(max-width: 768px)">
+          <DocumentationContainer {...this.props}>
+            <Box width={1/10} />
+            <Box width={8/10}>
+              {this.props.children}
+            </Box>
+            <Box width={1/10} />
+          </DocumentationContainer>    
+        </MediaQuery>
+        <MediaQuery query="(min-width: 769px)">
+          <DocumentationContainer {...this.props}>
+            <Box width={3/10} />
+            <Box width={4/10}>
+              {this.props.children}
+            </Box>
+            <Box width={3/10} />
+          </DocumentationContainer>      
+        </MediaQuery>
+      </React.Fragment>
     )
   }
 }

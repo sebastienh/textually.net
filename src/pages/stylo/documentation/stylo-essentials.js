@@ -183,7 +183,7 @@ class StyloDocumentation extends React.Component {
     };
 
     return (
-        <PageLocation path={["/", "stylo", "documentation", "styloessentials"]}>
+        <PageLocation path={["/", "stylo", "documentation", "stylo-essentials"]}>
             <SEO
               title="Stylo App"
               keywords={[
@@ -198,31 +198,31 @@ class StyloDocumentation extends React.Component {
             />  
             <TitledSidebar links={[
                 {
-                    href: "/stylo/documentation/stylo#essentials",
+                    href: "#essentials",
                     title: "Essentials"
                 },
                 {
-                    href: "/stylo/documentation/stylo#markdown-editor",
+                    href: "#markdown-editor",
                     title: "Markdown Editor"
                 },
                 {
-                    href: "/stylo/documentation/stylo#text-statistics",
+                    href: "#text-statistics",
                     title: "Text Statistics"
                 },
                 {
-                    href: "/stylo/documentation/stylo#sidebar",
+                    href: "#sidebar",
                     title: "Sidebar"
                 },
                 {
-                    href: "/stylo/documentation/stylo#styles-list",
+                    href: "#styles-list",
                     title: "Styles List"
                 },
                 {
-                    href: "/stylo/documentation/stylo#edit-a-style",
+                    href: "#edit-a-style",
                     title: "Style"
                 },
                 {
-                    href: "/stylo/documentation/stylo#markdown-formatting",
+                    href: "#markdown-formatting",
                     title: "Markdown Formatting"
                 }
             ]}>            

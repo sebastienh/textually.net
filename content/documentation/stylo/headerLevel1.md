@@ -8,4 +8,4 @@ To create a header level 1:
 - From the _Tools_ sidebar tab, click on the `h1` button
 - With the keyboard shortcut, enter `⌘1`
 
-See [Markdown](/stylo/documentation/markdown#md-headers) reference for more information. 
+See [Markdown](#md-headers) reference for more information. 

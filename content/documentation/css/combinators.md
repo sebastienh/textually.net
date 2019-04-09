@@ -14,10 +14,10 @@ At the end of the selection process we effectively end up with all `strong` elem
 
 There exists four kinds of selector combinators:
 
-- [Descandant combinator](/stylo/documentation/css#descendant-combinator)
-- [Child combinator](/stylo/documentation/css#child-combinator)
-- [Following sibling combinator](/stylo/documentation/css#following-sibling-combinator)
-- [Next sibling combinator](/stylo/documentation/css#next-sibling-combinator)
+- [Descandant combinator](#descendant-combinator)
+- [Child combinator](#child-combinator)
+- [Following sibling combinator](#following-sibling-combinator)
+- [Next sibling combinator](#next-sibling-combinator)
 
-Note: It may be helpful to re-read the [Definitions](/stylo/documentation/html#definitions) section of "Element" section for a reminder of the main concepts used here.
+Note: It may be helpful to re-read the [Definitions](#definitions) section of "Element" section for a reminder of the main concepts used here.
 

@@ -36,7 +36,7 @@ export default class StyloDocumentationBottomNavBar extends Component {
                             <BottomNavBarContainer>
                                 <Flex flexDirection={"row"}>
                                     <MainLink
-                                        path={["/", "stylo", "documentation", "styloessentials"]}
+                                        path={["/", "stylo", "documentation", "stylo-essentials"]}
                                         href='/stylo/documentation/stylo-essentials'
                                         p={2}>
                                         Essentials

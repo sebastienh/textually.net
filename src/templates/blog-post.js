@@ -5,7 +5,9 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import PageTemplate from "../components/PageTemplate"
+import DocumentationPageTemplate from "../components/DocumentationPageTemplate"
+import MarkdownContent from "../components/MarkdownContent"
+import PageLocation from "../components/PageLocation"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,7 +16,8 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-        <PageTemplate>
+      <PageLocation path={["/", "blog"]}>
+        <DocumentationPageTemplate>
           <SEO
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
@@ -30,13 +33,12 @@ class BlogPostTemplate extends React.Component {
           >
             {post.frontmatter.date}
           </p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr
+          <MarkdownContent post={post} />
+          {/* <hr
             style={{
               marginBottom: rhythm(1),
             }}
           />
-          <Bio />
 
           <ul
             style={{
@@ -61,8 +63,9 @@ class BlogPostTemplate extends React.Component {
                 </Link>
               )}
             </li>
-          </ul>
-        </PageTemplate>
+          </ul> */}
+        </DocumentationPageTemplate>
+        </PageLocation>
     )
   }
 }
@@ -80,7 +83,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      htmlAst
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

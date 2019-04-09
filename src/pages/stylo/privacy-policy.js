@@ -11,6 +11,7 @@ import PageLocation from "../../components/PageLocation"
 import PageScrollingNumbers from "../../components/PageScrollingNumbers"
 import MarkdownContent from "../../components/MarkdownContent"
 import PageTemplate from "../../components/PageTemplate"
+import DocumentationPageTemplate from "../../components/DocumentationPageTemplate"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -119,9 +120,9 @@ class StyloPrivacyPolicy extends React.Component {
               title="Release Notes"
               keywords={[`stylo`, `releases`, `notes`]}
             />
-            <PageTemplate>
+            <DocumentationPageTemplate>
                 <MarkdownContent post={styloPrivacyPolicy} />
-            </PageTemplate>
+            </DocumentationPageTemplate>
       </PageLocation>
     )
   }

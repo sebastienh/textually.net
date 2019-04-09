@@ -4,8 +4,8 @@ The `font-style` property allows to define the style of the font, it admits thre
 
 Formal definition: <code>
 font-style: normal | italic | oblique
-| [initial](/stylo/documentation/css#css-property-values-initial) 
-| [inherit](/stylo/documentation/css#css-property-values-inherit);</code>
+| [initial](#css-property-values-initial) 
+| [inherit](#css-property-values-inherit);</code>
 
 In the following example, give the value `italic` to `h1` elements:
 

@@ -162,47 +162,47 @@ class StyloDocumentationCSS extends React.Component {
             />  
             <TitledSidebar links={[
                 {
-                    href: "/stylo/documentation/css#introduction",
+                    href: "#introduction",
                     title: "Introduction"
                 },
                 {
-                    href: "/stylo/documentation/css#style",
+                    href: "#style",
                     title: "Style"
                 },
                 {
-                    href: "/stylo/documentation/css#selectors",
+                    href: "#selectors",
                     title: "Selectors"
                 },
                 {
-                    href: "/stylo/documentation/css#attribute-match",
+                    href: "#attribute-match",
                     title: "Attribute Match"
                 },
                 {
-                    href: "/stylo/documentation/css#combinators",
+                    href: "#combinators",
                     title: "Combinators"
                 },
                 {
-                    href: "/stylo/documentation/css#stylesheet",
+                    href: "#stylesheet",
                     title: "Stylesheet"
                 },
                 {
-                    href: "/stylo/documentation/css#cascading",
+                    href: "#cascading",
                     title: "Cascading"
                 },
                 {
-                    href: "/stylo/documentation/css#properties",
+                    href: "#properties",
                     title: "Properties"
                 },
                 {
-                    href: "/stylo/documentation/css#value-types",
+                    href: "#value-types",
                     title: "Value Types"
                 },
                 {
-                    href: "/stylo/documentation/css#pseudo-elements",
+                    href: "#pseudo-elements",
                     title: "Pseudo Elements"
                 },
                 {
-                    href: "/stylo/documentation/css#color-keywords",
+                    href: "#color-keywords",
                     title: "Color Keywords"
                 }
             ]}>            

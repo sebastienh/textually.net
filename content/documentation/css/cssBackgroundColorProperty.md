@@ -2,7 +2,7 @@
 
 The `background-color` property allows to assign a color to the background of an element. 
 
-Formal definition: <code>background-color: [color](/stylo/documentation/css#css-property-values-color) | [initial](/stylo/documentation/css#css-property-values-initial) | [inherit](/stylo/documentation/css#css-property-values-inherit);</code>
+Formal definition: <code>background-color: [color](#css-property-values-color) | [initial](#css-property-values-initial) | [inherit](#css-property-values-inherit);</code>
 
 _Note_: The values ​​that this property can take are the same as for the _color_ property.
 

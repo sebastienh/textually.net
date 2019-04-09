@@ -6,11 +6,11 @@ Stylo CSS aims at being 100% standard compliant, so anyone interested in having 
 
 Subjects:
 
-- [Style](/stylo/documentation/css#style)
-- [Selectors](/stylo/documentation/css#selectors)
-- [Combinator](/stylo/documentation/css#combinators)
-- [Stylesheet](/stylo/documentation/css#stylesheet)
-- [Cascading](/stylo/documentation/css#cascading)
-- [Priority Rules](/stylo/documentation/css#priority-rules)
-- [Properties](/stylo/documentation/css#properties)
-- [CSS Property types](/stylo/documentation/css#css-property-types)
+- [Style](#style)
+- [Selectors](#selectors)
+- [Combinator](#combinators)
+- [Stylesheet](#stylesheet)
+- [Cascading](#cascading)
+- [Priority Rules](#priority-rules)
+- [Properties](#properties)
+- [CSS Property types](#css-property-types)

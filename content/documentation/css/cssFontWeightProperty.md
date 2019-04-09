@@ -4,8 +4,8 @@ The `font-weight` property  allows to assign a thickness to a font. All values â
 
 Formal definition: <code>
 font-weight: normal | bold | bolder | lighter | number
-| [initial](/stylo/documentation/css#css-property-values-initial) 
-| [inherit](/stylo/documentation/css#css-property-values-inherit);</code>
+| [initial](#css-property-values-initial) 
+| [inherit](#css-property-values-inherit);</code>
 
 The two keywords `lighter` and `bolder` define the value of the thickness of the current font relative to the inherited thickness. The final value is computed using this table: 
 

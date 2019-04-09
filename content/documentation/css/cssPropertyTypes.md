@@ -2,7 +2,7 @@
 
 List of value types: 
 
-- [initial](/stylo/documentation/css#css-property-values-initial)
-- [inherit](/stylo/documentation/css#css-property-values-inherit)
-- [length](/stylo/documentation/css#css-property-values-length)
-- [color](/stylo/documentation/css#css-property-values-color)
+- [initial](#css-property-values-initial)
+- [inherit](#css-property-values-inherit)
+- [length](#css-property-values-length)
+- [color](#css-property-values-color)

@@ -154,5 +154,5 @@ h1 {
 }
 ```
 
-Keywords allow quick access to the main colors in CSS. See the full list of Stylo [color keywords](/stylo/documentation/css#color-keywords). 
+Keywords allow quick access to the main colors in CSS. See the full list of Stylo [color keywords](#color-keywords). 
 

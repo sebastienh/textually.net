@@ -4,7 +4,7 @@
 
 Do one of the following:
 
-- From the _Tools_ sidebar tab (see [Show/Hide the _Tools_ tab](/stylo/documentation/stylo#show-hide-tools)), click on the _Styles_ button which is represented by the symbol of a brush tip.
+- From the _Tools_ sidebar tab (see [Show/Hide the _Tools_ tab](#show-hide-tools)), click on the _Styles_ button which is represented by the symbol of a brush tip.
 - From the menu, choose `View`→`Styles`→`Show Styles`
 - From the _Style editor_, click on the `Styles` button
 - With the keyboard shortcut: `⇧⌘S`

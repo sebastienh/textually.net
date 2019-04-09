@@ -137,59 +137,59 @@ class StyloDocumentation extends React.Component {
             />  
             <TitledSidebar links={[
                 {
-                    href: "/stylo/documentation/markdown#introduction",
+                    href: "#introduction",
                     title: "Introduction"
                 },
                 {
-                    href: "/stylo/documentation/markdown#specific-elements",
+                    href: "#specific-elements",
                     title: "Markdown Specific Elements"
                 },
                 {
-                    href: "/stylo/documentation/markdown#headers",
+                    href: "#headers",
                     title: "Headers"
                 },
                 {
-                    href: "/stylo/documentation/markdown#horizontal-bar",
+                    href: "#horizontal-bar",
                     title: "Horizontal Bar"
                 },
                 {
-                    href: "/stylo/documentation/markdown#emphasis",
+                    href: "#emphasis",
                     title: "Emphasis"
                 },
                 {
-                    href: "/stylo/documentation/markdown#strikethrough",
+                    href: "#strikethrough",
                     title: "Strikethrough"
                 },
                 {
-                    href: "/stylo/documentation/markdown#blockquote",
+                    href: "#blockquote",
                     title: "Blockquote"
                 },
                 {
-                    href: "/stylo/documentation/markdown#lists",
+                    href: "#lists",
                     title: "Lists"
                 },
                 {
-                    href: "/stylo/documentation/markdown#code",
+                    href: "#code",
                     title: "Code"
                 },
                 {
-                    href: "/stylo/documentation/markdown#table",
+                    href: "#table",
                     title: "Table"
                 },
                 {
-                    href: "/stylo/documentation/markdown#reference",
+                    href: "#reference",
                     title: "Reference"
                 },
                 {
-                    href: "/stylo/documentation/markdown#link",
+                    href: "#link",
                     title: "Link"
                 },
                 {
-                    href: "/stylo/documentation/markdown#image",
+                    href: "#image",
                     title: "Image"
                 },
                 {
-                    href: "/stylo/documentation/markdown#ua-stylesheet",
+                    href: "#ua-stylesheet",
                     title: "Markdown UA stylesheet"
                 }
             ]}>            

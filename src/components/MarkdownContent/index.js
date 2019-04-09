@@ -54,12 +54,19 @@ const TextuallyLink = styled(Link)`
     }
 `
 
+const ExternalLink = styled.a`
+    color: gray;
+    box-shadow: 0 0 0;
+
+    &:hover {
+        box-shadow: 0 1px 0 #808080;
+    }
+`
+
 function MarkdownLink(props) {
 
     return (
-        <TextuallyLink to={props.href}>
-            {props.children}
-        </TextuallyLink>
+        props.href.startsWith("http") || props.href.startsWith("#") ? <ExternalLink href={props.href}>{props.children}</ExternalLink> : <TextuallyLink to={props.href}>{props.children}</TextuallyLink>
     )
 }
 

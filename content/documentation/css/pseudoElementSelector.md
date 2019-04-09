@@ -8,7 +8,7 @@ Markdown:
 ## header level 2
 ```
 
-The text "##" is the tag, or the label of the element. The pseudo-element selector `::tag`  allows to select only the tag of the element `h2` in the previous Markdown source. In Stylo, several pseudo-elements exist, for a complete list see the [Pseudo-elements](/stylo/documentation/css#pseudo-elements) section.
+The text "##" is the tag, or the label of the element. The pseudo-element selector `::tag`  allows to select only the tag of the element `h2` in the previous Markdown source. In Stylo, several pseudo-elements exist, for a complete list see the [Pseudo-elements](#pseudo-elements) section.
 
 The pseudo-element selector is introduced by two "colon" ("::") after the selector of an element and is followed by the name of the pseudo-element, for example:
 

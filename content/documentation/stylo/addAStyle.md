@@ -1,6 +1,6 @@
 # Add a style (`⇧⌘A`)
 
-New styles can created from the [_Styles List_](/stylo/documentation/stylo#show-hide-styles-list). 
+New styles can created from the [_Styles List_](#show-hide-styles-list). 
 
 To add a style, do one of the following:
 

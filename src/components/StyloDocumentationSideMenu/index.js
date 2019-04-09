@@ -5,6 +5,11 @@ import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
 import NavigationLink from "../NavigationLink"
 import BackButton from "../BackButton"
+import StyloDocumentationHtmlSideMenu from "../StyloDocumentationHtmlSideMenu"
+import StyloDocumentationCssSideMenu from "../StyloDocumentationCssSideMenu"
+import StyloDocumentationMarkdownSideMenu from "../StyloDocumentationMarkdownSideMenu"
+import StyloDocumentationEssentialsSideMenu from "../StyloDocumentationEssentialsSideMenu"
+import SidebarPushButton from "../SidebarPushButton"
 
 const {
     Transition
@@ -66,6 +71,30 @@ export default class StyloDocumentationSideMenu extends Component {
         // );
     }
 
+    onEssentials() {
+        this.props.navigationController.pushView(
+            <StyloDocumentationEssentialsSideMenu />
+        );
+    }
+
+    onHtml() {
+        this.props.navigationController.pushView(
+            <StyloDocumentationHtmlSideMenu />
+        );
+    }
+
+    onCss() {
+        this.props.navigationController.pushView(
+            <StyloDocumentationCssSideMenu />
+        );
+    }
+
+    onMarkdown() {
+        this.props.navigationController.pushView(
+            <StyloDocumentationMarkdownSideMenu />
+        );
+    }
+
     back() {
         this.props.navigationController.popView({
             transition: Transition.type.PUSH_RIGHT
@@ -106,30 +135,30 @@ export default class StyloDocumentationSideMenu extends Component {
                             Documentation
                         </Text>
                     </SectionTitle>
-                    <MainLink
-                        path={["/", "stylo", "documentation", "styloessentials"]}
-                        href='/stylo/documentation/stylo-essentials'
-                        p={2}>
-                        Essentials
-                    </MainLink>
-                    <MainLink
+                    <SidebarPushButton
+                        path={["/", "stylo", "documentation", "stylo-essentials"]}
+                        p={2}
+                        onClick={this.onEssentials.bind(this)}>
+                        Essentials...
+                    </SidebarPushButton>
+                    <SidebarPushButton
                         path={["/", "stylo", "documentation", "html"]}
-                        href='/stylo/documentation/html'
-                        p={2}>
-                        HTML
-                    </MainLink>
-                    <MainLink
+                        p={2}
+                        onClick={this.onHtml.bind(this)}>
+                        HTML...
+                    </SidebarPushButton>
+                    <SidebarPushButton
                         path={["/", "stylo", "documentation", "css"]}
-                        href='/stylo/documentation/css'
-                        p={2}>
-                        CSS
-                    </MainLink>
-                    <MainLink
+                        p={2}
+                        onClick={this.onCss.bind(this)}>
+                        CSS...
+                    </SidebarPushButton>
+                    <SidebarPushButton
                         path={["/", "stylo", "documentation", "markdown"]}
-                        href='/stylo/documentation/markdown'
-                        p={2}>
-                        Markdown
-                    </MainLink>
+                        p={2}
+                        onClick={this.onMarkdown.bind(this)}>
+                        Markdown...
+                    </SidebarPushButton>
                 </LinksContainer>
             </MenuContainer>
         )

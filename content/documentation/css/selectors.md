@@ -4,10 +4,10 @@ A selector makes it possible to specify how to select the elements for which the
 
 There are several different selectors:
 
-- [type selector](/stylo/documentation/css#type-selector)
-- [id selector](/stylo/documentation/css#id-selector)
-- [class selector](/stylo/documentation/css#class-selector)
-- [Universal selector](/stylo/documentation/css#universal-selector)
-- [attribute selector](/stylo/documentation/css#attribute-selector)
-- [pseudo-element selector](/stylo/documentation/css#pseudo-element-selector) 
-- [pseudo-class selector](/stylo/documentation/css#pseudo-class-selector) 
+- [type selector](#type-selector)
+- [id selector](#id-selector)
+- [class selector](#class-selector)
+- [Universal selector](#universal-selector)
+- [attribute selector](#attribute-selector)
+- [pseudo-element selector](#pseudo-element-selector) 
+- [pseudo-class selector](#pseudo-class-selector) 

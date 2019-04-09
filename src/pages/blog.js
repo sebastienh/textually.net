@@ -7,7 +7,7 @@ import { rhythm } from "../utils/typography"
 import ContentArea from "../components/ContentArea"
 import PageLocation from "../components/PageLocation"
 import styled from "styled-components";
-import PageTemplate from "../components/PageTemplate"
+import DocumentationPageTemplate from "../components/DocumentationPageTemplate"
 
 const BlogLink = styled(Link)`
   color: black;
@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
               title="All posts"
               keywords={[`blog`, `html`, `css`, `markdown`, `md`]}
             />
-          <PageTemplate>
+          <DocumentationPageTemplate>
             
             <h1>Blog</h1>
             <ContentArea>
@@ -53,7 +53,7 @@ class BlogIndex extends React.Component {
                 )
               })}
             </ContentArea>       
-          </PageTemplate>
+          </DocumentationPageTemplate>
       </PageLocation>
     )
   }

@@ -11,4 +11,4 @@ To export a Stylo document:
 
 - From the menu, choose `File`→`Export` and choose the destination format.
 
-Note: To save a Stylo document as `Plain text` or `Markdown` simply use the `Save as...` menu item, see [Save as...](/stylo/documentation/stylo#save-as) section for more information.
+Note: To save a Stylo document as `Plain text` or `Markdown` simply use the `Save as...` menu item, see [Save as...](#save-as) section for more information.

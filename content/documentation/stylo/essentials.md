@@ -4,10 +4,10 @@ Stylo is a Markdown text editor which allows to define the text appearance in CS
 
 Each appearance is refered as a _style_.  The _.stylo_ file format keeps style information along with the text document so that any change made to the styles are saved with the document. It is always possible to save a _.stylo_ file to Mardkown or plain text. Stylo also offers many export formats (HTML, PDF, Word). 
 
-- [New document](/stylo/documentation/stylo#new-document)
-- [Save a document](/stylo/documentation/stylo#save-document)
-- [Save as](/stylo/documentation/stylo#save-as)
-- [Open a document](/stylo/documentation/stylo#open-document)
-- [Rename a document](/stylo/documentation/stylo#rename-document)
-- [Export a document](/stylo/documentation/stylo#export-document)
-- [Print a document](/stylo/documentation/stylo#print-document)
+- [New document](#new-document)
+- [Save a document](#save-document)
+- [Save as](#save-as)
+- [Open a document](#open-document)
+- [Rename a document](#rename-document)
+- [Export a document](#export-document)
+- [Print a document](#print-document)

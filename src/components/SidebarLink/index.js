@@ -3,17 +3,19 @@ import styled from "styled-components";
 import { Link } from "gatsby"
 import LocationContext from "../../context/LocationContext"
 import { Flex, Box, Text, Container, Provider, Header } from "rebass";
+import LocationAwareLink from "../LocationAwareLink"
 
-const PlainLink = styled(Link)`
+const PlainLink = styled.a`
     box-shadow: 0 0 0;
     text-decoration: none;
+    font-weight: 200;
     color: ${props => props.selected ? "#FFA701" : "#aaa"};
 `
 
 const Li = styled.li`
     z-index: 1000;
     color: ${props => props.selected ? "#FFA701" : "#aaa"};
-    font-weight: 600;
+    font-weight: 200;
     margin-bottom: 0;
 `
 
@@ -52,9 +54,9 @@ export default class SidebarLink extends Component {
                 {(context) => (
                     <Li selected={context.index == number}>
                         <Box pl={["5px", "0px"]} fontSize={[1,2]}>
-                            <PlainLink to={href} selected={context.index == number}>
+                            <LocationAwareLink href={href} number={number}>
                                 {children}
-                            </PlainLink>
+                            </LocationAwareLink>
                         </Box>
                     </Li>
                 )}

@@ -16,5 +16,5 @@ A style preview is a smaller version of a style preview in the _Styles List_. It
 
 The length of the indicator is proportional to the amount of styles that are visible over the total number of styles. If the positioning indicator is on the left, the styles list shows the style at the beginning of the styles. The indicator moves to the right to indicate that we are closer to the end of the list. This indicator can not be directly manipulated.
 
-- [Show/hide the _Style Picker_](/stylo/documentation/stylo#show-hide-style-picker)
-- [Select a style](/stylo/documentation/stylo#select-a-style)
+- [Show/hide the _Style Picker_](#show-hide-style-picker)
+- [Select a style](#select-a-style)

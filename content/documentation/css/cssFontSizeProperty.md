@@ -2,19 +2,19 @@
 
 The `font-size` property allows to assign a size to a font. 
 
-Formal definition: <code>font-size: <a href="/stylo/documentation/css#css-properties-font-size-absolute">medium</a> 
-| <a href="/stylo/documentation/css#css-properties-font-size-absolute">xx-small</a> 
-| <a href="/stylo/documentation/css#css-properties-font-size-absolute">x-small</a> 
-| <a href="/stylo/documentation/css#css-properties-font-size-absolute">small</a> 
-| <a href="/stylo/documentation/css#css-properties-font-size-absolute">large</a> 
-| <a href="/stylo/documentation/css#css-properties-font-size-absolute">x-large</a> 
-| <a href="/stylo/documentation/css#css-properties-font-size-absolute">xx-large</a> 
-| <a href="/stylo/documentation/css#css-properties-font-size-relative">smaller</a> 
-| <a href="/stylo/documentation/css#css-properties-font-size-relative">larger</a> 
-| <a href="/stylo/documentation/css#css-property-values-length">length</a> 
-| <a href="/stylo/documentation/css#css-properties-font-size-percentage">%</a> 
-| <a href="/stylo/documentation/css#css-property-values-initial">initial</a> 
-| <a href="/stylo/documentation/css#css-property-values-inherit">inherit</a>;</code>
+Formal definition: <code>font-size: <a href="#css-properties-font-size-absolute">medium</a> 
+| <a href="#css-properties-font-size-absolute">xx-small</a> 
+| <a href="#css-properties-font-size-absolute">x-small</a> 
+| <a href="#css-properties-font-size-absolute">small</a> 
+| <a href="#css-properties-font-size-absolute">large</a> 
+| <a href="#css-properties-font-size-absolute">x-large</a> 
+| <a href="#css-properties-font-size-absolute">xx-large</a> 
+| <a href="#css-properties-font-size-relative">smaller</a> 
+| <a href="#css-properties-font-size-relative">larger</a> 
+| <a href="#css-property-values-length">length</a> 
+| <a href="#css-properties-font-size-percentage">%</a> 
+| <a href="#css-property-values-initial">initial</a> 
+| <a href="#css-property-values-inherit">inherit</a>;</code>
 
 ## Keywords
 

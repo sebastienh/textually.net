@@ -14,4 +14,4 @@ HTML:
 </html>
 ```
 
-The elements of an HTML document form a tree structure. In the HTML above, the `html` is the parent of the `body` element. See the [Definitions](/stylo/documentation/html#definitions) section for more information.
+The elements of an HTML document form a tree structure. In the HTML above, the `html` is the parent of the `body` element. See the [Definitions](#definitions) section for more information.

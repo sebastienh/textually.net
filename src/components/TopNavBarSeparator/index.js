@@ -5,7 +5,7 @@ import NavBarSeparatorContext from "../../context/NavBarSeparatorContext"
 const Separator = styled.hr`
     margin-top: 0px;
     margin-bottom: 0px;
-    height: 2px;
+    height: 1px;
     margin-right: ${ props => props.marginRight ? props.marginRight : "0px"};
     background-color: ${ props => props.selected ? "#FFA700" : "#A1A1A1"};
     transition: margin-right 0.5s;

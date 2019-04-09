@@ -126,31 +126,31 @@ class StyloDocumentation extends React.Component {
             />  
             <TitledSidebar links={[
                 {
-                    href: "/stylo/documentation/html#introduction",
+                    href: "#introduction",
                     title: "Introduction"
                 },
                 {
-                    href: "/stylo/documentation/html#document",
+                    href: "#document",
                     title: "Document"
                 },
                 {
-                    href: "/stylo/documentation/html#element",
+                    href: "#element",
                     title: "Element"
                 },
                 {
-                    href: "/stylo/documentation/html#definitions",
+                    href: "#definitions",
                     title: "Definitions"
                 },
                 {
-                    href: "/stylo/documentation/html#attributes",
+                    href: "#attributes",
                     title: "Attributes"
                 },
                 {
-                    href: "/stylo/documentation/html#id",
+                    href: "#id",
                     title: "Id"
                 },
                 {
-                    href: "/stylo/documentation/html#class",
+                    href: "#class",
                     title: "Class"
                 }
             ]}>            

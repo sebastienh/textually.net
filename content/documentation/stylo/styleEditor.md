@@ -11,6 +11,6 @@ The title section includes:
 
 The issues section includes the list of issues (warnings, errors) in the current CSS source.
 
-- [Show/hide the _Issues panel_](/stylo/documentation/stylo#show-hide-issues-panel)
-- [Reveal single/all issues ](/stylo/documentation/stylo#reveal-single-all-issues)
-- [Apply pending style changes](/stylo/documentation/stylo#apply-pending-style-changes)
+- [Show/hide the _Issues panel_](#show-hide-issues-panel)
+- [Reveal single/all issues ](#reveal-single-all-issues)
+- [Apply pending style changes](#apply-pending-style-changes)

@@ -5,7 +5,7 @@ import { Heading } from 'rebass'
 import SEO from "../components/seo"
 import styled from "styled-components";
 import PageLocation from "../components/PageLocation"
-import PageTemplate from "../components/PageTemplate"
+import DocumentationPageTemplate from "../components/DocumentationPageTemplate"
 import MarkdownContent from "../components/MarkdownContent"
 
 export const HeaderDivider = styled.hr`
@@ -61,13 +61,13 @@ class Index extends React.Component {
           keywords={[`textually`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
         />
         <PageLocation path={["/", "about"]}>
-          <PageTemplate bg={"#6B9080"} height={height}>
+          <DocumentationPageTemplate height={height}>
               <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
               <Heading  color={"white"} bg={"black"} fontSize={[6,7,8]}>T</Heading>
                 <Heading  color={"white"} fontSize={[6,7,8]}>extually</Heading>
               </Flex>
               <MarkdownContent color={"white"} post={textuallyAbout} />
-          </PageTemplate>  
+          </DocumentationPageTemplate>  
         </PageLocation>
       </React.Fragment>
     )

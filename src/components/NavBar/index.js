@@ -12,7 +12,7 @@ import TopNavBarSeparator from "../TopNavBarSeparator"
 
 // box-shadow: 10px 5px 5px red;
 export const Header = styled(Flex)`
-    height: 100px;
+
     /* background-color: #FFFCF7; */
     background-color: #FFF;
     box-shadow: ${props => props.visible ? "0px 2px 10px #ddd" : "0px 0px 0px"};
@@ -20,11 +20,17 @@ export const Header = styled(Flex)`
     padding: 0;
     width: 100%;
     z-index: 1100;
-    top: ${props => props.visible ? "0px" : "-100px"};
-    font-size: 14pt;
-
+    
     @media (min-width: 769px) {
+        height: 100px;
         transition: top 0.5s;
+        top: ${props => props.visible ? "0px" : "-100px"};
+    }
+
+    @media (max-width: 768px) {
+        height: 54px;
+        transition: top 0.5s;
+        top: ${props => props.visible ? "0px" : "-54px"};
     }
 `;
 
@@ -44,9 +50,9 @@ const BottomContainer = styled(Flex)`
 `
 
 const SectionLinkSeparator = styled(Text)`
-    margin-left: 12px;
+    margin-left: 0px;
     font-size: 20pt;
-    color: #A1A1A1;
+    color: #ddd;
 `
 
 export default class NavBar extends Component {
@@ -187,11 +193,11 @@ export default class NavBar extends Component {
                             <Flex style={{width:"100%"}}>
                                 <Box width={[1/10]} />
                                 <Flex width={[8/10]} flexDirection={"column"}>
-                                    <TopContainer px={2}>
+                                    <TopContainer fontSize={"15pt"} px={2}>
                                         {this.renderTop(locationContext)}
                                     </TopContainer>
                                     <TopNavBarSeparator />
-                                    <Flex fontSize={"14pt"} px={2} style={{width:"100%"}}>
+                                    <Flex fontSize={"13pt"} px={2} style={{width:"100%"}}>
                                         <Box mx='auto' />
                                         <Box>
                                             {this.renderBottom(locationContext)}

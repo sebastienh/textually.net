@@ -16,9 +16,9 @@ The button to show the _Styles List_ is represented by a symbol containing the t
  
 4. the _Text Statistics_ button to see the text statistics/writing session statistics
 
-The button to show the _Text Statistics_ view is represented by the lowercase letter "i". See [Statistics and Session](/stylo/documentation/stylo#text-statistics) section for a complete description.  
+The button to show the _Text Statistics_ view is represented by the lowercase letter "i". See [Statistics and Session](#text-statistics) section for a complete description.  
 
 5. the Markdown formatting tools
 
-The various buttons of this section provide access to quick Markdown formatting functions. See [Markdown Editor](/stylo/documentation/stylo#markdown-editor) section for a complete description.
+The various buttons of this section provide access to quick Markdown formatting functions. See [Markdown Editor](#markdown-editor) section for a complete description.
 

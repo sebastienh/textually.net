@@ -2,8 +2,8 @@
 
 This property allows to specify the decoration type to use. There are four types of decorations: `none` the default, that is to say there is no decoration; `underline`, we underline the elements; `overline`, a line is placed above the elements; `line-through`, a line runs through the elements, this is equivalent to a strikethrough.
 
-Formal definition: <code>text-decoration-line: none | underline | overline | line-through | [initial](/stylo/documentation/css#css-property-values-initial) 
-| [inherit](/stylo/documentation/css#css-property-values-inherit);</code>
+Formal definition: <code>text-decoration-line: none | underline | overline | line-through | [initial](#css-property-values-initial) 
+| [inherit](#css-property-values-inherit);</code>
 
 It is possible to use several decorations at a time, for example, the following CSS decorates `h1` elements with a line above and a line below.:
 

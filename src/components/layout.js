@@ -147,7 +147,6 @@ class Layout extends React.Component {
                         </Box>
                       </Flex>
                       <Flex style={{zIndex:"1000"}}>
-                        <Box mx='auto' style={{zIndex:"1000"}}/>
                         <Box       
                         width={[
                           3/10,
@@ -180,18 +179,6 @@ class Layout extends React.Component {
                         style={{zIndex:"1000"}}
                         alignSelf={"right"}>
                           <CircledNumbersSidebar /> 
-                        </Box>
-                      </Flex>
-                      <Flex style={{zIndex:"1000"}}>
-                        <Box mx='auto' style={{zIndex:"1000"}}/>
-                        <Box       
-                        width={[
-                          3/10,
-                        ]}     
-                        zIndex={100}
-                        style={{zIndex:"1000"}}
-                        alignSelf={"right"}>
-                          <TitledSidebarLinks />
                         </Box>
                       </Flex>
                     </MediaQuery>
