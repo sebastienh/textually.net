@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styled from "styled-components";
 import { Link } from "gatsby"
 import LocationContext from "../../context/LocationContext"
-import { Flex, Box, Text, Container, Provider, Header } from "rebass";
 
 // 1: x="224.021px" y="325.122px"
 // 3: x="200.371px" y="331.57px"
@@ -100,18 +99,7 @@ const getY = (number) => {
 const PlainLink = styled(Link)`
     box-shadow: 0 0 0;
     text-decoration: none;
-    z-index: 1000;
-`
-
-const CenterHorizontally = styled(Flex)`
-    z-index: 1000;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    justify-content: center;
-    flex-direction: row;
+    z-index: ${props => props.zIndex ? props.zIndex : "1000" };
 `
 
 // context.state.index == number ? "#f00" : color}
@@ -133,12 +121,13 @@ export default class CircledNumber extends Component {
             width,
             height,
             number,
-            color
+            color,
+            zIndex
         } = this.props;
 
         return (
 
-                <PlainLink to={link}>
+                <PlainLink to={link} zIndex={zIndex}>
                     <LocationContext.Consumer>
                         {(context) => (
                             <React.Fragment>

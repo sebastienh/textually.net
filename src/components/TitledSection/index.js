@@ -57,7 +57,8 @@ export default class TitledSection extends Component {
                             width={"82px"} 
                             height={"82px"} 
                             color={"#D74E09"} 
-                            number={number}/>
+                            number={number}
+                            zIndex={"0"}/>
                             
                     </Flex>
                     <TitledSectionInsideBlock number={number}>
