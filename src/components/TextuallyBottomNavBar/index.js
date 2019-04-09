@@ -10,7 +10,7 @@ import NavBarContextReseter from "../NavBarContextReseter"
 const MainLink = styled(NavBarLink)`
 
     box-shadow: 0px 0px 0px;
-    margin-left: 60px;
+    margin-left: 30px;
 
     &:hover {
         cursor: pointer;
@@ -48,7 +48,7 @@ export default class TextuallyBottomNavBar extends Component {
                                         Blog
                                     </MainLink>
                                     <NavBarSectionButton
-                                        marginLeft={"60px"}
+                                        marginLeft={"30px"}
                                         path={["/", "stylo"]}
                                         p={2}>
                                         Stylo...

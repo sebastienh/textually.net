@@ -191,7 +191,7 @@ export default class NavBar extends Component {
                                         {this.renderTop(locationContext)}
                                     </TopContainer>
                                     <TopNavBarSeparator />
-                                    <Flex px={2} style={{width:"100%"}}>
+                                    <Flex fontSize={"14pt"} px={2} style={{width:"100%"}}>
                                         <Box mx='auto' />
                                         <Box>
                                             {this.renderBottom(locationContext)}

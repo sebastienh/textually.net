@@ -11,22 +11,21 @@ const PageContainer = styled(Flex)`
 
 export default class PageTemplate extends Component {
 
+    render() {
 
-  render() {
+        const {
+          height,
+          ...other
+        } = this.props
 
-    const {
-      height,
-      ...other
-    } = this.props
-
-    return (
-      <PageContainer {...other} style={{height: height}}>
-        <Box width={2/10} />
-        <Box width={6/10}>
-          {this.props.children}
-        </Box>
-        <Box width={2/10} />
-      </PageContainer>      
-    )
-  }
+        return (
+            <PageContainer {...other} style={{height: height}}>
+                <Box width={2/10} />
+                <Box width={6/10}>
+                  {this.props.children}
+                </Box>
+                <Box width={2/10} />
+            </PageContainer>      
+        )
+    }
 }

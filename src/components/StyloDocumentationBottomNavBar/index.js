@@ -10,7 +10,7 @@ import NavBarContextReseter from "../NavBarContextReseter"
 const MainLink = styled(NavBarLink)`
 
     box-shadow: 0px 0px 0px;
-    margin-left: 60px;
+    margin-left: 30px;
 
     &:hover {
         cursor: pointer;

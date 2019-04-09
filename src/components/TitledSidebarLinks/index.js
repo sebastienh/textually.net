@@ -55,9 +55,9 @@ export default class TitledSidebarLinks extends Component {
                 title
             } = link;
 
-            children.push(<SidebarLink href={href} number={i+1}>{i+1}. {title}</SidebarLink>)
+            children.push(<SidebarLink href={href} number={i+1}>{title}</SidebarLink>)
         }
-        return children
+        return <ol>{children}</ol>
     }
 
     render() {

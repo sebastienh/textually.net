@@ -132,6 +132,12 @@ export default class StyloSideMenu extends Component {
                         p={2}>
                         Privacy Policy
                     </MainLink>
+                    <MainLink
+                        path={["/", "stylo", "acknowledgments"]}
+                        href='/stylo/acknowledgments'
+                        p={2}>
+                        Acknowledgments
+                    </MainLink>
                 </LinksContainer>
             </MenuContainer>
         )

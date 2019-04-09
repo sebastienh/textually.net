@@ -7,9 +7,14 @@ import { Flex, Box, Text, Container, Provider, Header } from "rebass";
 const PlainLink = styled(Link)`
     box-shadow: 0 0 0;
     text-decoration: none;
+    color: ${props => props.selected ? "#FFA701" : "#aaa"};
+`
+
+const Li = styled.li`
     z-index: 1000;
     color: ${props => props.selected ? "#FFA701" : "#aaa"};
     font-weight: 600;
+    margin-bottom: 0;
 `
 
 const CenterHorizontally = styled(Flex)`
@@ -45,11 +50,13 @@ export default class SidebarLink extends Component {
         return (
             <LocationContext.Consumer>
                 {(context) => (
-                    <Box pl={["5px", "0px"]} fontSize={[1,2,3]}>
-                        <PlainLink to={href} selected={context.index == number}>
-                            {children}
-                        </PlainLink>
-                    </Box>
+                    <Li selected={context.index == number}>
+                        <Box pl={["5px", "0px"]} fontSize={[1,2]}>
+                            <PlainLink to={href} selected={context.index == number}>
+                                {children}
+                            </PlainLink>
+                        </Box>
+                    </Li>
                 )}
             </LocationContext.Consumer>
         )

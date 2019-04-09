@@ -112,6 +112,7 @@ class StyloDocumentation extends React.Component {
     const applyPendingStyleChanges = data.applyPendingStyleChanges.edges[0].node;
     const blockquote = data.blockquote.edges[0].node;
     const bold = data.bold.edges[0].node;
+    const bundledFonts = data.bundledFonts.edges[0].node;
     const copySelector = data.copySelector.edges[0].node;
     const distractionFree = data.distractionFree.edges[0].node;
     const editAStyle = data.editAStyle.edges[0].node;
@@ -127,6 +128,7 @@ class StyloDocumentation extends React.Component {
     const htmlPreview = data.htmlPreview.edges[0].node;
     const introduction = data.introduction.edges[0].node;
     const italic = data.italic.edges[0].node;
+    const keyboardShortcuts = data.keyboardShortcuts.edges[0].node;
     const link = data.link.edges[0].node;
     const markdownEditor = data.markdownEditor.edges[0].node;
     const markdownFormatting = data.markdownFormatting.edges[0].node;
@@ -402,6 +404,16 @@ class StyloDocumentation extends React.Component {
                             <MarkdownContent post={link}/>
                         </Box>
                     </TitledSection>
+                    <TitledSection id={"bundled-fonts"} number={8}>
+                        <Box number={51}>
+                            <MarkdownContent post={bundledFonts}/>
+                        </Box>
+                    </TitledSection>
+                    <TitledSection id={"keyboard-shortcuts"} number={9}>
+                        <Box number={52}>
+                            <MarkdownContent post={keyboardShortcuts}/>
+                        </Box>
+                    </TitledSection>
                 </Flex>
             </DocumentationPageTemplate>
             </TitledSidebar>
@@ -468,6 +480,21 @@ query {
       }
     }
   }
+
+  bundledFonts: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/bundledFonts/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+  
 
   copySelector: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
@@ -670,6 +697,20 @@ query {
     filter: { 
       fields: { 
         slug: { eq: "/italic/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+
+  keyboardShortcuts: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/keyboardShortcuts/" } 
       } 
     }) {
     edges {
