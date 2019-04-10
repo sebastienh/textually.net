@@ -7,4 +7,4 @@ To convert to bold:
 - From the _Tools_ sidebar tab, select the text to convert to bold and click on the `B` button
 - With the keyboard shortcut, enter `⌘B`
 
-See  [Markdown](#md-emphasis) reference for more information. 
+See  [Markdown](/stylo/documentation/markdown#md-emphasis) reference for more information. 

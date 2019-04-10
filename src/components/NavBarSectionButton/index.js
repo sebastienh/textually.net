@@ -8,7 +8,7 @@ export const HoverButton = styled.button`
 
     padding: 8px;
     box-shadow: 0px 0px 0px;
-    color: ${props => props.selected ? "#FFA700" : props.onPath ? "#D74E09" : "#A1A1A1"};
+    color: ${props => props.selected ? "#FFA700" : props.onPath ? "#D74E09" : "#666"};
     border-width: 0px;
     outline: none;  
     background-color: inherit;

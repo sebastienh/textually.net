@@ -22,17 +22,17 @@ export default class Contact extends Component {
             />
           <PageTemplate>
             {/* <MarkdownContent post={textuallyContact} /> */}
-              <Flex mt={40} flexDirection={"row"} justifyContent={"center"}>
-                <Heading fontSize={[3,5,6]}>Contact Us</Heading>
-              </Flex>
-              <Flex mt={40} flexDirection={"row"} justifyContent={"center"}>
-                <Text> 
-                  At Textually, we try to   
-                  Leave us any comment, any suggestion we will be happy to answer.
-                  
-                </Text>
-              </Flex>
-              <ContactForm mt={60}/>
+            <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
+              <Heading  color={"#D74E09"} fontSize={[8]}>Contact Us</Heading>
+            </Flex>
+            <Flex mt={40} flexDirection={"row"} justifyContent={"center"}>
+              <Text> 
+                At Textually, we try to   
+                Leave us any comment, any suggestion we will be happy to answer.
+                
+              </Text>
+            </Flex>
+            <ContactForm mt={60}/>
           </PageTemplate>
       </PageLocation>
     )

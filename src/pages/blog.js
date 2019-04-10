@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { Flex, Box } from '@rebass/grid'
+import { Heading } from 'rebass'
 import Bio from "../components/bio"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -28,7 +29,9 @@ class BlogIndex extends React.Component {
             />
           <DocumentationPageTemplate>
             
-            <h1>Blog</h1>
+            <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
+              <Heading  color={"#D74E09"} fontSize={[8]}>Blog</Heading>
+            </Flex>
             <ContentArea>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug

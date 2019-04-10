@@ -84,7 +84,7 @@ HTML:
 
 All titles offer the following pseudo-element:
 
-- `tag`: allows to stylize the region used to define the title, in the case of syntax with `#`, only sharps will be stylized, and in the case of the _underlined_ syntax, the underline bar will be stylized. For example, the following CSS will color the "tag" part of the "h1" elements with the red color:
+- `tag`: allows to style the region used to define the title, in the case of syntax with `#`, only sharps will be styled, and in the case of the _underlined_ syntax, the underline bar will be styled. For example, the following CSS will color the "tag" part of the "h1" elements with the red color:
 
 ``` css
 h1::tag {

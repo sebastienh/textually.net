@@ -16,4 +16,4 @@ HTML:
 
 would create a link named "Stylo" pointing to the URL: "http://www.textually.net/stylo".
 
-See  [Markdown](#md-link) reference for more information. 
+See  [Markdown](/stylo/documentation/markdown#md-link) reference for more information. 

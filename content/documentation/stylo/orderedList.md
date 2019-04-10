@@ -7,4 +7,4 @@ To create an ordered list:
 - From the _Tools_ sidebar tab, select the text to be transformed into an ordered list and click on the `1.` button
 - With the keyboard shortcut, enter `⇧⌘L`
 
-See  [Markdown](#md-lists) reference for more information. 
+See  [Markdown](/stylo/documentation/markdown#md-lists) reference for more information. 

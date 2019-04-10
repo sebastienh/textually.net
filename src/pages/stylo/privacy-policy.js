@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import SEO from "../../components/seo"
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
-import { Text } from 'rebass'
+import { Text, Heading } from 'rebass'
 import theme from "../../styles/theme.js";
 import PageHeaderSection from "../../components/PageHeaderSection"
 import PageSection from "../../components/PageSection"
@@ -120,6 +120,9 @@ class StyloPrivacyPolicy extends React.Component {
               title="Release Notes"
               keywords={[`stylo`, `releases`, `notes`]}
             />
+            <Flex mt={120} flexDirection={"row"} justifyContent={"center"}> 
+              <Heading  color={"#D74E09"} fontSize={[8]}>Stylo Privacy Policy</Heading>
+            </Flex>
             <DocumentationPageTemplate>
                 <MarkdownContent post={styloPrivacyPolicy} />
             </DocumentationPageTemplate>

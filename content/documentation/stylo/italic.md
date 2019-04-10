@@ -7,4 +7,4 @@ To convert to italic:
 - From the _Tools_ sidebar tab, select the text to be converted to italic and click on the `I` button.
 - With the keyboard shortcut, enter `⌘I`
 
-See  [Markdown](#md-emphasis) reference for more information. 
+See  [Markdown](/stylo/documentation/markdown#md-emphasis) reference for more information. 

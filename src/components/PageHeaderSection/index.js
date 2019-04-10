@@ -8,7 +8,7 @@ const HeaderBox = styled.div`
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: #E0E0E0;
+    background-color: #f6f6f6;
     height: ${props => props.height ?  props.height : "100%"};
     width: ${props => props.width ?  props.width : "100%"};
 `

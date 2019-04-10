@@ -1,7 +1,4 @@
 
-
-# Stylo Privacy Policy
-
 This Privacy Policy is for the Stylo macOS App text editor by Textually Inc. Stylo does not keep or use any user data other than crash reports provided by Apple Inc.</p>
         
 ## User Content
@@ -10,8 +7,8 @@ All text files, images, and other files displayed in Stylo are kept either in a 
         
 ## What information does Stylo obtain?
         
-  - **Crash Reports**:
-    To help us understand what caused a crash, Textually will obtain crash reports from Apple Inc. Crash reports contain information on the crash, including device model, system version, plus the application’s version and build number.
+ **Crash Reports**:
+To help us understand what caused a crash, Textually will obtain crash reports from Apple Inc. Crash reports contain information on the crash, including device model, system version, plus the application’s version and build number.
 
 ## Changes
         

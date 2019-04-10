@@ -18,11 +18,13 @@ import StyloLogo from "../images/svg/logo-green.svg"
 import theme from "../styles/theme.js";
 import PageHeaderSection from "../components/PageHeaderSection"
 import StyloFourColoredScreenshots from "../components/StyloFourColoredScreenshots"
+import StyloNewParadigm from "../components/StyloNewParadigm"
 import PageSection from "../components/PageSection"
 import PageLocation from "../components/PageLocation"
 import PageScrollingNumbers from "../components/PageScrollingNumbers"
 import StyleUsingCSS from "../components/StyleUsingCSS"
 import VisibilitySensor from 'react-visibility-sensor'
+
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -119,9 +121,9 @@ class StyloIndex extends React.Component {
 
     const { data } = this.props;
     const styloAboutHtml =  data.styloAbout.edges[0].node.html;
-
+    const newParadigmImageDesktop = data.newParadigmDesktop.childImageSharp.sizes;
     const {
-        data: {
+        data: { 
             bgDesktop: {
               childImageSharp: { fixed: desktop }
             },
@@ -145,6 +147,7 @@ class StyloIndex extends React.Component {
           <PageScrollingNumbers links={[
               "/stylo#intro",
               "/stylo#four-colored-screenshots-page",
+              "/stylo#stylo-new-paradigm",
               "/stylo#last"
             ]}>
             <SEO
@@ -165,7 +168,6 @@ class StyloIndex extends React.Component {
               <PageSection id={"intro"} number={1}>
                 <PageHeaderSection>
                   <ContentResizer>
-                  
                     <Flex justifyContent={"center"} flexDirection={"row"}>
                       <StyloLogo width={[
                         "200px",
@@ -177,24 +179,23 @@ class StyloIndex extends React.Component {
                         Stylo
                       </Text>
                     </Flex>
-                    
                   </ContentResizer>
                 </PageHeaderSection>  
                 </PageSection>
-                <PageSection id={"four-colored-screenshots-page"} number={2}>
-                        <VisibilitySensor partialVisibility scrollCheck>
-                          {({ isVisible }) => (
-                            <React.Fragment>
-                              <p>Is visible: {isVisible}</p>
-                              <StyloFourColoredScreenshots images={images}/>
-                            </React.Fragment>
-                          )}
-                        </VisibilitySensor>
+                <PageSection  mt={140} id={"four-colored-screenshots-page"} number={2}>
+                  <React.Fragment>
+                    <StyloFourColoredScreenshots images={images}/>
+                  </React.Fragment>
+                </PageSection>
+                <PageSection  mt={140} id={"stylo-new-paradigm"} number={3}>
+                  <React.Fragment>
+                    <StyloNewParadigm image={newParadigmImageDesktop}/>
+                  </React.Fragment>
                 </PageSection>
                 {/* <PageSection id={"style-using-css"} number={3}> 
                     <StyleUsingCSS images={images}/>
                 </PageSection> */}
-                <PageSection id={"last"} number={3}>
+                <PageSection  mt={140} id={"last"} number={4}>
                   <WhitePage>
                     <Flex>
                       <Box width={1/10} />
@@ -230,10 +231,18 @@ query {
     }
   }
 
+  newParadigmDesktop: file(relativePath: { eq: "new-paradigm.png" }) {
+    childImageSharp {
+        sizes(quality: 90) {
+          ...GatsbyImageSharpSizes
+        }
+    }
+  }
+
   bgDesktop: file(relativePath: { eq: "colored-four-screens.png" }) {
     childImageSharp {
-      fixed(width: 1200, height: 750) {
-        ...GatsbyImageSharpFixed
+      sizes(quality: 90) {
+        ...GatsbyImageSharpSizes
       }
     }
   }

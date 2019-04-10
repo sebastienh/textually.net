@@ -1,0 +1,33 @@
+
+body {
+    
+    background-color: #222;
+    color: #8E8E8E;
+    font-family: Times;
+	font-size: 18pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #687775;
+}
+
+::tag {
+    color: #800E13;
+}
+
+p::first-letter {
+	color: red;
+	font-size: 20pt;
+}
+
+s {
+	text-decoration-color: #aaa;
+}
+
+a::tag {
+	color: #687775;
+}
+
+a::destination {
+	color: #333;
+}

@@ -1,7 +1,7 @@
 # Mardkown specific elements 
 
 
-In Stylo, CSS is used to stylize the Markdown text. Some Markdown elements have no correspondent HTML elements, so two elements were added specificifically for Markdown*: `html-block` and `reference`.
+In Stylo, CSS is used to style the Markdown text. Some Markdown elements have no correspondent HTML elements, so two elements were added specificifically for Markdown*: `html-block` and `reference`.
 
 - `html-block`: An `html-block` defines any HTML block in a Markdown source. 
  

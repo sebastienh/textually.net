@@ -36,6 +36,14 @@ const CenterHorizontally = styled(Flex)`
     flex-direction: row;
 `
 
+const LinkList = styled.ol`
+    
+`
+
+const LinkListContainer = styled(Box)`
+
+`
+
 export default class TitledSidebarLinks extends Component {
   
     constructor(props) {
@@ -57,7 +65,7 @@ export default class TitledSidebarLinks extends Component {
 
             children.push(<SidebarLink href={href} number={i+1}>{title}</SidebarLink>)
         }
-        return <ol>{children}</ol>
+        return <LinkListContainer><LinkList>{children}</LinkList></LinkListContainer>
     }
 
     render() {

@@ -10,11 +10,11 @@ class TitledSectionInsideBlock extends Component {
 
     render() {
 
-        const { number, children } = this.props
+        const { number, children, ...other } = this.props
 
         return (
             <React.Fragment>
-                <Box>
+                <Box {...other}>
                     {children}
                 </Box>
             </React.Fragment>
@@ -45,10 +45,10 @@ export default class TitledSection extends Component {
 
     render() {
 
-        const { id, number, children } = this.props
+        const { id, number, children, ...other } = this.props
 
         return (
-            <TrackerTitledSection onEnterViewport={this.onEnterViewport} onLeaveViewport={this.onLeaveViewport}>
+            <TrackerTitledSection {...other} onEnterViewport={this.onEnterViewport} onLeaveViewport={this.onLeaveViewport}>
                 <Box id={id} pt={50}>
                     <Flex mb={40} flexDirection={"row"} justifyContent={"center"}>
                         <CircledNumber selectedColor={"#D74E09"}
