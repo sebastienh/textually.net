@@ -178,22 +178,22 @@ class StyloIndex extends React.Component {
                   </ContentResizer>
                 </PageHeaderSection>  
                 </PageSection>
-                <PageSection  mt={100} id={"four-colored-screenshots-page"} number={2}>
+                <PageSection mt={[20,60,100]} id={"four-colored-screenshots-page"} number={2}>
                   <React.Fragment>
                     <StyloFourColoredScreenshots images={images}/>
                   </React.Fragment>
                 </PageSection>
-                <PageSection  mt={100} id={"stylo-new-paradigm"} number={3}>
+                <PageSection  mt={[20,60,100]} id={"stylo-new-paradigm"} number={3}>
                   <React.Fragment>
                     <StyloNewParadigm />
                   </React.Fragment>
                 </PageSection>
-                <PageSection  mt={100} id={"stylo-commonmark"} number={4}>
+                <PageSection  mt={[20,60,100]} id={"stylo-commonmark"} number={4}>
                   <React.Fragment>
                     <StyloCommonMark />
                   </React.Fragment>
                 </PageSection>
-                <PageSection  mt={100} id={"stylo-immerse"} number={5}>
+                <PageSection  mt={[20,60,100]} id={"stylo-immerse"} number={5}>
                   <React.Fragment>
                     <StyloImmerseInTheText />
                   </React.Fragment>

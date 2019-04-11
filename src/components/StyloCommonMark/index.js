@@ -31,7 +31,7 @@ export default class StyloCommonMark extends Component {
                     CommonMark + GitHub flavored
                     </Text>
                     </Flex>
-                    <Text fontSize={[ 12, 16, 20 ]} mt={20} mb={40} fontFamily={"HurmeGeometricSans3-Regular"}>
+                    <Text fontSize={[ 12, 16, 20 ]} mt={20} mb={[10,20,40]} fontFamily={"HurmeGeometricSans3-Regular"}>
                         Markdown was designed with readability in mind and Stylo embraces its 
                         formatting. It does not try to hide or change text while you write providing 
                         a smooth writing experience. What you write is what you get!!! 
@@ -41,7 +41,7 @@ export default class StyloCommonMark extends Component {
                         selectedTabPanelClassName='is-selected'>
                         <StyledTabList>
                             <StyledTab>Headers</StyledTab>
-                            <StyledTab>Links and images</StyledTab>
+                            <StyledTab>Links</StyledTab>
                             <StyledTab>Lists</StyledTab>
                             <StyledTab>Tables</StyledTab>
                             <StyledTab>Stikethrough</StyledTab>

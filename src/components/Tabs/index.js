@@ -1,7 +1,7 @@
 import React from "react"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import styled from 'styled-components';
-import { Flex, Box, Text, Container, Provider, Header } from "rebass";
+import { Flex } from "rebass";
 
 export const StyledTabs = styled(Tabs)`
   font-family: BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -16,51 +16,47 @@ export const StyledTabListContent = styled(TabList)`
   margin: 0;
   font-family: HurmeGeometricSans3-Regular, -apple-sans-serif, "Avenir Next", sans-serif;
 `;
-StyledTabListContent.tabsRole = 'TabList';
 
 export function StyledTabList(props) {
 
     return (
-        <Flex fontSize={[1,2,3]} flexDirection={"row"} justifyContent={"center"}>
-          <StyledTabListContent>
+        <Flex {...props} fontSize={[1,2,3]} flexDirection={"row"} justifyContent={"center"} style={{overflowX:"auto"}}>
+          <StyledTabListContent {...props}>
             {props.children}
           </StyledTabListContent>
         </Flex>
     )
 }
 
+StyledTabList.tabsRole = 'TabList';
 
 export const StyledTab = styled(Tab)`
-  margin-right: 4px;
-  border: 1px solid black; 
-  border-radius: 4px;
-  margin-left: 12px;
-  margin-right: 12px;
-  padding-left: 4px;
-  padding-right: 4px;
-  margin-bottom: 0px;
-  margin-top: 20px;
-  user-select: none;
-  cursor: arrow;
+    margin-right: 4px;
+    border: 1px solid black; 
+    border-radius: 4px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    user-select: none;
+    cursor: arrow;
 
-  &.is-selected {
-    // color: white;
-    // background: black;
-    /* border-bottom: 1px solid blue; */
-    box-shadow: 0 1px 0px 0px rgba(0, 0, 255, .5)
-  }
+    &.is-selected {
+        background: #eee;
+    }
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 0, 255, .5)
-  }
+    &:focus, &:hover {
+        outline: none;
+        background: #eee;
+    }
 `;
 StyledTab.tabsRole = 'Tab';
 
 export const StyledTabPanel = styled(TabPanel)`
   display: none;
   min-height: 40vh;
-  /* border: 1px solid black; */
   padding: 4px;
   margin-top: -5px;
 

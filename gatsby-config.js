@@ -129,8 +129,7 @@ module.exports = {
       options: {
         defaultQuality: 90
       }
-    }
-    `gatsby-plugin-sharp`,
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
