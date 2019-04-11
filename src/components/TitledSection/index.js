@@ -36,10 +36,12 @@ export default class TitledSection extends Component {
     }
 
     onEnterViewport() {
+        console.log("Entering index: " + this.state.number);
         this.context.enteringIndex(this.state.number);
     }
 
     onLeaveViewport() {
+        console.log("Leaving index: " + this.state.number);
         this.context.leavingIndex(this.state.number);
     }
 

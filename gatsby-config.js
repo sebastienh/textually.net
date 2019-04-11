@@ -124,6 +124,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaultQuality: 90
+      }
+    }
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,

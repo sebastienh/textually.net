@@ -6,6 +6,7 @@ import { graphql } from "gatsby";
 import ResponsiveImage from "../ResponsiveImage"
 import Img from 'gatsby-image'
 import Image from "../Image"
+import { StyledTabPanel, StyledTabs, StyledTabList, StyledTab } from "../Tabs"
 
 const WhitePage = styled.section`
   background-color: #fff;
@@ -16,7 +17,7 @@ const WhitePage = styled.section`
   box-sizing: border-box;
 `
 
-export default class StyloNewParadigm extends Component {
+export default class StyloCommonMark extends Component {
   render() {
 
     return (
@@ -27,14 +28,44 @@ export default class StyloNewParadigm extends Component {
                 <Box width={[4/6, 8/10]}>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={30}>
                     <Text fontSize={[ 20, 35, 50 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        A new text editing paradigm
+                    CommonMark + GitHub flavored
                     </Text>
                     </Flex>
                     <Text fontSize={[ 12, 16, 20 ]} mt={20} mb={40} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Stylo is designed to seamlessly integrate web technologies 
-                        such as HTML and CSS in a Markdown text editing environment. 
+                        Markdown was designed with readability in mind and Stylo embraces its 
+                        formatting. It does not try to hide or change text while you write providing 
+                        a smooth writing experience. What you write is what you get!!! 
                     </Text>
-                    <Image filename="new-paradigm.png" />
+                    <StyledTabs
+                        selectedTabClassName='is-selected'
+                        selectedTabPanelClassName='is-selected'>
+                        <StyledTabList>
+                            <StyledTab>Headers</StyledTab>
+                            <StyledTab>Links and images</StyledTab>
+                            <StyledTab>Lists</StyledTab>
+                            <StyledTab>Tables</StyledTab>
+                            <StyledTab>Stikethrough</StyledTab>
+                            <StyledTab>Code</StyledTab>
+                        </StyledTabList>
+                        <StyledTabPanel>
+                            <Image filename="headers.png" />
+                        </StyledTabPanel>
+                        <StyledTabPanel>
+                            <Image filename="links-images.png" />
+                        </StyledTabPanel>
+                        <StyledTabPanel>
+                            <Image filename="lists.png" />
+                        </StyledTabPanel>
+                        <StyledTabPanel>
+                            <Image filename="tables.png" />
+                        </StyledTabPanel>
+                        <StyledTabPanel>
+                            <Image filename="strikethrough.png" />
+                        </StyledTabPanel>
+                        <StyledTabPanel>
+                            <Image filename="code.png" />
+                        </StyledTabPanel>
+                    </StyledTabs>
                 </Box>
                 <Box width={[1/6, 1/10]} />
             </Flex>

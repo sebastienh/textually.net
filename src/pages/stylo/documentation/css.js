@@ -194,7 +194,7 @@ class StyloDocumentationCSS extends React.Component {
                     title: "Properties"
                 },
                 {
-                    href: "#value-types",
+                    href: "#valueTypes",
                     title: "Value Types"
                 },
                 {
@@ -343,12 +343,12 @@ class StyloDocumentationCSS extends React.Component {
                         <Box id={"css-text-decoration-style-property"}>
                             <MarkdownContent post={cssTextDecorationStyleProperty}/>
                         </Box>
-                        <Box>
+                        <Box id={"css-text-decoration-color-property"}>
                             <MarkdownContent post={cssTextDecorationColorProperty}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"value-types"} number={9}>
-                        <Box id={"css-property-types"}>
+                    <TitledSection id={"valueTypes"} number={9}>
+                        <Box>
                             <MarkdownContent post={cssPropertyTypes}/>
                         </Box>
                         <Box id={"css-property-values-initial"}>

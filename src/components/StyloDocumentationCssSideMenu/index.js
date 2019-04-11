@@ -36,6 +36,7 @@ const MenuContainer = styled(Box)`
     right: 0;
     bottom: 0;
     left: 0;
+    overflow-y: auto;
 `
 
 const LinksContainer = styled(Flex)`
@@ -158,21 +159,21 @@ export default class StyloDocumentationCssSideMenu extends Component {
                         Properties
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css", "value-types"]}
-                        href='/stylo/documentation/css#value-types'
+                        path={["/", "stylo", "documentation", "css"]}
+                        href='/stylo/documentation/css#valueTypes'
                         number={9}
                         p={2}>
                         Value Types
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css", "pseudo-elements"]}
+                        path={["/", "stylo", "documentation", "css"]}
                         href='/stylo/documentation/css#pseudo-elements'
                         number={10}
                         p={2}>
                         Pseudo Elements
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css", "color-keywords"]}
+                        path={["/", "stylo", "documentation", "css"]}
                         href='/stylo/documentation/css#color-keywords'
                         number={11}
                         p={2}>

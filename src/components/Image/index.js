@@ -13,7 +13,7 @@ export default Image = (props) => (
               name
               childImageSharp {
                 sizes(quality: 90) {
-                  ...GatsbyImageSharpSizes
+                  ...GatsbyImageSharpSizes_tracedSVG
                 }
               }
             }

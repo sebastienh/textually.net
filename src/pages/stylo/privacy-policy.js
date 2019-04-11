@@ -120,7 +120,7 @@ class StyloPrivacyPolicy extends React.Component {
               title="Release Notes"
               keywords={[`stylo`, `releases`, `notes`]}
             />
-            <Flex mt={120} flexDirection={"row"} justifyContent={"center"}> 
+            <Flex mt={140} flexDirection={"row"} justifyContent={"center"}> 
               <Heading  color={"#D74E09"} fontSize={[8]}>Stylo Privacy Policy</Heading>
             </Flex>
             <DocumentationPageTemplate>

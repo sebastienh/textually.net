@@ -9,21 +9,16 @@ import Accordion from "../components/Accordion"
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
-import StyledAccordion from "../components/StyledAccordion";
-import StyledAccordionItem from "../components/StyledAccordionItem";
-import Pointer from "../icons/pointer"
-import CircledNumber from "../components/CircledNumber"
-import Image from 'gatsby-image';
 import StyloLogo from "../images/svg/logo-green.svg"
 import theme from "../styles/theme.js";
 import PageHeaderSection from "../components/PageHeaderSection"
 import StyloFourColoredScreenshots from "../components/StyloFourColoredScreenshots"
 import StyloNewParadigm from "../components/StyloNewParadigm"
+import StyloImmerseInTheText from "../components/StyloImmerseInTheText"
+import StyloCommonMark from "../components/StyloCommonMark"
 import PageSection from "../components/PageSection"
 import PageLocation from "../components/PageLocation"
 import PageScrollingNumbers from "../components/PageScrollingNumbers"
-import StyleUsingCSS from "../components/StyleUsingCSS"
-import VisibilitySensor from 'react-visibility-sensor'
 
 
 export const HeaderDivider = styled.hr`
@@ -148,7 +143,8 @@ class StyloIndex extends React.Component {
               "/stylo#intro",
               "/stylo#four-colored-screenshots-page",
               "/stylo#stylo-new-paradigm",
-              "/stylo#last"
+              "/stylo#stylo-commonmark",
+              "/stylo#stylo-immerse"
             ]}>
             <SEO
               title="Stylo App"
@@ -182,30 +178,29 @@ class StyloIndex extends React.Component {
                   </ContentResizer>
                 </PageHeaderSection>  
                 </PageSection>
-                <PageSection  mt={140} id={"four-colored-screenshots-page"} number={2}>
+                <PageSection  mt={100} id={"four-colored-screenshots-page"} number={2}>
                   <React.Fragment>
                     <StyloFourColoredScreenshots images={images}/>
                   </React.Fragment>
                 </PageSection>
-                <PageSection  mt={140} id={"stylo-new-paradigm"} number={3}>
+                <PageSection  mt={100} id={"stylo-new-paradigm"} number={3}>
                   <React.Fragment>
-                    <StyloNewParadigm image={newParadigmImageDesktop}/>
+                    <StyloNewParadigm />
                   </React.Fragment>
                 </PageSection>
-                {/* <PageSection id={"style-using-css"} number={3}> 
-                    <StyleUsingCSS images={images}/>
-                </PageSection> */}
-                <PageSection  mt={140} id={"last"} number={4}>
-                  <WhitePage>
-                    <Flex>
-                      <Box width={1/10} />
-                      <Box width={8/10}>
-                        <Content dangerouslySetInnerHTML={{ __html: styloAboutHtml }} />
-                      </Box>
-                      <Box width={1/10} />
-                    </Flex>
-                  </WhitePage>
+                <PageSection  mt={100} id={"stylo-commonmark"} number={4}>
+                  <React.Fragment>
+                    <StyloCommonMark />
+                  </React.Fragment>
                 </PageSection>
+                <PageSection  mt={100} id={"stylo-immerse"} number={5}>
+                  <React.Fragment>
+                    <StyloImmerseInTheText />
+                  </React.Fragment>
+                </PageSection>
+
+
+                
               </ContentArea>
             </Flex>
           </PageScrollingNumbers>
