@@ -138,28 +138,30 @@ class Layout extends React.Component {
             <MediaQuery query="(max-width: 768px)">
               <DrawerContext.Consumer>
                 {(drawerContext) => (
-                  <NavBar 
-                    drawerClickHandler={this.drawerToggleClickHandler}
-                    drawerOpen={drawerContext !== undefined && drawerContext !== null ? drawerContext.open : false}/>
-                  <SideDrawer show={drawerContext !== null && drawerContext !== null ? drawerContext.open : false}/>
-                  <Box width={[
-                        10/10,
-                    ]}>
-                    {(drawerContext !== null && drawerContext !== null && drawerContext.open) ? <Backdrop click={this.backdropClickHandler} /> : null}
-                    <main>{children}</main>
-                  </Box>
-                  <Flex style={{zIndex:"1000"}}>
-                    <Box mx='auto' style={{zIndex:"1000"}}/>
-                    <Box       
-                    width={[
-                      1/10,
-                    ]}     
-                    zIndex={100}
-                    style={{zIndex:"1000"}}
-                    alignSelf={"right"}>
-                      <CircledNumbersSidebar /> 
+                  <React.Fragment>
+                    <NavBar 
+                      drawerClickHandler={this.drawerToggleClickHandler}
+                      drawerOpen={drawerContext !== undefined && drawerContext !== null ? drawerContext.open : false}/>
+                    <SideDrawer show={drawerContext !== null && drawerContext !== null ? drawerContext.open : false}/>
+                    <Box width={[
+                          10/10,
+                      ]}>
+                      {(drawerContext !== null && drawerContext !== null && drawerContext.open) ? <Backdrop click={this.backdropClickHandler} /> : null}
+                      <main>{children}</main>
                     </Box>
-                  </Flex>
+                    <Flex style={{zIndex:"1000"}}>
+                      <Box mx='auto' style={{zIndex:"1000"}}/>
+                      <Box       
+                      width={[
+                        1/10,
+                      ]}     
+                      zIndex={100}
+                      style={{zIndex:"1000"}}
+                      alignSelf={"right"}>
+                        <CircledNumbersSidebar /> 
+                      </Box>
+                    </Flex>
+                  </React.Fragment>
                 )}
               </DrawerContext.Consumer>
             </MediaQuery>
