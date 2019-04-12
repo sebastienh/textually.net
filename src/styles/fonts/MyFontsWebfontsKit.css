@@ -1,0 +1,62 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3739300, 2019-03-27T02:44:18-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: HurmeGeometricSans3-Bold by Hurme
+ * URL: https://www.myfonts.com/fonts/hurme/geometric-sans-3/bold/
+ * 
+ * Webfont: HurmeGeometricSans3-Hairline by Hurme
+ * URL: https://www.myfonts.com/fonts/hurme/geometric-sans-3/hairline/
+ * 
+ * Webfont: HurmeGeometricSans3-Light by Hurme
+ * URL: https://www.myfonts.com/fonts/hurme/geometric-sans-3/light/
+ * 
+ * Webfont: HurmeGeometricSans3-Regular by Hurme
+ * URL: https://www.myfonts.com/fonts/hurme/geometric-sans-3/regular/
+ * 
+ * Webfont: HurmeGeometricSans3-SemiBold by Hurme
+ * URL: https://www.myfonts.com/fonts/hurme/geometric-sans-3/semibold/
+ * 
+ * Webfont: HurmeGeometricSans3-Thin by Hurme
+ * URL: https://www.myfonts.com/fonts/hurme/geometric-sans-3/thin/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3739300
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright (c) 2012 by Toni Hurme. All rights reserved.
+ * 
+ * © 2019 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/390ea4");
+
+  
+@font-face {
+    font-family: 'HurmeGeometricSans3-Bold';
+    src: url('webfonts/390EA4_0_0.eot');
+    src: url('webfonts/390EA4_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/390EA4_0_0.woff2') format('woff2'),url('webfonts/390EA4_0_0.woff') format('woff'),url('webfonts/390EA4_0_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {font-family: 'HurmeGeometricSans3-Hairline';src: url('webfonts/390EA4_1_0.eot');src: url('webfonts/390EA4_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/390EA4_1_0.woff2') format('woff2'),url('webfonts/390EA4_1_0.woff') format('woff'),url('webfonts/390EA4_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HurmeGeometricSans3-Light';src: url('webfonts/390EA4_2_0.eot');src: url('webfonts/390EA4_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/390EA4_2_0.woff2') format('woff2'),url('webfonts/390EA4_2_0.woff') format('woff'),url('webfonts/390EA4_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HurmeGeometricSans3-Regular';src: url('webfonts/390EA4_3_0.eot');src: url('webfonts/390EA4_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/390EA4_3_0.woff2') format('woff2'),url('webfonts/390EA4_3_0.woff') format('woff'),url('webfonts/390EA4_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HurmeGeometricSans3-SemiBold';src: url('webfonts/390EA4_4_0.eot');src: url('webfonts/390EA4_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/390EA4_4_0.woff2') format('woff2'),url('webfonts/390EA4_4_0.woff') format('woff'),url('webfonts/390EA4_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HurmeGeometricSans3-Thin';src: url('webfonts/390EA4_5_0.eot');src: url('webfonts/390EA4_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/390EA4_5_0.woff2') format('woff2'),url('webfonts/390EA4_5_0.woff') format('woff'),url('webfonts/390EA4_5_0.ttf') format('truetype');}
+ 
