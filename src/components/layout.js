@@ -78,14 +78,6 @@ class Layout extends React.Component {
     this.backdropClickHandler = this.backdropClickHandler.bind(this);
   }
 
-  componentWillMount() {
-    this.setState(() => {
-      return {
-        sideDrawerOpen: this.context.open
-      };
-    });
-  }
-
   drawerToggleClickHandler() {
     this.handleDrawerToggle();
   };
@@ -96,22 +88,10 @@ class Layout extends React.Component {
 
   handleDrawerToggle() {
     this.context.toggleDrawer();
-    this.setState(() => {
-      return {
-        sideDrawerOpen: !this.state.sideDrawerOpen
-      };
-    });
   }
 
   render() {
     const { location, title, children } = this.props
-
-    let backdrop;
-
-    if(this.state.sideDrawerOpen) {
-      backdrop =  <Backdrop click={this.backdropClickHandler} />;
-    }
-
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
@@ -166,7 +146,7 @@ class Layout extends React.Component {
                       <Box width={[
                             10/10,
                         ]}>
-                        {backdrop}
+                        {drawerContext.open ? <Backdrop click={this.backdropClickHandler} /> : null}
                         <main>{children}</main>
                       </Box>
                       <Flex style={{zIndex:"1000"}}>

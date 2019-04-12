@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { Flex, Text, Heading } from "rebass";
 import PageLocation from "../components/PageLocation"
 import PageTemplate from "../components/PageTemplate"
+import { graphql } from 'gatsby'
 
 export default class Contact extends Component {
 
