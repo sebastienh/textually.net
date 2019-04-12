@@ -101,10 +101,10 @@ export default class ContactForm extends React.Component {
             <Container {...this.props}>
                 <form
                 name="contact-form"
-                action="/success"
-                method="POST"
+                action="/contact-form-success"
+                method="post"
                 data-netlify="true"
-                netlify-honeypot="bot-field"
+                data-netlify-honeypot="bot-field"
                 netlify="true"
                 >
                     <p hidden>
