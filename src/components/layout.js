@@ -95,76 +95,74 @@ class Layout extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
-          <DrawerContext.Consumer>
-            {(drawerContext) => (
-                <React.Fragment>
-                    <MediaQuery query="(min-width: 769px)">
-                    <LocationContext.Consumer>
-                      {(locationContext) => (
-                          <NavBar 
-                            currentPath={locationContext.pagePath}
-                            drawerClickHandler={this.drawerToggleClickHandler} 
-                            drawerOpen={drawerContext ? drawerContext.open : false}/>
-                      )}
-                      </LocationContext.Consumer>
-                      <Content open={drawerContext ? drawerContext.open : false} theme={theme}>
-                        <Box width={[
-                              10/10,
-                          ]}>
-                          <main>{children}</main>
-                        </Box>
-                      </Content>
-                      <Flex style={{zIndex:"1000"}}>
-                        <Box mx='auto' style={{zIndex:"1000"}}/>
-                        <Box       
-                        width={[
-                          1/10,
-                        ]}     
-                        zIndex={100}
-                        style={{zIndex:"1000"}}
-                        alignSelf={"right"}>
-                          <CircledNumbersSidebar />
-                        </Box>
-                      </Flex>
-                      <Flex style={{zIndex:"1000"}}>
-                        <Box       
-                        width={[
-                          3/10,
-                        ]}     
-                        zIndex={100}
-                        style={{zIndex:"1000"}}
-                        alignSelf={"right"}>
-                          <TitledSidebarLinks />
-                        </Box>
-                      </Flex>
-                    </MediaQuery>
-                    <MediaQuery query="(max-width: 768px)">
-                      <NavBar 
-                        drawerClickHandler={this.drawerToggleClickHandler}
-                        drawerOpen={drawerContext !== null ? drawerContext.open : false}/>
-                      <SideDrawer show={drawerContext !== null ? drawerContext.open : false}/>
-                      <Box width={[
-                            10/10,
-                        ]}>
-                        {(drawerContext !== null && drawerContext.open) ? <Backdrop click={this.backdropClickHandler} /> : null}
-                        <main>{children}</main>
-                      </Box>
-                      <Flex style={{zIndex:"1000"}}>
-                        <Box mx='auto' style={{zIndex:"1000"}}/>
-                        <Box       
-                        width={[
-                          1/10,
-                        ]}     
-                        zIndex={100}
-                        style={{zIndex:"1000"}}
-                        alignSelf={"right"}>
-                          <CircledNumbersSidebar /> 
-                        </Box>
-                      </Flex>
-                    </MediaQuery>
-                </React.Fragment>
-            )}
-          </DrawerContext.Consumer>
+            <MediaQuery query="(min-width: 769px)">
+              <LocationContext.Consumer>
+                {(locationContext) => (
+                    <NavBar 
+                      currentPath={locationContext.pagePath}
+                      drawerClickHandler={this.drawerToggleClickHandler} 
+                      drawerOpen={false}/>
+                )}
+              </LocationContext.Consumer>
+              <Content open={false} theme={theme}>
+                <Box width={[
+                      10/10,
+                  ]}>
+                  <main>{children}</main>
+                </Box>
+              </Content>
+              <Flex style={{zIndex:"1000"}}>
+                <Box mx='auto' style={{zIndex:"1000"}}/>
+                <Box       
+                width={[
+                  1/10,
+                ]}     
+                zIndex={100}
+                style={{zIndex:"1000"}}
+                alignSelf={"right"}>
+                  <CircledNumbersSidebar />
+                </Box>
+              </Flex>
+              <Flex style={{zIndex:"1000"}}>
+                <Box       
+                width={[
+                  3/10,
+                ]}     
+                zIndex={100}
+                style={{zIndex:"1000"}}
+                alignSelf={"right"}>
+                  <TitledSidebarLinks />
+                </Box>
+              </Flex>
+            </MediaQuery>
+            <MediaQuery query="(max-width: 768px)">
+              <DrawerContext.Consumer>
+                {(drawerContext) => (
+                  <NavBar 
+                    drawerClickHandler={this.drawerToggleClickHandler}
+                    drawerOpen={drawerContext !== undefined && drawerContext !== null ? drawerContext.open : false}/>
+                  <SideDrawer show={drawerContext !== null && drawerContext !== null ? drawerContext.open : false}/>
+                  <Box width={[
+                        10/10,
+                    ]}>
+                    {(drawerContext !== null && drawerContext !== null && drawerContext.open) ? <Backdrop click={this.backdropClickHandler} /> : null}
+                    <main>{children}</main>
+                  </Box>
+                  <Flex style={{zIndex:"1000"}}>
+                    <Box mx='auto' style={{zIndex:"1000"}}/>
+                    <Box       
+                    width={[
+                      1/10,
+                    ]}     
+                    zIndex={100}
+                    style={{zIndex:"1000"}}
+                    alignSelf={"right"}>
+                      <CircledNumbersSidebar /> 
+                    </Box>
+                  </Flex>
+                )}
+              </DrawerContext.Consumer>
+            </MediaQuery>
         </React.Fragment>
       </ThemeProvider>
     );
