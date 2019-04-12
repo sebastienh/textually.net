@@ -104,10 +104,10 @@ class Layout extends React.Component {
                           <NavBar 
                             currentPath={locationContext.pagePath}
                             drawerClickHandler={this.drawerToggleClickHandler} 
-                            drawerOpen={drawerContext.open}/>
+                            drawerOpen={drawerContext ? drawerContext.open : false}/>
                       )}
                       </LocationContext.Consumer>
-                      <Content open={drawerContext.open} theme={theme}>
+                      <Content open={drawerContext ? drawerContext.open : false} theme={theme}>
                         <Box width={[
                               10/10,
                           ]}>
@@ -141,12 +141,12 @@ class Layout extends React.Component {
                     <MediaQuery query="(max-width: 768px)">
                       <NavBar 
                         drawerClickHandler={this.drawerToggleClickHandler}
-                        drawerOpen={drawerContext.open}/>
-                      <SideDrawer show={drawerContext.open}/>
+                        drawerOpen={drawerContext !== null ? drawerContext.open : false}/>
+                      <SideDrawer show={drawerContext !== null ? drawerContext.open : false}/>
                       <Box width={[
                             10/10,
                         ]}>
-                        {drawerContext.open ? <Backdrop click={this.backdropClickHandler} /> : null}
+                        {(drawerContext !== null && drawerContext.open) ? <Backdrop click={this.backdropClickHandler} /> : null}
                         <main>{children}</main>
                       </Box>
                       <Flex style={{zIndex:"1000"}}>
