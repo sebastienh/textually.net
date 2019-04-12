@@ -134,7 +134,7 @@ const renderAst = new rehypeReact({
         "code": Code,
         "pre": Pre,
         "blockquote": Blockquote,
-        "funny-quote-text": FunnyQuote
+        "funny-quote": FunnyQuote
     }
 }).Compiler
 

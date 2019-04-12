@@ -8,36 +8,35 @@ import VisibilitySensor from 'react-visibility-sensor'
 import CircledNumber from "../CircledNumber"
 
 
-const QuoteText = styled(Text)`
-
+const Quote = styled(Box)`
+    text-align: right;
+    width: 50%;
+    color: #D74E09;
 `
 
-const QuoteAuthor = styled(Text)`
-
+const QuoteContainer = styled(Flex)`
+    font-family: "Times New Roman", serif;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 20px;
 `
 
 export default class FunnyQuote extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            number: props.number
-        }
-        this.onChange = this.onChange.bind(this);
-    }
-
     render() {
 
         const {
-            text,
-            author
+            children
         } = this.props;
 
         return (
-            <Flex flexDirection={"column"}>
-                <QuoteText>{text}</QuoteText>
-                <QuoteAuthor>{author}</QuoteAuthor>
-            </Flex>
+
+            <QuoteContainer flexDirection={"row"}>
+                <Box mx={"auto"} />
+                <Quote>
+                    {children}
+                </Quote>
+            </QuoteContainer>
         )
     }
 

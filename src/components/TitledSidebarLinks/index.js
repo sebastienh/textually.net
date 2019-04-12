@@ -37,11 +37,12 @@ const CenterHorizontally = styled(Flex)`
 `
 
 const LinkList = styled.ol`
-    
+    margin-bottom: 0;
 `
 
 const LinkListContainer = styled(Box)`
-
+    padding-right: 24px;
+    border-right: 3px solid #eee;
 `
 
 export default class TitledSidebarLinks extends Component {

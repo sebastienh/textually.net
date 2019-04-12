@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import ContactForm from '../components/ContactForm';
-import Layout from '../components/Layout';
 import SEO from "../components/seo"
-import { Flex, Box, Text, Container, Provider, Heading } from "rebass";
+import { Flex, Text, Heading } from "rebass";
 import PageLocation from "../components/PageLocation"
 import PageTemplate from "../components/PageTemplate"
-import MarkdownContent from "../components/MarkdownContent"
 
 export default class Contact extends Component {
 
