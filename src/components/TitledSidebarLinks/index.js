@@ -18,7 +18,7 @@ const TitledLinksContainer = styled(Flex)`
     flex-direction: column;
     z-index: 1000;
     display: ${props => props.display ? "flex" : "none"};
-
+    
     /* ${({ open }) => open && `
         backdrop-filter: blur(10px);
         background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.3), rgba(255,255,255,0));
@@ -33,7 +33,7 @@ const CenterHorizontally = styled(Flex)`
     top: 0;
     bottom: 0;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: row;    
 `
 
 const LinkList = styled.ol`
@@ -41,8 +41,8 @@ const LinkList = styled.ol`
 `
 
 const LinkListContainer = styled(Box)`
-    padding-right: 24px;
-    border-right: 3px solid #eee;
+    padding-right: 30px;
+    border-right: 1px solid #777;
 `
 
 export default class TitledSidebarLinks extends Component {

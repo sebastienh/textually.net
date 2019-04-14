@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import SEO from "../../components/seo"
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
-import { Text } from 'rebass'
+import { Text, Heading } from 'rebass'
 import StyloLogo from "../../images/svg/logo-red.svg"
 import PageHeaderSection from "../../components/PageHeaderSection"
 import PageSection from "../../components/PageSection"
@@ -56,6 +56,9 @@ export default class Acknowledgments extends Component {
                     title: "Licences"
                 }
             ]}>            
+            {/* <Flex mt={140} flexDirection={"row"} justifyContent={"center"}> 
+              <Heading color={"#D74E09"} fontSize={[8]}>Acknowledgments</Heading>
+            </Flex> */}
             <DocumentationPageTemplate>
                 <Flex flexDirection={"column"}>
                     <TitledSection id={"index"} number={1}>    

@@ -224,6 +224,14 @@ class StyloDocumentation extends React.Component {
                 {
                     href: "#markdown-formatting",
                     title: "Markdown Formatting"
+                },
+                {
+                    href: "#bundled-fonts",
+                    title: "Bundled Fonts"
+                },
+                {
+                    href: "#keyboard-shortcuts",
+                    title: "Keyboard shortcuts"
                 }
             ]}>            
             <PageHeaderSection id={"header"}>

@@ -105,8 +105,7 @@ export default class ContactForm extends React.Component {
                 method="post"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                netlify="true"
-                >
+                netlify>
                     <p hidden>
                         <Label>Don’t fill this out if you're human: <input name="bot-field" /></Label>
                     </p>

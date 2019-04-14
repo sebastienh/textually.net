@@ -57,7 +57,7 @@ class Index extends React.Component {
     return (
       <React.Fragment>
         <SEO
-          title="Home"
+          title="Textually"
           keywords={[`textually`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
         />
         <PageLocation path={["/", "about"]}>

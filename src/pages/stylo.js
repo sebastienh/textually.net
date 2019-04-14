@@ -19,7 +19,7 @@ import StyloCommonMark from "../components/StyloCommonMark"
 import PageSection from "../components/PageSection"
 import PageLocation from "../components/PageLocation"
 import PageScrollingNumbers from "../components/PageScrollingNumbers"
-
+import ReadyToTryStylo from "../components/ReadyToTryStylo"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -144,7 +144,8 @@ class StyloIndex extends React.Component {
               "/stylo#four-colored-screenshots-page",
               "/stylo#stylo-new-paradigm",
               "/stylo#stylo-commonmark",
-              "/stylo#stylo-immerse"
+              "/stylo#stylo-immerse",
+              "/stylo#ready-to-try-stylo"
             ]}>
             <SEO
               title="Stylo App"
@@ -198,9 +199,11 @@ class StyloIndex extends React.Component {
                     <StyloImmerseInTheText />
                   </React.Fragment>
                 </PageSection>
-
-
-                
+                <PageSection  mt={[20,60,100]} id={"ready-to-try-stylo"} number={6}>
+                  <React.Fragment>
+                    <ReadyToTryStylo />
+                  </React.Fragment>
+                </PageSection>
               </ContentArea>
             </Flex>
           </PageScrollingNumbers>
