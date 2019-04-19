@@ -86,7 +86,7 @@ export default class IndexSideMenu extends Component {
                     </SectionTitle>
                     <MainLink
                         path={["/", "about"]}
-                        href='/'
+                        href='/textually'
                         p={2}>
                         About
                     </MainLink>

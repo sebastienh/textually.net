@@ -37,7 +37,7 @@ export default class StyloBottomNavBar extends Component {
                                 <Flex flexDirection={"row"}>
                                     <MainLink
                                         path={["/", "stylo", "about"]}
-                                        href='/stylo'
+                                        href='/'
                                         p={2}>
                                         About
                                     </MainLink>

@@ -110,7 +110,7 @@ export default class StyloSideMenu extends Component {
                     </SectionTitle>
                     <MainLink
                         path={["/", "stylo", "about"]}
-                        href='/stylo'
+                        href='/'
                         p={2}>
                         About
                     </MainLink>

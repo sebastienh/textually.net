@@ -26,16 +26,13 @@ export default class StyloImmerseInTheText extends Component {
                 <Box width={[1/6, 1/10]} />
                 <Box width={[4/6, 8/10]}>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={[0,10,20]}>
-                    <Text fontSize={[ 20, 35, 50 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Immerse in the text... 
-                    </Text>
-                    </Flex>
-                    <Flex justifyContent={"center"} flexDirection={"row"} mt={[0,10,20]}>
-                        <Text fontSize={[ 12, 16, 20 ]} mb={[0,10,20]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                            Stylo interface is designed to disappear to let you write!
+                        <Text fontSize={[40, 60, 80]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                            Immersive... 
                         </Text>
                     </Flex>
-                    <Image filename="immerse-in-the-text.png" />
+                    <Box mt={[0,10,20]}>
+                        <Image filename="immerse-in-the-text.png" />
+                    </Box>
                 </Box>
                 <Box width={[1/6, 1/10]} />
             </Flex>

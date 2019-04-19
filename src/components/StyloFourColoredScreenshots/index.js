@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
+import MarkdownTag from "../MarkdownTag"
 import Image from "../Image"
 
 const WhitePage = styled.section`
@@ -23,8 +24,8 @@ export default class StyloFourColoredScreenshots extends Component {
                 <Box width={[1/6, 1/10]} />
                 <Box width={[4/6, 8/10]}>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={30}>
-                    <Text fontSize={[ 20, 35, 50 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Customizable Markdown text editor
+                    <Text fontSize={[ 20, 35, 50 ]} fontWeight={"bold"} fontFamily={"HurmeGeometricSans3-Regular"}>
+                      <MarkdownTag># </MarkdownTag>Customizable Markdown text editor
                     </Text>
                     </Flex>
                     <Text fontSize={[ 12, 16, 20 ]} mt={20} mb={40} fontFamily={"HurmeGeometricSans3-Regular"}>
