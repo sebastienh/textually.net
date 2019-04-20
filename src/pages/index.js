@@ -146,16 +146,16 @@ class StyloIndex extends React.Component {
     return (
         <PageLocation path={["/", "stylo", "about"]}>
           <PageScrollingNumbers links={[
-              "/stylo#intro",
-              "/stylo#ying-yang",
-              "/stylo#unique",
-              "/stylo#stylable",
-              "/stylo#inspiring",
-              "/stylo#easy",
-              "/stylo#stylo-commonmark",
-              "/stylo#stylo-immerse",
-              "/stylo#stylo-other-features",
-              "/stylo#ready-to-try-stylo"
+              "/#intro",
+              "/#ying-yang",
+              "/#unique",
+              "/#stylable",
+              "/#inspiring",
+              "/#easy",
+              "/#stylo-commonmark",
+              "/#stylo-immerse",
+              "/#stylo-other-features",
+              "/#ready-to-try-stylo"
             ]}>
             <SEO
               title="Stylo App"
@@ -189,31 +189,31 @@ class StyloIndex extends React.Component {
                   </ContentResizer>
                 </PageHeaderSection>  
                 </PageSection>
-                <PageSection mt={[20,60,100]} id={"ying-yang"} number={2}>
+                <PageSection mt={[20,60,80]} id={"ying-yang"} number={2}>
                   <StyloRevolutionary />
                 </PageSection>
-                <PageSection mt={[20,60,100]} id={"unique"} number={3}>
+                <PageSection mt={[20,60,80]} id={"unique"} number={3}>
                   <StyloUnique />
                 </PageSection>
-                <PageSection mt={[20,60,100]} id={"stylable"} number={4}>
+                <PageSection mt={[20,60,80]} id={"stylable"} number={4}>
                   <StyloStylable />
                 </PageSection>
-                <PageSection mt={[20,60,100]} id={"inspiring"} number={5}>
+                <PageSection mt={[20,60,80]} id={"inspiring"} number={5}>
                   <StyloInspiring />
                 </PageSection>
-                <PageSection mt={[20,60,100]} id={"easy"} number={6}>
+                <PageSection mt={[20,60,80]} id={"easy"} number={6}>
                   <StyloEasy />
                 </PageSection>
-                <PageSection  mt={[20,60,100]} id={"stylo-commonmark"} number={7}>
+                <PageSection  mt={[20,60,80]} id={"stylo-commonmark"} number={7}>
                   <StyloCommonMark />
                 </PageSection>
-                <PageSection  mt={[20,60,100]} id={"stylo-immerse"} number={8}>
+                <PageSection  mt={[20,60,80]} id={"stylo-immerse"} number={8}>
                   <StyloImmerseInTheText />
                 </PageSection>
-                <PageSection  mt={[20,60,100]} id={"stylo-other-features"} number={9}>
+                <PageSection  mt={[20,60,80]} id={"stylo-other-features"} number={9}>
                   <StyloOtherFeatures />
                 </PageSection>
-                <PageSection  mt={[20,60,100]} id={"ready-to-try-stylo"} number={10}>
+                <PageSection  mt={[20,60,80]} id={"ready-to-try-stylo"} number={10}>
                   <ReadyToTryStylo />
                 </PageSection>
               </ContentArea>

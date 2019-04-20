@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import MediaQuery from "react-responsive"
+import SectionContainer from "../SectionContainer"
+import { SectionDivider } from '../../pages/stylo/documentation/css';
 
 const WhitePage = styled.section`
   background-color: #fff;
@@ -16,17 +18,16 @@ const WhitePage = styled.section`
 const Code = styled.code`
 
     margin: 0;
-    font-size: 85%;
+    font-size: 240%;
     background-color: rgba(27,31,35,0.05);
-    border-radius: 3px;
+    border-radius: 10px;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     tab-size: 4;
 `
 
 const Pre = styled.pre`
-    padding: 16px;
+    
     overflow: auto;
-    font-size: 85%;
     background-color: #F2F2F2;
     border-radius: 3px;
     word-wrap: normal;
@@ -38,37 +39,42 @@ const Pre = styled.pre`
     code {
         background-color: inherit;
     }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        padding: 64px;
+    }
+    @media (min-width: 1024px) {
+        padding: 84px;
+    }
+    @media (max-width: 768px) {
+        padding: 84px;
+    }
 `
 
 export default class StyloEasy extends Component {
-  render() {
+  
+    render() {
 
+        let sourceCode = "h1 {\n\tcolor: red;\n}"
 
-    let sourceCode = "h1 {\n\tcolor: red;\n}"
+        return (
 
-    return (
-
-        <WhitePage>
-            <Flex>
-                <Box width={[1/6, 1/10]} />
-                <Box width={[4/6, 8/10]}>
+            <WhitePage>
+                <SectionContainer>
                     <MediaQuery query="(min-width: 769px)">
-                        <Flex flexDirection={"row"}>
-                            <Box width={[5/12]} mt={100} ml={60}>
-                                <Pre>
-                                    <Code>
-                                        {sourceCode}
-                                    </Code>
-                                </Pre>
+                        <Flex flexDirection={"row"} mt={100}>
+                            <Box width={[6/12]} >
+                                <Pre><Code>
+                                    {sourceCode}
+                                </Code></Pre>
                             </Box>
-                            <Flex width={[7/12]} mt={100} justifyContent={"row"}>
-                                <Box width={[1/5]} />
-                                <Box width={[3/5]}>
+                            <Box width={[1/12]} />
+                            <Flex width={[5/12]} justifyContent={"row"}>
+                                <Flex flexDirection={"column"} justifyContent={"center"}>
                                     <Text color={"#f00"} fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
                                         Easy.
                                     </Text>
-                                </Box>
-                                <Box width={[1/5]} />
+                                </Flex>
                             </Flex>
                         </Flex>
                     </MediaQuery>
@@ -90,13 +96,11 @@ export default class StyloEasy extends Component {
                     </MediaQuery>
                     <Flex flexDirection={"row"} mt={[20, 40, 100]}>
                         <Text color={"#848689"} fontSize={[ 14, 20, 30 ]}>
-                            Stylo CSS uses a minimal and standard compliant subset of CSS. It is simple and fun to use. 
+                        Stylo CSS uses a minimal and standard compliant subset of CSS that only retains the usefull parts in the context of text editing. It is simple and fun to use.
                         </Text>
                     </Flex>
-                </Box>
-                <Box width={[1/6, 1/10]} />
-            </Flex>
-        </WhitePage>
-    )
-  }
+                </SectionContainer>
+            </WhitePage>
+        )
+    }
 }

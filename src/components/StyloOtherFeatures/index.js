@@ -6,6 +6,7 @@ import In from "../../images/svg/in.svg"
 import Share from "../../images/svg/share.svg"
 import Statistics from "../../images/svg/statistics.svg"
 import Open from "../../images/svg/open.svg"
+import SectionContainer from "../SectionContainer"
 
 const WhitePage = styled.section`
   background-color: #fff;
@@ -34,11 +35,11 @@ function Feature(props) {
         <Flex flexDirection={"row"} mt={[20, 40, 60]}>
             <Box width={[2/10]}>
                 <Flex flexDirection={"row"} style={{height:"100%"}}>
-                    <Box width={[1/4, 2/5]} />
-                    <Flex width={[2/4, 3/5]} style={{height:"100%"}} flexDirection={"column"} justifyContent={"center"}>
+                    <Box width={[1/4, 2/6]} />
+                    <Flex width={[2/4, 2/6]} style={{height:"100%"}} flexDirection={"column"} justifyContent={"center"}>
                         {icon}
                     </Flex>
-                    <Box width={[1/4, 2/5]} />
+                    <Box width={[1/4, 2/6]} />
                 </Flex>  
             </Box>
             <Box width={[8/10]}>
@@ -63,32 +64,28 @@ export default class StyloOtherFeatures extends Component {
 
         return (
             <WhitePage>
-                <Flex>
-                    <Box width={[1/6, 1/10]} />
-                    <Box width={[4/6, 8/10]}>
-                        <Feature 
-                            icon={<Open />} 
-                            title={"Open."}
-                            text={"Stylo native format is designed from the ground up to be open and readable by any text editor or version control system. It consists of a wrapper directory around plain text files in json, Markdown and CSS format."}
-                        />
-                        <Feature 
-                            icon={<In />} 
-                            title={"Respectful."}
-                            text={"Edit any Markdown and plain text format files with the same styling capabilities as with Stylo native format, except, of course, style editing and saving which is not supported by the format."}
-                        />
-                        <Feature 
-                            icon={<Share />} 
-                            title={"Accessible."}
-                            text={"Save as plain text, Markdown or the native .stylo format: Stylo can edit all three of them, or export your final document to HTML, PDF or Word. "}    
-                        />    
-                        <Feature 
-                            icon={<Statistics />} 
-                            title={"Informative."}
-                            text={"Stylo tracks characters, sentences, paragraphs and pages count along with reading time estimates for slow, average and fast reader. Want to know how many words you wrote since you started your writing session? Stylo _sessions_ will let you know just that!"}    
-                        />   
-                    </Box>
-                    <Box width={[1/6, 1/10]} />
-                </Flex>
+                <SectionContainer>
+                    <Feature 
+                        icon={<Open />} 
+                        title={"Open."}
+                        text={"Stylo native format is designed from the ground up to be open and readable by any text editor or version control system. It consists of a wrapper directory around plain text files in json, Markdown and CSS format."}
+                    />
+                    <Feature 
+                        icon={<In />} 
+                        title={"Respectful."}
+                        text={"Edit any Markdown and plain text format files with the same styling capabilities as with Stylo native format, except, of course, style editing and saving which is not supported by the format."}
+                    />
+                    <Feature 
+                        icon={<Share />} 
+                        title={"Accessible."}
+                        text={"Save as plain text, Markdown or the native .stylo format: Stylo can edit all three of them, or export your final document to HTML, PDF or Word. "}    
+                    />    
+                    <Feature 
+                        icon={<Statistics />} 
+                        title={"Informative."}
+                        text={"Stylo tracks characters, sentences, paragraphs and pages count along with reading time estimates for slow, average and fast reader. Want to know how many words you wrote since you started your writing session? Stylo _sessions_ will let you know just that!"}    
+                    />   
+                </SectionContainer>
             </WhitePage>
         )
     }

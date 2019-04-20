@@ -31,7 +31,13 @@ export default class StyloImmerseInTheText extends Component {
                         </Text>
                     </Flex>
                     <Box mt={[0,10,20]}>
-                        <Image filename="immerse-in-the-text.png" />
+                        <Flex flexDirection={"row"} mt={0}>
+                            <Box width={1/8} />
+                                <Box width={6/8}>
+                                <Image filename="immerse-in-the-text.png" />
+                                </Box>
+                            <Box width={1/8} />
+                        </Flex> 
                     </Box>
                 </Box>
                 <Box width={[1/6, 1/10]} />
