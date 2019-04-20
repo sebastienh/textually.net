@@ -6,8 +6,7 @@ import Image from "../Image"
 import { StyledTabPanel, StyledTabs, StyledTabList, StyledTab } from "../Tabs"
 import SectionContainer from '../SectionContainer';
 
-const WhitePage = styled.section`
-  background-color: #fff;
+const Page = styled.section`
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -38,7 +37,7 @@ export default class StyloCommonMark extends Component {
 
     return (
 
-        <WhitePage>
+        <Page>
             <SectionContainer>
                 <Flex justifyContent={"center"} flexDirection={"row"} mt={30}>
                     <Text fontSize={[ 30, 40, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
@@ -89,7 +88,7 @@ export default class StyloCommonMark extends Component {
                     </StyledTabPanel>
                 </StyledTabs>
             </SectionContainer>
-        </WhitePage>
+        </Page>
     )
   }
 }

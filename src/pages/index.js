@@ -192,25 +192,25 @@ class StyloIndex extends React.Component {
                 <PageSection mt={[20,60,80]} id={"ying-yang"} number={2}>
                   <StyloRevolutionary />
                 </PageSection>
-                <PageSection mt={[20,60,80]} id={"unique"} number={3}>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"unique"} number={3}>
                   <StyloUnique />
                 </PageSection>
                 <PageSection mt={[20,60,80]} id={"stylable"} number={4}>
                   <StyloStylable />
                 </PageSection>
-                <PageSection mt={[20,60,80]} id={"inspiring"} number={5}>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"inspiring"} number={5} pb={40}>
                   <StyloInspiring />
                 </PageSection>
                 <PageSection mt={[20,60,80]} id={"easy"} number={6}>
                   <StyloEasy />
                 </PageSection>
-                <PageSection  mt={[20,60,80]} id={"stylo-commonmark"} number={7}>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"stylo-commonmark"} number={7}>
                   <StyloCommonMark />
                 </PageSection>
                 <PageSection  mt={[20,60,80]} id={"stylo-immerse"} number={8}>
                   <StyloImmerseInTheText />
                 </PageSection>
-                <PageSection  mt={[20,60,80]} id={"stylo-other-features"} number={9}>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"stylo-other-features"} number={9}>
                   <StyloOtherFeatures />
                 </PageSection>
                 <PageSection  mt={[20,60,80]} id={"ready-to-try-stylo"} number={10}>

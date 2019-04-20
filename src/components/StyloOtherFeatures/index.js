@@ -8,8 +8,7 @@ import Statistics from "../../images/svg/statistics.svg"
 import Open from "../../images/svg/open.svg"
 import SectionContainer from "../SectionContainer"
 
-const WhitePage = styled.section`
-  background-color: #fff;
+const Page = styled.section`
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -28,11 +27,12 @@ function Feature(props) {
     const {
         icon,
         title,
-        text
+        text,
+        ...other
     } = props
   
     return (
-        <Flex flexDirection={"row"} mt={[20, 40, 60]}>
+        <Flex {...other} flexDirection={"row"} mt={[20, 40, 60]}>
             <Box width={[2/10]}>
                 <Flex flexDirection={"row"} style={{height:"100%"}}>
                     <Box width={[1/4, 2/6]} />
@@ -63,7 +63,7 @@ export default class StyloOtherFeatures extends Component {
     render() {
 
         return (
-            <WhitePage>
+            <Page>
                 <SectionContainer>
                     <Feature 
                         icon={<Open />} 
@@ -86,7 +86,7 @@ export default class StyloOtherFeatures extends Component {
                         text={"Stylo tracks characters, sentences, paragraphs and pages count along with reading time estimates for slow, average and fast reader. Want to know how many words you wrote since you started your writing session? Stylo _sessions_ will let you know just that!"}    
                     />   
                 </SectionContainer>
-            </WhitePage>
+            </Page>
         )
     }
 }

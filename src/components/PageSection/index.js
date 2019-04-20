@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from "react-dom"
 import { Box } from '@rebass/grid'
 import styled from "styled-components";
 import LocationContext from    "../../context/LocationContext"
@@ -49,7 +48,13 @@ class PageSection extends Component {
 
     render() {
 
-        const { children, id, partialVisibility, minTopValue, ...other } = this.props
+        const { 
+            children, 
+            id, 
+            partialVisibility, 
+            minTopValue,
+            ...other 
+        } = this.props
 
         return (
 

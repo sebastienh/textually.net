@@ -5,8 +5,7 @@ import { Text } from 'rebass'
 import Gear from "../Gear"
 import SectionContainer from "../SectionContainer"
 
-const WhitePage = styled.section`
-  background-color: #fff;
+const Page = styled.section`
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -19,7 +18,7 @@ export default class StyloUnique extends Component {
 
     return (
 
-        <WhitePage>
+        <Page>
             <SectionContainer>
                 <Flex justifyContent={"center"} flexDirection={"row"} mt={30}>
                     <Text color={"#D74E09"} fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
@@ -41,7 +40,7 @@ export default class StyloUnique extends Component {
                     </Flex>
                 </Flex>
             </SectionContainer>
-        </WhitePage>
+        </Page>
     )
   }
 }
