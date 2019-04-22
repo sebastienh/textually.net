@@ -56,9 +56,8 @@ StyledTab.tabsRole = 'Tab';
 
 export const StyledTabPanel = styled(TabPanel)`
   display: none;
-  min-height: 40vh;
   padding: 4px;
-  margin-top: -5px;
+    margin-top: 15px;
 
   &.is-selected {
     display: block;

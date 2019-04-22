@@ -4,7 +4,7 @@ import SEO from "../../../components/seo"
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
-import StyloLogo from "../../../images/svg/logo-red.svg"
+import StyloLogo  from "../../../images/svg/logo-red.svg"
 import PageHeaderSection from "../../../components/PageHeaderSection"
 import PageSection from "../../../components/PageSection"
 import PageLocation from "../../../components/PageLocation"
@@ -60,11 +60,6 @@ const RightSideContainer = styled(Box)`
     padding: 0px;
     width: 60px;
     height: 100%;
-    /* position: fixed; */
-    /* top: 0; */
-    /* bottom: 0; */
-    /* justify-content: center; */
-    /* flex-direction: column; */
 `;
 
 const CenterHorizontally = styled(Flex)`
@@ -85,7 +80,7 @@ const WhitePage = styled.section`
 
 const GreyPage = styled.section`
   background-color: #fafafa;
-  position: relative;
+  position: relative; 
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -208,15 +203,12 @@ class StyloDocumentationCSS extends React.Component {
             ]}>            
             <PageHeaderSection id={"header"}>
                 <ContentResizer>
-                    <Flex justifyContent={"center"} flexDirection={"row"}>
-                        <StyloLogo width={[
-                        "200px",
-                        "300px",
-                        "500px"]}/>
+                    <Flex mt={80} justifyContent={"center"} flexDirection={"row"}>
+                        <StyloLogo />
                     </Flex>
                     <Flex justifyContent={"center"} flexDirection={"row"}>
                         <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        CSS
+                          CSS
                         </Text>
                     </Flex>
                 </ContentResizer>

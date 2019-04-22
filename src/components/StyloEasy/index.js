@@ -4,7 +4,6 @@ import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import MediaQuery from "react-responsive"
 import SectionContainer from "../SectionContainer"
-import { SectionDivider } from '../../pages/stylo/documentation/css';
 
 const WhitePage = styled.section`
   background-color: #fff;
@@ -18,11 +17,22 @@ const WhitePage = styled.section`
 const Code = styled.code`
 
     margin: 0;
-    font-size: 240%;
+    
     background-color: rgba(27,31,35,0.05);
     border-radius: 10px;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     tab-size: 4;
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        font-size: 240%;
+    }
+    @media (min-width: 1024px) {
+        font-size: 240%;
+    }
+    @media (max-width: 768px) {
+        font-size: 140%;
+    }
+
 `
 
 const Pre = styled.pre`
@@ -41,13 +51,13 @@ const Pre = styled.pre`
     }
 
     @media (min-width: 769px) and (max-width: 1024px) {
-        padding: 64px;
+        padding: 84px;
     }
     @media (min-width: 1024px) {
         padding: 84px;
     }
     @media (max-width: 768px) {
-        padding: 84px;
+        padding: 44px;
     }
 `
 
@@ -62,8 +72,8 @@ export default class StyloEasy extends Component {
             <WhitePage>
                 <SectionContainer>
                     <MediaQuery query="(min-width: 769px)">
-                        <Flex flexDirection={"row"} mt={100}>
-                            <Box width={[6/12]} >
+                        <Flex flexDirection={"row"} mt={[40, 70, 100]}>
+                            <Box width={[6/12]}>
                                 <Pre><Code>
                                     {sourceCode}
                                 </Code></Pre>
@@ -79,8 +89,8 @@ export default class StyloEasy extends Component {
                         </Flex>
                     </MediaQuery>
                     <MediaQuery query="(max-width: 768px)">
-                        <Flex flexDirection={"column"}>
-                            <Box mt={100}>
+                        <Flex flexDirection={"column"} mt={[40, 70, 100]}>
+                            <Box>
                                 <Pre>
                                     <Code>
                                         {sourceCode}

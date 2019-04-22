@@ -26,6 +26,7 @@ import StyloStylable from "../components/StyloStylable"
 import StyloInspiring from "../components/StyloInspiring"
 import StyloEasy from "../components/StyloEasy"
 import StyloOtherFeatures from "../components/StyloOtherFeatures"
+import MediaQuery from "react-responsive"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -145,18 +146,6 @@ class StyloIndex extends React.Component {
 
     return (
         <PageLocation path={["/", "stylo", "about"]}>
-          <PageScrollingNumbers links={[
-              "/#intro",
-              "/#ying-yang",
-              "/#unique",
-              "/#stylable",
-              "/#inspiring",
-              "/#easy",
-              "/#stylo-commonmark",
-              "/#stylo-immerse",
-              "/#stylo-other-features",
-              "/#ready-to-try-stylo"
-            ]}>
             <SEO
               title="Stylo App"
               keywords={[
@@ -169,6 +158,20 @@ class StyloIndex extends React.Component {
                 `css`, 
                 `html`]}
             />  
+        {/* <MediaQuery query="(min-width: 769px)"> */}
+          {/* <PageScrollingNumbers links={[
+              "/#intro",
+              "/#ying-yang",
+              "/#unique",
+              "/#stylable",
+              "/#inspiring",
+              "/#easy",
+              "/#stylo-commonmark",
+              "/#stylo-immerse",
+              "/#stylo-other-features",
+              "/#ready-to-try-stylo"
+            ]}> */}
+
             <Flex p={0}
                     m={0}>
               <ContentArea>
@@ -176,10 +179,7 @@ class StyloIndex extends React.Component {
                 <PageHeaderSection>
                   <ContentResizer>
                     <Flex mt={80} justifyContent={"center"} flexDirection={"row"}>
-                      <StyloLogo width={[
-                        "200px",
-                        "300px",
-                        "500px"]}/>
+                      <StyloLogo />
                     </Flex>
                     <Flex justifyContent={"center"} flexDirection={"row"}>
                       <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
@@ -218,7 +218,7 @@ class StyloIndex extends React.Component {
                 </PageSection>
               </ContentArea>
             </Flex>
-          </PageScrollingNumbers>
+          {/* </PageScrollingNumbers> */}
       </PageLocation>
     )
   }

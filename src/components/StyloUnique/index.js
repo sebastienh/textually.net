@@ -29,7 +29,7 @@ export default class StyloUnique extends Component {
                     <Flex mt={40} flexDirection={"row"}>
                         <Box width={[1/6]} />
                         <Box width={[4/6]}>
-                            <Text color={"#848689"} fontSize={[ 10, 12, 24 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                            <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
                                 A custom text rendering engine technology provides a smooth writing experience along with advanced live styling capabilities.  
                             </Text>
                         </Box>

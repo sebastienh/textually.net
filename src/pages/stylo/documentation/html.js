@@ -4,7 +4,7 @@ import SEO from "../../../components/seo"
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
-import StyloLogo from "../../../images/svg/logo-red.svg"
+import StyloLogo from "../../../images/svg/logo-green.svg"
 import PageHeaderSection from "../../../components/PageHeaderSection"
 import PageSection from "../../../components/PageSection"
 import PageLocation from "../../../components/PageLocation"
@@ -156,11 +156,8 @@ class StyloDocumentation extends React.Component {
             ]}>            
             <PageHeaderSection id={"header"}>
                 <ContentResizer>
-                    <Flex justifyContent={"center"} flexDirection={"row"}>
-                        <StyloLogo width={[
-                        "200px",
-                        "300px",
-                        "500px"]}/>
+                    <Flex mt={80} justifyContent={"center"} flexDirection={"row"}>
+                        <StyloLogo />
                     </Flex>
                     <Flex justifyContent={"center"} flexDirection={"row"}>
                         <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
