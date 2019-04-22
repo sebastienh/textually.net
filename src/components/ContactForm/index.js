@@ -45,11 +45,12 @@ const Input = styled.input`
   height: 2rem;
   border: none;
   padding: 0.25rem 1rem;
-  box-shadow: 0 1px 0;
+  box-shadow: 0 1px 0 black;
   border-radius: 1px;
-  -webkit-box-shadow: 0 1px 0;
+  -webkit-box-shadow: 0 1px 0 black;
   overflow: auto;
   font: inherit;
+  -webkit-appearance: none;
 
   &:-internal-autofill-previewed {
     background-color: #FFFCF7 !important;
