@@ -70,7 +70,7 @@ class LocationProvider extends React.Component {
   render() {
 
     const { children } = this.props
-    const { pagePath, index, displayedSectionPath } = this.state
+    const { pagePath, index, displayedSectionPath, visibleIndexes } = this.state
     
     return (
       <LocationContext.Provider
@@ -78,6 +78,7 @@ class LocationProvider extends React.Component {
           pagePath,
           index,
           displayedSectionPath,
+          visibleIndexes,
           updatePagePath: this.updatePagePath,
           enteringIndex: this.enteringIndex,
           leavingIndex: this.leavingIndex,

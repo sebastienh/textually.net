@@ -52,7 +52,7 @@ export default class SidebarLink extends Component {
         return (
             <LocationContext.Consumer>
                 {(context) => (
-                    <Li selected={context.index == number}>
+                    <Li selected={context.visibleIndexes.has(number)}>
                         <Box pl={["5px", "0px"]} fontSize={[1,2]}>
                             <LocationAwareLink href={href} number={number}>
                                 {children}

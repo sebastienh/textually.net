@@ -32,7 +32,7 @@ export default class LocationAwareLink extends Component {
         return (
             <LocationContext.Consumer>
                 {(context) => (
-                    <PlainLink href={href} selected={context.index == this.state.number}>
+                    <PlainLink href={href} selected={context.visibleIndexes.has(this.state.number)}>
                         {children}
                     </PlainLink>
                 )}
