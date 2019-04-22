@@ -34,7 +34,7 @@ export default class StyloStylable extends Component {
                     <Flex flexDirection={"row"} mt={0}>
                         <Box width={1/8} />
                         <Box width={6/8}>
-                            <Image filename="new-paradigm.png" />
+                            <Image filename="new-paradigm-dark.png" />
                         </Box>
                         <Box width={1/8} />
                     </Flex>

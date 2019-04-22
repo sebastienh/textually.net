@@ -72,7 +72,7 @@ export default class StyloOtherFeatures extends Component {
                     />
                     <Feature 
                         icon={<In />} 
-                        title={"Respectful."}
+                        title={"Universal."}
                         text={"Edit any Markdown and plain text format files with the same styling capabilities as with Stylo native format, except, of course, style editing and saving which is not supported by the format."}
                     />
                     <Feature 
@@ -82,7 +82,7 @@ export default class StyloOtherFeatures extends Component {
                     />    
                     <Feature 
                         icon={<Statistics />} 
-                        title={"Informative."}
+                        title={"Statistical."}
                         text={"Stylo tracks characters, sentences, paragraphs and pages count along with reading time estimates for slow, average and fast reader. Want to know how many words you wrote since you started your writing session? Stylo _sessions_ will let you know just that!"}    
                     />   
                 </SectionContainer>
