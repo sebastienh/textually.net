@@ -39,7 +39,7 @@ const Container = styled(Flex)`
 const Label = styled.label`
   margin: 1rem 0 1rem 0;
   color: black;
-`;
+`; 
 
 const Input = styled.input`
   height: 2rem;
