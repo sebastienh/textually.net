@@ -41,12 +41,12 @@ export default class TextuallyBottomNavBar extends Component {
                                         p={2}>
                                         About
                                     </MainLink>
-                                    <MainLink
+                                    {/* <MainLink
                                         path={["/", "blog"]}
                                         href='/blog'
                                         p={2}>
                                         Blog
-                                    </MainLink>
+                                    </MainLink> */}
                                     <NavBarSectionButton
                                         marginLeft={"30px"}
                                         path={["/", "stylo"]}

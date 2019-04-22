@@ -120,12 +120,12 @@ export default class StyloSideMenu extends Component {
                         onClick={this.onDocumentation.bind(this)}>
                         Documentation...
                     </SidebarPushButton>
-                    <MainLink
+                    {/* <MainLink
                         path={["/", "stylo", "release-notes"]}
                         href='#'
                         p={2}>
                         Release Notes
-                    </MainLink>
+                    </MainLink> */}
                     <MainLink
                         path={["/", "stylo", "privacy-policy"]}
                         href='/stylo/privacy-policy'

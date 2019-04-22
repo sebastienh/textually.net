@@ -1,15 +1,7 @@
 
 
 
-## History
-
-Textually is born from the desir to give all people who create and modify texts, tools that reflect the fundamental changes that occured in the way informartion is handled.  
 
 ## Mission 
 
-Textually is dedicated to transform the way we write and to create betters tools to edit text.  
-  
-
-
-
-
+Textually is dedicated to develop innovative text editors that help to organize textual information and make it available and useful to produce texts. 

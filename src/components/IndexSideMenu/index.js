@@ -90,12 +90,12 @@ export default class IndexSideMenu extends Component {
                         p={2}>
                         About
                     </MainLink>
-                    <MainLink
+                    {/* <MainLink
                         path={["/", "blog"]}
                         href='/blog'
                         p={2}>
                         Blog
-                    </MainLink>
+                    </MainLink> */}
                     <SidebarPushButton
                         onClick={this.onStylo}
                         path={["/", "stylo"]}

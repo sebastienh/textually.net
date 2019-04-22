@@ -47,12 +47,12 @@ export default class StyloBottomNavBar extends Component {
                                         p={2}>
                                         Documentation...
                                     </NavBarSectionButton>
-                                    <MainLink
+                                    {/* <MainLink
                                         path={["/", "stylo", "release-notes"]}
                                         href='#'
                                         p={2}>
                                         Release Notes
-                                    </MainLink>
+                                    </MainLink> */}
                                     <MainLink
                                         path={["/", "stylo", "privacy-policy"]}
                                         href='/stylo/privacy-policy'
