@@ -133,7 +133,7 @@ export default class CircledNumber extends Component {
                         <React.Fragment>
                             <svg width={width} height={height} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
                                 <path d="M259.441,14.443c129.153,0 234.009,104.856 234.009,234.009c0,129.152 -104.856,234.008 -234.009,234.008c-129.153,0 -234.008,-104.856 -234.008,-234.008c0,-129.153 104.855,-234.009 234.008,-234.009Zm0,20.247c117.978,0 213.762,95.783 213.762,213.762c0,117.978 -95.784,213.761 -213.762,213.761c-117.978,0 -213.761,-95.783 -213.761,-213.761c0,-117.979 95.783,-213.762 213.761,-213.762Z" fill={context.index == number || this.state.forceSelected ? this.state.selectedColor : color}/>
-                                <text x={getX(number)} y={getY(number)} font-family="'Hurme Geometric Sans 3',sans-serif" font-weight="700" font-size="220" fill={context.index == number || this.state.forceSelected  ? this.state.selectedColor : color}>
+                                <text x={getX(number)} y={getY(number)} font-family="'HurmeGeometricSans3-Regular',sans-serif" font-weight="700" font-size="220" fill={context.index == number || this.state.forceSelected  ? this.state.selectedColor : color}>
                             {number}
                             </text>
                             </svg>
