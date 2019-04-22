@@ -78,7 +78,7 @@ export default class NavBar extends Component {
 
         const { prevScrollPos, visible } = this.state
         const currentScrollPos = window.pageYOffset
-        const nextVisibleState = prevScrollPos > currentScrollPos
+        const nextVisibleState = prevScrollPos > currentScrollPos || currentScrollPos == 0
 
         // we reset the displayed path if we hide the navbar 
         // so that the next time we will display the actual 
