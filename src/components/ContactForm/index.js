@@ -46,6 +46,8 @@ const Input = styled.input`
   border: none;
   padding: 0.25rem 1rem;
   box-shadow: 0 1px 0;
+  border-radius: 1px;
+  /* -webkit-box-shadow: 0 1px 0; */
   overflow: auto;
   font: inherit;
 

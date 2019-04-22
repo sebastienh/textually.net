@@ -36,10 +36,7 @@ export default class ReadyToTryStylo extends Component {
                     </Flex>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={[80]} mb={[100]}>
                         <Link style={{boxShadow:"0 0 0"}} href="https://itunes.apple.com/us/app/stylo/id1456230357?mt=8">
-                            <DownloadMacAppStore width={[
-                                "200px",
-                                "300px",
-                                "500px"]}/>
+                            <DownloadMacAppStore />
                         </Link>
                     </Flex>
                 </SectionContainer>
