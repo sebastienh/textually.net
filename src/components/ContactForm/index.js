@@ -97,11 +97,17 @@ const FormButton = styled(Button)`
   color: black;
 `
 
+const From = styled.form`
+  -webkit-appearance: none;
+
+`
+
+
 export default class ContactForm extends React.Component {
     render() {
         return (
             <Container {...this.props}>
-                <form
+                <From
                 name="contact-form"
                 action="/contact-form-success"
                 method="post"
@@ -130,7 +136,7 @@ export default class ContactForm extends React.Component {
                         </FormButton>
                     </p>
                     <Input type="hidden" name="form-name" value="contact-form" />
-                </form>
+                </From>
             </Container>
         );
     }
