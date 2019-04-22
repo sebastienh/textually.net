@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Flex } from '@rebass/grid'
 import { Text, Link } from 'rebass'
 import DownloadMacAppStore from  "../../images/svg/Download_on_the_Mac_App_Store.svg"
+import MacAppStoreDownloadImage from "../../images/svg/MacAppStoreDownloadImage.svg"
 import SectionContainer from "../SectionContainer"
 
 const WhitePage = styled.section`
@@ -36,7 +37,7 @@ export default class ReadyToTryStylo extends Component {
                     </Flex>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={[80]} mb={[100]}>
                         <Link style={{boxShadow:"0 0 0"}} href="https://itunes.apple.com/us/app/stylo/id1456230357?mt=8">
-                            <DownloadMacAppStore />
+                            <MacAppStoreDownloadImage />
                         </Link>
                     </Flex>
                 </SectionContainer>
