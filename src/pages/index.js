@@ -220,7 +220,17 @@ class StyloIndex extends React.Component {
               </ContentArea>
             </Flex>
 
-            <ContactFormJS mt={60}/>
+            <form
+      name="contact-form"
+      method="post"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+      <input hidden className="hidden" name="bot-field" />
+      <input type="text" placeholder="name" name="name" />
+      <div data-netlify-recaptcha />
+      <button>Send</button>
+    </form>
 
           {/* </PageScrollingNumbers> */}
       </PageLocation>
