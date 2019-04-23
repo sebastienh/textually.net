@@ -106,7 +106,7 @@ export default class IndexSideMenu extends Component {
                     </SidebarPushButton>
                     <MainLink
                         path={["/", "contact"]}
-                        href='/contact'
+                        href='/contact?no-cache=1'
                         p={2}>
                         Contact
                     </MainLink>

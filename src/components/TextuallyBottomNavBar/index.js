@@ -55,7 +55,7 @@ export default class TextuallyBottomNavBar extends Component {
                                     </NavBarSectionButton>
                                     <MainLink
                                         path={["/", "contact"]}
-                                        href='/contact'
+                                        href='/contact?no-cache=1'
                                         p={2}>
                                         Contact
                                     </MainLink>
