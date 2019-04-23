@@ -6,7 +6,7 @@ import PageLocation from "../components/PageLocation"
 import PageTemplate from "../components/PageTemplate"
 import { graphql } from 'gatsby'
 
-export default class Contact extends Component {
+export default class Index extends Component {
 
   render() {
 

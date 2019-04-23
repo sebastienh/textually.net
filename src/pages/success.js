@@ -4,7 +4,7 @@ import PageTemplate from "../components/PageTemplate"
 import SEO from "../components/seo"
 import { Flex, Text, Heading } from "rebass";
 
-const ContactFormSuccess = (props) => (
+const Success = (props) => (
     <PageLocation path={["/", "contact"]}>
         <SEO
         title="Thank you for contacting us "
@@ -17,7 +17,7 @@ const ContactFormSuccess = (props) => (
                         <Heading  color={"#D74E09"} fontSize={[5]}>Message sent!</Heading>
                     </Flex>
                     <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
-                        <Text>Thank you for contacting us! We will handle your request as soon as possible...</Text>
+                        <Text>Thank you for contacting us! We will handle your request as soon as possible.</Text>
                     </Flex>
                     <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
                         <Text>Textually team</Text>
@@ -28,4 +28,4 @@ const ContactFormSuccess = (props) => (
     </PageLocation>
 )
 
-export default ContactFormSuccess
+export default Success
