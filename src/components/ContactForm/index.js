@@ -119,11 +119,10 @@ export default class ContactForm extends React.Component {
                         <TextArea name="message" required />
                     </p>
                     <p style={{ marginTop: '1rem' }}>
-                        <FormButton>
+                        <FormButton type="submit" value="Send" id="Form-submit">
                             Send
                         </FormButton>
                     </p>
-                    <Input type="hidden" name="form-name" value="contact" />
                 </form>
             </Container>
         );
