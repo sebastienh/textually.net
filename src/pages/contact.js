@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ContactForm from '../components/ContactForm';
+import ContactFormJS from "../components/ContactFormJS"
 import SEO from "../components/seo"
 import { Flex, Text, Heading } from "rebass";
 import PageLocation from "../components/PageLocation"
@@ -31,7 +32,7 @@ export default class Index extends Component {
                 
               </Text>
             </Flex>
-            <ContactForm mt={60}/>
+            <ContactFormJS mt={60}/>
           </PageTemplate>
       </PageLocation>
     )
