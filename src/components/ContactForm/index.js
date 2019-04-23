@@ -119,7 +119,7 @@ export default class Index extends React.Component {
     render() {
         return (
             <Container {...this.props}>
-                <form name="contact" method="POST" netlify>
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="contact" />
                     <p>
                         <Label htmlFor="name">Name</Label>
