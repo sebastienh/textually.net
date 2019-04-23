@@ -102,10 +102,7 @@ export default class ContactForm extends React.Component {
     render() {
         return (
             <Container {...this.props}>
-                <form action="POST" data-netlify="true"
-                name="contact"
-                // action="/contact-form-success"
-                netlify-honeypot="bot-field">
+                <form name="contact" method="POST" action="/contact-form-success" netlify>
                     <p hidden>
                         <Label>Don’t fill this out if you're human: <input name="bot-field" /></Label>
                     </p>
@@ -121,13 +118,12 @@ export default class ContactForm extends React.Component {
                         <Label htmlFor="message">Your Message</Label>
                         <TextArea name="message" required />
                     </p>
-                    <div data-netlify-recaptcha="true"></div>
                     <p style={{ marginTop: '1rem' }}>
                         <FormButton>
                             Send
                         </FormButton>
                     </p>
-                    <Input type="hidden" name="form-name" value="contact-form" />
+                    <Input type="hidden" name="form-name" value="contact" />
                 </form>
             </Container>
         );
