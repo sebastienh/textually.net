@@ -108,6 +108,7 @@ const IndexPage = () => (
       data-netlify="true"
       netlify-honeypot="bot-field"
     >
+      <input type="hidden" name="contact-form" value="contact-form" />
       <input hidden className="hidden" name="bot-field" />
       <input type="text" placeholder="name" name="name" />
       <div data-netlify-recaptcha />
