@@ -98,23 +98,16 @@ const FormButton = styled(Button)`
   color: black;
 `
 
-const From = styled.form`
-  -webkit-appearance: none;
-
-`
-
-
 export default class ContactForm extends React.Component {
     render() {
         return (
             <Container {...this.props}>
-                <From
-                name="contact-form"
+                <form
+                name="contact"
                 action="/contact-form-success"
                 method="post"
                 data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                netlify>
+                netlify-honeypot="bot-field">
                     <p hidden>
                         <Label>Don’t fill this out if you're human: <input name="bot-field" /></Label>
                     </p>
@@ -137,7 +130,7 @@ export default class ContactForm extends React.Component {
                         </FormButton>
                     </p>
                     <Input type="hidden" name="form-name" value="contact-form" />
-                </From>
+                </form>
             </Container>
         );
     }
