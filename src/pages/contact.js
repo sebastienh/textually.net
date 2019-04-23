@@ -32,7 +32,7 @@ export default class Index extends Component {
                 
               </Text>
             </Flex>
-            <ContactFormJS mt={60}/>
+            <ContactForm mt={60}/>
           </PageTemplate>
       </PageLocation>
     )

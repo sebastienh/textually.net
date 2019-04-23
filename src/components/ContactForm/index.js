@@ -101,14 +101,40 @@ const FormButton = styled(Button)`
 export default class Index extends React.Component {
     render() {
         return (
-          <form
-              name="contact-form"
-              method="post"
-              data-netlify="true"
-            >
-              <input type="text" placeholder="name" name="name"/>
-              <button>Send</button>
-          </form>
+            <Container {...this.props}>
+
+<form
+      name="contact-form"
+      method="post"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+      <input hidden className="hidden" name="bot-field" />
+      <input type="text" placeholder="name" name="name" />
+      <div data-netlify-recaptcha />
+      <button>Send</button>
+    </form>
+
+                {/* <form name="contact" method="POST" netlify>
+                    <p>
+                        <Label htmlFor="name">Name</Label>
+                        <Input name="name" type="text" required />
+                    </p>
+                    <p>
+                        <Label htmlFor="email">E-Mail</Label>
+                        <Input name="email" type="email" required />
+                    </p>
+                    <p>
+                        <Label htmlFor="message">Your Message</Label>
+                        <TextArea name="message" required />
+                    </p>
+                    <p style={{ marginTop: '1rem' }}>
+                        <FormButton type="submit" value="Send" id="Form-submit">
+                            Send
+                        </FormButton>
+                    </p>
+                </form> */}
+            </Container>
         );
     }
 }
