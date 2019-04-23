@@ -25,11 +25,20 @@ export default class PageHeaderSection extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener('resize', this.handleWindowResize);
+        const mq = window.matchMedia( "(min-width: 769px)" );
+        if (mq.matches) {
+            window.addEventListener('resize', this.handleWindowResize);
+        }
+        else {
+            this.handleWindowResize()
+        }
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleWindowResize);
+        const mq = window.matchMedia( "(min-width: 769px)" );
+        if (mq.matches) {
+            window.removeEventListener('resize', this.handleWindowResize);
+        }
         this.context.resetIndexContext()
     }
 
@@ -42,7 +51,7 @@ export default class PageHeaderSection extends Component {
 
     render() {
 
-        const { id, children } = this.props
+        const { children } = this.props
         const { width, height } = this.state
 
         return (

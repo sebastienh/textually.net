@@ -47,7 +47,7 @@ export default class StyloRevolutionary extends Component {
                                 {text}    
                             </Text>
                         </Box>
-                        <Box mt={[40, 60, 80]} ml={60}>
+                        <Box mt={[40, 60, 80]}>
                             <YinYang fillColor={"#848689"} dotColor={"#D74E09"} width={"200"} height={"200"} />
                         </Box>
                 </MediaQuery>
