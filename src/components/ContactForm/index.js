@@ -98,32 +98,50 @@ const FormButton = styled(Button)`
   color: black;
 `
 
+  /* <form name="contact" method="POST" action="/contact-form-success" netlify>
+      <p>
+          <Label htmlFor="form-name">Name</Label>
+          <Input name="form-name" type="text" required />
+      </p>
+      <p>
+          <Label htmlFor="email">E-Mail</Label>
+          <Input name="email" type="email" required />
+      </p>
+      <p>
+          <Label htmlFor="message">Your Message</Label>
+          <TextArea name="message" required />
+      </p>
+      <p style={{ marginTop: '1rem' }}>
+          <FormButton type="submit" value="Send" id="Form-submit">
+              Send
+          </FormButton>
+      </p>
+  </form> */
+
 export default class ContactForm extends React.Component {
     render() {
         return (
             <Container {...this.props}>
-                <form name="contact" method="POST" action="/contact-form-success" netlify>
-                    <p hidden>
-                        <Label>Don’t fill this out if you're human: <input name="bot-field" /></Label>
-                    </p>
-                    <p>
-                        <Label htmlFor="name">Name</Label>
-                        <Input name="name" type="text" required />
-                    </p>
-                    <p>
-                        <Label htmlFor="email">E-Mail</Label>
-                        <Input name="email" type="email" required />
-                    </p>
-                    <p>
-                        <Label htmlFor="message">Your Message</Label>
-                        <TextArea name="message" required />
-                    </p>
-                    <p style={{ marginTop: '1rem' }}>
-                        <FormButton type="submit" value="Send" id="Form-submit">
-                            Send
-                        </FormButton>
-                    </p>
-                </form>
+              <form name="contact" method="POST" data-netlify="true">
+                <p>
+                  <label>Your Name: <input type="text" name="name" /></label>   
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                  <label>Your Role: <select name="role[]" multiple>
+                    <option value="leader">Leader</option>
+                    <option value="follower">Follower</option>
+                  </select></label>
+                </p>
+                <p>
+                  <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
             </Container>
         );
     }
