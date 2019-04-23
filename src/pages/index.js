@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import ContactFormJS from "../components/ContactFormJS"
 import SideArea from "../components/SideArea"
 import ContentArea from "../components/ContentArea"
 import Accordion from "../components/Accordion"
@@ -218,6 +219,9 @@ class StyloIndex extends React.Component {
                 </PageSection>
               </ContentArea>
             </Flex>
+
+            <ContactFormJS mt={60}/>
+
           {/* </PageScrollingNumbers> */}
       </PageLocation>
     )
