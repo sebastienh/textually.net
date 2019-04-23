@@ -98,12 +98,11 @@ const FormButton = styled(Button)`
   color: black;
 `
 
-export default class Index extends React.Component {
-    render() {
-        return (
-            <Container {...this.props}>
-
-<form
+const IndexPage = () => (
+  <div>
+    <h1>Hi people</h1>
+    <p>Welcome to your new Gatsby site.</p>
+    <form
       name="contact-form"
       method="post"
       data-netlify="true"
@@ -114,28 +113,49 @@ export default class Index extends React.Component {
       <div data-netlify-recaptcha />
       <button>Send</button>
     </form>
+  </div>
+)
 
-                {/* <form name="contact" method="POST" netlify>
-                    <p>
-                        <Label htmlFor="name">Name</Label>
-                        <Input name="name" type="text" required />
-                    </p>
-                    <p>
-                        <Label htmlFor="email">E-Mail</Label>
-                        <Input name="email" type="email" required />
-                    </p>
-                    <p>
-                        <Label htmlFor="message">Your Message</Label>
-                        <TextArea name="message" required />
-                    </p>
-                    <p style={{ marginTop: '1rem' }}>
-                        <FormButton type="submit" value="Send" id="Form-submit">
-                            Send
-                        </FormButton>
-                    </p>
-                </form> */}
-            </Container>
-        );
-    }
-}
+export default IndexPage;
+
+// export default class Index extends React.Component {
+//     render() {
+//         return (
+//             <Container {...this.props}>
+
+// <form
+//       name="contact-form"
+//       method="post"
+//       data-netlify="true"
+//       netlify-honeypot="bot-field"
+//     >
+//       <input hidden className="hidden" name="bot-field" />
+//       <input type="text" placeholder="name" name="name" />
+//       <div data-netlify-recaptcha />
+//       <button>Send</button>
+//     </form>
+
+//                 {/* <form name="contact" method="POST" netlify>
+//                     <p>
+//                         <Label htmlFor="name">Name</Label>
+//                         <Input name="name" type="text" required />
+//                     </p>
+//                     <p>
+//                         <Label htmlFor="email">E-Mail</Label>
+//                         <Input name="email" type="email" required />
+//                     </p>
+//                     <p>
+//                         <Label htmlFor="message">Your Message</Label>
+//                         <TextArea name="message" required />
+//                     </p>
+//                     <p style={{ marginTop: '1rem' }}>
+//                         <FormButton type="submit" value="Send" id="Form-submit">
+//                             Send
+//                         </FormButton>
+//                     </p>
+//                 </form> */}
+//             </Container>
+//         );
+//     }
+// }
 
