@@ -105,13 +105,9 @@ const IndexPage = () => (
     <form
       name="contact-form"
       method="post"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-    >
+      netlify>
       <input type="hidden" name="form-name" value="contact-form" />
-      <input hidden className="hidden" name="bot-field" />
       <input type="text" placeholder="name" name="name" />
-      <div data-netlify-recaptcha />
       <button>Send</button>
     </form>
   </div>
