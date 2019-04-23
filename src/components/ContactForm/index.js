@@ -101,9 +101,20 @@ const FormButton = styled(Button)`
 export default class Index extends React.Component {
     render() {
         return (
-            <Container {...this.props}>
+<form
+    name="contact-form"
+    method="post"
+    data-netlify="true"
+  >
+    <input type="text" placeholder="name" name="name"/>
+    <button>Send</button>
+</form>
 
-                <form name="contact" method="POST" netlify>
+            // <Container {...this.props}>
+
+
+
+                {/* <form name="contact" method="POST" netlify>
                     <p>
                         <Label htmlFor="name">Name</Label>
                         <Input name="name" type="text" required />
@@ -121,8 +132,8 @@ export default class Index extends React.Component {
                             Send
                         </FormButton>
                     </p>
-                </form>
-            </Container>
+                </form> */}
+            // </Container>
         );
     }
 }
