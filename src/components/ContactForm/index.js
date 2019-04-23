@@ -98,7 +98,7 @@ const FormButton = styled(Button)`
   color: black;
 `
 
-export default class ContactForm extends React.Component {
+export default class Index extends React.Component {
     render() {
         return (
             <Container {...this.props}>
