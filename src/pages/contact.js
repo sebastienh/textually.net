@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import ContactForm from '../components/ContactForm';
 import ContactFormJS from "../components/ContactFormJS"
 import SEO from "../components/seo"
-import { Flex, Text, Heading } from "rebass";
 import PageLocation from "../components/PageLocation"
 import PageTemplate from "../components/PageTemplate"
 import { graphql } from 'gatsby'
-
-
+import styled from "styled-components";
+import { Flex, Heading, Link, Text, Button } from "rebass";
 
 const Container = styled(Flex)`
   justify-content: center;
@@ -104,7 +103,6 @@ const FormButton = styled(Button)`
   border-width: 1px;
   color: black;
 `
-
 
 export default class Index extends Component {
 
