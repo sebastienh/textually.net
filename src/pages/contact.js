@@ -116,6 +116,15 @@ export default class Index extends Component {
               keywords={[`contact`, `textually`, `email`]}
             />
           <PageTemplate>
+
+            <div dangerouslySetInnerHTML={{__html:
+                <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+                    <input name="name" type="text" />
+                    <input name="email" type="email" />
+                    <textarea name="message" required></textarea>
+                </form>
+            }} />
+
             {/* <MarkdownContent post={textuallyContact} /> */}
             <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
               <Heading  color={"#D74E09"} fontSize={[5,6,8]}>Contact Us</Heading>
