@@ -18,8 +18,8 @@ export default class PageHeaderSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            width: window.innerWidth,
-            height: window.innerHeight
+            width: window !== undefined && window !== null ? window.innerWidth : 0,
+            height: window !== undefined && window !== null ? window.innerHeight : 0
         }
         this.handleWindowResize = this.handleWindowResize.bind(this);
     }
