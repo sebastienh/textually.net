@@ -220,19 +220,6 @@ class StyloIndex extends React.Component {
               </ContentArea>
             </Flex>
 
-            <div>
-              <h1>Hi people</h1>
-              <p>Welcome to your new Gatsby site.</p>
-              <form
-                name="contact-form-1"
-                method="post"
-                netlify>
-                <input type="hidden" name="form-name" value="contact-form-1" />
-                <input type="text" placeholder="name" name="name" />
-                <button>Send</button>
-              </form>
-            </div>
-
           {/* </PageScrollingNumbers> */}
       </PageLocation>
     )
