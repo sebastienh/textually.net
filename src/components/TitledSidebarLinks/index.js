@@ -55,16 +55,18 @@ export default class TitledSidebarLinks extends Component {
 
         let children = []
 
-        for(var i = 0; i < links.length; i++) {
+        if(links !== undefined && links !== null) {
+            for(var i = 0; i < links.length; i++) {
 
-            let link = links[i]
+                let link = links[i]
 
-            const {
-                href,
-                title
-            } = link;
+                const {
+                    href,
+                    title
+                } = link;
 
-            children.push(<SidebarLink href={href} number={i+1}>{title}</SidebarLink>)
+                children.push(<SidebarLink href={href} number={i+1}>{title}</SidebarLink>)
+            }
         }
         return <LinkListContainer><LinkList>{children}</LinkList></LinkListContainer>
     }
@@ -86,7 +88,7 @@ export default class TitledSidebarLinks extends Component {
                                     {(locationContext) => (
                                         <CenterHorizontally>
                                             <TitledLinksContainer 
-                                                open={drawerContext.open} 
+                                                open={drawerContext !== undefined && drawerContext !== null ? drawerContext.open : false} 
                                                 display={titledSidebarContext.display && !drawerContext.open && locationContext.index !== null && locationContext.index !== undefined && locationContext.index !== 0}>
                                                 {this.createLinks(titledSidebarContext.links)}
                                             </TitledLinksContainer>

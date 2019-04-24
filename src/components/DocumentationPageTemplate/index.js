@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Flex, Box, Text, Container, Provider, Header } from "rebass";
 import styled from "styled-components";
-import MediaQuery from 'react-responsive';
+import MediaQuery from 'react-media';
 
 const DocumentationContainer = styled(Flex)`
   

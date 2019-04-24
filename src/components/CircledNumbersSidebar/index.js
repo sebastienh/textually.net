@@ -48,19 +48,21 @@ export default class CircledNumbersSidebar extends Component {
         let unselectedColor = "#000"
         let children = []
 
-        for(var i = 0; i < links.length; i++) {
+        if(links !== undefined && links !== null) {
+            for(var i = 0; i < links.length; i++) {
 
-            let child = <CircledNumber 
-                selectedColor={selectedColor}
-                unselectedColor={unselectedColor}
-                forceSelected={false}
-                link={links[i]} 
-                style={{marginTop:"10px"}} 
-                width={"32px"} 
-                height={"32px"} 
-                color={"#000"} 
-                number={i+1}/>
-            children.push(child)
+                let child = <CircledNumber 
+                    selectedColor={selectedColor}
+                    unselectedColor={unselectedColor}
+                    forceSelected={false}
+                    link={links[i]} 
+                    style={{marginTop:"10px"}} 
+                    width={"32px"} 
+                    height={"32px"} 
+                    color={"#000"} 
+                    number={i+1}/>
+                children.push(child)
+            }
         }
         return children
     }
@@ -79,7 +81,7 @@ export default class CircledNumbersSidebar extends Component {
                         <CenterHorizontally>
                             <ScrollingNumbersSidebarContext>
                                 {(srollingNumbersContext) => (
-                                    <CircledNumbersContainer open={drawerContext.open} display={srollingNumbersContext.display && !drawerContext.open}>
+                                    <CircledNumbersContainer open={drawerContext !== undefined && drawerContext !== null ? drawerContext.open : false} display={srollingNumbersContext.display && !drawerContext.open}>
                                         {this.createNumbers(srollingNumbersContext.links)}
                                     </CircledNumbersContainer>
                                 )}

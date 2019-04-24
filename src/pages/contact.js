@@ -111,14 +111,6 @@ export default class Contact extends Component {
 
     return (
       <PageLocation path={["/", "contact"]}>
-            <div dangerouslySetInnerHTML={{__html:
-                <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-                    <input name="name" type="text" />
-                    <input name="email" type="email" />
-                    <textarea name="message" required></textarea>
-                </form>
-            }} />
-
             <SEO
               title="Contact Us"
               keywords={[`contact`, `textually`, `email`]}
@@ -131,9 +123,7 @@ export default class Contact extends Component {
             </Flex>
             <Flex mt={40} flexDirection={"row"} justifyContent={"center"}>
               <Text> 
-                At Textually, we try to   
                 Leave us any comment, any suggestion we will be happy to answer.
-                
               </Text>
             </Flex>
             <Container mt={60}>

@@ -144,99 +144,82 @@ class StyloIndex extends React.Component {
     };
 
     return (
-      <div>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <form
-        name="contact-form"
-        method="post"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="contact-form" />
-        <input hidden className="hidden" name="bot-field" />
-        <input type="text" placeholder="name" name="name" />
-        <div data-netlify-recaptcha />
-        <button>Send</button>
-      </form>
-    </div>
+        <PageLocation path={["/", "stylo", "about"]}>
+            <SEO
+              title="Stylo App"
+              keywords={[
+                `textually`, 
+                `text editor`, 
+                `stylo`, 
+                `markdown`, 
+                `md`, 
+                `commonmark`, 
+                `css`, 
+                `html`]}
+            />  
+        {/* <MediaQuery query="(min-width: 769px)"> */}
+          {/* <PageScrollingNumbers links={[
+              "/#intro",
+              "/#ying-yang",
+              "/#unique",
+              "/#stylable",
+              "/#inspiring",
+              "/#easy",
+              "/#stylo-commonmark",
+              "/#stylo-immerse",
+              "/#stylo-other-features",
+              "/#ready-to-try-stylo"
+            ]}> */}
 
-      //   <PageLocation path={["/", "stylo", "about"]}>
-      //       <SEO
-      //         title="Stylo App"
-      //         keywords={[
-      //           `textually`, 
-      //           `text editor`, 
-      //           `stylo`, 
-      //           `markdown`, 
-      //           `md`, 
-      //           `commonmark`, 
-      //           `css`, 
-      //           `html`]}
-      //       />  
-      //   {/* <MediaQuery query="(min-width: 769px)"> */}
-      //     {/* <PageScrollingNumbers links={[
-      //         "/#intro",
-      //         "/#ying-yang",
-      //         "/#unique",
-      //         "/#stylable",
-      //         "/#inspiring",
-      //         "/#easy",
-      //         "/#stylo-commonmark",
-      //         "/#stylo-immerse",
-      //         "/#stylo-other-features",
-      //         "/#ready-to-try-stylo"
-      //       ]}> */}
+            <Flex p={0}
+                    m={0}>
+              <ContentArea>
+              <PageSection id={"intro"} number={1}>
+                <PageHeaderSection>
+                  <ContentResizer>
+                    <Flex mt={80} justifyContent={"center"} flexDirection={"row"}>
+                      <StyloLogo />
+                    </Flex>
+                    <Flex justifyContent={"center"} flexDirection={"row"}>
+                      <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                        Stylo
+                      </Text>
+                    </Flex>
+                  </ContentResizer>
+                </PageHeaderSection>  
+                </PageSection>
+                <PageSection mt={[20,60,80]} id={"ying-yang"} number={2}>
+                  <StyloRevolutionary />
+                </PageSection>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"unique"} number={3}>
+                  <StyloUnique />
+                </PageSection>
+                <PageSection mt={[20,60,80]} id={"stylable"} number={4}>
+                  <StyloStylable />
+                </PageSection>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"inspiring"} number={5} pb={40}>
+                  <StyloInspiring />
+                </PageSection>
+                <PageSection mt={[20,60,80]} id={"easy"} number={6}>
+                  <StyloEasy />
+                </PageSection>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"stylo-commonmark"} number={7}>
+                  <StyloCommonMark />
+                </PageSection>
+                <PageSection  mt={[20,60,80]} id={"stylo-immerse"} number={8}>
+                  <StyloImmerseInTheText />
+                </PageSection>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"stylo-other-features"} number={9}>
+                  <StyloOtherFeatures />
+                </PageSection>
+                <PageSection  mt={[20,60,80]} id={"ready-to-try-stylo"} number={10}>
+                  <ReadyToTryStylo />
+                </PageSection>
+              </ContentArea>
+            </Flex>
 
-      //       <Flex p={0}
-      //               m={0}>
-      //         <ContentArea>
-      //         <PageSection id={"intro"} number={1}>
-      //           <PageHeaderSection>
-      //             <ContentResizer>
-      //               <Flex mt={80} justifyContent={"center"} flexDirection={"row"}>
-      //                 <StyloLogo />
-      //               </Flex>
-      //               <Flex justifyContent={"center"} flexDirection={"row"}>
-      //                 <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-      //                   Stylo
-      //                 </Text>
-      //               </Flex>
-      //             </ContentResizer>
-      //           </PageHeaderSection>  
-      //           </PageSection>
-      //           <PageSection mt={[20,60,80]} id={"ying-yang"} number={2}>
-      //             <StyloRevolutionary />
-      //           </PageSection>
-      //           <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"unique"} number={3}>
-      //             <StyloUnique />
-      //           </PageSection>
-      //           <PageSection mt={[20,60,80]} id={"stylable"} number={4}>
-      //             <StyloStylable />
-      //           </PageSection>
-      //           <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"inspiring"} number={5} pb={40}>
-      //             <StyloInspiring />
-      //           </PageSection>
-      //           <PageSection mt={[20,60,80]} id={"easy"} number={6}>
-      //             <StyloEasy />
-      //           </PageSection>
-      //           <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"stylo-commonmark"} number={7}>
-      //             <StyloCommonMark />
-      //           </PageSection>
-      //           <PageSection  mt={[20,60,80]} id={"stylo-immerse"} number={8}>
-      //             <StyloImmerseInTheText />
-      //           </PageSection>
-      //           <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"stylo-other-features"} number={9}>
-      //             <StyloOtherFeatures />
-      //           </PageSection>
-      //           <PageSection  mt={[20,60,80]} id={"ready-to-try-stylo"} number={10}>
-      //             <ReadyToTryStylo />
-      //           </PageSection>
-      //         </ContentArea>
-      //       </Flex>
-
-      //     {/* </PageScrollingNumbers> */}
-      // </PageLocation>
+          {/* </PageScrollingNumbers> */}
+      </PageLocation>
     )
   }
 }

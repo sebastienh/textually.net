@@ -1,8 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import { rhythm, scale } from "../utils/typography"
-import Footer from "../components/Footer"
 import { Flex, Box, Text, Container, Provider, Header } from "rebass";
 import styled from "styled-components";
 import theme from "../styles/theme.js";
@@ -10,8 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import SideDrawer from "../components/SideDrawer"
 import Backdrop from "../components/Backdrop"
 
-import MediaQuery from 'react-responsive';
-import DrawerToggleButton from "../components/DrawerToggleButton"
+import MediaQuery from 'react-media';
 import "./layout.css"
 import DrawerContext from "../context/DrawerContext"
 import CircledNumbersSidebar from "../components/CircledNumbersSidebar"
@@ -95,46 +90,47 @@ class Layout extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
-
             <MediaQuery query="(min-width: 769px)">
-              <LocationContext.Consumer>
-                {(locationContext) => (
-                    <NavBar 
-                      currentPath={locationContext.pagePath}
-                      drawerClickHandler={this.drawerToggleClickHandler} 
-                      drawerOpen={false}/>
-                )}
-              </LocationContext.Consumer>
-              <Content open={false} theme={theme}>
-                <Box width={[
-                      10/10,
-                  ]}>
-                  <main>{children}</main>
-                </Box>
-              </Content>
-              <Flex style={{zIndex:"1000"}}>
-                <Box mx='auto' style={{zIndex:"1000"}}/>
-                <Box       
-                width={[
-                  1/10,
-                ]}     
-                zIndex={100}
-                style={{zIndex:"1000"}}
-                alignSelf={"right"}>
-                  <CircledNumbersSidebar />
-                </Box>
-              </Flex>
-              <Flex style={{zIndex:"1000"}}>
-                <Box       
-                width={[
-                  3/10,
-                ]}     
-                zIndex={100}
-                style={{zIndex:"1000"}}
-                alignSelf={"right"}>
-                  <TitledSidebarLinks />
-                </Box>
-              </Flex>
+              <React.Fragment>
+                <LocationContext.Consumer>
+                  {(locationContext) => (
+                      <NavBar 
+                        currentPath={locationContext.pagePath}
+                        drawerClickHandler={this.drawerToggleClickHandler} 
+                        drawerOpen={false}/>
+                  )}
+                </LocationContext.Consumer>
+                <Content open={false} theme={theme}>
+                  <Box width={[
+                        10/10,
+                    ]}>
+                    <main>{children}</main>
+                  </Box>
+                </Content>
+                <Flex style={{zIndex:"1000"}}>
+                  <Box mx='auto' style={{zIndex:"1000"}}/>
+                  <Box       
+                  width={[
+                    1/10,
+                  ]}     
+                  zIndex={100}
+                  style={{zIndex:"1000"}}
+                  alignSelf={"right"}>
+                    <CircledNumbersSidebar />
+                  </Box>
+                </Flex>
+                <Flex style={{zIndex:"1000"}}>
+                  <Box       
+                  width={[
+                    3/10,
+                  ]}     
+                  zIndex={100}
+                  style={{zIndex:"1000"}}
+                  alignSelf={"right"}>
+                    <TitledSidebarLinks />
+                  </Box>
+                </Flex>
+              </React.Fragment>
             </MediaQuery>
             <MediaQuery query="(max-width: 768px)">
               <DrawerContext.Consumer>
@@ -143,11 +139,11 @@ class Layout extends React.Component {
                     <NavBar 
                       drawerClickHandler={this.drawerToggleClickHandler}
                       drawerOpen={drawerContext !== undefined && drawerContext !== null ? drawerContext.open : false}/>
-                    <SideDrawer show={drawerContext !== null && drawerContext !== null ? drawerContext.open : false}/>
+                    <SideDrawer show={drawerContext !== undefined && drawerContext !== null ? drawerContext.open : false}/>
                     <Box width={[
                           10/10,
                       ]}>
-                      {(drawerContext !== null && drawerContext !== null && drawerContext.open) ? <Backdrop click={this.backdropClickHandler} /> : null}
+                      {(drawerContext !== undefined && drawerContext !== null && drawerContext.open) ? <Backdrop click={this.backdropClickHandler} /> : null}
                       <main>{children}</main>
                     </Box>
                     <Flex style={{zIndex:"1000"}}>
