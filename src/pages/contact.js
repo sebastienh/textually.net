@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ContactForm from '../components/ContactForm';
-import ContactFormJS from "../components/ContactFormJS"
 import SEO from "../components/seo"
 import PageLocation from "../components/PageLocation"
 import PageTemplate from "../components/PageTemplate"

@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import ContactFormJS from "../components/ContactFormJS"
 import SideArea from "../components/SideArea"
 import ContentArea from "../components/ContentArea"
 import Accordion from "../components/Accordion"
