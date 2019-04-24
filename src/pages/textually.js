@@ -24,13 +24,17 @@ class Textually extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-          width: window.innerWidth,
-          height: window.innerHeight
+          width: 0,
+          height: 0
       }
       this.handleWindowResize = this.handleWindowResize.bind(this);
     }
 
     componentDidMount() {
+      this.setState({
+        width: window.innerWidth,
+        height: window.innerHeight
+      })
         window.addEventListener('resize', this.handleWindowResize);
     }
 
