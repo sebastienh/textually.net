@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 
 import SideArea from "../components/SideArea"
 import ContentArea from "../components/ContentArea"
-import Accordion from "../components/Accordion"
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
