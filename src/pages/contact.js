@@ -111,13 +111,6 @@ export default class Index extends Component {
 
     return (
       <PageLocation path={["/", "contact"]}>
-            <div dangerouslySetInnerHTML={{__html:
-                <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-                    <input name="name" type="text" />
-                    <input name="email" type="email" />
-                    <textarea name="message" required></textarea>
-                </form>
-            }} />
             <SEO
               title="Contact Us"
               keywords={[`contact`, `textually`, `email`]}
