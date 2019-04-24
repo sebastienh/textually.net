@@ -125,8 +125,11 @@ export default class Contact extends Component {
               </Text>
             </Flex>
             <Container mt={60}>
-                <form name="contact" method="post" netlify>
+                <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
+                    <p class="hidden">
+                      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <p>
                         <Label htmlFor="name">Name</Label>
                         <Input name="name" type="text" required />
