@@ -102,7 +102,7 @@ const FormButton = styled(Button)`
   color: black;
 `
 
-export default class Index extends Component {
+export default class Contact extends Component {
 
   render() {
 
@@ -111,12 +111,6 @@ export default class Index extends Component {
 
     return (
       <PageLocation path={["/", "contact"]}>
-            <SEO
-              title="Contact Us"
-              keywords={[`contact`, `textually`, `email`]}
-            />
-          <PageTemplate>
-
             <div dangerouslySetInnerHTML={{__html:
                 <form name="contact" netlify netlify-honeypot="bot-field" hidden>
                     <input name="name" type="text" />
@@ -124,6 +118,12 @@ export default class Index extends Component {
                     <textarea name="message" required></textarea>
                 </form>
             }} />
+
+            <SEO
+              title="Contact Us"
+              keywords={[`contact`, `textually`, `email`]}
+            />
+          <PageTemplate>
 
             {/* <MarkdownContent post={textuallyContact} /> */}
             <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
