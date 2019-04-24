@@ -95,13 +95,6 @@ class Layout extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
-            <div dangerouslySetInnerHTML={{__html:
-                <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-                    <input name="name" type="text" />
-                    <input name="email" type="email" />
-                    <textarea name="message" required></textarea>
-                </form>
-            }} />
 
             <MediaQuery query="(min-width: 769px)">
               <LocationContext.Consumer>
