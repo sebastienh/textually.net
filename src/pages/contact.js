@@ -116,8 +116,6 @@ export default class Contact extends Component {
               keywords={[`contact`, `textually`, `email`]}
             />
           <PageTemplate>
-
-            {/* <MarkdownContent post={textuallyContact} /> */}
             <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
               <Heading  color={"#D74E09"} fontSize={[5,6,8]}>Contact Us</Heading>
             </Flex>
@@ -127,9 +125,8 @@ export default class Contact extends Component {
               </Text>
             </Flex>
             <Container mt={60}>
-                <form name="contact" method="post" netlify netlify-honeypot="bot-field">
+                <form name="contact" method="post" netlify>
                     <input type="hidden" name="form-name" value="contact" />
-                    <input hidden className="hidden" name="bot-field" />
                     <p>
                         <Label htmlFor="name">Name</Label>
                         <Input name="name" type="text" required />
