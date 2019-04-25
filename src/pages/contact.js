@@ -105,6 +105,7 @@ const FormButton = styled(Button)`
 const HiddenParagraph = styled.p`
   visibility: hidden;
   height: 0px;
+  margin: 0;
 `
 
 export default class Contact extends Component {
