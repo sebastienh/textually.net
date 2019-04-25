@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 import { Flex, Box, Text } from "rebass";
 import DrawerToggleButton from "../DrawerToggleButton"
-import MediaQuery from 'react-responsive';
+import MediaQuery from 'react-media';
 import NavBarSectionButton from '../NavBarSectionButton';
 import TextuallyBottomNavBar from '../TextuallyBottomNavBar';
 import LocationContext from "../../context/LocationContext"

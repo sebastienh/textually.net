@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MediaQuery from 'react-responsive';
+import MediaQuery from 'react-media';
 import Img from 'gatsby-image/withIEPolyfill'
 
 export default class ResponsiveImage extends Component {
