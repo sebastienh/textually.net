@@ -61,12 +61,16 @@ export default class NavBar extends Component {
         super(props);
     
         this.state = {
-            prevScrollPos: window.pageYOffset,
+            prevScrollPos: 0,
             visible: true
         };
     }
 
     componentDidMount() {
+        this.setState({
+            prevScrollPos: window !== undefined && window !== null ? window.pageYOffset : 0,
+            visible: true
+        })
         window.addEventListener("scroll", this.handleScroll);
     }
       
@@ -101,17 +105,20 @@ export default class NavBar extends Component {
 
     bottomElements = (sectionPath) => {
 
-        let lastSection = sectionPath[sectionPath.length-1]
+        if(sectionPath !== undefined && sectionPath !== null) {
+            let lastSection = sectionPath[sectionPath.length-1]
 
-        if(lastSection == '/') {
-            return <TextuallyBottomNavBar />
+            if(lastSection == '/') {
+                return <TextuallyBottomNavBar />
+            }
+            else if(lastSection == 'stylo') {
+                return <StyloBottomNavBar />
+            }
+            else if(lastSection == 'documentation') {
+                return <StyloDocumentationBottomNavBar />
+            }
         }
-        else if(lastSection == 'stylo') {
-            return <StyloBottomNavBar />
-        }
-        else if(lastSection == 'documentation') {
-            return <StyloDocumentationBottomNavBar />
-        }
+        return null;
     }
 
     sectionName = (pathString) => {
@@ -131,19 +138,21 @@ export default class NavBar extends Component {
 
         var topBarElements = []
 
-        for(var i = 0; i < sectionPath.length; i++) {
+        if(sectionPath !== undefined && sectionPath !== null) {
+            for(var i = 0; i < sectionPath.length; i++) {
 
-            if(topBarElements.length != 0) {
-                topBarElements.push(<SectionLinkSeparator> • </SectionLinkSeparator>)
+                if(topBarElements.length != 0) {
+                    topBarElements.push(<SectionLinkSeparator> • </SectionLinkSeparator>)
+                }
+
+                topBarElements.push(
+                    <NavBarSectionButton
+                        path={sectionPath.slice(0, i+1)}
+                        p={2}>
+                        {this.sectionName(sectionPath[i])}
+                    </NavBarSectionButton>
+                )
             }
-
-            topBarElements.push(
-                <NavBarSectionButton
-                    path={sectionPath.slice(0, i+1)}
-                    p={2}>
-                    {this.sectionName(sectionPath[i])}
-                </NavBarSectionButton>
-            )
         }
         return topBarElements
     }

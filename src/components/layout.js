@@ -149,11 +149,11 @@ class Layout extends React.Component {
                       <NavBar 
                         drawerClickHandler={this.drawerToggleClickHandler}
                         drawerOpen={drawerContext !== undefined && drawerContext !== null ? drawerContext.open : false}/>
-                      <SideDrawer show={drawerContext !== null && drawerContext !== null ? drawerContext.open : false}/>
+                      <SideDrawer show={drawerContext !== undefined && drawerContext !== null ? drawerContext.open : false}/>
                       <Box width={[
                             10/10,
                         ]}>
-                        {(drawerContext !== null && drawerContext !== null && drawerContext.open) ? <Backdrop click={this.backdropClickHandler} /> : null}
+                        {(drawerContext !== undefined && drawerContext !== null && drawerContext.open) ? <Backdrop click={this.backdropClickHandler} /> : null}
                         <main>{children}</main>
                       </Box>
                       <Flex style={{zIndex:"1000"}}>
