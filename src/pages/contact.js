@@ -26,9 +26,7 @@ export default class Contact extends Component {
             </Flex>
             <Flex mt={40} flexDirection={"row"} justifyContent={"center"}>
               <Text> 
-                At Textually, we try to   
                 Leave us any comment, any suggestion we will be happy to answer.
-                
               </Text>
             </Flex>
             <ContactForm mt={60}/>
