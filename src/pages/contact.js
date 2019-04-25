@@ -102,6 +102,11 @@ const FormButton = styled(Button)`
   color: black;
 `
 
+const HiddenParagraph = styled.p`
+  visibility: hidden;
+  height: 0px;
+`
+
 export default class Contact extends Component {
 
   render() {
@@ -127,9 +132,9 @@ export default class Contact extends Component {
             <Container mt={60}>
                 <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
-                    <p class="hidden">
+                    <HiddenParagraph>
                       <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-                    </p>
+                    </HiddenParagraph>
                     <p>
                         <Label htmlFor="name">Name</Label>
                         <Input name="name" type="text" required />
