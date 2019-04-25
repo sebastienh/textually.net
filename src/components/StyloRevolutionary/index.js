@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import YinYang from "../YinYang"
-import MediaQuery from "react-responsive"
+import MediaQuery from "react-media"
 import SectionContainer from '../SectionContainer';
 
 const WhitePage = styled.section`
@@ -30,26 +30,34 @@ export default class StyloRevolutionary extends Component {
                     </Text>
                 </Flex>
                 <MediaQuery query="(min-width: 769px)">
-                    <Flex flexDirection={"row"}>
-                        <Box width={[5/12]} mt={[40, 60, 80]}>
-                            <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                                {text}    
-                            </Text>
-                        </Box>
-                        <Box width={[7/12]} mt={[40, 60, 80]} ml={50}>
-                            <YinYang fillColor={"#848689"} dotColor={"#D74E09"} width={"200"} height={"200"} />
-                        </Box>
-                    </Flex>
+                    {matches =>
+                        !matches ? (null) : (
+                        <Flex flexDirection={"row"}>
+                            <Box width={[5/12]} mt={[40, 60, 80]}>
+                                <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                                    {text}    
+                                </Text>
+                            </Box>
+                            <Box width={[7/12]} mt={[40, 60, 80]} ml={50}>
+                                <YinYang fillColor={"#848689"} dotColor={"#D74E09"} width={"200"} height={"200"} />
+                            </Box>
+                        </Flex>
+                    )}
                 </MediaQuery>
                 <MediaQuery query="(max-width: 768px)">
-                        <Box mt={[40, 60, 80]}>
-                            <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                                {text}    
-                            </Text>
-                        </Box>
-                        <Box mt={[40, 60, 80]}>
-                            <YinYang fillColor={"#848689"} dotColor={"#D74E09"} width={"200"} height={"200"} />
-                        </Box>
+                    {matches =>
+                        !matches ? (null) : (
+                            <React.Fragment>
+                            <Box mt={[40, 60, 80]}>
+                                <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                                    {text}    
+                                </Text>
+                            </Box>
+                            <Box mt={[40, 60, 80]}>
+                                <YinYang fillColor={"#848689"} dotColor={"#D74E09"} width={"200"} height={"200"} />
+                            </Box>
+                        </React.Fragment>
+                    )}
                 </MediaQuery>
             </SectionContainer>
         </WhitePage>

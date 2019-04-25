@@ -98,46 +98,39 @@ const FormButton = styled(Button)`
   color: black;
 `
 
-const From = styled.form`
-  -webkit-appearance: none;
-
+const HiddenParagraph = styled.p`
+  visibility: hidden;
+  height: 0px;
+  margin: 0;
 `
-
 
 export default class ContactForm extends React.Component {
     render() {
         return (
             <Container {...this.props}>
-                <From
-                name="contact-form"
-                action="/contact-form-success"
-                method="post"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                netlify>
-                    <p hidden>
-                        <Label>Don’t fill this out if you're human: <input name="bot-field" /></Label>
-                    </p>
+                <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <HiddenParagraph>
+                      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                    </HiddenParagraph>
                     <p>
                         <Label htmlFor="name">Name</Label>
-                        <Input data-cy="contact-name" name="name" type="text" required />
+                        <Input name="name" type="text" required />
                     </p>
                     <p>
                         <Label htmlFor="email">E-Mail</Label>
-                        <Input data-cy="contact-email" name="email" type="email" required />
+                        <Input name="email" type="email" required />
                     </p>
                     <p>
                         <Label htmlFor="message">Your Message</Label>
-                        <TextArea data-cy="contact-message" name="message" required />
+                        <TextArea name="message" required />
                     </p>
-                    <div data-netlify-recaptcha="true"></div>
                     <p style={{ marginTop: '1rem' }}>
-                        <FormButton>
+                        <FormButton type="submit" value="Send" id="Form-submit">
                             Send
                         </FormButton>
                     </p>
-                    <Input type="hidden" name="form-name" value="contact-form" />
-                </From>
+                </form>
             </Container>
         );
     }

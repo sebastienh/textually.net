@@ -187,25 +187,31 @@ export default class NavBar extends Component {
                         bg='#D6E5E3'
                         alignItems='center'>
                         <MediaQuery query="(max-width: 768px)">
-                            <DrawerToggleButton click={this.props.drawerClickHandler}/>
+                            {matches =>
+                                !matches ? (null) : (
+                                <DrawerToggleButton click={this.props.drawerClickHandler}/>
+                            )}
                         </MediaQuery>
                         <MediaQuery query="(min-width: 769px)">
-                            <Flex style={{width:"100%"}}>
-                                <Box width={[1/10]} />
-                                <Flex width={[8/10]} flexDirection={"column"}>
-                                    <TopContainer fontSize={"15pt"} px={2}>
-                                        {this.renderTop(locationContext)}
-                                    </TopContainer>
-                                    <TopNavBarSeparator />
-                                    <Flex fontSize={"13pt"} px={2} style={{width:"100%"}}>
-                                        <Box mx='auto' />
-                                        <Box>
-                                            {this.renderBottom(locationContext)}
-                                        </Box>
+                            {matches =>
+                                !matches ? (null) : (
+                                <Flex style={{width:"100%"}}>
+                                    <Box width={[1/10]} />
+                                    <Flex width={[8/10]} flexDirection={"column"}>
+                                        <TopContainer fontSize={"15pt"} px={2}>
+                                            {this.renderTop(locationContext)}
+                                        </TopContainer>
+                                        <TopNavBarSeparator />
+                                        <Flex fontSize={"13pt"} px={2} style={{width:"100%"}}>
+                                            <Box mx='auto' />
+                                            <Box>
+                                                {this.renderBottom(locationContext)}
+                                            </Box>
+                                        </Flex>
                                     </Flex>
+                                    <Box width={[1/10]} />
                                 </Flex>
-                                <Box width={[1/10]} />
-                            </Flex>
+                            )}
                         </MediaQuery>
                     </Header>
                 )}

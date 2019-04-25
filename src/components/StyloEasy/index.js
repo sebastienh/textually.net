@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
-import MediaQuery from "react-responsive"
+import MediaQuery from "react-media"
 import SectionContainer from "../SectionContainer"
 
 const WhitePage = styled.section`
@@ -72,37 +72,43 @@ export default class StyloEasy extends Component {
             <WhitePage>
                 <SectionContainer>
                     <MediaQuery query="(min-width: 769px)">
-                        <Flex flexDirection={"row"} mt={[40, 70, 100]}>
-                            <Box width={[6/12]}>
-                                <Pre><Code>
-                                    {sourceCode}
-                                </Code></Pre>
-                            </Box>
-                            <Box width={[1/12]} />
-                            <Flex width={[5/12]} justifyContent={"row"}>
-                                <Flex flexDirection={"column"} justifyContent={"center"}>
+                        {matches =>
+                            !matches ? (null) : (
+                            <Flex flexDirection={"row"} mt={[40, 70, 100]}>
+                                <Box width={[6/12]}>
+                                    <Pre><Code>
+                                        {sourceCode}
+                                    </Code></Pre>
+                                </Box>
+                                <Box width={[1/12]} />
+                                <Flex width={[5/12]} justifyContent={"row"}>
+                                    <Flex flexDirection={"column"} justifyContent={"center"}>
+                                        <Text color={"#f00"} fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                                            Easy.
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+                            </Flex>
+                        )}
+                    </MediaQuery>
+                    <MediaQuery query="(max-width: 768px)">
+                        {matches =>
+                            !matches ? (null) : (
+                            <Flex flexDirection={"column"} mt={[40, 70, 100]}>
+                                <Box>
+                                    <Pre>
+                                        <Code>
+                                            {sourceCode}
+                                        </Code>
+                                    </Pre>
+                                </Box>
+                                <Flex flexDirection={"row"} justifyContent={"center"} mt={40}>
                                     <Text color={"#f00"} fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
                                         Easy.
                                     </Text>
                                 </Flex>
                             </Flex>
-                        </Flex>
-                    </MediaQuery>
-                    <MediaQuery query="(max-width: 768px)">
-                        <Flex flexDirection={"column"} mt={[40, 70, 100]}>
-                            <Box>
-                                <Pre>
-                                    <Code>
-                                        {sourceCode}
-                                    </Code>
-                                </Pre>
-                            </Box>
-                            <Flex flexDirection={"row"} justifyContent={"center"} mt={40}>
-                                <Text color={"#f00"} fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                                    Easy.
-                                </Text>
-                            </Flex>
-                        </Flex>
+                        )}
                     </MediaQuery>
                     <Flex flexDirection={"row"} mt={[20, 40, 100]}>
                         <Text color={"#848689"} fontSize={[ 14, 20, 30 ]}>

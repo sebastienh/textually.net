@@ -10,7 +10,7 @@ import { ThemeProvider } from 'styled-components'
 import SideDrawer from "../components/SideDrawer"
 import Backdrop from "../components/Backdrop"
 
-import MediaQuery from 'react-responsive';
+import MediaQuery from 'react-media';
 import DrawerToggleButton from "../components/DrawerToggleButton"
 import "./layout.css"
 import DrawerContext from "../context/DrawerContext"
@@ -96,74 +96,82 @@ class Layout extends React.Component {
       <ThemeProvider theme={theme}>
         <React.Fragment>
             <MediaQuery query="(min-width: 769px)">
-              <LocationContext.Consumer>
-                {(locationContext) => (
-                    <NavBar 
-                      currentPath={locationContext.pagePath}
-                      drawerClickHandler={this.drawerToggleClickHandler} 
-                      drawerOpen={false}/>
-                )}
-              </LocationContext.Consumer>
-              <Content open={false} theme={theme}>
-                <Box width={[
-                      10/10,
-                  ]}>
-                  <main>{children}</main>
-                </Box>
-              </Content>
-              <Flex style={{zIndex:"1000"}}>
-                <Box mx='auto' style={{zIndex:"1000"}}/>
-                <Box       
-                width={[
-                  1/10,
-                ]}     
-                zIndex={100}
-                style={{zIndex:"1000"}}
-                alignSelf={"right"}>
-                  <CircledNumbersSidebar />
-                </Box>
-              </Flex>
-              <Flex style={{zIndex:"1000"}}>
-                <Box       
-                width={[
-                  3/10,
-                ]}     
-                zIndex={100}
-                style={{zIndex:"1000"}}
-                alignSelf={"right"}>
-                  <TitledSidebarLinks />
-                </Box>
-              </Flex>
-            </MediaQuery>
-            <MediaQuery query="(max-width: 768px)">
-              <DrawerContext.Consumer>
-                {(drawerContext) => (
-                  <React.Fragment>
-                    <NavBar 
-                      drawerClickHandler={this.drawerToggleClickHandler}
-                      drawerOpen={drawerContext !== undefined && drawerContext !== null ? drawerContext.open : false}/>
-                    <SideDrawer show={drawerContext !== null && drawerContext !== null ? drawerContext.open : false}/>
+              {matches =>
+              !matches ? (null) : (
+                <React.Fragment>
+                  <LocationContext.Consumer>
+                    {(locationContext) => (
+                        <NavBar 
+                          currentPath={locationContext.pagePath}
+                          drawerClickHandler={this.drawerToggleClickHandler} 
+                          drawerOpen={false}/>
+                    )}
+                  </LocationContext.Consumer>
+                  <Content open={false} theme={theme}>
                     <Box width={[
                           10/10,
                       ]}>
-                      {(drawerContext !== null && drawerContext !== null && drawerContext.open) ? <Backdrop click={this.backdropClickHandler} /> : null}
                       <main>{children}</main>
                     </Box>
-                    <Flex style={{zIndex:"1000"}}>
-                      <Box mx='auto' style={{zIndex:"1000"}}/>
-                      <Box       
+                  </Content>
+                  <Flex style={{zIndex:"1000"}}>
+                    <Box mx='auto' style={{zIndex:"1000"}}/>
+                    <Box       
                       width={[
                         1/10,
                       ]}     
                       zIndex={100}
                       style={{zIndex:"1000"}}
                       alignSelf={"right"}>
-                        <CircledNumbersSidebar /> 
+                      <CircledNumbersSidebar />
+                    </Box>
+                  </Flex>
+                  <Flex style={{zIndex:"1000"}}>
+                    <Box       
+                    width={[
+                      3/10,
+                    ]}     
+                    zIndex={100}
+                    style={{zIndex:"1000"}}
+                    alignSelf={"right"}>
+                      <TitledSidebarLinks />
+                    </Box>
+                  </Flex>
+                </React.Fragment>
+              )}
+            </MediaQuery>
+            <MediaQuery query="(max-width: 768px)">
+            {matches =>
+              !matches ? null : (
+                <DrawerContext.Consumer>
+                  {(drawerContext) => (
+                    <React.Fragment>
+                      <NavBar 
+                        drawerClickHandler={this.drawerToggleClickHandler}
+                        drawerOpen={drawerContext !== undefined && drawerContext !== null ? drawerContext.open : false}/>
+                      <SideDrawer show={drawerContext !== null && drawerContext !== null ? drawerContext.open : false}/>
+                      <Box width={[
+                            10/10,
+                        ]}>
+                        {(drawerContext !== null && drawerContext !== null && drawerContext.open) ? <Backdrop click={this.backdropClickHandler} /> : null}
+                        <main>{children}</main>
                       </Box>
-                    </Flex>
-                  </React.Fragment>
-                )}
-              </DrawerContext.Consumer>
+                      <Flex style={{zIndex:"1000"}}>
+                        <Box mx='auto' style={{zIndex:"1000"}}/>
+                        <Box       
+                        width={[
+                          1/10,
+                        ]}     
+                        zIndex={100}
+                        style={{zIndex:"1000"}}
+                        alignSelf={"right"}>
+                          <CircledNumbersSidebar /> 
+                        </Box>
+                      </Flex>
+                    </React.Fragment>
+                  )}
+                </DrawerContext.Consumer>
+              )}
             </MediaQuery>
         </React.Fragment>
       </ThemeProvider>

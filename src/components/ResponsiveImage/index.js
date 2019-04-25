@@ -14,13 +14,22 @@ export default class ResponsiveImage extends Component {
     return (
         <React.Fragment>
             <MediaQuery query="(min-width: 1200px)">
-                <Img fixed={desktop} alt="desktop"/>
+                {matches =>
+                    !matches ? (null) : (
+                    <Img fixed={desktop} alt="desktop"/>
+                )}
             </MediaQuery>
             <MediaQuery query="(min-width: 800px) and (max-width: 1200px)">
-                <Img fixed={tablet} alt="tablet"/>
+                {matches =>
+                    !matches ? (null) : (
+                    <Img fixed={tablet} alt="tablet"/>
+                )}
             </MediaQuery>
             <MediaQuery query="(max-width: 450px)">
-                <Img fixed={mobile} alt="mobile"/>
+                {matches =>
+                    !matches ? (null) : (
+                    <Img fixed={mobile} alt="mobile"/>
+                )}
             </MediaQuery>
         </React.Fragment>
     )

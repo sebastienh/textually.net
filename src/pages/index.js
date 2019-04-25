@@ -26,7 +26,7 @@ import StyloStylable from "../components/StyloStylable"
 import StyloInspiring from "../components/StyloInspiring"
 import StyloEasy from "../components/StyloEasy"
 import StyloOtherFeatures from "../components/StyloOtherFeatures"
-import MediaQuery from "react-responsive"
+import MediaQuery from "react-media"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
