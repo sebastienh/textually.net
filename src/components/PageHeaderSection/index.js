@@ -18,13 +18,19 @@ export default class PageHeaderSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            width: window.innerWidth,
-            height: window.innerHeight
+            width: 0,
+            height: 0
         }
         this.handleWindowResize = this.handleWindowResize.bind(this);
     }
 
     componentDidMount() {
+
+        this.setState({
+            width: window !== undefined && window !== null ? window.innerWidth : 0,
+            height: window !== undefined && window !== null ? window.innerHeight : 0
+        })
+
         const mq = window.matchMedia( "(min-width: 769px)" );
         if (mq.matches) {
             window.addEventListener('resize', this.handleWindowResize);
