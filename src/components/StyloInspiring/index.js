@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import Image from "../Image"
-import MediaQuery from "react-media"
+import MediaQuery from "react-responsive"
 import SectionContainer from '../SectionContainer';
 
 const Page = styled.section`
@@ -27,8 +27,8 @@ export default class StyloInspiring extends Component {
                     </Text>
                 </Flex>
                 <MediaQuery query="(min-width: 769px)">
-                    {matches =>
-                        !matches ? (null) : (
+                    {/* {matches =>
+                        !matches ? (null) : ( */}
                         <Flex flexDirection={"row"}>
                             <Box width={[5/12]} mt={100} ml={60}>
                                 <Image filename="colored-four-screens.png" />
@@ -43,11 +43,11 @@ export default class StyloInspiring extends Component {
                                 <Box width={[1/5]} />
                             </Flex>
                         </Flex>
-                    )}
+                    {/* )} */}
                 </MediaQuery>
                 <MediaQuery query="(max-width: 768px)">
-                    {matches =>
-                        !matches ? (null) : (
+                    {/* {matches =>
+                        !matches ? (null) : ( */}
                         <Flex flexDirection={"column"}>
                             <Image filename="colored-four-screens.png" />
                             <Flex mt={[40, 60]} justifyContent={"row"}>
@@ -56,7 +56,7 @@ export default class StyloInspiring extends Component {
                                 </Text>
                             </Flex>
                         </Flex>
-                    )}
+                    {/* )} */}
                 </MediaQuery>
             </SectionContainer>
         </Page>

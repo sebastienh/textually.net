@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
-import MediaQuery from "react-media"
+import MediaQuery from "react-responsive"
 import SectionContainer from "../SectionContainer"
 
 const WhitePage = styled.section`
@@ -72,8 +72,8 @@ export default class StyloEasy extends Component {
             <WhitePage>
                 <SectionContainer>
                     <MediaQuery query="(min-width: 769px)">
-                        {matches =>
-                            !matches ? (null) : (
+                        {/* {matches =>
+                            !matches ? (null) : ( */}
                             <Flex flexDirection={"row"} mt={[40, 70, 100]}>
                                 <Box width={[6/12]}>
                                     <Pre><Code>
@@ -89,11 +89,11 @@ export default class StyloEasy extends Component {
                                     </Flex>
                                 </Flex>
                             </Flex>
-                        )}
+                        {/* )} */}
                     </MediaQuery>
                     <MediaQuery query="(max-width: 768px)">
-                        {matches =>
-                            !matches ? (null) : (
+                        {/* {matches =>
+                            !matches ? (null) : ( */}
                             <Flex flexDirection={"column"} mt={[40, 70, 100]}>
                                 <Box>
                                     <Pre>
@@ -108,7 +108,7 @@ export default class StyloEasy extends Component {
                                     </Text>
                                 </Flex>
                             </Flex>
-                        )}
+                        {/* )} */}
                     </MediaQuery>
                     <Flex flexDirection={"row"} mt={[20, 40, 100]}>
                         <Text color={"#848689"} fontSize={[ 14, 20, 30 ]}>

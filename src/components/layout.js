@@ -10,7 +10,7 @@ import { ThemeProvider } from 'styled-components'
 import SideDrawer from "../components/SideDrawer"
 import Backdrop from "../components/Backdrop"
 
-import MediaQuery from 'react-media';
+import MediaQuery from 'react-responsive';
 import DrawerToggleButton from "../components/DrawerToggleButton"
 import "./layout.css"
 import DrawerContext from "../context/DrawerContext"
@@ -96,8 +96,8 @@ class Layout extends React.Component {
       <ThemeProvider theme={theme}>
         <React.Fragment>
             <MediaQuery query="(min-width: 769px)">
-              {matches =>
-              !matches ? (null) : (
+              {/* {matches =>
+              !matches ? (null) : ( */}
                 <React.Fragment>
                   <LocationContext.Consumer>
                     {(locationContext) => (
@@ -138,11 +138,11 @@ class Layout extends React.Component {
                     </Box>
                   </Flex>
                 </React.Fragment>
-              )}
+              {/* )} */}
             </MediaQuery>
             <MediaQuery query="(max-width: 768px)">
-            {matches =>
-              !matches ? null : (
+            {/* {matches =>
+              !matches ? null : ( */}
                 <DrawerContext.Consumer>
                   {(drawerContext) => (
                     <React.Fragment>
@@ -171,7 +171,7 @@ class Layout extends React.Component {
                     </React.Fragment>
                   )}
                 </DrawerContext.Consumer>
-              )}
+              {/* )} */}
             </MediaQuery>
         </React.Fragment>
       </ThemeProvider>

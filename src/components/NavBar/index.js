@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 import { Flex, Box, Text } from "rebass";
 import DrawerToggleButton from "../DrawerToggleButton"
-import MediaQuery from 'react-media';
+import MediaQuery from 'react-responsive';
 import NavBarSectionButton from '../NavBarSectionButton';
 import TextuallyBottomNavBar from '../TextuallyBottomNavBar';
 import LocationContext from "../../context/LocationContext"
@@ -196,14 +196,14 @@ export default class NavBar extends Component {
                         bg='#D6E5E3'
                         alignItems='center'>
                         <MediaQuery query="(max-width: 768px)">
-                            {matches =>
-                                !matches ? (null) : (
+                            {/* {matches =>
+                                !matches ? (null) : ( */}
                                 <DrawerToggleButton click={this.props.drawerClickHandler}/>
-                            )}
+                            {/* )} */}
                         </MediaQuery>
                         <MediaQuery query="(min-width: 769px)">
-                            {matches =>
-                                !matches ? (null) : (
+                            {/* {matches =>
+                                !matches ? (null) : ( */}
                                 <Flex style={{width:"100%"}}>
                                     <Box width={[1/10]} />
                                     <Flex width={[8/10]} flexDirection={"column"}>
@@ -220,7 +220,7 @@ export default class NavBar extends Component {
                                     </Flex>
                                     <Box width={[1/10]} />
                                 </Flex>
-                            )}
+                            {/* )} */}
                         </MediaQuery>
                     </Header>
                 )}
