@@ -161,6 +161,7 @@ class StyloDocumentation extends React.Component {
     const totalTextStatistics = data.totalTextStatistics.edges[0].node;
     const unorderedList = data.unorderedList.edges[0].node;
     const userInterface = data.userInterface.edges[0].node;
+    const textAttributes = data.textAttributes.edges[0].node;
 
     const {
         data: {
@@ -224,6 +225,10 @@ class StyloDocumentation extends React.Component {
                 {
                     href: "#markdown-formatting",
                     title: "Markdown Formatting"
+                },
+                {
+                    href: "#text-attributes",
+                    title: "Text Attributes"
                 },
                 {
                     href: "#bundled-fonts",
@@ -409,13 +414,18 @@ class StyloDocumentation extends React.Component {
                             <MarkdownContent post={link}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"bundled-fonts"} number={8}>
+                    <TitledSection id={"text-attributes"} number={8}>
                         <Box number={51}>
+                            <MarkdownContent post={textAttributes}/>
+                        </Box>
+                    </TitledSection>
+                    <TitledSection id={"bundled-fonts"} number={9}>
+                        <Box number={52}>
                             <MarkdownContent post={bundledFonts}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"keyboard-shortcuts"} number={9}>
-                        <Box number={52}>
+                    <TitledSection id={"keyboard-shortcuts"} number={10}>
+                        <Box number={53}>
                             <MarkdownContent post={keyboardShortcuts}/>
                         </Box>
                     </TitledSection>
@@ -1158,6 +1168,20 @@ query {
     filter: { 
       fields: { 
         slug: { eq: "/userInterface/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+
+  textAttributes: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/textAttributesAndHighlight/" } 
       } 
     }) {
     edges {

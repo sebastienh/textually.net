@@ -9,7 +9,7 @@ import PageHeaderSection from "../../../components/PageHeaderSection"
 import PageSection from "../../../components/PageSection"
 import PageLocation from "../../../components/PageLocation"
 import TitledSidebar from "../../../components/TitledSidebar"
-import MarkdownContent from "../../../components/MarkdownContent";
+import MarkdownContent, { MarkdownUnorderedList } from "../../../components/MarkdownContent";
 import DocumentationPageTemplate from "../../../components/DocumentationPageTemplate"
 import TitledSection from "../../../components/TitledSection"
 
@@ -152,6 +152,10 @@ class StyloDocumentation extends React.Component {
                 {
                     href: "#class",
                     title: "Class"
+                },
+                {
+                    href: "#terms",
+                    title: "Terms and definitions"
                 }
             ]}>            
             <PageHeaderSection id={"header"}>
@@ -201,6 +205,20 @@ class StyloDocumentation extends React.Component {
                     <TitledSection id={"class"} number={7}>
                         <Box>
                             <MarkdownContent post={htmlClass}/>
+                        </Box>
+                    </TitledSection>
+                    <TitledSection id={"terms"} number={8}>
+                        <Box>
+                          <h1>Terms and definitions</h1>
+                          <h2 id="html-space">Space</h2>  
+                          <p>A space is any of the following unicode characters:</p>
+                          <MarkdownUnorderedList>
+                            <li>Space (U+0020)</li>
+                            <li>Character tabulation (or tab) (U+0009)</li>
+                            <li>Line feed (U+000A)</li>
+                            <li>Form feed (U+000C)</li>
+                            <li>Carriage return (U+000D)</li>
+                          </MarkdownUnorderedList> 
                         </Box>
                     </TitledSection>
                 </Flex>

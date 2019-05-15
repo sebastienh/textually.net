@@ -26,3 +26,7 @@ HTML:
     </body>
 </html>
 ```
+
+## HTML Syntax
+
+A class name must begin with a letter and may be followed by a sequence of unicode characters exept line feed, whitespace, tab character. 

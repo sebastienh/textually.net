@@ -70,7 +70,7 @@ function MarkdownLink(props) {
     )
 }
 
-const MarkdownUnorderedList = styled.ul`
+export const MarkdownUnorderedList = styled.ul`
     padding-left: 2em;
     margin-top: 0;
     margin-bottom: 16px;

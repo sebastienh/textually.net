@@ -13,3 +13,8 @@ HTML:
     </body>
 </html>
 ```
+
+## HTML Syntax
+
+The id is just a special case of the [attribute syntax](#attribute-syntax) with the attribute's name set to `id`.
+

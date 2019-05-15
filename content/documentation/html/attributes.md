@@ -17,3 +17,21 @@ HTML:
 ```
 
 Two attributes names are reserved and have special meaning in HTML, `id` and `class`.
+
+## HTML Syntax
+
+An attribute contains a name and a value separated by an equal sign "=" with optional space(s) before and after. An element can not contain two attributes with the same name. 
+
+### Name
+
+The name must be a sequence of one or more Unicode character not containing: 
+
+> the space characters, U+0000 NULL, """, "'", ">", "/", "=", the control characters, and any characters that are not defined by Unicode.
+
+### Value 
+
+The value must be a sequence of one or more valid Unicode characters other than the `U+0000` and control characters (with the exception of [spaces characters](#html-space), which are allowed), optionally enclosed in two single quotes or two double quotes. If the value is enclosed in quotes, it must not contain the enclosing quote character. An attribute value can also contain HTML entity. 
+
+
+
+
