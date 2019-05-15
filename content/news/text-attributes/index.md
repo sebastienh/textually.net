@@ -1,5 +1,5 @@
 ---
-title: Stylo Text Attributes 
+title: Stylo: Introducing Text Attributes 
 date: "2019-05-15T15:28:03.284Z"
 type: news-entry
 path: "/news/text-attributes"
