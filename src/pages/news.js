@@ -7,6 +7,12 @@ import styled from "styled-components";
 import PageLocation from "../components/PageLocation"
 import DocumentationPageTemplate from "../components/DocumentationPageTemplate"
 import MarkdownContent from "../components/MarkdownContent"
+import { rhythm } from "../utils/typography"
+import ContentArea from "../components/ContentArea"
+
+const BlogLink = styled(Link)`
+  color: black;
+`
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -48,48 +54,79 @@ class News extends React.Component {
             height: window.innerHeight
         })
     }
-
-  render() {
-
-    const { data } = this.props
-    const textuallyAbout =  data.textuallyAbout.edges[0].node
-
-    const {
-      height
-    } = this.state;
-
-    return (
-      <React.Fragment>
-        <SEO
-          title="News"
-          keywords={[`news`, `text editors`, `stylo`, `markdown`, `css`, `html`]}
-        />
+  
+    render() {
+  
+      const { data } = this.props
+      const posts = data.allMarkdownRemark.edges
+  
+      return (
         <PageLocation path={["/", "news"]}>
-          <DocumentationPageTemplate height={height}>
+            <SEO
+                title="All posts"
+                keywords={[`blog`, `html`, `css`, `markdown`, `md`]}
+              />
+            <DocumentationPageTemplate>
+              
               <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
                 <Heading  color={"#D74E09"} fontSize={[8]}>News</Heading>
               </Flex>
-              <MarkdownContent color={"white"} post={textuallyAbout} />
-          </DocumentationPageTemplate>  
+              <ContentArea>
+                {posts.map(({ node }) => {
+                  const title = node.frontmatter.title || node.fields.slug
+                  return (
+                    <div key={node.fields.slug}>
+                      <h3
+                        style={{
+                          marginBottom: rhythm(1 / 4),
+                        }}
+                      >
+                        <BlogLink style={{ boxShadow: `none` }} to={node.fields.slug}>
+                          {title}
+                        </BlogLink>
+                      </h3>
+                      <small>{node.frontmatter.date}</small>
+                      <MarkdownContent  post={node} />
+                    </div>
+                  )
+                })}
+              </ContentArea>       
+            </DocumentationPageTemplate>
         </PageLocation>
-      </React.Fragment>
-    )
+      )
+    }
   }
-}
 
 export default News
 
-export const query = graphql`
-query {
-  textuallyAbout: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { fields: { 
-      slug: { eq: "/textually-about/" } } }) {
-    edges {
-      node {
-        htmlAst
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(
+      sort: { 
+        fields: [frontmatter___date], order: DESC 
+      }, 
+      filter: { 
+        fileAbsolutePath: { regex: "/.*news.*/" } 
+      }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+          htmlAst
+        }
       }
     }
   }
-}
-`;
+`

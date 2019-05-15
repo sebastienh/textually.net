@@ -14,7 +14,7 @@ export default class YinYang extends Component {
 
         return (
             <React.Fragment>
-                <Flex style={{width:"100%"}} flexDirection={"row"} justifyContent={"center"}>
+                <Flex mt={[0,0,20]} style={{width:"100%"}} flexDirection={"row"} justifyContent={"center"}>
                     <Box width={["100px", "150px", "260px"]}>
                         <svg viewBox="0 0 414 414" xmlns="http://www.w3.org/2000/svg">
                             <g fill-rule="nonzero" fill="none">
