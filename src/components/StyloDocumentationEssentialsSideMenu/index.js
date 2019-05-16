@@ -145,8 +145,15 @@ export default class StyloDocumentationEssentialsSideMenu extends Component {
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "stylo-essentials"]}
-                        href='/stylo/documentation/stylo-essentials#markdown-formatting'
+                        href='/stylo/documentation/stylo-essentials#text-attributes'
                         number={7}
+                        p={2}>
+                        Text Attributes
+                    </MainLink>
+                    <MainLink
+                        path={["/", "stylo", "documentation", "stylo-essentials"]}
+                        href='/stylo/documentation/stylo-essentials#markdown-formatting'
+                        number={8}
                         p={2}>
                         Markdown Formatting
                     </MainLink>

@@ -150,6 +150,13 @@ export default class StyloDocumentationHtmlSideMenu extends Component {
                         p={2}>
                         class
                     </MainLink>
+                    <MainLink
+                        path={["/", "stylo", "documentation", "html"]}
+                        href='/stylo/documentation/html#terms'
+                        number={8}
+                        p={2}>
+                        Terms
+                    </MainLink>
                 </LinksContainer>
             </MenuContainer>
         )
