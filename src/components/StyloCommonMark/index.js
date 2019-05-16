@@ -46,7 +46,7 @@ export default class StyloCommonMark extends Component {
                 </Flex>
                 <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} mt={20} mb={[10,20,40]} fontFamily={"HurmeGeometricSans3-Regular"}>
                     Along with unparalleled styling capabilities, Stylo offers impressive Markdown editing capabilities. 
-                    Stylo implements the standard CommonMark and adds GitHub Flavored Markdown tables and strikethough. 
+                    Stylo implements CommonMark+Text Attributes extension and adds GitHub Flavored Markdown tables and strikethough. 
                 </Text>
                 <StyledTabs
                     selectedTabClassName='is-selected'
