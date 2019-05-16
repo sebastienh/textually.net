@@ -24,6 +24,7 @@ import StyloRevolutionary from "../components/StyloRevolutionary"
 import StyloUnique from "../components/StyloUnique"
 import StyloStylable from "../components/StyloStylable"
 import StyloInspiring from "../components/StyloInspiring"
+import StyloHighlightable from "../components/StyloHighlightable"
 import StyloEasy from "../components/StyloEasy"
 import StyloOtherFeatures from "../components/StyloOtherFeatures"
 
@@ -197,22 +198,25 @@ class StyloIndex extends React.Component {
                 <PageSection mt={[20,60,80]} id={"stylable"} number={4}>
                   <StyloStylable />
                 </PageSection>
-                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"inspiring"} number={5} pb={40}>
-                  <StyloInspiring />
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"highlightable"} number={5}>
+                  <StyloHighlightable />
                 </PageSection>
-                <PageSection mt={[20,60,80]} id={"easy"} number={6}>
+                <PageSection mt={[20,60,80]} id={"easy"} number={7}>
                   <StyloEasy />
                 </PageSection>
-                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"stylo-commonmark"} number={7}>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"inspiring"} number={6} pb={40}>
+                  <StyloInspiring />
+                </PageSection>
+                <PageSection mt={[20,60,80]} id={"stylo-commonmark"} number={8}>
                   <StyloCommonMark />
                 </PageSection>
-                <PageSection  mt={[20,60,80]} id={"stylo-immerse"} number={8}>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"stylo-immerse"} number={9}>
                   <StyloImmerseInTheText />
                 </PageSection>
-                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"stylo-other-features"} number={9}>
+                <PageSection mt={[20,60,80]} id={"stylo-other-features"} number={10}>
                   <StyloOtherFeatures />
                 </PageSection>
-                <PageSection  mt={[20,60,80]} id={"ready-to-try-stylo"} number={10}>
+                <PageSection bg={"#f6f6f6"}  mt={[20,60,80]} id={"ready-to-try-stylo"} number={11}>
                   <ReadyToTryStylo />
                 </PageSection>
               </ContentArea>

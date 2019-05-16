@@ -68,55 +68,52 @@ export default class StyloEasy extends Component {
         let sourceCode = "h1 {\n\tcolor: red;\n}"
 
         return (
-
-            <WhitePage>
-                <SectionContainer>
-                    <MediaQuery query="(min-width: 769px)">
-                        {/* {matches =>
-                            !matches ? (null) : ( */}
-                            <Flex flexDirection={"row"} mt={[40, 70, 100]}>
-                                <Box width={[6/12]}>
-                                    <Pre><Code>
-                                        {sourceCode}
-                                    </Code></Pre>
-                                </Box>
-                                <Box width={[1/12]} />
-                                <Flex width={[5/12]} justifyContent={"row"}>
-                                    <Flex flexDirection={"column"} justifyContent={"center"}>
-                                        <Text color={"#f00"} fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                                            Easy.
-                                        </Text>
-                                    </Flex>
-                                </Flex>
-                            </Flex>
-                        {/* )} */}
-                    </MediaQuery>
-                    <MediaQuery query="(max-width: 768px)">
-                        {/* {matches =>
-                            !matches ? (null) : ( */}
-                            <Flex flexDirection={"column"} mt={[40, 70, 100]}>
-                                <Box>
-                                    <Pre>
-                                        <Code>
-                                            {sourceCode}
-                                        </Code>
-                                    </Pre>
-                                </Box>
-                                <Flex flexDirection={"row"} justifyContent={"center"} mt={40}>
+            <SectionContainer>
+                <MediaQuery query="(min-width: 769px)">
+                    {/* {matches =>
+                        !matches ? (null) : ( */}
+                        <Flex flexDirection={"row"} mt={[40, 70, 100]}>
+                            <Box width={[6/12]}>
+                                <Pre><Code>
+                                    {sourceCode}
+                                </Code></Pre>
+                            </Box>
+                            <Box width={[1/12]} />
+                            <Flex width={[5/12]} justifyContent={"row"}>
+                                <Flex flexDirection={"column"} justifyContent={"center"}>
                                     <Text color={"#f00"} fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
                                         Easy.
                                     </Text>
                                 </Flex>
                             </Flex>
-                        {/* )} */}
-                    </MediaQuery>
-                    <Flex flexDirection={"row"} mt={[20, 40, 100]}>
-                        <Text color={"#848689"} fontSize={[ 14, 20, 30 ]}>
-                        Stylo CSS uses a minimal and standard compliant subset of CSS that only retains the usefull parts in the context of text editing. It is simple and fun to use.
-                        </Text>
-                    </Flex>
-                </SectionContainer>
-            </WhitePage>
+                        </Flex>
+                    {/* )} */}
+                </MediaQuery>
+                <MediaQuery query="(max-width: 768px)">
+                    {/* {matches =>
+                        !matches ? (null) : ( */}
+                        <Flex flexDirection={"column"} mt={[40, 70, 100]}>
+                            <Box>
+                                <Pre>
+                                    <Code>
+                                        {sourceCode}
+                                    </Code>
+                                </Pre>
+                            </Box>
+                            <Flex flexDirection={"row"} justifyContent={"center"} mt={40}>
+                                <Text color={"#f00"} fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                                    Easy.
+                                </Text>
+                            </Flex>
+                        </Flex>
+                    {/* )} */}
+                </MediaQuery>
+                <Flex flexDirection={"row"} mt={[20, 40, 100]}>
+                    <Text color={"#848689"} fontSize={[ 14, 20, 30 ]}>
+                    Stylo CSS uses a minimal and standard compliant subset of CSS that only retains the usefull parts in the context of text editing. It is simple and fun to use.
+                    </Text>
+                </Flex>
+            </SectionContainer>
         )
     }
 }
