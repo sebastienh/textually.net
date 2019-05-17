@@ -13,4 +13,4 @@ Subjects:
 - [Cascading](#cascading)
 - [Priority Rules](#priority-rules)
 - [Properties](#properties)
-- [CSS Property types](#css-property-types)
+- [CSS value types](#valueTypes)
