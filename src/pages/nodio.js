@@ -7,18 +7,13 @@ import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import NodioLogo from "../images/svg/nodio-logo.svg"
 import PageHeaderSection from "../components/PageHeaderSection"
-import StyloImmerseInTheText from "../components/StyloImmerseInTheText"
-import StyloCommonMark from "../components/StyloCommonMark"
 import PageSection from "../components/PageSection"
 import PageLocation from "../components/PageLocation"
 import ReadyToTryNodio from "../components/ReadyToTryNodio"
 import NodioIntro from "../components/NodioIntro"
-import StyloUnique from "../components/StyloUnique"
-import StyloStylable from "../components/StyloStylable"
-import StyloInspiring from "../components/StyloInspiring"
-import StyloHighlightable from "../components/StyloHighlightable"
-import StyloEasy from "../components/StyloEasy"
-import StyloOtherFeatures from "../components/StyloOtherFeatures"
+import NodioOtherFeatures from "../components/NodioOtherFeatures"
+import NodioOutline from "../components/NodioOutline"
+import NodioAddText from "../components/NodioAddText"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -109,32 +104,11 @@ const ContentResizer = styled(Flex)`
   height: 100px;
 `
 
-class StyloIndex extends React.Component {
+export default class NodioIndex extends React.Component {
 
     render() {
 
         const { data } = this.props;
-        const styloAboutHtml =  data.styloAbout.edges[0].node.html;
-        const newParadigmImageDesktop = data.newParadigmDesktop.childImageSharp.sizes;
-        const {
-            data: {
-                bgDesktop: {
-                    childImageSharp: { fixed: desktop }
-                },
-                bgTablet: {
-                    childImageSharp: { fixed: tablet }
-                },
-                bgMobile: {
-                    childImageSharp: { fixed: mobile }
-                }
-            }
-        } = this.props;
-
-        const images = {
-            desktop,
-            tablet,
-            mobile
-        };
 
         return (
             <PageLocation path={["/", "nodio", "about"]}>
@@ -167,70 +141,24 @@ class StyloIndex extends React.Component {
                                 </ContentResizer>
                             </PageHeaderSection>
                         </PageSection>
-                        <PageSection mt={[20,60,80]} id={"ying-yang"} number={2}>
+                        <PageSection mt={[20,60,80]} id={"nodio-intro"} number={2}>
                             <NodioIntro />
                         </PageSection>
-                        {/*<PageSection mt={[20,60,80]} id={"stylo-other-features"} number={10}>*/}
-                        {/*    <StyloOtherFeatures />*/}
-                        {/*</PageSection>*/}
+                        <PageSection mt={[20,60,80]} id={"nodio-outline"} number={3}>
+                            <NodioOutline />
+                        </PageSection>
+                        <PageSection mt={[20,60,80]} id={"nodio-add-texts-inside-editor"} number={4}>
+                            <NodioAddText />
+                        </PageSection>
+                        <PageSection mt={[20,60,80]} id={"nodio-other-features"} number={10}>
+                            <NodioOtherFeatures />
+                        </PageSection>
                         <PageSection bg={"#f6f6f6"}  mt={[20,60,80]} id={"ready-to-try-stylo"} number={11}>
                             <ReadyToTryNodio />
                         </PageSection>
                     </ContentArea>
                 </Flex>
-                {/* </PageScrollingNumbers> */}
             </PageLocation>
         )
     }
 }
-export default StyloIndex
-
-export const query = graphql`
-query {
-  styloAbout: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { 
-      fields: { 
-        slug: { eq: "/stylo-about/" } 
-      } 
-    }) {
-    edges {
-      node {
-        html
-      }
-    }
-  }
-
-  newParadigmDesktop: file(relativePath: { eq: "new-paradigm.png" }) {
-    childImageSharp {
-        sizes(quality: 90) {
-          ...GatsbyImageSharpSizes
-        }
-    }
-  }
-
-  bgDesktop: file(relativePath: { eq: "colored-four-screens.png" }) {
-    childImageSharp {
-      sizes(quality: 90) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-  }
-
-  bgTablet: file(relativePath: { eq: "colored-four-screens.png" }) {
-    childImageSharp {
-      fixed(width: 800, height: 500) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-
-  bgMobile: file(relativePath: { eq: "colored-four-screens.png" }) {
-    childImageSharp {
-      fixed(width: 450, height: 281) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-}
-`;

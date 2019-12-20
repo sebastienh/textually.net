@@ -19,7 +19,7 @@ export default class NodioIntro extends Component {
     render() {
 
         // let text = "Stylo represents a new paradigm in text editing and bring Markdown format to an unprecedented representational level. State-of-the-art innovations seamlessly integrate the well-known lightweight markup language into the fundamental web technology stack."
-        let text = "Nodio is a full fledged Markdown text editor with an outline to help manage multiple text files and their associated audio recordings. It has been thought from the ground up to make it easy to manage audio recordings, generally speech, and text files. "
+        let text = "Nodio is a full fledged Markdown text editor with an outline to help manage multiple text files and their associated audio recordings. It has been thought from the ground up to make it easy to manage audio recordings and text files. "
 
         return (
 
