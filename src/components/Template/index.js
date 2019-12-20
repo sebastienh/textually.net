@@ -29,7 +29,7 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
     <Provider theme={theme}>
       <Helmet
-        title="Textually.net"
+        title="Index.net"
         meta={[
           { name: "description", content: "" },
           { name: "keywords", content: "react, redux, graphQl, javascript" }

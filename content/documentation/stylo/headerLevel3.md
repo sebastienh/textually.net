@@ -2,7 +2,7 @@
 
 To create a header  level 3:
 
-- Textually, enter `###`, one or more spaces, and the title itself
+- Index, enter `###`, one or more spaces, and the title itself
 - From the menu, choose: `Format`→`Heading 3`
 - From the _Tools_ sidebar tab, click on the `h3` button
 - With the keyboard shortcut, enter `⌘3`

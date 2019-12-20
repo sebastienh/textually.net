@@ -4,7 +4,7 @@ A reference takes the form: `[\<reference label\>]: \<destination uri\> "\<title
 
 ## Syntax
 
-An example of a reference to [Textually](http://www.textually.net):
+An example of a reference to [Index](http://www.textually.net):
 
 Markdown: 
 
@@ -27,7 +27,7 @@ A reference can also have a title:
 Markdown: 
 
 ``` markdown
-[textually]: www.textually.net "Textually website"
+[textually]: www.textually.net "Index website"
 ```
 
 Note: A link or an image using a non existing reference label, will be treated as text by Stylo. 

@@ -1,0 +1,45 @@
+import React, { Component } from 'react'
+import styled from "styled-components";
+import { Flex } from '@rebass/grid'
+import { Text, Link } from 'rebass'
+import DownloadMacAppStore from  "../../images/svg/Download_on_the_Mac_App_Store.svg"
+import MacAppStoreDownloadImage from "../../images/svg/MacAppStoreDownloadImage.svg"
+import SectionContainer from "../SectionContainer"
+
+const WhitePage = styled.section`
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+`
+
+export default class ReadyToTryNodio extends Component {
+
+    render() {
+        return (
+
+            <WhitePage>
+                <SectionContainer>
+                    <Flex justifyContent={"center"} flexDirection={"row"} mt={30}>
+                        <Text fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                            Ready to try Nodio?
+                        </Text>
+                    </Flex>
+                    <Flex justifyContent={"center"} flexDirection={"row"} mt={40}>
+                        <Text mt={40} fontSize={[ 10, 14, 20 ]} mb={40} fontFamily={"HurmeGeometricSans3-Regular"}>
+                            {/*Nodio is available from the macOS Apple Store at the low introductory price of 9.99$*/}
+                            Nodio will be available really soon on the Mac Store.
+                        </Text>
+                    </Flex>
+                    {/*<Flex justifyContent={"center"} flexDirection={"row"} mt={[80]} mb={[100]}>*/}
+                    {/*    <Link style={{boxShadow:"0 0 0"}} href="https://itunes.apple.com/us/app/stylo/id1456230357?mt=8">*/}
+                    {/*        <MacAppStoreDownloadImage />*/}
+                    {/*    </Link>*/}
+                    {/*</Flex>*/}
+                </SectionContainer>
+            </WhitePage>
+        )
+  }
+}

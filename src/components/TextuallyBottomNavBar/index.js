@@ -3,7 +3,7 @@ import LocationContext from "../../context/LocationContext"
 import NavBarLink from "../NavBarLink"
 import NavBarSectionButton from '../NavBarSectionButton';
 import styled from "styled-components";
-import { Flex, Box } from "rebass";
+import { Flex } from "rebass";
 import BottomNavBarContainer from "../BottomNavBarContainer"
 import NavBarContextReseter from "../NavBarContextReseter"
 
@@ -52,6 +52,12 @@ export default class TextuallyBottomNavBar extends Component {
                                         path={["/", "stylo"]}
                                         p={2}>
                                         Stylo...
+                                    </NavBarSectionButton>
+                                    <NavBarSectionButton
+                                        marginLeft={"30px"}
+                                        path={["/", "nodio"]}
+                                        p={2}>
+                                        Nodio...
                                     </NavBarSectionButton>
                                     <MainLink
                                         path={["/", "contact"]}

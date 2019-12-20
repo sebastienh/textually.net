@@ -17,13 +17,13 @@ const MainLink = styled(NavBarLink)`
     }
 `;
 
-export default class StyloBottomNavBar extends Component {
-    
+export default class NodioBottomNavBar extends Component {
+
     constructor(props) {
         super(props)
 
         this.state = {
-            diplayedSectionPath: ["/", "stylo"]
+            diplayedSectionPath: ["/", "nodio"]
         }
     }
 
@@ -36,34 +36,16 @@ export default class StyloBottomNavBar extends Component {
                             <BottomNavBarContainer>
                                 <Flex flexDirection={"row"}>
                                     <MainLink
-                                        path={["/", "stylo", "about"]}
-                                        href='/stylo'
+                                        path={["/", "nodio", "about"]}
+                                        href='/nodio'
                                         p={2}>
                                         About
                                     </MainLink>
-                                    <NavBarSectionButton
-                                        marginLeft={"30px"}
-                                        path={["/", "stylo", "documentation"]}
-                                        p={2}>
-                                        Documentation...
-                                    </NavBarSectionButton>
-                                    {/* <MainLink
-                                        path={["/", "stylo", "release-notes"]}
-                                        href='#'
-                                        p={2}>
-                                        Release Notes
-                                    </MainLink> */}
                                     <MainLink
-                                        path={["/", "stylo", "privacy-policy"]}
-                                        href='/stylo/privacy-policy'
+                                        path={["/", "nodio", "privacy-policy"]}
+                                        href='/nodio/privacy-policy'
                                         p={2}>
                                         Privacy Policy
-                                    </MainLink>
-                                    <MainLink
-                                        path={["/", "stylo", "acknowledgments"]}
-                                        href='/stylo/acknowledgments'
-                                        p={2}>
-                                        Acknowledgments
                                     </MainLink>
                                 </Flex>
                             </BottomNavBarContainer>
@@ -75,4 +57,4 @@ export default class StyloBottomNavBar extends Component {
     }
 }
 
-StyloBottomNavBar.contextType = LocationContext; 
+NodioBottomNavBar.contextType = LocationContext;

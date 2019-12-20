@@ -8,6 +8,7 @@ import TextuallyBottomNavBar from '../TextuallyBottomNavBar';
 import LocationContext from "../../context/LocationContext"
 import StyloDocumentationBottomNavBar from "../StyloDocumentationBottomNavBar"
 import StyloBottomNavBar from "../StyloBottomNavBar"
+import NodioBottomNavBar from "../NodioBottomNavBar"
 import TopNavBarSeparator from "../TopNavBarSeparator"
 
 // box-shadow: 10px 5px 5px red;
@@ -114,6 +115,9 @@ export default class NavBar extends Component {
             else if(lastSection == 'stylo') {
                 return <StyloBottomNavBar />
             }
+            else if(lastSection == 'nodio') {
+                return <NodioBottomNavBar />
+            }
             else if(lastSection == 'documentation') {
                 return <StyloDocumentationBottomNavBar />
             }
@@ -128,6 +132,9 @@ export default class NavBar extends Component {
         }
         else if(pathString == "stylo") {
             return "Stylo"
+        }
+        else if(pathString == "nodio") {
+            return "Nodio"
         }
         else if(pathString == "documentation") {
             return "Documentation"
@@ -196,31 +203,25 @@ export default class NavBar extends Component {
                         bg='#D6E5E3'
                         alignItems='center'>
                         <MediaQuery query="(max-width: 768px)">
-                            {/* {matches =>
-                                !matches ? (null) : ( */}
-                                <DrawerToggleButton click={this.props.drawerClickHandler}/>
-                            {/* )} */}
+                            <DrawerToggleButton click={this.props.drawerClickHandler}/>
                         </MediaQuery>
                         <MediaQuery query="(min-width: 769px)">
-                            {/* {matches =>
-                                !matches ? (null) : ( */}
-                                <Flex style={{width:"100%"}}>
-                                    <Box width={[1/10]} />
-                                    <Flex width={[8/10]} flexDirection={"column"}>
-                                        <TopContainer fontSize={"15pt"} px={2}>
-                                            {this.renderTop(locationContext)}
-                                        </TopContainer>
-                                        <TopNavBarSeparator />
-                                        <Flex fontSize={"13pt"} px={2} style={{width:"100%"}}>
-                                            <Box mx='auto' />
-                                            <Box>
-                                                {this.renderBottom(locationContext)}
-                                            </Box>
-                                        </Flex>
+                            <Flex style={{width:"100%"}}>
+                                <Box width={[1/10]} />
+                                <Flex width={[8/10]} flexDirection={"column"}>
+                                    <TopContainer fontSize={"15pt"} px={2}>
+                                        {this.renderTop(locationContext)}
+                                    </TopContainer>
+                                    <TopNavBarSeparator />
+                                    <Flex fontSize={"13pt"} px={2} style={{width:"100%"}}>
+                                        <Box mx='auto' />
+                                        <Box>
+                                            {this.renderBottom(locationContext)}
+                                        </Box>
                                     </Flex>
-                                    <Box width={[1/10]} />
                                 </Flex>
-                            {/* )} */}
+                                <Box width={[1/10]} />
+                            </Flex>
                         </MediaQuery>
                     </Header>
                 )}
