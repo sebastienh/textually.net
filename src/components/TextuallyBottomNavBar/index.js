@@ -37,7 +37,7 @@ export default class TextuallyBottomNavBar extends Component {
                                 <Flex flexDirection={"row"}>
                                     <MainLink
                                         path={["/", "about"]}
-                                        href='/textually'
+                                        href='/'
                                         p={2}>
                                         About
                                     </MainLink>
