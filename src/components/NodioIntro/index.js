@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
-import YinYang from "../YinYang"
 import MediaQuery from "react-responsive"
 import SectionContainer from '../SectionContainer';
 
@@ -37,7 +36,6 @@ export default class NodioIntro extends Component {
                                     {text}
                                 </Text>
                             </Box>
-
                         </Flex>
                     </MediaQuery>
                     <MediaQuery query="(max-width: 768px)">
@@ -46,12 +44,6 @@ export default class NodioIntro extends Component {
                                 <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
                                     {text}
                                 </Text>
-                                <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                                    More coming soon...
-                                </Text>
-                            </Box>
-                            <Box mt={[40, 60, 80]}>
-                                <YinYang fillColor={"#848689"} dotColor={"#D74E09"} width={"200"} height={"200"} />
                             </Box>
                         </React.Fragment>
                     </MediaQuery>
