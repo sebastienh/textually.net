@@ -5,9 +5,6 @@ import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import SectionContainer from '../SectionContainer';
-import video from '../../videos/add-new-text.m4v';
-
-require("../../videos/add-new-text.m4v'")
 
 const WhitePage = styled.section`
   background-color: #fff;
@@ -37,10 +34,7 @@ export default class NodioAddText extends Component {
                     <Flex flexDirection={"row"} mt={0}>
                         <Box width={1/8} />
                         <Box width={6/8}>
-                            <video width="100%" height="100vh"  preload='auto' loop autoPlay muted>
-                                <source src={video} type="video/mp4" />
-                                Your browser does not support HTML5 video.
-                            </video>
+
                         </Box>
                         <Box width={1/8} />
                     </Flex>
