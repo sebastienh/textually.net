@@ -119,6 +119,7 @@ const Pre = styled.pre`
 
 const Blockquote = styled.blockquote`
     color: #D74E09;
+    border-left: 2px solid gray;
 `
 
 const renderAst = new rehypeReact({

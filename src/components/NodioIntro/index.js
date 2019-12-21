@@ -26,7 +26,7 @@ export default class NodioIntro extends Component {
                 <SectionContainer>
                     <Flex flexDirection={"row"} mt={30}>
                         <Text fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                            When Markdown meets audio.
+                            Markdown meets audio.
                         </Text>
                     </Flex>
                     <MediaQuery query="(min-width: 769px)">

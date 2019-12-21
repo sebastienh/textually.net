@@ -45,56 +45,6 @@ export const AccordionText = styled.div`
   padding: 0;
 `;
 
-const CircledNumbersContainer = styled(Flex)`
-    margin:0px;
-    padding: 0px;
-    width: 10%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    justify-content: center;
-    flex-direction: column;
-`;
-
-const RightSideContainer = styled(Box)`
-
-    margin:0px;
-    padding: 0px;
-    width: 60px;
-    height: 100%;
-    /* position: fixed; */
-    /* top: 0; */
-    /* bottom: 0; */
-    /* justify-content: center; */
-    /* flex-direction: column; */
-`;
-
-const CenterHorizontally = styled(Flex)`
-
-    height: 100%;
-    justify-content: center;
-    flex-direction: row;
-`
-
-const WhitePage = styled.section`
-  background-color: #fff;
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
-`
-
-const GreyPage = styled.section`
-  background-color: #fafafa;
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
-`
-
 const ContentResizer = styled(Flex)`
   width: 100%;
   height: 100%;
