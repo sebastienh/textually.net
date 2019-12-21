@@ -61,13 +61,13 @@ const MenuTitleContainer = styled(Flex)`
     /* font-weight: bold; */
 `
 
-export default class StyloSideMenu extends Component {
+export default class NodioSideMenu extends Component {
 
-    onDocumentation() {
-        this.props.navigationController.pushView(
-            <StyloDocumentationSideMenu />
-        );
-    }
+    // onDocumentation() {
+    //     this.props.navigationController.pushView(
+    //         <StyloDocumentationSideMenu />
+    //     );
+    // }
 
     back() {
         this.props.navigationController.popView({
@@ -96,7 +96,6 @@ export default class StyloSideMenu extends Component {
                     </MenuTitleContainer>
                 </Flex>
                 <LinksContainer>
-
                     <Box height={"auto"} />
                     <SectionTitle>
                         <Text 
@@ -105,36 +104,24 @@ export default class StyloSideMenu extends Component {
                             fontSize={[5]} 
                             fontWeight={"bold"} 
                             color={"#D74E09"}>
-                            Stylo
+                            Nodio
                         </Text>
                     </SectionTitle>
                     <MainLink
-                        path={["/", "stylo", "about"]}
-                        href='/stylo'
+                        path={["/", "nodio", "about"]}
+                        href='/nodio'
                         p={2}>
                         About
                     </MainLink>
-                    <SidebarPushButton
-                        path={["/", "stylo", "documentation"]}
-                        p={2}
-                        onClick={this.onDocumentation.bind(this)}>
-                        Documentation...
-                    </SidebarPushButton>
-                    {/* <MainLink
-                        path={["/", "stylo", "release-notes"]}
-                        href='#'
-                        p={2}>
-                        Release Notes
-                    </MainLink> */}
                     <MainLink
-                        path={["/", "stylo", "privacy-policy"]}
-                        href='/stylo/privacy-policy'
+                        path={["/", "nodio", "privacy-policy"]}
+                        href='/nodio/privacy-policy'
                         p={2}>
                         Privacy Policy
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "acknowledgments"]}
-                        href='/stylo/acknowledgments'
+                        path={["/", "nodio", "acknowledgments"]}
+                        href='/nodio/acknowledgments'
                         p={2}>
                         Acknowledgments
                     </MainLink>

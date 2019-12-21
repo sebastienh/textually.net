@@ -12,7 +12,7 @@ Dear all!
  a new text editor sharing the same framework as Stylo will come shortly. This new 
   text editor will bring, among others, files outline and audio recording support. 
   
- Stay tuned for the annoncements! 
+ Stay tuned for the announcements! 
  
  In the meantime, we wish you all happy holidays!  
 

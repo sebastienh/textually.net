@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
-import ExpandMoreIcon from "../../icons/expandMore";
 import { Link } from 'gatsby';
 
 export const Item = styled(Link)`
@@ -82,10 +80,10 @@ class StyledAccordionItem extends Component {
       className,
       onChange,
     } = this.props;
+
     const { isOpen } = this.state;
 
     return (
-        
         <ListItem>
             <Item href="#">
                 <Text fontSize={"15px"} fontWeight={300}>

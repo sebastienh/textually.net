@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Flex, Box, Text, Link } from "rebass";
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import StyloSideMenu from "../StyloSideMenu"
+import NodioSideMenu from "../NodioSideMenu"
 import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
 import NavigationLink from "../NavigationLink"
-import Pointer from '../../icons/pointer';
 import SidebarPushButton from "../SidebarPushButton"
 
 const {
@@ -71,6 +71,13 @@ export default class IndexSideMenu extends Component {
             })
     }
 
+    onNodio = () => {
+        this.props.navigationController.pushView(
+            <NodioSideMenu />, {
+                transition: Transition.type.PUSH_LEFT
+            })
+    }
+
     render() {
         return (
             <MenuContainer>
@@ -86,7 +93,7 @@ export default class IndexSideMenu extends Component {
                     </SectionTitle>
                     <MainLink
                         path={["/", "about"]}
-                        href='/textually'
+                        href='/'
                         p={2}>
                         About
                     </MainLink>
@@ -103,6 +110,14 @@ export default class IndexSideMenu extends Component {
                         navigationController={this.props.navigationController}
                         p={2}>
                         Stylo...
+                    </SidebarPushButton>
+                    <SidebarPushButton
+                        onClick={this.onNodio}
+                        path={["/", "nodio"]}
+                        menu={<NodioSideMenu />}
+                        navigationController={this.props.navigationController}
+                        p={2}>
+                        Nodio...
                     </SidebarPushButton>
                     <MainLink
                         path={["/", "contact"]}
