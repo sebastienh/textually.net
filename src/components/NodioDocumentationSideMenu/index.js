@@ -4,10 +4,10 @@ import styled, { css } from 'styled-components';
 import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
 import NavigationLink from "../NavigationLink"
-import NodioDocumentationSideMenu from "../NodioDocumentationSideMenu"
 import BackButton from "../BackButton"
+import NodioDocumentationMarkdownSideMenu from "../NodioDocumentationMarkdownSideMenu"
+import NodioDocumentationEssentialsSideMenu from "../NodioDocumentationEssentialsSideMenu"
 import SidebarPushButton from "../SidebarPushButton"
-import NavBarSectionButton from "../NavBarSectionButton";
 
 const {
     Transition
@@ -38,6 +38,7 @@ const MenuContainer = styled(Box)`
     right: 0;
     bottom: 0;
     left: 0;
+    overflow-y: auto;
 `
 
 const LinksContainer = styled(Flex)`
@@ -57,33 +58,45 @@ const SectionTitle = styled(Box)`
 const MenuTitleContainer = styled(Flex)`
     height: 60px;
     flex-direction: "row";
-
     /* box-shadow: 0px 1px 0px #aaa8; */
     /* font-weight: bold; */
 `
 
-export default class NodioSideMenu extends Component {
+export default class NodioDocumentationSideMenu extends Component {
 
-    onDocumentation() {
+    onReleaseNotes() {
+        // this.props.navigationController.pushView(
+        //     <div>Welcome Stylo!</div>
+        // );
+    }
+
+    onEssentials() {
         this.props.navigationController.pushView(
-            <NodioDocumentationSideMenu />
+            <NodioDocumentationEssentialsSideMenu />
+        );
+    }
+
+    onMarkdown() {
+        this.props.navigationController.pushView(
+            <NodioDocumentationMarkdownSideMenu />
         );
     }
 
     back() {
         this.props.navigationController.popView({
             transition: Transition.type.PUSH_RIGHT
-          })
+        })
     }
 
     render() {
         return (
             <MenuContainer>
                 <Flex style={{height: "60px", top: "0"}} justifyContent={"center"} flexDirection={"column"}>
+
                     <MenuTitleContainer>
                         <Text fontSize={[3]} mt={"13px"} ml={"31px"} color={"#aaa"}>...</Text>
-                        <Flex 
-                            justifyContent={"center"} 
+                        <Flex
+                            justifyContent={"center"}
                             flexDirection={"column"}
                             style={{height:"100%"}}>
                             <BackButton
@@ -91,47 +104,36 @@ export default class NodioSideMenu extends Component {
                                 fontSize={[3]}
                                 onClick={this.back.bind(this)}
                                 color='black'>
-                                Textually
+                                Nodio
                             </BackButton>
                         </Flex>
                     </MenuTitleContainer>
                 </Flex>
                 <LinksContainer>
+
                     <Box height={"auto"} />
                     <SectionTitle>
-                        <Text 
-                            ml={44} 
+                        <Text
+                            ml={44}
                             mb={10}
-                            fontSize={[5]} 
-                            fontWeight={"bold"} 
+                            fontSize={[4]}
+                            fontWeight={"bold"}
                             color={"#D74E09"}>
-                            Nodio
+                            Documentation
                         </Text>
                     </SectionTitle>
-                    <MainLink
-                        path={["/", "nodio", "about"]}
-                        href='/nodio'
-                        p={2}>
-                        About
-                    </MainLink>
                     <SidebarPushButton
-                        path={["/", "nodio", "documentation"]}
+                        path={["/", "nodio", "documentation", "essentials"]}
                         p={2}
-                        onClick={this.onDocumentation.bind(this)}>
-                        Documentation...
+                        onClick={this.onEssentials.bind(this)}>
+                        Essentials...
                     </SidebarPushButton>
-                    <MainLink
-                        path={["/", "nodio", "privacy-policy"]}
-                        href='/nodio/privacy-policy'
-                        p={2}>
-                        Privacy Policy
-                    </MainLink>
-                    <MainLink
-                        path={["/", "nodio", "acknowledgments"]}
-                        href='/nodio/acknowledgments'
-                        p={2}>
-                        Acknowledgments
-                    </MainLink>
+                    <SidebarPushButton
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        p={2}
+                        onClick={this.onMarkdown.bind(this)}>
+                        Markdown...
+                    </SidebarPushButton>
                 </LinksContainer>
             </MenuContainer>
         )

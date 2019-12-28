@@ -18,29 +18,57 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/documentation/stylo`,
+        path: `${__dirname}/content/en/documentation/stylo`,
         name: `stylo-documentation`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/documentation/markdown`,
+        path: `${__dirname}/content/en/documentation/markdown`,
         name: `stylo-documentation-markdown`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/documentation/html`,
+        path: `${__dirname}/content/en/documentation/html`,
         name: `stylo-documentation-html`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/documentation/css`,
+        path: `${__dirname}/content/en/documentation/css`,
         name: `stylo-documentation-css`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/en/documentation/common`,
+        name: `documentation-common`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/en/documentation/markdown-ui`,
+        name: `documentation-markdown-ui`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/en/documentation/audio`,
+        name: `documentation-audio`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/en/documentation/nodio`,
+        name: `documentation-nodio`,
       },
     },
     {

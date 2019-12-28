@@ -103,56 +103,56 @@ export default class StyloDocumentationHtmlSideMenu extends Component {
                     </SectionTitle>
                     <MainLink
                         path={["/", "stylo", "documentation", "html"]}
-                        href='/stylo/documentation/html#introduction'
+                        href='/html#introduction'
                         number={1}
                         p={2}>
                         Introduction
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "html"]}
-                        href='/stylo/documentation/html#document'
+                        href='/html#document'
                         number={2}
                         p={2}>
                         Document
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "html"]}
-                        href='/stylo/documentation/html#element'
+                        href='/html#element'
                         number={3}
                         p={2}>
                         Element
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "html"]}
-                        href='/stylo/documentation/html#definitions'
+                        href='/html#definitions'
                         number={4}
                         p={2}>
                         Definitions
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "html"]}
-                        href='/stylo/documentation/html#attributes'
+                        href='/html#attributes'
                         number={5}
                         p={2}>
                         Attributes
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "html"]}
-                        href='/stylo/documentation/html#id'
+                        href='/html#id'
                         number={6}
                         p={2}>
                         Id
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "html"]}
-                        href='/stylo/documentation/html#class'
+                        href='/html#class'
                         number={7}
                         p={2}>
                         class
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "html"]}
-                        href='/stylo/documentation/html#terms'
+                        href='/html#terms'
                         number={8}
                         p={2}>
                         Terms

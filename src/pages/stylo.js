@@ -19,6 +19,9 @@ import StyloInspiring from "../components/StyloInspiring"
 import StyloHighlightable from "../components/StyloHighlightable"
 import StyloEasy from "../components/StyloEasy"
 import StyloOtherFeatures from "../components/StyloOtherFeatures"
+import StyloProject from "../components/StyloProject"
+import StyloAddText from "../components/StyloAddText"
+
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -187,23 +190,26 @@ class StyloIndex extends React.Component {
                 <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"unique"} number={3}>
                   <StyloUnique />
                 </PageSection>
-                <PageSection mt={[20,60,80]} id={"stylable"} number={4}>
+                  <PageSection mt={[20,60,80]} id={"stylable"} number={4}>
+                      <StyloProject />
+                  </PageSection>
+                  <PageSection mt={[20,60,80]} id={"stylable"} number={5}>
+                      <StyloAddText />
+                  </PageSection>
+                <PageSection mt={[20,60,80]} id={"stylable"} number={6}>
                   <StyloStylable />
                 </PageSection>
-                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"highlightable"} number={5}>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"highlightable"} number={7}>
                   <StyloHighlightable />
                 </PageSection>
                 <PageSection mt={[20,60,80]} id={"easy"} number={7}>
                   <StyloEasy />
                 </PageSection>
-                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"inspiring"} number={6} pb={40}>
+                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"inspiring"} number={8} pb={40}>
                   <StyloInspiring />
                 </PageSection>
-                <PageSection mt={[20,60,80]} id={"stylo-commonmark"} number={8}>
+                <PageSection mt={[20,60,80]} id={"stylo-commonmark"} number={9}>
                   <StyloCommonMark />
-                </PageSection>
-                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"stylo-immerse"} number={9}>
-                  <StyloImmerseInTheText />
                 </PageSection>
                 <PageSection mt={[20,60,80]} id={"stylo-other-features"} number={10}>
                   <StyloOtherFeatures />

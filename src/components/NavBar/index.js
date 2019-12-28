@@ -7,6 +7,7 @@ import NavBarSectionButton from '../NavBarSectionButton';
 import TextuallyBottomNavBar from '../TextuallyBottomNavBar';
 import LocationContext from "../../context/LocationContext"
 import StyloDocumentationBottomNavBar from "../StyloDocumentationBottomNavBar"
+import NodioDocumentationBottomNavBar from "../NodioDocumentationBottomNavBar"
 import StyloBottomNavBar from "../StyloBottomNavBar"
 import NodioBottomNavBar from "../NodioBottomNavBar"
 import TopNavBarSeparator from "../TopNavBarSeparator"
@@ -107,6 +108,7 @@ export default class NavBar extends Component {
     bottomElements = (sectionPath) => {
 
         if(sectionPath !== undefined && sectionPath !== null) {
+            let beforeLastSection = sectionPath[sectionPath.length-2]
             let lastSection = sectionPath[sectionPath.length-1]
 
             if(lastSection == '/') {
@@ -118,8 +120,11 @@ export default class NavBar extends Component {
             else if(lastSection == 'nodio') {
                 return <NodioBottomNavBar />
             }
-            else if(lastSection == 'documentation') {
+            else if(lastSection == 'documentation' && beforeLastSection == 'stylo') {
                 return <StyloDocumentationBottomNavBar />
+            }
+            else if(lastSection == 'documentation' && beforeLastSection == 'nodio') {
+                return <NodioDocumentationBottomNavBar />
             }
         }
         return null;
@@ -138,6 +143,9 @@ export default class NavBar extends Component {
         }
         else if(pathString == "documentation") {
             return "Documentation"
+        }
+        else if(pathString == "markdown") {
+            return "Markdown"
         }
     }
 

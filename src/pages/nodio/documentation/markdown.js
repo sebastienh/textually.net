@@ -101,7 +101,7 @@ const ContentResizer = styled(Flex)`
   height: 100px;
 `
 
-class StyloMarkdownDocumentation extends React.Component {
+class NodioMarkdownDocumentation extends React.Component {
 
   render() {
 
@@ -122,12 +122,12 @@ class StyloMarkdownDocumentation extends React.Component {
     const mdTable = data.mdTable.edges[0].node;
 
     return (
-        <PageLocation path={["/", "stylo", "documentation", "markdown"]}>
+        <PageLocation path={["/", "nodio", "documentation", "markdown"]}>
             <SEO
               title="Markdown"
               keywords={[
                 `textually`, 
-                `stylo`, 
+                `nodio`,
                 `markdown`, 
                 `md`, 
                 `commonmark`,
@@ -283,7 +283,7 @@ class StyloMarkdownDocumentation extends React.Component {
     )
   }
 }
-export default StyloMarkdownDocumentation
+export default NodioMarkdownDocumentation
 
 export const query = graphql`
 query {

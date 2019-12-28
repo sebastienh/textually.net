@@ -9,7 +9,7 @@ export const HoverLink = styled(Link)`
 
     padding-top: 16px;
     padding-bottom: 12px;
-    color: ${props => props.selected ? "#FFA700" : "#666" };
+    color: ${props => props.selected ? "#75B9BE" : "#C1C1C1" };
     font-weight: ${props => props.selected ? "bold" : "regular"};
 
     &:after {
@@ -26,7 +26,7 @@ export const HoverLink = styled(Link)`
         ${({ selected }) => selected && `
             height: 1px;
             width: 80%;
-            background: #FFA70088; 
+            background: #75B9BE88; 
         `}
     }
      

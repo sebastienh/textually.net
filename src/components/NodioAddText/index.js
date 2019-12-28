@@ -16,6 +16,11 @@ const WhitePage = styled.section`
   box-sizing: border-box;
 `
 
+const Video = styled.video`
+    box-shadow: 0 4px 8px 0;
+`
+
+
 export default class NodioAddText extends Component {
 
     render() {
@@ -29,7 +34,7 @@ export default class NodioAddText extends Component {
                         </Text>
                     </Flex>
                     <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} mt={20} mb={24} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        In Nodio, it is possible to add new text files directly from the editor using the <em>plus</em> button under each text editor.
+                        Add new text files directly from the editor using the <em>plus</em> button under each text editor.
                         They will be automatically added to the text selection and ready to be edited.
                     </Text>
                     <Flex flexDirection={"row"} mt={0}>

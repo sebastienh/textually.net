@@ -36,7 +36,7 @@ export default class SidebarLink extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            selectedColor: "#FFA700",
+            selectedColor: "#75B9BE",
             unselectedColor: "#000"
         }
     }

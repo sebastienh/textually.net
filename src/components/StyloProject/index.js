@@ -14,7 +14,7 @@ const WhitePage = styled.section`
   box-sizing: border-box;
 `
 
-export default class StyloStylable extends Component {
+export default class StyloProject extends Component {
   
     render() {
         return (
@@ -23,18 +23,16 @@ export default class StyloStylable extends Component {
                 <SectionContainer>
                     <Flex justifyContent={"center"} flexDirection={"row"}>
                     <Text fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Stylable.
+                        Writing projects...
                     </Text>
                     </Flex>
                     <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} mt={20} mb={24} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Markdown and CSS are brought together to provide outstanding editing and styling capabalities. 
-                        While Markdown defines the document content and its structure, CSS describes it's presentation. 
-                        It's the perfect match! 
+                        No matter how many files your project contains Stylo will handle them all! Many of you have asked about project management, or <em>notebook</em> mode and we have implemented it along with some welcome additions...
                     </Text>
                     <Flex flexDirection={"row"} mt={0}>
                         <Box width={1/8} />
                         <Box width={6/8}>
-                            <Image filename="new-paradigm-dark-0.6.png" />
+                            <Image filename="stylo-project-0.6.png" />
                         </Box>
                         <Box width={1/8} />
                     </Flex>

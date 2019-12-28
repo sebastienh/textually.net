@@ -16,7 +16,7 @@ export default class LocationAwareLink extends Component {
         super(props)
         this.state = {
             number: props.number,
-            selectedColor: "#FFA700",
+            selectedColor: "#75B9BE",
             unselectedColor: "#000"
         }
     }

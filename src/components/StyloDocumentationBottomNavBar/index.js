@@ -43,13 +43,13 @@ export default class StyloDocumentationBottomNavBar extends Component {
                                     </MainLink>
                                     <MainLink
                                         path={["/", "stylo", "documentation", "html"]}
-                                        href='/stylo/documentation/html'
+                                        href='/html'
                                         p={2}>
                                         HTML
                                     </MainLink>
                                     <MainLink
                                         path={["/", "stylo", "documentation", "css"]}
-                                        href='/stylo/documentation/css'
+                                        href='/css'
                                         p={2}>
                                         CSS
                                     </MainLink>

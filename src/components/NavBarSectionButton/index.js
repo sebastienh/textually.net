@@ -4,11 +4,13 @@ import LocationContext from "../../context/LocationContext"
 import NavBarSeparatorContext from "../../context/NavBarSeparatorContext"
 import { Flex, Box, Text, Container, Provider, Header } from "rebass";
 
+// D74E09
+
 export const HoverButton = styled.button`
 
     padding: 8px;
     box-shadow: 0px 0px 0px;
-    color: ${props => props.selected ? "#FFA700" : props.onPath ? "#D74E09" : "#666"};
+    color: ${props => props.selected ? "#75B9BE" : props.onPath ? "#444545" : "#C1C1C1"};
     border-width: 0px;
     outline: none;  
     background-color: inherit;
@@ -96,14 +98,17 @@ export default class NavBarSectionButton extends Component {
 
         if(contextPagePath !== undefined) {
 
-            let section = path[path.length-1]
-            let currentSection = contextPagePath[contextPagePath.length-2]
-            
-            if(section === currentSection) {
-                return true
+            if(path.length != contextPagePath.length) {
+                return false;
+            }
+
+            for(var i = 0; i < path.length; i++) {
+                if(path[i] != contextPagePath[i]) {
+                    return false;
+                }
             }
         }
-        return false;
+        return true;
     }
 
     onPath = (contextPagePath) => {

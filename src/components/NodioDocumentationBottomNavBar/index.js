@@ -17,13 +17,13 @@ const MainLink = styled(NavBarLink)`
     }
 `;
 
-export default class NodioBottomNavBar extends Component {
-
+export default class NodioDocumentationBottomNavBar extends Component {
+    
     constructor(props) {
         super(props)
 
         this.state = {
-            diplayedSectionPath: ["/", "nodio"]
+            diplayedSectionPath: ["/", "nodio", "documentation"]
         }
     }
 
@@ -36,28 +36,16 @@ export default class NodioBottomNavBar extends Component {
                             <BottomNavBarContainer>
                                 <Flex flexDirection={"row"}>
                                     <MainLink
-                                        path={["/", "nodio", "about"]}
-                                        href='/nodio'
+                                        path={["/", "nodio", "documentation", "essentials"]}
+                                        href='/nodio/documentation/essentials'
                                         p={2}>
-                                        About
-                                    </MainLink>
-                                    <NavBarSectionButton
-                                        marginLeft={"30px"}
-                                        path={["/", "nodio", "documentation"]}
-                                        p={2}>
-                                        Documentation...
-                                    </NavBarSectionButton>
-                                    <MainLink
-                                        path={["/", "nodio", "privacy-policy"]}
-                                        href='/nodio/privacy-policy'
-                                        p={2}>
-                                        Privacy Policy
+                                        Essentials
                                     </MainLink>
                                     <MainLink
-                                        path={["/", "nodio", "acknowledgments"]}
-                                        href='/nodio/acknowledgments'
+                                        path={["/", "nodio", "documentation", "markdown"]}
+                                        href='/nodio/documentation/markdown'
                                         p={2}>
-                                        Acknowledgments
+                                        Markdown
                                     </MainLink>
                                 </Flex>
                             </BottomNavBarContainer>
@@ -69,4 +57,4 @@ export default class NodioBottomNavBar extends Component {
     }
 }
 
-NodioBottomNavBar.contextType = LocationContext;
+NodioDocumentationBottomNavBar.contextType = LocationContext;

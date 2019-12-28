@@ -110,14 +110,14 @@ export default class StyloDocumentationEssentialsSideMenu extends Component {
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "stylo-essentials"]}
-                        href='/stylo/documentation/stylo-essentials#markdown-editor'
+                        href='/stylo/documentation/stylo-essentials#markdownEditor'
                         number={2}
                         p={2}>
                         Markdown Editor
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "stylo-essentials"]}
-                        href='/stylo/documentation/stylo-essentials#text-statistics'
+                        href='/stylo/documentation/stylo-essentials#textStatistics'
                         number={3}
                         p={2}>
                         Text Statistics
@@ -131,28 +131,28 @@ export default class StyloDocumentationEssentialsSideMenu extends Component {
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "stylo-essentials"]}
-                        href='/stylo/documentation/stylo-essentials#styles-list'
+                        href='/stylo/documentation/stylo-essentials#stylesList'
                         number={5}
                         p={2}>
                         Styles List
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "stylo-essentials"]}
-                        href='/stylo/documentation/stylo-essentials#edit-a-style'
+                        href='/stylo/documentation/stylo-essentials#editStyle'
                         number={6}
                         p={2}>
                         Style
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "stylo-essentials"]}
-                        href='/stylo/documentation/stylo-essentials#text-attributes'
+                        href='/stylo/documentation/stylo-essentials#textAttributes'
                         number={7}
                         p={2}>
                         Text Attributes
                     </MainLink>
                     <MainLink
                         path={["/", "stylo", "documentation", "stylo-essentials"]}
-                        href='/stylo/documentation/stylo-essentials#markdown-formatting'
+                        href='/stylo/documentation/stylo-essentials#markdownFormatting'
                         number={8}
                         p={2}>
                         Markdown Formatting

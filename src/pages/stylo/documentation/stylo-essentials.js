@@ -108,14 +108,13 @@ class StyloDocumentation extends React.Component {
 
     const { data } = this.props;
     
-    const addAStyle = data.addAStyle.edges[0].node;
+    const addStyle = data.addStyle.edges[0].node;
     const applyPendingStyleChanges = data.applyPendingStyleChanges.edges[0].node;
     const blockquote = data.blockquote.edges[0].node;
     const bold = data.bold.edges[0].node;
     const bundledFonts = data.bundledFonts.edges[0].node;
     const copySelector = data.copySelector.edges[0].node;
-    const distractionFree = data.distractionFree.edges[0].node;
-    const editAStyle = data.editAStyle.edges[0].node;
+    const editStyle = data.editStyle.edges[0].node;
     const enableDisableSessionTools = data.enableDisableSessionTools.edges[0].node;
     const essentials = data.essentials.edges[0].node;
     const exportDocument = data.exportDocument.edges[0].node;
@@ -125,33 +124,28 @@ class StyloDocumentation extends React.Component {
     const headerLevel4 = data.headerLevel4.edges[0].node;
     const headerLevel5 = data.headerLevel5.edges[0].node;
     const headerLevel6 = data.headerLevel6.edges[0].node;
-    const htmlPreview = data.htmlPreview.edges[0].node;
-    const introduction = data.introduction.edges[0].node;
     const italic = data.italic.edges[0].node;
     const keyboardShortcuts = data.keyboardShortcuts.edges[0].node;
     const link = data.link.edges[0].node;
-    const markdownEditor = data.markdownEditor.edges[0].node;
     const markdownFormatting = data.markdownFormatting.edges[0].node;
     const newDocument = data.newDocument.edges[0].node;
     const openDocument = data.openDocument.edges[0].node;
     const orderedList = data.orderedList.edges[0].node;
     const printDocument = data.printDocument.edges[0].node;
-    const renameAStyle = data.renameAStyle.edges[0].node;
-    const renameDocument = data.renameDocument.edges[0].node;
-    const revealHideHtmlPreview = data.revealHideHtmlPreview.edges[0].node;
+    const renameStyle = data.renameStyle.edges[0].node;
     const revealHideSidebar = data.revealHideSidebar.edges[0].node;
     const revealSingleAllIssues = data.revealSingleAllIssues.edges[0].node;
     const saveAs = data.saveAs.edges[0].node;
     const saveDocument = data.saveDocument.edges[0].node;
-    const selectAStyle = data.selectAStyle.edges[0].node;
+    const selectStyle = data.selectStyle.edges[0].node;
     const session = data.session.edges[0].node;
-    const showHideASession = data.showHideASession.edges[0].node;
+    const showHideSession = data.showHideSession.edges[0].node;
     const showHideIssuesPanel = data.showHideIssuesPanel.edges[0].node;
     const showHideStylePicker = data.showHideStylePicker.edges[0].node;
     const showHideStylesList = data.showHideStylesList.edges[0].node;
     const showHideTools = data.showHideTools.edges[0].node;
-    const sidebar = data.sidebar.edges[0].node;
-    const startRestartASession = data.startRestartASession.edges[0].node;
+    const editorSidebar = data.editorSidebar.edges[0].node;
+    const startRestartSession = data.startRestartSession.edges[0].node;
     const strikethrough = data.strikethrough.edges[0].node;
     const styleEditor = data.styleEditor.edges[0].node;
     const stylePicker = data.stylePicker.edges[0].node;
@@ -160,8 +154,9 @@ class StyloDocumentation extends React.Component {
     const tools = data.tools.edges[0].node;
     const totalTextStatistics = data.totalTextStatistics.edges[0].node;
     const unorderedList = data.unorderedList.edges[0].node;
-    const userInterface = data.userInterface.edges[0].node;
-    const textAttributes = data.textAttributes.edges[0].node;
+    const textAttributesAndHighlight = data.textAttributesAndHighlight.edges[0].node;
+    const filesOutline = data.filesOutline.edges[0].node;
+    const editorsPanel = data.editorsPanel.edges[0].node;
 
     const {
         data: {
@@ -203,39 +198,39 @@ class StyloDocumentation extends React.Component {
                     title: "Essentials"
                 },
                 {
-                    href: "#markdown-editor",
-                    title: "Markdown Editor"
+                    href: "#usingStylo",
+                    title: "Stylo Fundamentals"
                 },
                 {
-                    href: "#text-statistics",
+                    href: "#textStatistics",
                     title: "Text Statistics"
                 },
                 {
-                    href: "#sidebar",
-                    title: "Sidebar"
+                    href: "#editorSidebar",
+                    title: "Editor Sidebar"
                 },
                 {
-                    href: "#styles-list",
+                    href: "#stylesList",
                     title: "Styles List"
                 },
                 {
-                    href: "#edit-a-style",
+                    href: "#editStyle",
                     title: "Style"
                 },
                 {
-                    href: "#markdown-formatting",
+                    href: "#markdownFormatting",
                     title: "Markdown Formatting"
                 },
                 {
-                    href: "#text-attributes",
+                    href: "#textAttributesAndHighlight",
                     title: "Text Attributes"
                 },
                 {
-                    href: "#bundled-fonts",
+                    href: "#bundledFonts",
                     title: "Bundled Fonts"
                 },
                 {
-                    href: "#keyboard-shortcuts",
+                    href: "#keyboardShortcuts",
                     title: "Keyboard shortcuts"
                 }
             ]}>            
@@ -253,152 +248,146 @@ class StyloDocumentation extends React.Component {
             </PageHeaderSection>  
             <DocumentationPageTemplate>
                 <Flex flexDirection={"column"}>
-                    <Box>
-                        <MarkdownContent post={introduction} />
-                    </Box>  
                     <TitledSection id={"essentials"} number={1}>    
                         <Box>
                             <MarkdownContent post={essentials} />
                         </Box>  
-                        <Box id={"new-document"} number={2}>
+                        <Box id={"newDocument"} number={2}>
                             <MarkdownContent post={newDocument}/>
                         </Box>
-                        <Box id={"save-document"} number={3}>
+                        <Box id={"saveDocument"} number={3}>
                             <MarkdownContent post={saveDocument}/>
                         </Box>
-                        <Box id={"open-document"} number={4}>
+                        <Box id={"openDocument"} number={4}>
                             <MarkdownContent post={openDocument}/>
                         </Box>
-                        <Box id={"save-as"} number={5}>
+                        <Box id={"saveAs"} number={5}>
                             <MarkdownContent post={saveAs}/>
                         </Box>
-                        <Box id={"rename-document"} number={6}>
-                            <MarkdownContent post={renameDocument}/>
-                        </Box>
-                        <Box id={"export-document"} number={7}>
+                        <Box id={"exportDocument"} number={7}>
                             <MarkdownContent post={exportDocument}/>
                         </Box>
-                        <Box id={"print-document"} number={8}>
+                        <Box id={"printDocument"} number={8}>
                             <MarkdownContent post={printDocument}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"markdown-editor"} number={2}>
-                        <Box number={11}>
-                            <MarkdownContent post={markdownEditor}/>
+                    <TitledSection id={"usingStylo"} number={2}>
+                        <Box>
+                            <MarkdownContent post={filesOutline} />
                         </Box>
-                        <Box id={"html-preview"} number={12}>
-                            <MarkdownContent post={htmlPreview}/>
+                        <Box>
+                            <MarkdownContent post={editorsPanel} />
                         </Box>
-                        <Box id={"reveal-hide-html-preview"} number={13}>
-                            <MarkdownContent post={revealHideHtmlPreview}/>
+                        <Box>
+                            <MarkdownContent post={editorSidebar} />
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"text-statistics"} number={3}>
+                    <TitledSection id={"textStatistics"} number={3}>
                         <Box number={14}>
                             <MarkdownContent post={textStatistics}/>
                         </Box>
-                        <Box id={"total-text-statistics"} number={15}>
+                        <Box id={"totalTextStatistics"} number={15}>
                             <MarkdownContent post={totalTextStatistics}/>
                         </Box>
                         <Box id={"session"} number={16}>
                             <MarkdownContent post={session}/>
                         </Box>
-                        <Box id={"start-restart-a-session"} number={17}>
-                            <MarkdownContent post={startRestartASession}/>
+                        <Box id={"startRestartSession"} number={17}>
+                            <MarkdownContent post={startRestartSession}/>
                         </Box>
-                        <Box id={"show-hide-a-session"} number={18}>
-                            <MarkdownContent post={showHideASession}/>
+                        <Box id={"showHideSession"} number={18}>
+                            <MarkdownContent post={showHideSession}/>
                         </Box>
-                        <Box id={"enable-disable-session-tools"} number={19}>
+                        <Box id={"enableDisableSessionTools"} number={19}>
                             <MarkdownContent post={enableDisableSessionTools}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"sidebar"} number={4}>
+                    <TitledSection id={"editorSidebar"} number={4}>
                         <Box number={20}>
-                            <MarkdownContent post={sidebar}/>
+                            <MarkdownContent post={editorSidebar}/>
                         </Box>
-                        <Box id={"reveal-hide-sidebar"} number={21}>
+                        <Box id={"revealHideSidebar"} number={21}>
                             <MarkdownContent post={revealHideSidebar}/>
                         </Box>
                         <Box id={"tools"} number={22}>
                             <MarkdownContent post={tools}/>
                         </Box>
-                        <Box id={"show-hide-tools"} number={23}>
+                        <Box id={"showHideTools"} number={23}>
                             <MarkdownContent post={showHideTools}/>
                         </Box>
-                        <Box id={"style-picker"} number={24}>
+                        <Box id={"stylePicker"} number={24}>
                             <MarkdownContent post={stylePicker}/>
                         </Box>
-                        <Box id={"show-hide-style-picker"} number={25}>
+                        <Box id={"showHideStylePicker"} number={25}>
                             <MarkdownContent post={showHideStylePicker}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"styles-list"} number={5}>
+                    <TitledSection id={"stylesList"} number={5}>
                         <Box number={26}>
                             <MarkdownContent post={stylesList}/>
                         </Box>
-                        <Box id={"show-hide-styles-list"} number={27}>
+                        <Box id={"showHideStylesList"} number={27}>
                             <MarkdownContent post={showHideStylesList}/>
                         </Box>
-                        <Box id={"select-a-style"} number={28}>
-                            <MarkdownContent post={selectAStyle}/>
+                        <Box id={"selectStyle"} number={28}>
+                            <MarkdownContent post={selectStyle}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"edit-a-style"} number={6}>
+                    <TitledSection id={"editStyle"} number={6}>
                         <Box number={29}>
-                            <MarkdownContent post={editAStyle}/>
+                            <MarkdownContent post={editStyle}/>
                         </Box>
-                        <Box id={"copy-selector"} number={30}>
+                        <Box id={"copySelector"} number={30}>
                             <MarkdownContent post={copySelector}/>
                         </Box>
-                        <Box id={"add-a-style"} number={31}>
-                            <MarkdownContent post={addAStyle}/>
+                        <Box id={"addStyle"} number={31}>
+                            <MarkdownContent post={addStyle}/>
                         </Box>
-                        <Box id={"rename-a-style"} number={32}>
-                            <MarkdownContent post={renameAStyle}/>
+                        <Box id={"renameStyle"} number={32}>
+                            <MarkdownContent post={renameStyle}/>
                         </Box>
-                        <Box id={"style-editor"} number={33}>
+                        <Box id={"styleEditor"} number={33}>
                             <MarkdownContent post={styleEditor}/>
                         </Box>                    
-                        <Box id={"show-hide-issues-panel"} number={34}>
+                        <Box id={"showHideIssuesPanel"} number={34}>
                             <MarkdownContent post={showHideIssuesPanel}/>
                         </Box>
-                        <Box id={"reveal-single-all-issues"} number={35}>
+                        <Box id={"revealSingleAllIssues"} number={35}>
                             <MarkdownContent post={revealSingleAllIssues}/>
                         </Box>
-                        <Box id={"apply-pending-style-changes"} number={36}>
+                        <Box id={"applyPendingStyleChanges"} number={36}>
                             <MarkdownContent post={applyPendingStyleChanges}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"markdown-formatting"} number={7}>
+                    <TitledSection id={"markdownFormatting"} number={7}>
                         <Box number={37}>
                             <MarkdownContent post={markdownFormatting}/>
                         </Box>
-                        <Box id={"header-level-1"} number={38}>
+                        <Box id={"headerLevel1"} number={38}>
                             <MarkdownContent post={headerLevel1}/>
                         </Box>
-                        <Box id={"header-level-2"} number={39}>
+                        <Box id={"headerLevel2"} number={39}>
                             <MarkdownContent post={headerLevel2}/>
                         </Box>
-                        <Box id={"header-level-3"} number={40}>
+                        <Box id={"headerLevel3"} number={40}>
                             <MarkdownContent post={headerLevel3}/>
                         </Box>
-                        <Box id={"header-level-4"} number={41}>
+                        <Box id={"headerLevel4"} number={41}>
                             <MarkdownContent post={headerLevel4}/>
                         </Box>
-                        <Box id={"header-level-5"} number={42}>
+                        <Box id={"headerLevel5"} number={42}>
                             <MarkdownContent post={headerLevel5}/>
                         </Box>
-                        <Box id={"header-level-6"} number={43}>
+                        <Box id={"headerLevel6"} number={43}>
                             <MarkdownContent post={headerLevel6}/>
                         </Box>
                         <Box id={"blockquote"} number={44}>
                             <MarkdownContent post={blockquote}/>
                         </Box>
-                        <Box id={"unordered-list"} number={45}>
+                        <Box id={"unorderedList"} number={45}>
                             <MarkdownContent post={unorderedList}/>
                         </Box>
-                        <Box id={"ordered-list"} number={46}>
+                        <Box id={"orderedList"} number={46}>
                             <MarkdownContent post={orderedList}/>
                         </Box>
                         <Box id={"bold"} number={47}>
@@ -414,17 +403,17 @@ class StyloDocumentation extends React.Component {
                             <MarkdownContent post={link}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"text-attributes"} number={8}>
+                    <TitledSection id={"textAttributesAndHighlight"} number={8}>
                         <Box number={51}>
-                            <MarkdownContent post={textAttributes}/>
+                            <MarkdownContent post={textAttributesAndHighlight}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"bundled-fonts"} number={9}>
+                    <TitledSection id={"bundledFonts"} number={9}>
                         <Box number={52}>
                             <MarkdownContent post={bundledFonts}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"keyboard-shortcuts"} number={10}>
+                    <TitledSection id={"keyboardShortcuts"} number={10}>
                         <Box number={53}>
                             <MarkdownContent post={keyboardShortcuts}/>
                         </Box>
@@ -440,11 +429,11 @@ export default StyloDocumentation
 
 export const query = graphql`
 query {
-  addAStyle: allMarkdownRemark(
+  addStyle: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 
-        slug: { eq: "/addAStyle/" } 
+        slug: { eq: "/addStyle/" } 
       } 
     }) {
     edges {
@@ -453,7 +442,45 @@ query {
       }
     }
   }
-
+  filesOutline: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/filesOutline/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+  editorsPanel: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/styloEditorsPanel/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+  editorSidebar: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/editorSidebar/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
   applyPendingStyleChanges: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
@@ -539,11 +566,11 @@ query {
     }
   }
 
-  editAStyle: allMarkdownRemark(
+  editStyle: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 
-        slug: { eq: "/editAStyle/" } 
+        slug: { eq: "/editStyle/" } 
       } 
     }) {
     edges {
@@ -571,7 +598,7 @@ query {
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 
-        slug: { eq: "/essentials/" } 
+        slug: { eq: "/styloEssentials/" } 
       } 
     }) {
     edges {
@@ -684,20 +711,6 @@ query {
     filter: { 
       fields: { 
         slug: { eq: "/htmlPreview/" } 
-      } 
-    }) {
-    edges {
-      node {
-        htmlAst
-      }
-    }
-  }
-
-  introduction: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { 
-      fields: { 
-        slug: { eq: "/introduction/" } 
       } 
     }) {
     edges {
@@ -833,11 +846,11 @@ query {
     }
   }
 
-  renameAStyle: allMarkdownRemark(
+  renameStyle: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 
-        slug: { eq: "/renameAStyle/" } 
+        slug: { eq: "/renameStyle/" } 
       } 
     }) {
     edges {
@@ -931,11 +944,11 @@ query {
     }
   }
 
-  selectAStyle: allMarkdownRemark(
+  selectStyle: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 
-        slug: { eq: "/selectAStyle/" } 
+        slug: { eq: "/selectStyle/" } 
       } 
     }) {
     edges {
@@ -959,11 +972,11 @@ query {
     }
   }
 
-  showHideASession: allMarkdownRemark(
+  showHideSession: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 
-        slug: { eq: "/showHideASession/" } 
+        slug: { eq: "/showHideSession/" } 
       } 
     }) {
     edges {
@@ -1029,25 +1042,11 @@ query {
     }
   }
 
-  sidebar: allMarkdownRemark(
+  startRestartSession: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 
-        slug: { eq: "/sidebar/" } 
-      } 
-    }) {
-    edges {
-      node {
-        htmlAst
-      }
-    }
-  }
-
-  startRestartASession: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { 
-      fields: { 
-        slug: { eq: "/startRestartASession/" } 
+        slug: { eq: "/startRestartSession/" } 
       } 
     }) {
     edges {
@@ -1177,7 +1176,7 @@ query {
     }
   }
 
-  textAttributes: allMarkdownRemark(
+  textAttributesAndHighlight: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 

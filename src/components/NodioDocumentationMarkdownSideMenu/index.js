@@ -3,9 +3,8 @@ import { Flex, Box, Link, Text } from "rebass";
 import styled, { css } from 'styled-components';
 import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
-import NavigationLink from "../NavigationLink"
-import BackButton from "../BackButton"
 import LocationAwareNavigationLink from "../LocationAwareNavigationLink"
+import BackButton from "../BackButton"
 
 const {
     Transition
@@ -60,7 +59,7 @@ const MenuTitleContainer = styled(Flex)`
     /* font-weight: bold; */
 `
 
-export default class StyloDocumentationCssSideMenu extends Component {
+export default class NodioDocumentationMarkdownSideMenu extends Component {
 
     back() {
         this.props.navigationController.popView({
@@ -99,85 +98,106 @@ export default class StyloDocumentationCssSideMenu extends Component {
                             fontSize={[4]} 
                             fontWeight={"bold"} 
                             color={"#D74E09"}>
-                            CSS
+                            Mardkown
                         </Text>
                     </SectionTitle>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#introduction'
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#introduction'
                         number={1}
                         p={2}>
                         Introduction
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#style'
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#specific-elements'
                         number={2}
                         p={2}>
-                        Style
+                        Markdown Specific Elements
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#selectors'
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#headers'
                         number={3}
                         p={2}>
-                        Selectors
+                        Headers
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#attribute-match'
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#horizontal-bar'
                         number={4}
                         p={2}>
-                        Attribute Match
+                        Horizontal Bar
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#combinators'
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#emphasis'
                         number={5}
                         p={2}>
-                        Combinators
+                        Emphasis
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#stylesheet'
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#strikethrough'
                         number={6}
                         p={2}>
-                        Stylesheet
+                        Strikethrough
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#cascading'
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#blockquote'
                         number={7}
                         p={2}>
-                        Cascading
+                        Blockquote
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#properties'
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#lists'
                         number={8}
                         p={2}>
-                        Properties
+                        Lists
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#valueTypes'
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#code'
                         number={9}
                         p={2}>
-                        Value Types
+                        Code
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#pseudo-elements'
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#table'
                         number={10}
                         p={2}>
-                        Pseudo Elements
+                        Table
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#color-keywords'
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#reference'
                         number={11}
                         p={2}>
-                        Color Keywords
+                        Reference
+                    </MainLink>
+                    <MainLink
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#link'
+                        number={12}
+                        p={2}>
+                        Link
+                    </MainLink>
+                    <MainLink
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#image'
+                        number={13}
+                        p={2}>
+                        Image
+                    </MainLink>
+                    <MainLink
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#ua-stylesheet'
+                        number={14}
+                        p={2}>
+                        Markdown UA stylesheet
                     </MainLink>
                 </LinksContainer>
             </MenuContainer>

@@ -1,9 +1,11 @@
+
+
 import React, { Component } from 'react'
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
-import Image from "../Image"
 import SectionContainer from '../SectionContainer';
+import video from '../../videos/add-new-text-stylo.mp4'
 
 const WhitePage = styled.section`
   background-color: #fff;
@@ -14,27 +16,34 @@ const WhitePage = styled.section`
   box-sizing: border-box;
 `
 
-export default class StyloStylable extends Component {
-  
+const Video = styled.video`
+    box-shadow: 0 4px 8px 0;
+`
+
+
+export default class StyloAddText extends Component {
+
     render() {
         return (
 
             <WhitePage>
                 <SectionContainer>
                     <Flex justifyContent={"center"} flexDirection={"row"}>
-                    <Text fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Stylable.
-                    </Text>
+                        <Text fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                            Add files.
+                        </Text>
                     </Flex>
                     <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} mt={20} mb={24} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Markdown and CSS are brought together to provide outstanding editing and styling capabalities. 
-                        While Markdown defines the document content and its structure, CSS describes it's presentation. 
-                        It's the perfect match! 
+                        Add new text files directly from the editor using the <em>plus</em> button under each text editor.
+                        They will be automatically added to the text selection and ready to be edited.
                     </Text>
                     <Flex flexDirection={"row"} mt={0}>
                         <Box width={1/8} />
-                        <Box width={6/8}>
-                            <Image filename="new-paradigm-dark-0.6.png" />
+                        <Box border={"none"} width={6/8}>
+                            <video width="100%" height="100%"  preload='auto' loop autoPlay muted>
+                                <source src={video} type="video/mp4" />
+                                Your browser does not support HTML5 video.
+                            </video>
                         </Box>
                         <Box width={1/8} />
                     </Flex>

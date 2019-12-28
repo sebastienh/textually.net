@@ -3,9 +3,8 @@ import { Flex, Box, Link, Text } from "rebass";
 import styled, { css } from 'styled-components';
 import NavigationController from 'react-navigation-controller';
 import ExpandMoreIcon from "../../icons/expandMore";
-import NavigationLink from "../NavigationLink"
-import BackButton from "../BackButton"
 import LocationAwareNavigationLink from "../LocationAwareNavigationLink"
+import BackButton from "../BackButton"
 
 const {
     Transition
@@ -60,7 +59,7 @@ const MenuTitleContainer = styled(Flex)`
     /* font-weight: bold; */
 `
 
-export default class StyloDocumentationCssSideMenu extends Component {
+export default class NodioDocumentationEssentialsSideMenu extends Component {
 
     back() {
         this.props.navigationController.popView({
@@ -99,85 +98,43 @@ export default class StyloDocumentationCssSideMenu extends Component {
                             fontSize={[4]} 
                             fontWeight={"bold"} 
                             color={"#D74E09"}>
-                            CSS
+                            Nodio
                         </Text>
                     </SectionTitle>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#introduction'
+                        path={["/", "nodio", "documentation", "essentials"]}
+                        href='/nodio/documentation/essentials#essentials'
                         number={1}
                         p={2}>
                         Introduction
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#style'
+                        path={["/", "nodio", "documentation", "essentials"]}
+                        href='/nodio/documentation/essentials#usingNodio'
                         number={2}
                         p={2}>
-                        Style
+                        Files Outline
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#selectors'
+                        path={["/", "nodio", "documentation", "essentials"]}
+                        href='/nodio/documentation/essentials#textStatistics'
                         number={3}
                         p={2}>
-                        Selectors
+                        Text Statistics
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#attribute-match'
+                        path={["/", "nodio", "documentation", "essentials"]}
+                        href='/nodio/documentation/essentials#sidebar'
                         number={4}
                         p={2}>
-                        Attribute Match
+                        Sidebar
                     </MainLink>
                     <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#combinators'
+                        path={["/", "nodio", "documentation", "essentials"]}
+                        href='/nodio/documentation/essentials#markdownFormatting'
                         number={5}
                         p={2}>
-                        Combinators
-                    </MainLink>
-                    <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#stylesheet'
-                        number={6}
-                        p={2}>
-                        Stylesheet
-                    </MainLink>
-                    <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#cascading'
-                        number={7}
-                        p={2}>
-                        Cascading
-                    </MainLink>
-                    <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#properties'
-                        number={8}
-                        p={2}>
-                        Properties
-                    </MainLink>
-                    <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#valueTypes'
-                        number={9}
-                        p={2}>
-                        Value Types
-                    </MainLink>
-                    <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#pseudo-elements'
-                        number={10}
-                        p={2}>
-                        Pseudo Elements
-                    </MainLink>
-                    <MainLink
-                        path={["/", "stylo", "documentation", "css"]}
-                        href='/css#color-keywords'
-                        number={11}
-                        p={2}>
-                        Color Keywords
+                        Markdown Formatting
                     </MainLink>
                 </LinksContainer>
             </MenuContainer>
