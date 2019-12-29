@@ -1,5 +1,5 @@
 ---
-title: Updcoming releases
+title: Upcoming releases
 date: "2019-12-21T14:51:03.284Z"
 type: news-entry
 path: "/news/upcoming-release"

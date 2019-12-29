@@ -21,7 +21,7 @@ import StyloEasy from "../components/StyloEasy"
 import StyloOtherFeatures from "../components/StyloOtherFeatures"
 import StyloProject from "../components/StyloProject"
 import StyloAddText from "../components/StyloAddText"
-
+import StyloShareYourWork from "../components/StyloShareYourWork"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -208,6 +208,9 @@ class StyloIndex extends React.Component {
                 <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"inspiring"} number={8} pb={40}>
                   <StyloInspiring />
                 </PageSection>
+                  <PageSection mt={[20,60,80]} id={"stylo-share"} number={9}>
+                      <StyloShareYourWork />
+                  </PageSection>
                 <PageSection mt={[20,60,80]} id={"stylo-commonmark"} number={9}>
                   <StyloCommonMark />
                 </PageSection>

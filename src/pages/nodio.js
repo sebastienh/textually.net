@@ -16,6 +16,8 @@ import NodioOutline from "../components/NodioOutline"
 import NodioAddText from "../components/NodioAddText"
 import NodioRecordFromTheEditor from "../components/NodioRecordFromTheEditor"
 import StyloCommonMark from "../components/StyloCommonMark";
+import ShareYourWork from "../components/ShareYourWork"
+
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -104,6 +106,9 @@ export default class NodioIndex extends React.Component {
                         </PageSection>
                         <PageSection mt={[20,60,80]} id={"nodio-record-inside-editor"} number={5}>
                             <NodioRecordFromTheEditor />
+                        </PageSection>
+                        <PageSection mt={[20,60,80]} id={"nodio-share-your-work"} number={5}>
+                            <ShareYourWork />
                         </PageSection>
                         <PageSection mt={[20,60,80]} id={"stylo-commonmark"} number={6}>
                             <StyloCommonMark />

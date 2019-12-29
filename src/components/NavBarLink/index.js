@@ -8,7 +8,7 @@ import { Flex, Box, Text, Container, Provider, Header } from "rebass";
 export const HoverLink = styled(Link)`
 
     box-shadow: 0 0 0;
-    color: ${props => props.selected ? "#75B9BE" : "#C1C1C1" };
+    color: ${props => props.selected ? "#FFBF00" : "#C1C1C1" };
     /* font-weight: ${props => props.selected ? "bold" : "regular"}; */
     font-size: ${props => props.fontSize ? props.fontSize : "inherit"}
 `

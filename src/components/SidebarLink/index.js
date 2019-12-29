@@ -9,12 +9,12 @@ const PlainLink = styled.a`
     box-shadow: 0 0 0;
     text-decoration: none;
     font-weight: 200;
-    color: ${props => props.selected ? "#FFA701" : "#aaa"};
+    color: ${props => props.selected ? "#FFBF00" : "#aaa"};
 `
 
 const Li = styled.li`
     z-index: 1000;
-    color: ${props => props.selected ? "#FFA701" : "#aaa"};
+    color: ${props => props.selected ? "#FFBF00" : "#aaa"};
     font-weight: 200;
     margin-bottom: 0;
 `
@@ -36,7 +36,7 @@ export default class SidebarLink extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            selectedColor: "#75B9BE",
+            selectedColor: "#FFBF00",
             unselectedColor: "#000"
         }
     }

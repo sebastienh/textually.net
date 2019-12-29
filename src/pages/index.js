@@ -67,7 +67,7 @@ class Index extends React.Component {
         <PageLocation path={["/", "about"]}>
           <DocumentationPageTemplate height={height}>
               <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
-                <Heading  color={"#D74E09"} fontSize={[8]}>Textually</Heading>
+                <Heading  color={"#444545"} fontSize={[8]}>Textually</Heading>
               </Flex>
               <MarkdownContent color={"white"} post={textuallyAbout} />
           </DocumentationPageTemplate>  

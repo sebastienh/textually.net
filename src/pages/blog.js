@@ -30,7 +30,7 @@ class BlogIndex extends React.Component {
           <DocumentationPageTemplate>
             
             <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
-              <Heading  color={"#D74E09"} fontSize={[8]}>Blog</Heading>
+              <Heading  color={"#444545"} fontSize={[8]}>Blog</Heading>
             </Flex>
             <ContentArea>
               {posts.map(({ node }) => {

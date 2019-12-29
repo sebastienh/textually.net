@@ -97,7 +97,7 @@ export default class StyloDocumentationMarkdownSideMenu extends Component {
                             mb={10}
                             fontSize={[4]} 
                             fontWeight={"bold"} 
-                            color={"#D74E09"}>
+                            color={"#444545"}>
                             Mardkown
                         </Text>
                     </SectionTitle>

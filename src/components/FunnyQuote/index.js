@@ -11,7 +11,7 @@ import CircledNumber from "../CircledNumber"
 const Quote = styled(Box)`
     text-align: right;
     width: 50%;
-    color: #D74E09;
+    color: #444545;
 `
 
 const QuoteContainer = styled(Flex)`

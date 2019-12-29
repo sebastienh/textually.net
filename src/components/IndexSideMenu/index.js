@@ -50,7 +50,7 @@ const LinksContainer = styled(Flex)`
 const MenuTitleContainer = styled(Flex)`
     left: 60px;
     height: 60px;
-    box-shadow: 0px 1px 0px #B1000D;
+    box-shadow: 0px 1px 0px #F73C20;
     flex-direction: row;
     justify-content: center;
 `
@@ -87,7 +87,7 @@ export default class IndexSideMenu extends Component {
                             ml={44} 
                             fontSize={[5]} 
                             fontWeight={"bold"} 
-                            color={"#D74E09"}>
+                            color={"#444545"}>
                             Textually
                         </Text>
                     </SectionTitle>

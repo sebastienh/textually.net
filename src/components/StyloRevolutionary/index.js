@@ -39,7 +39,7 @@ export default class StyloRevolutionary extends Component {
                                 </Text>
                             </Box>
                             <Box width={[7/12]} mt={[40, 60, 80]} ml={50}>
-                                <YinYang fillColor={"#848689"} dotColor={"#D74E09"} width={"200"} height={"200"} />
+                                <YinYang fillColor={"#848689"} dotColor={"#F73C20"} width={"200"} height={"200"} />
                             </Box>
                         </Flex>
                     {/* )} */}
@@ -54,7 +54,7 @@ export default class StyloRevolutionary extends Component {
                                 </Text>
                             </Box>
                             <Box mt={[40, 60, 80]}>
-                                <YinYang fillColor={"#848689"} dotColor={"#D74E09"} width={"200"} height={"200"} />
+                                <YinYang fillColor={"#848689"} dotColor={"#F73C20"} width={"200"} height={"200"} />
                             </Box>
                         </React.Fragment>
                     {/* )} */}

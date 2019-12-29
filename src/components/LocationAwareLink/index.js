@@ -6,7 +6,7 @@ const PlainLink = styled.a`
     box-shadow: 0 0 0;
     text-decoration: none;
     font-weight: 200;
-    color: ${props => props.selected ? "#FFA701" : "#aaa"};
+    color: ${props => props.selected ? "#FFBF00" : "#aaa"};
 `
 
 // context.state.index == number ? "#f00" : color}
@@ -16,7 +16,7 @@ export default class LocationAwareLink extends Component {
         super(props)
         this.state = {
             number: props.number,
-            selectedColor: "#75B9BE",
+            selectedColor: "#FFBF00",
             unselectedColor: "#000"
         }
     }

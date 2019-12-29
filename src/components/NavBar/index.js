@@ -24,7 +24,7 @@ export const Header = styled(Flex)`
     z-index: 1100;
     
     @media (min-width: 769px) {
-        height: 100px;
+        height: 90px;
         transition: top 0.5s;
         top: ${props => props.visible ? "0px" : "-100px"};
     }
@@ -217,7 +217,7 @@ export default class NavBar extends Component {
                             <Flex style={{width:"100%"}}>
                                 <Box width={[1/10]} />
                                 <Flex width={[8/10]} flexDirection={"column"}>
-                                    <TopContainer fontSize={"15pt"} px={2}>
+                                    <TopContainer fontSize={"13pt"} px={2}>
                                         {this.renderTop(locationContext)}
                                     </TopContainer>
                                     <TopNavBarSeparator />

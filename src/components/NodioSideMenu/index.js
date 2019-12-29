@@ -104,7 +104,7 @@ export default class NodioSideMenu extends Component {
                             mb={10}
                             fontSize={[5]} 
                             fontWeight={"bold"} 
-                            color={"#D74E09"}>
+                            color={"#444545"}>
                             Nodio
                         </Text>
                     </SectionTitle>

@@ -14,7 +14,7 @@ const ContactFormSuccess = (props) => (
             <div id="main" className="alt">
                 <section id="one">
                     <Flex mt={120} flexDirection={"row"} justifyContent={"center"}> 
-                        <Heading  color={"#D74E09"} fontSize={[5]}>Message sent!</Heading>
+                        <Heading  color={"#444545"} fontSize={[5]}>Message sent!</Heading>
                     </Flex>
                     <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
                         <Text>Thank you for contacting us! We will handle your request as soon as possible...</Text>

@@ -7,7 +7,7 @@ const Separator = styled.hr`
     margin-bottom: 0px;
     height: 1px;
     margin-right: ${ props => props.marginRight ? props.marginRight : "0px"};
-    background-color: ${ props => props.selected ? "#75B9BE" : "#C1C1C1"};
+    background-color: ${ props => props.selected ? "#FFBF00" : "#C1C1C1"};
     transition: margin-right 0.5s;
 `
 

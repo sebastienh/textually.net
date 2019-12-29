@@ -4,13 +4,13 @@ import LocationContext from "../../context/LocationContext"
 import NavBarSeparatorContext from "../../context/NavBarSeparatorContext"
 import { Flex, Box, Text, Container, Provider, Header } from "rebass";
 
-// D74E09
+// 444545
 
 export const HoverButton = styled.button`
 
     padding: 8px;
     box-shadow: 0px 0px 0px;
-    color: ${props => props.selected ? "#75B9BE" : props.onPath ? "#444545" : "#C1C1C1"};
+    color: ${props => props.selected ? "#FFBF00" : props.onPath ? "#444545" : "#C1C1C1"};
     border-width: 0px;
     outline: none;  
     background-color: inherit;

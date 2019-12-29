@@ -44,7 +44,7 @@ export default class CircledNumbersSidebar extends Component {
   
     createNumbers(links) {
 
-        let selectedColor = "#75B9BE"
+        let selectedColor = "#FFBF00"
         let unselectedColor = "#000"
         let children = []
 

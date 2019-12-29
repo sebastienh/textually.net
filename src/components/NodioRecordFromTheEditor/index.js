@@ -29,11 +29,11 @@ export default class NodioRecordFromTheEditor extends Component {
                 <SectionContainer>
                     <Flex justifyContent={"center"} flexDirection={"row"}>
                         <Text fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                            Add files.
+                            Add audio recordings.
                         </Text>
                     </Flex>
                     <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} mt={20} mb={24} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Record from the editor using the <em>record</em> button.
+                        Record from the editor using the <em>record</em> button or use the keyboard shortcuts to access all audio functionality directly from the editor.
                     </Text>
                     <Flex flexDirection={"row"} mt={0}>
                         <Box width={1/8} />

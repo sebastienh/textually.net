@@ -117,7 +117,7 @@ class StyloPrivacyPolicy extends React.Component {
                     keywords={[`nodio`, `releases`, `notes`]}
                 />
                 <Flex mt={140} flexDirection={"row"} justifyContent={"center"}>
-                    <Heading  color={"#D74E09"} fontSize={[5,6,8]}>Nodio Privacy Policy</Heading>
+                    <Heading  color={"#444545"} fontSize={[5,6,8]}>Nodio Privacy Policy</Heading>
                 </Flex>
                 <DocumentationPageTemplate mt={[20, 10, 0]}>
                     <MarkdownContent post={nodioPrivacyPolicy} />

@@ -22,7 +22,7 @@ export default class Contact extends Component {
           <PageTemplate>
             {/* <MarkdownContent post={textuallyContact} /> */}
             <Flex mt={60} flexDirection={"row"} justifyContent={"center"}> 
-              <Heading  color={"#D74E09"} fontSize={[5,6,8]}>Contact Us</Heading>
+              <Heading  color={"#444545"} fontSize={[5,6,8]}>Contact Us</Heading>
             </Flex>
             <Flex mt={40} flexDirection={"row"} justifyContent={"center"}>
               <Text> 

@@ -21,7 +21,7 @@ export default class StyloUnique extends Component {
         <Page>
             <SectionContainer>
                 <Flex justifyContent={"center"} flexDirection={"row"} mt={30}>
-                    <Text color={"#D74E09"} fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                    <Text color={"#444545"} fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
                         Unique.
                     </Text>
                 </Flex>
@@ -36,7 +36,7 @@ export default class StyloUnique extends Component {
                         <Box width={[1/6]} />
                     </Flex>  
                     <Flex mt={[10, 15, 20]} flexDirection={"row"} justifyContent={"center"}>
-                        <Gear outerColor={"#aaa"} innerColor={"#D74E09"} size={["100px", "175px", "350px"]}/>
+                        <Gear outerColor={"#aaa"} innerColor={"#FFBF00"} size={["100px", "175px", "350px"]}/>
                     </Flex>
                 </Flex>
             </SectionContainer>

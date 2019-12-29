@@ -118,7 +118,7 @@ const Pre = styled.pre`
 `
 
 const Blockquote = styled.blockquote`
-    color: #D74E09;
+    color: #444545;
     border-left: 2px solid gray;
 `
 

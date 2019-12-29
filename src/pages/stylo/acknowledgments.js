@@ -57,10 +57,10 @@ export default class Acknowledgments extends Component {
                 }
             ]}>            
             {/* <Flex mt={140} flexDirection={"row"} justifyContent={"center"}> 
-              <Heading color={"#D74E09"} fontSize={[8]}>Acknowledgments</Heading>
+              <Heading color={"#444545"} fontSize={[8]}>Acknowledgments</Heading>
             </Flex> */}
             <Flex mt={140} flexDirection={"row"} justifyContent={"center"}> 
-              <Heading  color={"#D74E09"} fontSize={[5,6,8]}>Acknowledgments</Heading>
+              <Heading  color={"#444545"} fontSize={[5,6,8]}>Acknowledgments</Heading>
             </Flex>
             <DocumentationPageTemplate>
                 <Flex flexDirection={"column"}>

@@ -9,7 +9,7 @@ export const HoverButton = styled.button`
     box-shadow: 0px 0px 0px;
     padding-top: 16px;
     padding-bottom: 12px;
-    color: ${props => props.selected ? "#75B9BE" : "#777"};
+    color: ${props => props.selected ? "#FFBF00" : "#777"};
     font-weight: ${props => props.selected ? "bold" : "regular"};
     border-width: 0px;
     outline: none;  
@@ -32,7 +32,7 @@ export const HoverButton = styled.button`
         ${({ selected }) => selected && `
             height: 1px;
             width: 80%;
-            background: #75B9BE88;
+            background: #FFBF0088;
         `}
     }
      

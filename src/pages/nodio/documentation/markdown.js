@@ -4,7 +4,7 @@ import SEO from "../../../components/seo"
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
-import StyloLogo from "../../../images/svg/logo-yellow.svg"
+import NodioMarkdownLogo from "../../../images/svg/nodio-markdown-logo.svg"
 import PageHeaderSection from "../../../components/PageHeaderSection"
 import PageLocation from "../../../components/PageLocation"
 import TitledSidebar from "../../../components/TitledSidebar"
@@ -195,7 +195,7 @@ class NodioMarkdownDocumentation extends React.Component {
             <PageHeaderSection id={"header"}>
                 <ContentResizer>
                     <Flex mt={80} justifyContent={"center"} flexDirection={"row"}>
-                        <StyloLogo />
+                        <NodioMarkdownLogo />
                     </Flex>
                     <Flex justifyContent={"center"} flexDirection={"row"}>
                         <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
