@@ -34,7 +34,7 @@ export default class ShareYourWork extends Component {
                         </Text>
                     </Flex>
                     <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} mt={20} mb={24} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Share your work to the world in HTML, PDF, Word or more...
+                        Share your work to the world in HTML, PDF, Word, plain text or Markdown. Nodio allows you to preview the exported file before saving it.
                     </Text>
                     <Flex flexDirection={"row"} mt={0}>
                         <Box width={1/8} />

@@ -32,7 +32,7 @@ export default class ReadyToTryStylo extends Component {
                     </Text>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={40}>
                         <Text mt={40} fontSize={[ 10, 14, 20 ]} mb={40} fontFamily={"HurmeGeometricSans3-Regular"}>
-                            Stylo is available from the macOS Apple Store at the low introductory price of 9.99$
+                            Stylo is available from the macOS Apple Store at 5.99$
                         </Text>
                     </Flex>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={[80]} mb={[100]}>

@@ -29,15 +29,14 @@ export default class ReadyToTryNodio extends Component {
                     </Flex>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={40}>
                         <Text mt={40} fontSize={[ 10, 14, 20 ]} mb={40} fontFamily={"HurmeGeometricSans3-Regular"}>
-                            {/*Nodio is available from the macOS Apple Store at the low introductory price of 9.99$*/}
-                            Nodio will be available really soon on the Mac Store.
+                            Nodio is available from the macOS Apple Store at the low introductory price of 9.99$
                         </Text>
                     </Flex>
-                    {/*<Flex justifyContent={"center"} flexDirection={"row"} mt={[80]} mb={[100]}>*/}
-                    {/*    <Link style={{boxShadow:"0 0 0"}} href="https://itunes.apple.com/us/app/stylo/id1456230357?mt=8">*/}
-                    {/*        <MacAppStoreDownloadImage />*/}
-                    {/*    </Link>*/}
-                    {/*</Flex>*/}
+                    <Flex justifyContent={"center"} flexDirection={"row"} mt={[80]} mb={[100]}>
+                        <Link style={{boxShadow:"0 0 0"}} href="https://apps.apple.com/ca/app/nodio/id1483730218?mt=12">
+                            <MacAppStoreDownloadImage />
+                        </Link>
+                    </Flex>
                 </SectionContainer>
             </WhitePage>
         )
