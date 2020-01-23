@@ -1,16 +1,24 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import SideArea from "../components/SideArea"
 import ContentArea from "../components/ContentArea"
+import Accordion from "../components/Accordion"
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import StyloLogo from "../images/svg/logo.svg"
+import theme from "../styles/theme.js";
 import PageHeaderSection from "../components/PageHeaderSection"
+import StyloFourColoredScreenshots from "../components/StyloFourColoredScreenshots"
+import StyloNewParadigm from "../components/StyloNewParadigm"
 import StyloImmerseInTheText from "../components/StyloImmerseInTheText"
 import StyloCommonMark from "../components/StyloCommonMark"
 import PageSection from "../components/PageSection"
 import PageLocation from "../components/PageLocation"
+import PageScrollingNumbers from "../components/PageScrollingNumbers"
 import ReadyToTryStylo from "../components/ReadyToTryStylo"
 import StyloRevolutionary from "../components/StyloRevolutionary"
 import StyloUnique from "../components/StyloUnique"
@@ -19,9 +27,6 @@ import StyloInspiring from "../components/StyloInspiring"
 import StyloHighlightable from "../components/StyloHighlightable"
 import StyloEasy from "../components/StyloEasy"
 import StyloOtherFeatures from "../components/StyloOtherFeatures"
-import StyloProject from "../components/StyloProject"
-import StyloAddText from "../components/StyloAddText"
-import StyloShareYourWork from "../components/StyloShareYourWork"
 
 export const HeaderDivider = styled.hr`
   background-color: #D6E5E3;
@@ -114,47 +119,47 @@ const ContentResizer = styled(Flex)`
 
 class StyloIndex extends React.Component {
 
-  render() {
+    render() {
 
-    const { data } = this.props;
-    const styloAboutHtml =  data.styloAbout.edges[0].node.html;
-    const newParadigmImageDesktop = data.newParadigmDesktop.childImageSharp.sizes;
-    const {
-        data: { 
-            bgDesktop: {
-              childImageSharp: { fixed: desktop }
-            },
-            bgTablet: {
-              childImageSharp: { fixed: tablet }
-            },
-            bgMobile: {
-              childImageSharp: { fixed: mobile }
+        const { data } = this.props;
+        const styloAboutHtml =  data.styloAbout.edges[0].node.html;
+        const newParadigmImageDesktop = data.newParadigmDesktop.childImageSharp.sizes;
+        const {
+            data: {
+                bgDesktop: {
+                    childImageSharp: { fixed: desktop }
+                },
+                bgTablet: {
+                    childImageSharp: { fixed: tablet }
+                },
+                bgMobile: {
+                    childImageSharp: { fixed: mobile }
+                }
             }
-        }
-    } = this.props;
+        } = this.props;
 
-    const images = {
-        desktop,
-        tablet,
-        mobile
-    };
+        const images = {
+            desktop,
+            tablet,
+            mobile
+        };
 
-    return (
-        <PageLocation path={["/", "stylo", "about"]}>
-            <SEO
-              title="Stylo App"
-              keywords={[
-                `textually`, 
-                `text editor`, 
-                `stylo`, 
-                `markdown`, 
-                `md`, 
-                `commonmark`, 
-                `css`, 
-                `html`]}
-            />  
-        {/* <MediaQuery query="(min-width: 769px)"> */}
-          {/* <PageScrollingNumbers links={[
+        return (
+            <PageLocation path={["/", "stylo", "about"]}>
+                <SEO
+                    title="Stylo App"
+                    keywords={[
+                        `textually`,
+                        `text editor`,
+                        `stylo`,
+                        `markdown`,
+                        `md`,
+                        `commonmark`,
+                        `css`,
+                        `html`]}
+                />
+                {/* <MediaQuery query="(min-width: 769px)"> */}
+                {/* <PageScrollingNumbers links={[
               "/#intro",
               "/#ying-yang",
               "/#unique",
@@ -167,65 +172,59 @@ class StyloIndex extends React.Component {
               "/#ready-to-try-stylo"
             ]}> */}
 
-            <Flex p={0}
-                    m={0}>
-              <ContentArea>
-              <PageSection id={"intro"} number={1}>
-                <PageHeaderSection>
-                  <ContentResizer>
-                    <Flex mt={80} justifyContent={"center"} flexDirection={"row"}>
-                      <StyloLogo />
-                    </Flex>
-                    <Flex justifyContent={"center"} flexDirection={"row"}>
-                      <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Stylo
-                      </Text>
-                    </Flex>
-                  </ContentResizer>
-                </PageHeaderSection>  
-                </PageSection>
-                <PageSection mt={[20,60,80]} id={"ying-yang"} number={2}>
-                  <StyloRevolutionary />
-                </PageSection>
-                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"unique"} number={3}>
-                  <StyloUnique />
-                </PageSection>
-                  <PageSection mt={[20,60,80]} id={"stylable"} number={4}>
-                      <StyloProject />
-                  </PageSection>
-                  <PageSection mt={[20,60,80]} id={"stylable"} number={5}>
-                      <StyloAddText />
-                  </PageSection>
-                <PageSection mt={[20,60,80]} id={"stylable"} number={6}>
-                  <StyloStylable />
-                </PageSection>
-                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"highlightable"} number={7}>
-                  <StyloHighlightable />
-                </PageSection>
-                <PageSection mt={[20,60,80]} id={"easy"} number={7}>
-                  <StyloEasy />
-                </PageSection>
-                <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"inspiring"} number={8} pb={40}>
-                  <StyloInspiring />
-                </PageSection>
-                  <PageSection mt={[20,60,80]} id={"stylo-share"} number={9}>
-                      <StyloShareYourWork />
-                  </PageSection>
-                <PageSection mt={[20,60,80]} id={"stylo-commonmark"} number={9}>
-                  <StyloCommonMark />
-                </PageSection>
-                <PageSection mt={[20,60,80]} id={"stylo-other-features"} number={10}>
-                  <StyloOtherFeatures />
-                </PageSection>
-                <PageSection bg={"#f6f6f6"}  mt={[20,60,80]} id={"ready-to-try-stylo"} number={11}>
-                  <ReadyToTryStylo />
-                </PageSection>
-              </ContentArea>
-            </Flex>
-          {/* </PageScrollingNumbers> */}
-      </PageLocation>
-    )
-  }
+                <Flex p={0}
+                      m={0}>
+                    <ContentArea>
+                        <PageSection id={"intro"} number={1}>
+                            <PageHeaderSection>
+                                <ContentResizer>
+                                    <Flex mt={80} justifyContent={"center"} flexDirection={"row"}>
+                                        <StyloLogo />
+                                    </Flex>
+                                    <Flex justifyContent={"center"} flexDirection={"row"}>
+                                        <Text fontSize={[ 40, 80, 110 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
+                                            Stylo
+                                        </Text>
+                                    </Flex>
+                                </ContentResizer>
+                            </PageHeaderSection>
+                        </PageSection>
+                        <PageSection mt={[20,60,80]} id={"ying-yang"} number={2}>
+                            <StyloRevolutionary />
+                        </PageSection>
+                        <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"unique"} number={3}>
+                            <StyloUnique />
+                        </PageSection>
+                        <PageSection mt={[20,60,80]} id={"stylable"} number={4}>
+                            <StyloStylable />
+                        </PageSection>
+                        <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"highlightable"} number={5}>
+                            <StyloHighlightable />
+                        </PageSection>
+                        <PageSection mt={[20,60,80]} id={"easy"} number={7}>
+                            <StyloEasy />
+                        </PageSection>
+                        <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"inspiring"} number={6} pb={40}>
+                            <StyloInspiring />
+                        </PageSection>
+                        <PageSection mt={[20,60,80]} id={"stylo-commonmark"} number={8}>
+                            <StyloCommonMark />
+                        </PageSection>
+                        <PageSection bg={"#f6f6f6"} mt={[20,60,80]} id={"stylo-immerse"} number={9}>
+                            <StyloImmerseInTheText />
+                        </PageSection>
+                        <PageSection mt={[20,60,80]} id={"stylo-other-features"} number={10}>
+                            <StyloOtherFeatures />
+                        </PageSection>
+                        <PageSection bg={"#f6f6f6"}  mt={[20,60,80]} id={"ready-to-try-stylo"} number={11}>
+                            <ReadyToTryStylo />
+                        </PageSection>
+                    </ContentArea>
+                </Flex>
+                {/* </PageScrollingNumbers> */}
+            </PageLocation>
+        )
+    }
 }
 export default StyloIndex
 
