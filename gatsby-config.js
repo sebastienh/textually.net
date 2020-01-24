@@ -18,6 +18,34 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/documentation/stylo`,
+        name: `stylo-documentation`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/documentation/markdown`,
+        name: `stylo-documentation-markdown`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/documentation/html`,
+        name: `stylo-documentation-html`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/documentation/css`,
+        name: `stylo-documentation-css`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/en/documentation/stylo`,
         name: `stylo-documentation`,
       },
