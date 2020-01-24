@@ -18,4 +18,4 @@ The button to show the _Text Statistics_ view is represented by the lowercase le
 
 4. the Markdown formatting tools
 
-The various buttons of this section provide access to quick Markdown formatting functions. See [Markdown Editor](#markdownEditor) section for a complete description.
+The various buttons of this section provide access to quick Markdown formatting functions. See [Markdown Formatting](../markdown-ui/#markdownFormatting) section for a complete description.

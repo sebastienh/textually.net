@@ -1,10 +1,8 @@
 
 
 # Editor 
-
-The _Editors_ panel displays all the selected files from the corresponding [files outline](#filesOutline). Each editor displays a title bar, the text and a panel with a plus button. 
-
-Following is a description brief description for each. 
+ 
+The _Editors_ panel displays all the selected files from the corresponding [files outline](#filesOutline). At the top of the _Editors_ panel, the _document title bar_ displays the name of the document along with _back_ and _forward_ buttons to move back and forward into the history. Each editor displays a title bar, the text and a panel with a plus button.  
 
 ## Title bar  
  

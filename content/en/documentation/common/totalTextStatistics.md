@@ -4,7 +4,7 @@
 Total text statistics contain the following indicators: 
 
 - number of characters 
-- number of words 
+- number of words  
 - number of sentences 
 - number of paragraphs 
 - number of pages 

@@ -34,10 +34,6 @@
 
 - Show export window: `⌘R`
 
-### Text Statistics
-
-- Enable/Disable Session Tool: `⇧⌘T`
-
 ## Mardown Editing  
 
 - Heading 1: `⌘1`

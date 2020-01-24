@@ -2,7 +2,9 @@
 # Nodio: Audio and Markdown 
 
 
-Nodio is a text editor aiming to simplify the management of multiple text documents in contexts where they are based on or associated with recorded audio. Each file in Nodio may have any number of recorded audio files associated with it. Complete control of the audio recording is given through the keyboard allowing live control of audio recording and playback with just some keystrokes. 
+Nodio is a text editor aiming to simplify the management of multiple text documents in contexts where they are based on or associated with recorded audio. Nodio is based on Stylo so most of what is explained about Stylo that is not related the _Style Editor_ is valid in Nodio.
+
+Each file in Nodio may have any number of recorded audio files associated with it. Complete control of the audio recording is given through the keyboard allowing live control of audio recording and playback with just some keystrokes. 
 
 ## Audio 
 

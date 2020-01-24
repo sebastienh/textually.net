@@ -1,5 +1,5 @@
 
-# Print selected text files (`⌘P`)
+# Print selected text files (`⌘P`) 
 
 When printing, all the selected files will be printed. Basically, all the files displayed in the _Editors_ panels. 
 
@@ -9,6 +9,6 @@ Douglas Adams
 </funny-quote>
 
 To print a document:
-
+  
 - From the menu, choose `File`→`Print...`
 - With the keyboard shortcut: `⌘P`

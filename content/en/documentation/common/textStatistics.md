@@ -8,3 +8,5 @@ The text statistics popup shows the total text statistics and the session statis
 - [Enable/Disable Session Tools](#enableDisableSessionTools) 
 - [Total Text Statistics](#totalTextStatistics)
 - [Session](#session)
+
+_Note_: Sessions are currently not supported for Nodio application. It is a planned feature that will become available soon.
