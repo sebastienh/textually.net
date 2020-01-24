@@ -135,7 +135,6 @@ class NodioDocumentation extends React.Component {
         const showHideStylePicker = data.showHideStylePicker.edges[0].node;
         const showHideStylesList = data.showHideStylesList.edges[0].node;
         const showHideTools = data.showHideTools.edges[0].node;
-        const sidebar = data.sidebar.edges[0].node;
         const startRestartSession = data.startRestartSession.edges[0].node;
         const strikethrough = data.strikethrough.edges[0].node;
         const styleEditor = data.styleEditor.edges[0].node;
@@ -149,7 +148,7 @@ class NodioDocumentation extends React.Component {
         const textAttributesAndHighlight = data.textAttributesAndHighlight.edges[0].node;
         const filesOutline = data.filesOutline.edges[0].node;
         const editorsPanel = data.editorsPanel.edges[0].node;
-        const nodioEditorSidebar = data.nodioEditorSidebar.edges[0].node;
+        const editorToolsSidebar = data.editorToolsSidebar.edges[0].node;
         const audioTools = data.audioTools.edges[0].node;
         const startStopRecording = data.startStopRecording.edges[0].node;
         const startPausePlaying = data.startPausePlaying.edges[0].node;
@@ -259,7 +258,7 @@ class NodioDocumentation extends React.Component {
                                     <MarkdownContent post={editorsPanel} />
                                 </Box>
                                 <Box>
-                                    <MarkdownContent post={nodioEditorSidebar} />
+                                    <MarkdownContent post={editorToolsSidebar} />
                                 </Box>
                                 <Box>
                                     <MarkdownContent post={audioTools} />
@@ -299,7 +298,7 @@ class NodioDocumentation extends React.Component {
                             </TitledSection>
                             <TitledSection id={"sidebar"} number={4}>
                                 <Box number={20}>
-                                    <MarkdownContent post={sidebar}/>
+                                    <MarkdownContent post={editorToolsSidebar}/>
                                 </Box>
                                 <Box id={"revealHideSidebar"} number={21}>
                                     <MarkdownContent post={revealHideSidebar}/>
@@ -416,11 +415,11 @@ query {
       }
     }
   }
-  nodioEditorSidebar: allMarkdownRemark(
+  editorToolsSidebar: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 
-        slug: { eq: "/nodioEditorSidebar/" } 
+        slug: { eq: "/editorToolsSidebar/" } 
       } 
     }) {
     edges {
