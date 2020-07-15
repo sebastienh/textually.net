@@ -5,29 +5,37 @@ type: news-entry
 path: "/news/nodio-0.8.0"
 ---
 
-Nodio 0.8.0 is ready! 
+Nodio 0.8.0 is now ready for download in the Mac App Store! 
  
-New in this version: tags. Tags are textual attributes that can be added to any Markdown element e.g.
+New feature in this version: tags. Tags are textual attributes that can be added to any Markdown element e.g.
 
+<pre><code>
 {.tag}
 This text is tagged. 
+</code></pre>
 
 They come in three forms: 
 
-1. class: 
+- class: 
 
+<pre><code>
 {.class}
 This text has a class attribute.
+</code></pre>
 
-2. id:  
+- id:  
 
+<pre><code>
 {#id}
 This text has an id attribute.
+</code></pre>
 
-3. name and value: 
+- name and value: 
 
+<pre><code>
 {name="john"}
 This text has a name-value attribute.
+</code></pre>
 
 The tag panel allows to highlight selected tags in text files and to navigate through them. This makes it easy to visually recognize tagged text. They can also be filtered to allow to see only the ones you are interested in. This feature makes it easier to find the information you need in the texts in a document.
 
