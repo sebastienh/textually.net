@@ -39,7 +39,7 @@ export default class ShareYourWork extends Component {
                     <Flex flexDirection={"row"} mt={0}>
                         <Box width={1/8} />
                         <Box width={6/8}>
-                            <Image filename="nodio-share.png" />
+                            <Image filename="nodio-share-2.png" />
                         </Box>
                         <Box width={1/8} />
                     </Flex>

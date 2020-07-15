@@ -35,7 +35,7 @@ export default class NodioTags extends Component {
                     </Flex>
                     <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} mt={20} mb={24} fontFamily={"HurmeGeometricSans3-Regular"}>
                         Tags are a great way to make information easy to find. Nodio makes it even easier with tags highlight and navigation. They are editors pane independent,
-                        are available in three forms that follows HTML attributes: class, id and name-value; they can be filtered and navigated.
+                        are available in three forms that follows HTML attributes: class, id and name-value...
                     </Text>
                     <Flex flexDirection={"row"} mt={0}>
                         <Box width={1/8} />

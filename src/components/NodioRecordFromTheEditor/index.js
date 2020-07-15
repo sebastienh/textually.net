@@ -1,10 +1,9 @@
-
 import React, { Component } from 'react'
 import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import SectionContainer from '../SectionContainer';
-import video from '../../videos/record-from-the-editor.mp4';
+import Image from "../Image"
 
 const WhitePage = styled.section`
   background-color: #fff;
@@ -19,7 +18,6 @@ const Video = styled.video`
     box-shadow: 0 4px 8px 0;
 `
 
-
 export default class NodioRecordFromTheEditor extends Component {
 
     render() {
@@ -29,19 +27,17 @@ export default class NodioRecordFromTheEditor extends Component {
                 <SectionContainer>
                     <Flex justifyContent={"center"} flexDirection={"row"}>
                         <Text fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                            Add audio recordings.
+                            Audio recordings.
                         </Text>
                     </Flex>
                     <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} mt={20} mb={24} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Record from the editor using the <em>record</em> button or use the keyboard shortcuts to access all audio functionality directly from the editor.
+                        Record from the editor using the <em>record</em> button or use the keyboard shortcuts to access all audio functionality.
+                        Each document keeps its own audio recordings.
                     </Text>
                     <Flex flexDirection={"row"} mt={0}>
                         <Box width={1/8} />
-                        <Box border={"none"} width={6/8}>
-                            <video width="100%" height="100%"  preload='auto' loop autoPlay muted>
-                                <source src={video} type="video/mp4" />
-                                Your browser does not support HTML5 video.
-                            </video>
+                        <Box width={6/8}>
+                            <Image filename="raspberry-light-audio.png" />
                         </Box>
                         <Box width={1/8} />
                     </Flex>

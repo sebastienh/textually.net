@@ -37,6 +37,11 @@ export default class ReadyToTryNodio extends Component {
                             <MacAppStoreDownloadImage />
                         </Link>
                     </Flex>
+                    <Flex justifyContent={"center"} flexDirection={"row"} mt={30}>
+                        <Flex justifyContent={"left"} flexDirection={"row"} mt={20}>
+                                All source texts from Wikipedia.
+                        </Flex>
+                    </Flex>
                 </SectionContainer>
             </WhitePage>
         )
