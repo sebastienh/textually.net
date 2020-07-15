@@ -44,6 +44,7 @@
 	- [Table](markdown/mdTable.html)
 	- [Reference](markdown/mdReference.html)
 	- [Image](markdown/mdImage.html)
+	- [Attributes](markdown/mdAttributes.html))
 
 
 4. More 

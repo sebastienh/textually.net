@@ -110,92 +110,99 @@ export default class NodioDocumentationMarkdownSideMenu extends Component {
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#specific-elements'
+                        href='/nodio/documentation/markdown#specificElements'
                         number={2}
                         p={2}>
                         Markdown Specific Elements
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#headers'
+                        href='/nodio/documentation/markdown#mdHeaders'
                         number={3}
                         p={2}>
                         Headers
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#horizontal-bar'
+                        href='/nodio/documentation/markdown#mdHorizontalBar'
                         number={4}
                         p={2}>
                         Horizontal Bar
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#emphasis'
+                        href='/nodio/documentation/markdown#mdEmphasis'
                         number={5}
                         p={2}>
                         Emphasis
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#strikethrough'
+                        href='/nodio/documentation/markdown#mdStrikethrough'
                         number={6}
                         p={2}>
                         Strikethrough
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#blockquote'
+                        href='/nodio/documentation/markdown#mdBlockquote'
                         number={7}
                         p={2}>
                         Blockquote
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#lists'
+                        href='/nodio/documentation/markdown#mdLists'
                         number={8}
                         p={2}>
                         Lists
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#code'
+                        href='/nodio/documentation/markdown#mdCode'
                         number={9}
                         p={2}>
                         Code
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#table'
+                        href='/nodio/documentation/markdown#mdTable'
                         number={10}
                         p={2}>
                         Table
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#reference'
+                        href='/nodio/documentation/markdown#mdReference'
                         number={11}
                         p={2}>
                         Reference
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#link'
+                        href='/nodio/documentation/markdown#mdLink'
                         number={12}
                         p={2}>
                         Link
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#image'
+                        href='/nodio/documentation/markdown#mdImage'
                         number={13}
                         p={2}>
                         Image
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "markdown"]}
-                        href='/nodio/documentation/markdown#ua-stylesheet'
+                        href='/nodio/documentation/markdown#mdAttributes'
                         number={14}
+                        p={2}>
+                        Attributes
+                    </MainLink>
+                    <MainLink
+                        path={["/", "nodio", "documentation", "markdown"]}
+                        href='/nodio/documentation/markdown#markdownUaStylesheet'
+                        number={15}
                         p={2}>
                         Markdown UA stylesheet
                     </MainLink>
