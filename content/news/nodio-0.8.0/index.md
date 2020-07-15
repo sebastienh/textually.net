@@ -19,7 +19,7 @@ They come in three forms:
 {.class}
 This text has a class attribute.
 
-2. id: 
+2. id:  
 
 {#id}
 This text has an id attribute.

@@ -22,7 +22,7 @@ export default class NodioOutline extends Component {
                     <Flex flexDirection={"row"} mt={0}>
                         <Box width={1/8} />
                         <Box width={6/8}>
-                            <Image filename="nodio-outline.png" />
+                            <Image filename="nodio-outline-2.png" />
                         </Box>
                         <Box width={1/8} />
                     </Flex>

@@ -24,7 +24,8 @@ export default class NodioIntro extends Component {
 
             <WhitePage>
                 <SectionContainer>
-                    <Flex flexDirection={"row"} mt={30}>
+
+                    <Flex justifyContent={"center"} flexDirection={"row"} mt={30}>
                         <Text fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
                             Markdown meets audio.
                         </Text>
