@@ -29,7 +29,7 @@ export default class ReadyToTryNodio extends Component {
                     </Flex>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={40}>
                         <Text mt={40} fontSize={[ 10, 14, 20 ]} mb={40} fontFamily={"HurmeGeometricSans3-Regular"}>
-                            Nodio is available from the macOS Apple Store at the low introductory price of 9.99$
+                            Nodio is available for free from the macOS Apple Store. Go get it now while it last...
                         </Text>
                     </Flex>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={[80]} mb={[100]}>

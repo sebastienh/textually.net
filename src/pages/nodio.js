@@ -13,7 +13,11 @@ import ReadyToTryNodio from "../components/ReadyToTryNodio"
 import NodioIntro from "../components/NodioIntro"
 import NodioOtherFeatures from "../components/NodioOtherFeatures"
 import NodioOutline from "../components/NodioOutline"
+import NodioTags from "../components/NodioTags"
+import NodioFilteredTags from "../components/NodioFilteredTags"
+import NodioNavigatedTags from "../components/NodioNavigatedTags"
 import NodioAddText from "../components/NodioAddText"
+import NodioEditorsPane from "../components/NodioEditorsPane"
 import NodioRecordFromTheEditor from "../components/NodioRecordFromTheEditor"
 import StyloCommonMark from "../components/StyloCommonMark";
 import ShareYourWork from "../components/ShareYourWork"
@@ -101,22 +105,31 @@ export default class NodioIndex extends React.Component {
                         <PageSection mt={[20,60,80]} id={"nodio-outline"} number={3}>
                             <NodioOutline />
                         </PageSection>
-                        <PageSection mt={[20,60,80]} id={"nodio-add-texts-inside-editor"} number={4}>
-                            <NodioAddText />
+                        <PageSection mt={[20,60,80]} id={"nodio-editors-pane"} number={4}>
+                            <NodioEditorsPane />
                         </PageSection>
-                        <PageSection mt={[20,60,80]} id={"nodio-record-inside-editor"} number={5}>
+                        <PageSection mt={[20,60,80]} id={"nodio-tags"} number={5}>
+                            <NodioTags />
+                        </PageSection>
+                        <PageSection mt={[20,60,80]} id={"nodio-filtered-tags"} number={6}>
+                            <NodioFilteredTags />
+                        </PageSection>
+                        <PageSection mt={[20,60,80]} id={"nodio-navigated-tags"} number={7}>
+                            <NodioNavigatedTags />
+                        </PageSection>
+                        <PageSection mt={[20,60,80]} id={"nodio-record-inside-editor"} number={8}>
                             <NodioRecordFromTheEditor />
                         </PageSection>
-                        <PageSection mt={[20,60,80]} id={"nodio-share-your-work"} number={5}>
+                        <PageSection mt={[20,60,80]} id={"nodio-share-your-work"} number={9}>
                             <ShareYourWork />
                         </PageSection>
-                        <PageSection mt={[20,60,80]} id={"stylo-commonmark"} number={6}>
+                        <PageSection mt={[20,60,80]} id={"stylo-commonmark"} number={10}>
                             <StyloCommonMark />
                         </PageSection>
-                        <PageSection mt={[20,60,80]} id={"nodio-other-features"} number={10}>
+                        <PageSection mt={[20,60,80]} id={"nodio-other-features"} number={11}>
                             <NodioOtherFeatures />
                         </PageSection>
-                        <PageSection bg={"#f6f6f6"}  mt={[20,60,80]} id={"ready-to-try-stylo"} number={11}>
+                        <PageSection bg={"#f6f6f6"}  mt={[20,60,80]} id={"ready-to-try-stylo"} number={12}>
                             <ReadyToTryNodio />
                         </PageSection>
                     </ContentArea>

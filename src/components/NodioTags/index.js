@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Flex, Box } from '@rebass/grid'
 import { Text } from 'rebass'
 import SectionContainer from '../SectionContainer';
-import video from '../../videos/add-new-text-2.mp4'
+import Image from "../Image"
 
 const WhitePage = styled.section`
   background-color: #fff;
@@ -21,7 +21,7 @@ const Video = styled.video`
 `
 
 
-export default class NodioAddText extends Component {
+export default class NodioTags extends Component {
 
     render() {
         return (
@@ -30,20 +30,17 @@ export default class NodioAddText extends Component {
                 <SectionContainer>
                     <Flex justifyContent={"center"} flexDirection={"row"}>
                         <Text fontSize={[ 40, 60, 80 ]} fontFamily={"HurmeGeometricSans3-Regular"}>
-                            Add files.
+                            Tags.
                         </Text>
                     </Flex>
                     <Text color={"#848689"} fontSize={[ 12, 16, 20 ]} mt={20} mb={24} fontFamily={"HurmeGeometricSans3-Regular"}>
-                        Add new text files directly from the editor using the <em>plus</em> button at the top of each editors pane.
-                        They will be automatically added to the text selection and ready to be edited.
+                        Tags are a great way to make information easy to find. Nodio makes it even easier with tags highlight and navigation. They are editors pane independent,
+                        are available in three forms that follows HTML attributes: class, id and name-value; they can be filtered and navigated.
                     </Text>
                     <Flex flexDirection={"row"} mt={0}>
                         <Box width={1/8} />
-                        <Box border={"none"} width={6/8}>
-                            <video width="100%" height="100%"  preload='auto' loop autoPlay muted>
-                                <source src={video} type="video/mp4" />
-                                Your browser does not support HTML5 video.
-                            </video>
+                        <Box width={6/8}>
+                            <Image filename="novel-dark-tags.png" />
                         </Box>
                         <Box width={1/8} />
                     </Flex>
