@@ -39,7 +39,7 @@ export default class ReadyToTryNodio extends Component {
                     </Flex>
                     <Flex justifyContent={"center"} flexDirection={"row"} mt={30}>
                         <Flex justifyContent={"left"} flexDirection={"row"} mt={20}>
-                                All source texts from Wikipedia.
+                                All source texts from Wikipedia. A big thanks to its community!
                         </Flex>
                     </Flex>
                 </SectionContainer>

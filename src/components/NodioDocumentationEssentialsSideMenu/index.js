@@ -110,31 +110,66 @@ export default class NodioDocumentationEssentialsSideMenu extends Component {
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "essentials"]}
-                        href='/nodio/documentation/essentials#usingNodio'
+                        href='/nodio/documentation/essentials#projectToolbar'
                         number={2}
                         p={2}>
-                        Files Outline
+                        Project Toolbar
+                    </MainLink>
+                    <MainLink
+                        path={["/", "nodio", "documentation", "essentials"]}
+                        href='/nodio/documentation/essentials#filesOutlinePanel'
+                        number={3}
+                        p={2}>
+                        Files Outline Panel
+                    </MainLink>
+                    <MainLink
+                        path={["/", "nodio", "documentation", "essentials"]}
+                        href='/nodio/documentation/essentials#editorsPanel'
+                        number={4}
+                        p={2}>
+                        Editors Panel
+                    </MainLink>
+                    <MainLink
+                        path={["/", "nodio", "documentation", "essentials"]}
+                        href='/nodio/documentation/essentials#tags'
+                        number={5}
+                        p={2}>
+                        Tags
+                    </MainLink>
+                    <MainLink
+                        path={["/", "nodio", "documentation", "essentials"]}
+                        href='/nodio/documentation/essentials#audio'
+                        number={6}
+                        p={2}>
+                        Audio
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "essentials"]}
                         href='/nodio/documentation/essentials#textStatistics'
-                        number={3}
+                        number={7}
                         p={2}>
                         Text Statistics
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "essentials"]}
                         href='/nodio/documentation/essentials#sidebar'
-                        number={4}
+                        number={8}
                         p={2}>
                         Sidebar
                     </MainLink>
                     <MainLink
                         path={["/", "nodio", "documentation", "essentials"]}
                         href='/nodio/documentation/essentials#markdownFormatting'
-                        number={5}
+                        number={9}
                         p={2}>
                         Markdown Formatting
+                    </MainLink>
+                    <MainLink
+                        path={["/", "nodio", "documentation", "essentials"]}
+                        href='/nodio/documentation/essentials#keyboardShortcuts'
+                        number={10}
+                        p={2}>
+                        Keyboard Shortcuts
                     </MainLink>
                 </LinksContainer>
             </MenuContainer>

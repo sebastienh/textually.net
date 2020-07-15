@@ -10,7 +10,7 @@ Each _Editors Pane_ has its own title bar located at the top. It allows to:
   - close the current _editors pane_  using the left _Close Editors Pane_ button that represented by a `x`. 
   - navigate in the navigation history using the _Go Back_ and _Go Forward_ buttons each represented by an left and right arrow respectively.
   - change its name using the _Editors Pane Title_ text field name which is editable.
-  - add a new [_File Editor_](#fileEditor) under the currently edited one using the _Add Editor_ button without needing to access the _Project Tool_ left sidebar's [Files Outline View](../common/#filesOutlineView). The newly created text file will automatically be inserted in the current _Editors Pane_ associated files outline selection. It will also be located directly under the _Add Editor_ button's panel's associated file in the same directory. 
+  - add a new [_File Editor_](#fileEditor) under the currently edited one using the _Add Editor_ button without needing to access the _Project Tool_ left sidebar's [Files Outline View](#filesOutlineView). The newly created text file will automatically be inserted in the current _Editors Pane_ associated files outline selection. It will also be located directly under the _Add Editor_ button's panel's associated file in the same directory. 
 - add a new _Editors Pane_ after the current one using the right _Add Editors Pane_ button.
 
 

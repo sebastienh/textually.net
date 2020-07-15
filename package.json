@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "Textually Inc.",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Textually Inc. website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Sébastien Hamel <sebastien.hamel@textually.net>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://www.textually.net/support"
   },
   "dependencies": {
     "@rebass/grid": "^6.1.0",
@@ -61,9 +61,9 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://www.textually.net",
   "keywords": [
-    "gatsby"
+    "textually, nodio, stylo, markdown"
   ],
   "license": "MIT",
   "main": "n/a",

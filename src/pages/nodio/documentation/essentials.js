@@ -146,8 +146,13 @@ class NodioDocumentation extends React.Component {
         const unorderedList = data.unorderedList.edges[0].node;
         const userInterface = data.userInterface.edges[0].node;
         const textAttributesAndHighlight = data.textAttributesAndHighlight.edges[0].node;
-        const filesOutline = data.filesOutline.edges[0].node;
+        const filesOutlinePanel = data.filesOutlinePanel.edges[0].node;
+        const filesOutlinesTitleBar = data.filesOutlinesTitleBar.edges[0].node;
+        const filesOutlineView = data.filesOutlineView.edges[0].node;
         const editorsPanel = data.editorsPanel.edges[0].node;
+        const fileEditor = data.fileEditor.edges[0].node;
+        const tagsTools = data.tagsTools.edges[0].node;
+        const projectToolbar = data.projectToolbar.edges[0].node;
         const editorToolsSidebar = data.editorToolsSidebar.edges[0].node;
         const audioTools = data.audioTools.edges[0].node;
         const startStopRecording = data.startStopRecording.edges[0].node;
@@ -193,8 +198,24 @@ class NodioDocumentation extends React.Component {
                         title: "Essentials"
                     },
                     {
-                        href: "#usingNodio",
-                        title: "Nodio Fundamentals"
+                        href: "#projectToolbar",
+                        title: "Project Toolbar"
+                    },
+                    {
+                        href: "#filesOutlinePanel",
+                        title: "Files Outline Panel"
+                    },
+                    {
+                        href: "#editorsPanel",
+                        title: "Editors Panel"
+                    },
+                    {
+                        href: "#tags",
+                        title: "Tags"
+                    },
+                    {
+                        href: "#audio",
+                        title: "Audio"
                     },
                     {
                         href: "#textStatistics",
@@ -250,17 +271,40 @@ class NodioDocumentation extends React.Component {
                                     <MarkdownContent post={printDocument}/>
                                 </Box>
                             </TitledSection>
-                            <TitledSection id={"usingNodio"} number={2}>
-                                <Box>
-                                    <MarkdownContent post={filesOutline} />
+                            <TitledSection id={"projectToolbar"} number={2}>
+                                <Box id={"projectToolbar"}>
+                                    <MarkdownContent post={projectToolbar} />
                                 </Box>
+                            </TitledSection>
+                            <TitledSection id={"filesOutlinePanel"} number={3}>
+                                <Box>
+                                    <MarkdownContent post={filesOutlinePanel} />
+                                </Box>
+                                <Box id={"filesOutlinesTitleBar"}>
+                                    <MarkdownContent post={filesOutlinesTitleBar} />
+                                </Box>
+                                <Box id={"filesOutlineView"}>
+                                    <MarkdownContent post={filesOutlineView} />
+                                </Box>
+                            </TitledSection>
+                            <TitledSection id={"editorsPanel"} number={4}>
                                 <Box>
                                     <MarkdownContent post={editorsPanel} />
                                 </Box>
-                                <Box>
+                                <Box id={"fileEditor"}>
+                                    <MarkdownContent post={fileEditor} />
+                                </Box>
+                                <Box id={"editorToolsSidebar"}>
                                     <MarkdownContent post={editorToolsSidebar} />
                                 </Box>
-                                <Box>
+                            </TitledSection>
+                            <TitledSection id={"tags"} number={5}>
+                                <Box id={"tagsTools"}>
+                                    <MarkdownContent post={tagsTools} />
+                                </Box>
+                            </TitledSection>
+                            <TitledSection id={"audio"} number={6}>
+                                <Box id={"audioTools"}>
                                     <MarkdownContent post={audioTools} />
                                 </Box>
                                 <Box>
@@ -276,7 +320,7 @@ class NodioDocumentation extends React.Component {
                                     <MarkdownContent post={renameRecording} />
                                 </Box>
                             </TitledSection>
-                            <TitledSection id={"textStatistics"} number={3}>
+                            <TitledSection id={"textStatistics"} number={7}>
                                 <Box number={14}>
                                     <MarkdownContent post={textStatistics}/>
                                 </Box>
@@ -296,7 +340,7 @@ class NodioDocumentation extends React.Component {
                                     <MarkdownContent post={enableDisableSessionTools}/>
                                 </Box>
                             </TitledSection>
-                            <TitledSection id={"sidebar"} number={4}>
+                            <TitledSection id={"sidebar"} number={8}>
                                 <Box number={20}>
                                     <MarkdownContent post={editorToolsSidebar}/>
                                 </Box>
@@ -316,7 +360,7 @@ class NodioDocumentation extends React.Component {
                                     <MarkdownContent post={showHideStylePicker}/>
                                 </Box>
                             </TitledSection>
-                            <TitledSection id={"markdownFormatting"} number={5}>
+                            <TitledSection id={"markdownFormatting"} number={9}>
                                 <Box number={37}>
                                     <MarkdownContent post={markdownFormatting}/>
                                 </Box>
@@ -360,7 +404,7 @@ class NodioDocumentation extends React.Component {
                                     <MarkdownContent post={link}/>
                                 </Box>
                             </TitledSection>
-                            <TitledSection id={"keyboardShortcuts"} number={6}>
+                            <TitledSection id={"keyboardShortcuts"} number={10}>
                                 <Box number={53}>
                                     <MarkdownContent post={keyboardShortcuts}/>
                                 </Box>
@@ -389,11 +433,12 @@ query {
       }
     }
   }
-  filesOutline: allMarkdownRemark(
+  
+  projectToolbar: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 
-        slug: { eq: "/filesOutline/" } 
+        slug: { eq: "/projectToolbar/" } 
       } 
     }) {
     edges {
@@ -402,11 +447,68 @@ query {
       }
     }
   }
+  
+  filesOutlinePanel: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/filesOutlinePanel/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+  
+  filesOutlinesTitleBar: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/filesOutlinesTitleBar/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+  
+  tagsTools: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/tagsTools/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+  
+  filesOutlineView: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/filesOutlineView/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+  
   editorsPanel: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 
-        slug: { eq: "/nodioEditorsPanel/" } 
+        slug: { eq: "/editorsPanel/" } 
       } 
     }) {
     edges {
@@ -415,6 +517,21 @@ query {
       }
     }
   }
+  
+  fileEditor: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/fileEditor/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+  
   editorToolsSidebar: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 

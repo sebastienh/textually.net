@@ -9,6 +9,8 @@
 - Word
 - PDF
 
+The export function will export all selected files shown in the currently selected [Editors Pane](#editorsPanel). So any combination is possible as long as it can be shown in the [Editors Pane](#editorsPanel). 
+
 To export the selected files:
 
 - From the menu, choose `File`→`Preview...`. The preview window will appear.

@@ -1,21 +1,18 @@
 
-{.tagstools}
 # Tags Tools
 
 ## Tag Tool panel
 
-The _Tags Tools_ panel shows all the controls to manage files tags in Stylo/Nodio. A tag is a representation of a [Markdown attribute](../markdown#mdAttributes) in the form of a token. Markdown attributes are defined in the source text files using the syntax defined in the documentation for [Markdown attributes](../markdown#mdAttributes).  
+The _Tags Tools_ panel shows all the controls to manage files tags in Stylo/Nodio. A tag is a representation of a [Markdown attribute](/nodio/documentation/markdown#mdAttributes) in the form of a token. Markdown attributes are defined in the source text files using the syntax defined in the documentation for [Markdown attributes](/nodio/documentation/markdown#mdAttributes).  
 
 The _Tags Tools_ panel shows all the attributes values defined in the currently selected _Editors Pane_. 
 
-The tags are selectable and when some tags are selected the _editors pane_ will change the display mode to _tags highlight mode_. In this mode, the text parts attributed with the [Markdown attributes](../markdown#mdAttributes) represented by the selected tags will become highlighted making them easily identifiable from their context. The visual form that the highlight might take is style dependant.     
+The tags are selectable and when some tags are selected the _editors pane_ will change the display mode to _tags highlight mode_. In this mode, the text parts attributed with the [Markdown attributes](/nodio/documentation/markdown#mdAttributes) represented by the selected tags will become highlighted making them easily identifiable from their context. The visual form that the highlight might take is style dependant.     
 
 The _Tags Tools_ also allow to navigate through the selected tags using the _Tags Tools's Tools Bar_'s _Previous_ and _Next_ buttons temporarly higlighthing the text attributed with the target tag revealing it among the text attributed with the other selected tags.
 
-{#attributes-display-mode}
-### Display modes
-
-[Markdown attributes](../markdown#mdAttributes) can be displayed two ways: in _Values_ and in _Attributes_ mode. 
+### Display modes   
+[Markdown attributes](/nodio/documentation/markdown#mdAttributes) can be displayed two ways: in _Values_ and in _Attributes_ mode. 
 
 #### Attributes 
 
@@ -121,7 +118,7 @@ At the left, it displays the _filter active_ indicator which takes the system cu
 
 In the center, there is the _tags filter text field_ which allows to enter a string that will be used to filter the tags values and only show the ones that _contains_ the specified filtering string. 
 
-The _Attribute Display Mode Selector_ button is located at the right of the _Tags Tool's Bottom Bar_. It allows to select the [attributes display mode](#attributes-display-mode): _Values_ or _Attributes_.
+The _Attribute Display Mode Selector_ button is located at the right of the _Tags Tool's Bottom Bar_. It allows to select the [attributes display mode](#attributesDisplayMode): _Values_ or _Attributes_.
 
 ### Actions
 

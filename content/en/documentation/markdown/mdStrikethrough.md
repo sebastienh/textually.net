@@ -1,7 +1,7 @@
 
 # Strikethrough  
 
-The _strikethrough_ implementation in Stylo is based on the GitHub Flavored Markdown(GFM), see [strikethrough extension](https://github.github.com/gfm/#strikethrough-extension-) for more information. 
+The _strikethrough_ implementation in Stylo/Nodio is based on the GitHub Flavored Markdown(GFM), see [strikethrough extension](https://github.github.com/gfm/#strikethrough-extension-) for more information. 
 
 ## Syntax
 

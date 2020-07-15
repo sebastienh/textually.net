@@ -1,10 +1,19 @@
 
+      
 
-
-
+ 
 # Keyboard shortcuts
 
 ## Actions 
+
+### Editors Panes 
+
+- Add a new _Editors Pane: `⇧⌘n`
+- Close the current _Editors Pane_: `⇧⌘w`
+- Add a new file in current _Editors Pane_: `⌥⇧⌘T`
+
+- Go forward in navigation history: `⌃⌥→` 
+- Go back in navigation history: `⌃⌥←` 
 
 ### Outline 
 
@@ -29,6 +38,13 @@
 - Play/Pause current recording: `⌃⌘S` 
 - Advance playing: `⌃⌘→` 
 - Back playing: `⌃⌘←` 
+
+### Tags
+
+- Select All: `⌃⌘A`
+- Unselect All: `⌃⌘U`
+- Go to Previous: `⌃⌘↑` 
+- Go to Next: `⌃⌘↓`
 
 ### Export 
 

@@ -120,6 +120,7 @@ class NodioMarkdownDocumentation extends React.Component {
     const mdReference = data.mdReference.edges[0].node;
     const mdStrikethrough = data.mdStrikethrough.edges[0].node;
     const mdTable = data.mdTable.edges[0].node;
+    const mdAttributes = data.mdAttributes.edges[0].node;
 
     return (
         <PageLocation path={["/", "nodio", "documentation", "markdown"]}>
@@ -186,6 +187,10 @@ class NodioMarkdownDocumentation extends React.Component {
                 {
                     href: "#mdImage",
                     title: "Image"
+                },
+                {
+                    href: "#mdAttributes",
+                    title: "Markdown Attributes"
                 },
                 {
                     href: "#markdownUaStylesheet",
@@ -271,7 +276,12 @@ class NodioMarkdownDocumentation extends React.Component {
                             <MarkdownContent post={mdImage}/>
                         </Box>
                     </TitledSection>
-                    <TitledSection id={"markdownUaStylesheet"} number={14}>
+                    <TitledSection id={"mdAttributes"} number={14}>
+                        <Box>
+                            <MarkdownContent post={mdAttributes}/>
+                        </Box>
+                    </TitledSection>
+                    <TitledSection id={"markdownUaStylesheet"} number={15}>
                         <Box>
                             <MarkdownContent post={markdownUaStylesheet}/>
                         </Box>
@@ -482,5 +492,20 @@ query {
       }
     }
   }
+  
+  mdAttributes: allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }, 
+    filter: { 
+      fields: { 
+        slug: { eq: "/mdAttributes/" } 
+      } 
+    }) {
+    edges {
+      node {
+        htmlAst
+      }
+    }
+  }
+  
 }
 `;

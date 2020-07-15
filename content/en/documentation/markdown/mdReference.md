@@ -31,7 +31,7 @@ Markdown:
 [textually]: www.textually.net "Index website"
 ```
 
-Note: A link or an image using a non existing reference label, will be treated as text by Stylo. 
+Note: A link or an image using a non existing reference label, will be treated as text by Stylo/Nodio. 
 
 
 ## Pseudo-elements  

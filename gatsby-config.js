@@ -46,6 +46,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/en/documentation/tags`,
+        name: `stylo-documentation-tags`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/en/documentation/stylo`,
         name: `stylo-documentation`,
       },
