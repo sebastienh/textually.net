@@ -155,7 +155,6 @@ class StyloDocumentation extends React.Component {
     const totalTextStatistics = data.totalTextStatistics.edges[0].node;
     const unorderedList = data.unorderedList.edges[0].node;
     const textAttributesAndHighlight = data.textAttributesAndHighlight.edges[0].node;
-    const filesOutline = data.filesOutline.edges[0].node;
     const editorsPanel = data.editorsPanel.edges[0].node;
 
     const {
@@ -272,9 +271,6 @@ class StyloDocumentation extends React.Component {
                         </Box>
                     </TitledSection>
                     <TitledSection id={"usingStylo"} number={2}>
-                        <Box>
-                            <MarkdownContent post={filesOutline} />
-                        </Box>
                         <Box>
                             <MarkdownContent post={editorsPanel} />
                         </Box>
@@ -442,19 +438,7 @@ query {
       }
     }
   }
-  filesOutline: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { 
-      fields: { 
-        slug: { eq: "/filesOutline/" } 
-      } 
-    }) {
-    edges {
-      node {
-        htmlAst
-      }
-    }
-  }
+
   editorsPanel: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
