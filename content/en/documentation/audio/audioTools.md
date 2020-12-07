@@ -1,7 +1,7 @@
 
 # Audio Tools
 
-The _Audio Tools_ panel shows all the controls to control audio recording and playback in Nodio. 
+The _Audio Tools_ panel shows all the controls to manage audio recording and playback in Stylo/Nodio. 
 
 To show the _Audio Tools_ panel: 
 

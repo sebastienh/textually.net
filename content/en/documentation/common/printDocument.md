@@ -1,7 +1,7 @@
 
 # Print selected text files (`⌘P`) 
 
-When printing, all the selected files will be printed. Basically, all the files displayed in the _Editors_ panels. 
+When printing, all the selected files will be printed. Basically, all the files displayed in the selected _Editors panel_[#editorsPanel]. 
 
 <funny-quote>
 “Lovers of print are simply confusing the plate for the food.” <br />

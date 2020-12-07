@@ -1,4 +1,4 @@
-
+      
 # Code 
 
 A code element is any element that contains source code, generally a programming language or a markup language. There are three types of Markdown code elements: _inline_, _fenced_ and _indented_.
@@ -12,7 +12,7 @@ Markdown:
 ``` markdown
 # title
 ```
-
+  
 the Markdown title "# title" is not a title according to the current syntax space: it is in the block of code that contains it, but in the current document, it is source code inside a code block.
 
 ## Syntax
@@ -33,12 +33,12 @@ HTML:
 <p>
     A line with <code> code </ code>.
 </p>
-```
-
+``` 
+           
 ### Fenced 
 
 The fenced code syntax is used to define a code element on several lines. It makes it possible to define the beginning of the code and the end on different lines. In this case, it will be necessary to use three grave accents side by side at the beginning of a line, optionally followed by a parameter, generally the name of the language used, and ended with three grave accents. All text between these two tags will be considered code. Here is an example:
-
+ 
 Markdown: 
 
 <pre><code>
@@ -48,7 +48,7 @@ func estEven(number: Int) -> Bool {
 }
 ```
 </code></pre>
-
+ 
 HTML:
 
 ``` html
@@ -57,7 +57,8 @@ HTML:
 }
 </code></pre>
 ```
-
+          
+{#indentedCodeBlock}
 ### Indented 
 
 A third alternative to defining a code section is the indented syntax. Just place 4 or more spaces at the beginning of each line of code, as below:
@@ -72,7 +73,7 @@ Markdown / HTML:
     line 3 of the code
 </pre></code>
 ```
-
+   
 HTML:
 
 ``` html
@@ -83,8 +84,8 @@ HTML:
     line 3 of the code
 </pre></code>
 ```
-
-## Pseudo-elements  
+                
+## Pseudo-elements   
 
 The inline code and the fenced code supports the following pseudo-elements:
 
@@ -93,3 +94,4 @@ The inline code and the fenced code supports the following pseudo-elements:
 And the fenced code also supports the pseudo-element:
 
 - `params`: which contains the text portion of the parameters of the fenced code opening tag.
+  

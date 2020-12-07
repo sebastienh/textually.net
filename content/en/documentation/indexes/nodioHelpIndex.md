@@ -1,30 +1,46 @@
 
 # Nodio Help
 
-1. [Essentials](stylo/essentials.html)
+1. Essentials
 
 	- [New document](common/newDocument.html)
 	- [Save a document](common/saveDocument.html) 
 	- [Open a document](common/openDocument.html)
-	- [Save as](saveAs.html)
+	- [Save as](common/saveAs.html)
 	- [Export selected files](common/exportDocument.html)
 	- [Print selected files](common/printDocument.html)
 
 
-2. Using Nodio 
+2. Document Window
 
-	- [Files outline](common/filesOutline.html)
-	- [Editors Panel](nodio/nodioEditorsPanel.html)
-	- [Editor Sidebar](nodio/editorToolsSidebar.html)
+	- [Document Window](common/documentWindow.html)
+	- [Navigator](common/navigator.html)
+	- [Editors Panel](nodio/editorsPanel.html)
+	
+
+3. Editors 
+
+   - [File Editor](nodio/fileEditor.html)
+   - [Focus](common/focusMode.html)
+
+
+4. Tags
+
+	- [Text attributes and highlight](common/textAttributesAndHighlight.html)
+	- [Tags tool](tags/tagsTools.html)
+	- [Markdown Attributes](markdown/mdAttributes.html)
+
+
+5. Audio
+
 	- [Audio tools](audio/audioTools.html)
 	- [Start/Stop recording](audio/startStopRecording.html)
 	- [Start/Pause playing](audio/startPausePlaying.html)
-	- [Delete a recording](audio/deleteRecording.html
+	- [Delete a recording](audio/deleteRecording.html)
 	- [Rename a recording](audio/renameRecording.html)
-	- [Text Statistics and Session Popup](common/textStatistics.html)
 
 
-3. Markdown Formatting
+6. Markdown Formatting
 
 	- [Header level 1](markdown-ui/headerLevel1.html)
 	- [Header level 2](markdown-ui/headerLevel2.html)
@@ -44,16 +60,15 @@
 	- [Table](markdown/mdTable.html)
 	- [Reference](markdown/mdReference.html)
 	- [Image](markdown/mdImage.html)
-	- [Attributes](markdown/mdAttributes.html))
 
 
-4. More 
+7. More 
 
-	- [Markdown Reference](markdown/contents.html)
+	- [Markdown Reference](markdown/mdContents.html)
+	- [HTML Guide](html/contents.html)
+	- [CSS Guide](css/contents.html)
 	- [Keyboard shortcuts](nodio/keyboardShortcuts.html)
 	- [Acknowledgments](nodio/acknowledgments.html) 
-
-
 
 
 

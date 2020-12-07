@@ -7,7 +7,7 @@ The sidebar is the vertical and narrow bar on the right of the document window a
  
 To reveal the sidebar:
 
-- Move the mouse cursor to the right side of a Stylo/Nodio document window.
+- Move the mouse cursor to the right side of a Stylo document window.
 - Reveal the [_Style Picker_](#showHideStylePicker)
 - Reveal the [_Tools_](#showHideTools)
 

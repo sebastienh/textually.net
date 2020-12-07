@@ -1,7 +1,7 @@
 
 # Stylo Help
 
-1. [Essentials](stylo/essentials.html)
+1. Essentials
 
 	- [New document](common/newDocument.html)
 	- [Save a document](common/saveDocument.html) 
@@ -13,8 +13,9 @@
 2. Using Stylo 
 
 	- [User Interface](stylo/userInterface.html)
-	- [Files outline](common/filesOutline.html)
+	- [Files Outline Panel](common/filesOutlinePanel.html)
 	- [Editors Panel](stylo/styloEditorsPanel.html)
+     - [File Editor](nodio/fileEditor.html)
 	- [Applying Style](stylo/selectStyle.html)
 	- [Adding a Style](stylo/addStyle.html)
 	- [Editing a style](stylo/editStyle.html)
@@ -41,14 +42,13 @@
 	- [Table](markdown/mdTable.html)
 	- [Reference](markdown/mdReference.html)
 	- [Image](markdown/mdImage.html)
-	- 
 
 
 4. More 
 
 	- [CSS Guide](css/contents.html)
 	- [HTML Guide](html/contents.html)
-	- [Markdown Reference](markdown/contents.html)
+	- [Markdown Reference](markdown/mdContents.html)
 	- [Bundled Fonts](stylo/bundledFonts.html)
 	- [Color keywords](ss/colorKeywords.html)
 	- [Keyboard shortcuts](stylo/keyboardShortcuts.html)

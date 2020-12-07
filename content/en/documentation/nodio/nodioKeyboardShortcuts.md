@@ -1,7 +1,4 @@
 
-      
-
- 
 # Keyboard shortcuts
 
 ## Actions 
@@ -21,9 +18,9 @@
 - Add a directory: `⇧⌘D` 
 - Add a group: `⇧⌘R` 
 
-### Project Sidebar
+### Navigator Area
 
-- Reveal/Hide the _Project Tools_: `⌥⌘1`
+- Reveal/Hide the _Navigator Area_: `⌥⌘1`
 
 ### Appearance Mode 
 

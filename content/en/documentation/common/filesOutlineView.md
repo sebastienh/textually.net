@@ -1,7 +1,15 @@
 
 # Files Outline View 
 
-A _Files Outline View_ is a specific view of the files in a document. It's an outline view which contains user selected items and expanded ones. A specific navigation history is also associated with each _Files Outline View_. Each _Files Outline View_ is associated with a corresponding [_Editors Pane_](#editorsPanel) which shows the selected text files computed based on the _Files Outline View_'s user selected items. 
+A _Files Outline View_ is a specific view of the files in a document. It's an outline view which contains user selected items and expanded ones. A specific navigation history is also associated with each _Files Outline View_. Each _Files Outline View_ is also associated with a corresponding [_Editors Panel_](#editorsPanel) which shows the selected text files computed based on the _Files Outline View_'s user selected items. 
+
+## Select the _Files Outline View_
+
+If the Navigator is not opened, click on the [left sidebar button](#sidebarButtons). 
+
+To select the _Files Outline View_:
+
+- from the [Navigator Title Bar](#navigatorTitleBar)'s [_navigator tool selector button_](#navigatorToolSelectorButton): click on the `Files` popup menu item. 
 
 ## Items types 
 
@@ -64,9 +72,9 @@ To rename an item:
 
 - from the _Files Outline View_: click on a uniquely selected item. 
 
-It's also possible to rename a file from the [_File Editor_](#fileEditor)
+It's also possible to rename a file from the [_File Editor_](../nodio#fileEditor)
 
-- from the [_File Editor_](#fileEditor): click on the file name in the file path located on the left of the _Editor Title Bar_. The title will go in edit mode. 
+- from the [_File Editor_](../nodio#fileEditor): click on the file name in the file path located on the left of the _Editor Title Bar_. The title will go in edit mode. 
 
 ### Add a group (`⇧⌘R`)
 
@@ -170,7 +178,4 @@ To delete a file:
 - From the files outline title view, select the file to be deleted and press the `-` (_Delete Item_) button from the _Files Outlines Panel Title Bar_.
 
 - From the file popup menu, right click the file to be deleted, and chose the option: `Delete`
-
-
-
 

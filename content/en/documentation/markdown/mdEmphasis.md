@@ -13,14 +13,14 @@ Markdown:
 *Emphasized text 1*
 _Emphasized text 2_
 ```
-
+  
 HTML:
 
 ``` html 
 <em>Emphasized text 1</em>
 <em>Emphasized text 2</em>
 ```
-
+ 
 To define an important section of text, simply enclose it with two "*" (star) or two "_" (underscore):
 
 Markdown: 
@@ -29,7 +29,7 @@ Markdown:
 **important text**  
 __important text__
 ```
-
+ 
 HTML:
 
 ``` html

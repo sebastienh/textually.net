@@ -3,6 +3,16 @@
 
 ## Actions 
 
+
+### Editors Panes 
+
+- Add a new _Editors Pane: `⇧⌘n`
+- Close the current _Editors Pane_: `⇧⌘w`
+- Add a new file in current _Editors Pane_: `⌥⇧⌘T`
+
+- Go forward in navigation history: `⌃⌥→` 
+- Go back in navigation history: `⌃⌥←` 
+
 ### Outline 
 
 - Add a file: `⇧⌘T` 

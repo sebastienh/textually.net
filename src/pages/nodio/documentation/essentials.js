@@ -103,7 +103,6 @@ class NodioDocumentation extends React.Component {
         const copySelector = data.copySelector.edges[0].node;
         const distractionFree = data.distractionFree.edges[0].node;
         const editStyle = data.editStyle.edges[0].node;
-        const enableDisableSessionTools = data.enableDisableSessionTools.edges[0].node;
         const essentials = data.essentials.edges[0].node;
         const exportDocument = data.exportDocument.edges[0].node;
         const headerLevel1 = data.headerLevel1.edges[0].node;
@@ -129,13 +128,10 @@ class NodioDocumentation extends React.Component {
         const saveAs = data.saveAs.edges[0].node;
         const saveDocument = data.saveDocument.edges[0].node;
         const selectStyle = data.selectStyle.edges[0].node;
-        const session = data.session.edges[0].node;
-        const showHideSession = data.showHideSession.edges[0].node;
         const showHideIssuesPanel = data.showHideIssuesPanel.edges[0].node;
         const showHideStylePicker = data.showHideStylePicker.edges[0].node;
         const showHideStylesList = data.showHideStylesList.edges[0].node;
         const showHideTools = data.showHideTools.edges[0].node;
-        const startRestartSession = data.startRestartSession.edges[0].node;
         const strikethrough = data.strikethrough.edges[0].node;
         const styleEditor = data.styleEditor.edges[0].node;
         const stylePicker = data.stylePicker.edges[0].node;
@@ -146,19 +142,23 @@ class NodioDocumentation extends React.Component {
         const unorderedList = data.unorderedList.edges[0].node;
         const userInterface = data.userInterface.edges[0].node;
         const textAttributesAndHighlight = data.textAttributesAndHighlight.edges[0].node;
-        const filesOutlinePanel = data.filesOutlinePanel.edges[0].node;
-        const filesOutlinesTitleBar = data.filesOutlinesTitleBar.edges[0].node;
         const filesOutlineView = data.filesOutlineView.edges[0].node;
         const editorsPanel = data.editorsPanel.edges[0].node;
         const fileEditor = data.fileEditor.edges[0].node;
         const tagsTools = data.tagsTools.edges[0].node;
-        const projectToolbar = data.projectToolbar.edges[0].node;
-        const editorToolsSidebar = data.editorToolsSidebar.edges[0].node;
         const audioTools = data.audioTools.edges[0].node;
         const startStopRecording = data.startStopRecording.edges[0].node;
         const startPausePlaying = data.startPausePlaying.edges[0].node;
         const deleteRecording = data.deleteRecording.edges[0].node;
         const renameRecording = data.renameRecording.edges[0].node;
+        const documentWindow = data.documentWindow.edges[0].node;
+        const sidebarsButtons = data.sidebarsButtons.edges[0].node;
+        const navigator = data.navigator.edges[0].node;
+        const navigatorTitleBar = data.navigatorTitleBar.edges[0].node;
+        const navigatorToolSelectorButton = data.navigatorToolSelectorButton.edges[0].node;
+        const contentArea = data.contentArea.edges[0].node;
+        const utilityToolsArea = data.utilityToolsArea.edges[0].node;
+        const previewWindow = data.previewWindow.edges[0].node;
 
         const {
             data: {
@@ -198,12 +198,12 @@ class NodioDocumentation extends React.Component {
                         title: "Essentials"
                     },
                     {
-                        href: "#projectToolbar",
-                        title: "Project Toolbar"
+                        href: "#documentWindow",
+                        title: "Document Window"
                     },
                     {
-                        href: "#filesOutlinePanel",
-                        title: "Files Outline Panel"
+                        href: "#filesOutlineView",
+                        title: "Files Outline View"
                     },
                     {
                         href: "#editorsPanel",
@@ -222,8 +222,8 @@ class NodioDocumentation extends React.Component {
                         title: "Text Statistics"
                     },
                     {
-                        href: "#sidebar",
-                        title: "Sidebar"
+                        href: "#previewWindow",
+                        title: "Preview Window"
                     },
                     {
                         href: "#markdownFormatting",
@@ -271,31 +271,40 @@ class NodioDocumentation extends React.Component {
                                     <MarkdownContent post={printDocument}/>
                                 </Box>
                             </TitledSection>
-                            <TitledSection id={"projectToolbar"} number={2}>
-                                <Box id={"projectToolbar"}>
-                                    <MarkdownContent post={projectToolbar} />
+                            <TitledSection number={2}>
+                                <Box id={"documentWindow"}>
+                                    <MarkdownContent post={documentWindow} />
+                                </Box>
+                                <Box id={"sidebarsButtons"}>
+                                    <MarkdownContent post={sidebarsButtons} />
+                                </Box>
+                                <Box id={"navigator"}>
+                                    <MarkdownContent post={navigator} />
+                                </Box>
+                                <Box id={"navigatorTitleBar"}>
+                                    <MarkdownContent post={navigatorTitleBar} />
+                                </Box>
+                                <Box id={"navigatorToolSelectorButton"}>
+                                    <MarkdownContent post={navigatorToolSelectorButton} />
+                                </Box>
+                                <Box id={"contentArea"}>
+                                    <MarkdownContent post={contentArea} />
+                                </Box>
+                                <Box id={"utilityToolsArea"}>
+                                    <MarkdownContent post={utilityToolsArea} />
                                 </Box>
                             </TitledSection>
-                            <TitledSection id={"filesOutlinePanel"} number={3}>
-                                <Box>
-                                    <MarkdownContent post={filesOutlinePanel} />
-                                </Box>
-                                <Box id={"filesOutlinesTitleBar"}>
-                                    <MarkdownContent post={filesOutlinesTitleBar} />
-                                </Box>
+                            <TitledSection number={3}>
                                 <Box id={"filesOutlineView"}>
                                     <MarkdownContent post={filesOutlineView} />
                                 </Box>
                             </TitledSection>
-                            <TitledSection id={"editorsPanel"} number={4}>
-                                <Box>
+                            <TitledSection number={4}>
+                                <Box id={"editorsPanel"}>
                                     <MarkdownContent post={editorsPanel} />
                                 </Box>
                                 <Box id={"fileEditor"}>
                                     <MarkdownContent post={fileEditor} />
-                                </Box>
-                                <Box id={"editorToolsSidebar"}>
-                                    <MarkdownContent post={editorToolsSidebar} />
                                 </Box>
                             </TitledSection>
                             <TitledSection id={"tags"} number={5}>
@@ -327,41 +336,14 @@ class NodioDocumentation extends React.Component {
                                 <Box id={"totalTextStatistics"} number={15}>
                                     <MarkdownContent post={totalTextStatistics}/>
                                 </Box>
-                                <Box id={"session"} number={16}>
-                                    <MarkdownContent post={session}/>
-                                </Box>
-                                <Box id={"startRestartSession"} number={17}>
-                                    <MarkdownContent post={startRestartSession}/>
-                                </Box>
-                                <Box id={"showHideSession"} number={18}>
-                                    <MarkdownContent post={showHideSession}/>
-                                </Box>
-                                <Box id={"enableDisableSessionTools"} number={19}>
-                                    <MarkdownContent post={enableDisableSessionTools}/>
+                            </TitledSection>
+                            <TitledSection number={8}>
+                                <Box id={"previewWindow"} number={21}>
+                                    <MarkdownContent post={previewWindow}/>
                                 </Box>
                             </TitledSection>
-                            <TitledSection id={"sidebar"} number={8}>
-                                <Box number={20}>
-                                    <MarkdownContent post={editorToolsSidebar}/>
-                                </Box>
-                                <Box id={"revealHideSidebar"} number={21}>
-                                    <MarkdownContent post={revealHideSidebar}/>
-                                </Box>
-                                <Box id={"tools"} number={22}>
-                                    <MarkdownContent post={tools}/>
-                                </Box>
-                                <Box id={"showHideTools"} number={23}>
-                                    <MarkdownContent post={showHideTools}/>
-                                </Box>
-                                <Box id={"stylePicker"} number={24}>
-                                    <MarkdownContent post={stylePicker}/>
-                                </Box>
-                                <Box id={"showHideStylePicker"} number={25}>
-                                    <MarkdownContent post={showHideStylePicker}/>
-                                </Box>
-                            </TitledSection>
-                            <TitledSection id={"markdownFormatting"} number={9}>
-                                <Box number={37}>
+                            <TitledSection number={9}>
+                                <Box id={"markdownFormatting"} number={37}>
                                     <MarkdownContent post={markdownFormatting}/>
                                 </Box>
                                 <Box id={"headerLevel1"} number={38}>
@@ -404,8 +386,8 @@ class NodioDocumentation extends React.Component {
                                     <MarkdownContent post={link}/>
                                 </Box>
                             </TitledSection>
-                            <TitledSection id={"keyboardShortcuts"} number={10}>
-                                <Box number={53}>
+                            <TitledSection number={10}>
+                                <Box id={"keyboardShortcuts"} number={53}>
                                     <MarkdownContent post={keyboardShortcuts}/>
                                 </Box>
                             </TitledSection>
@@ -420,6 +402,119 @@ export default NodioDocumentation
 
 export const query = graphql`
 query {
+
+    previewWindow: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC },
+        filter: {
+            fields: {
+                slug: { eq: "/previewWindow/" }
+            }
+        }) {
+        edges {
+            node {
+                htmlAst
+            }
+        }
+    }
+    
+    navigatorTitleBar: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC },
+        filter: {
+            fields: {
+                slug: { eq: "/navigatorTitleBar/" }
+            }
+        }) {
+        edges {
+            node {
+                htmlAst
+            }
+        }
+    }
+
+    navigatorToolSelectorButton: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC },
+        filter: {
+            fields: {
+                slug: { eq: "/navigatorTitleBar/" }
+            }
+        }) {
+        edges {
+            node {
+                htmlAst
+            }
+        }
+    }
+    
+    contentArea: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC },
+        filter: {
+            fields: {
+                slug: { eq: "/contentArea/" }
+            }
+        }) {
+        edges {
+            node {
+                htmlAst
+            }
+        }
+    }
+    
+    utilityToolsArea: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC },
+        filter: {
+            fields: {
+                slug: { eq: "/utilityToolsArea/" }
+            }
+        }) {
+        edges {
+            node {
+                htmlAst
+            }
+        }
+    }
+    
+    sidebarsButtons: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC },
+        filter: {
+            fields: {
+                slug: { eq: "/sidebarButtons/" }
+            }
+        }) {
+        edges {
+            node {
+                htmlAst
+            }
+        }
+    }
+    
+    navigatorTitleBar: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC },
+        filter: {
+            fields: {
+                slug: { eq: "/navigatorTitleBar/" }
+            }
+        }) {
+        edges {
+            node {
+                htmlAst
+            }
+        }
+    }
+    
+    navigator: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC },
+        filter: {
+            fields: {
+                slug: { eq: "/navigator/" }
+            }
+        }) {
+        edges {
+            node {
+                htmlAst
+            }
+        }
+    }
+    
   addStyle: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
@@ -433,40 +528,12 @@ query {
       }
     }
   }
-  
-  projectToolbar: allMarkdownRemark(
+    
+    documentWindow: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
       fields: { 
-        slug: { eq: "/projectToolbar/" } 
-      } 
-    }) {
-    edges {
-      node {
-        htmlAst
-      }
-    }
-  }
-  
-  filesOutlinePanel: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { 
-      fields: { 
-        slug: { eq: "/filesOutlinePanel/" } 
-      } 
-    }) {
-    edges {
-      node {
-        htmlAst
-      }
-    }
-  }
-  
-  filesOutlinesTitleBar: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { 
-      fields: { 
-        slug: { eq: "/filesOutlinesTitleBar/" } 
+        slug: { eq: "/documentWindow/" } 
       } 
     }) {
     edges {
@@ -531,20 +598,7 @@ query {
       }
     }
   }
-  
-  editorToolsSidebar: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { 
-      fields: { 
-        slug: { eq: "/editorToolsSidebar/" } 
-      } 
-    }) {
-    edges {
-      node {
-        htmlAst
-      }
-    }
-  }
+    
   audioTools: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
@@ -702,25 +756,11 @@ query {
         slug: { eq: "/editStyle/" } 
       } 
     }) {
-    edges {
-      node {
-        htmlAst
+      edges {
+          node {
+              htmlAst
+          }
       }
-    }
-  }
-
-  enableDisableSessionTools: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { 
-      fields: { 
-        slug: { eq: "/enableDisableSessionTools/" } 
-      } 
-    }) {
-    edges {
-      node {
-        htmlAst
-      }
-    }   
   }
 
   essentials: allMarkdownRemark(
@@ -1086,35 +1126,7 @@ query {
       }
     }
   }
-
-  session: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { 
-      fields: { 
-        slug: { eq: "/session/" } 
-      } 
-    }) {
-    edges {
-      node {
-        htmlAst
-      }
-    }
-  }
-
-  showHideSession: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { 
-      fields: { 
-        slug: { eq: "/showHideSession/" } 
-      } 
-    }) {
-    edges {
-      node {
-        htmlAst
-      }
-    }
-  }
-
+    
   showHideIssuesPanel: allMarkdownRemark(
     sort: { fields: [frontmatter___date], order: DESC }, 
     filter: { 
@@ -1176,20 +1188,6 @@ query {
     filter: { 
       fields: { 
         slug: { eq: "/nodioEditorSidebar/" } 
-      } 
-    }) {
-    edges {
-      node {
-        htmlAst
-      }
-    }
-  }
-
-  startRestartSession: allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }, 
-    filter: { 
-      fields: { 
-        slug: { eq: "/startRestartSession/" } 
       } 
     }) {
     edges {

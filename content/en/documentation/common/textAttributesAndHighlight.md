@@ -16,7 +16,7 @@ And we could also specify other things such a the subject of the paragraph:
 I started to write when I was young. This paragraph is not complete... 
 ```
 
-Attributes can be stacked, meaning they can be be defined in different attributes blocs:  
+Attributes can be stacked, meaning they can be defined in different attributes blocs:  
 
 ```markdown
 {.young} 
@@ -56,7 +56,7 @@ A _paragraph_ {.inline-class} {.paragraph-class}.
 {#id}
 ```
  
-This completes the overview of text attributes, for more information check out the complete [markdown](../markdown/#mdAttributes) and [tags](#tagsTools) documentations.
+This completes the overview of text attributes, for more information check out the complete [markdown](../markdown/#mdAttributes) and [tags](../tags/#tagsTools) documentations.
 
 
 

@@ -27,7 +27,7 @@ Markdown:
 | Text column 1   | Text column 2 |
 ```
 
-HTML
+HTML:
 
 ``` html
 <table>
