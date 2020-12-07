@@ -49,7 +49,7 @@ In _Values_ display mode, only the values of the attributes are shown in the tag
 
 To open the _Tags Tool_:
 
-- From the [_Navigator Title Bar_](../common#navigatorTitle): click on the [_tool selector button_](../common#toolSelectorButton) and choose the `Tags` item.   
+- From the [_Navigator Title Bar_](#navigatorTitle): click on the [_tool selector button_](#toolSelectorButton) and choose the `Tags` item.   
 
 
 {.toptoolsbar}

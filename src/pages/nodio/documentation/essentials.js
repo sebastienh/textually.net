@@ -159,6 +159,7 @@ class NodioDocumentation extends React.Component {
         const contentArea = data.contentArea.edges[0].node;
         const utilityToolsArea = data.utilityToolsArea.edges[0].node;
         const previewWindow = data.previewWindow.edges[0].node;
+        const fileInformationPopup = data.fileInformationPopup.edges[0].node;
 
         const {
             data: {
@@ -252,22 +253,22 @@ class NodioDocumentation extends React.Component {
                                 <Box>
                                     <MarkdownContent post={essentials} />
                                 </Box>
-                                <Box id={"newDocument"} number={2}>
+                                <Box id={"newDocument"}>
                                     <MarkdownContent post={newDocument}/>
                                 </Box>
-                                <Box id={"saveDocument"} number={3}>
+                                <Box id={"saveDocument"}>
                                     <MarkdownContent post={saveDocument}/>
                                 </Box>
-                                <Box id={"openDocument"} number={4}>
+                                <Box id={"openDocument"}>
                                     <MarkdownContent post={openDocument}/>
                                 </Box>
-                                <Box id={"saveAs"} number={5}>
+                                <Box id={"saveAs"}>
                                     <MarkdownContent post={saveAs}/>
                                 </Box>
-                                <Box id={"exportDocument"} number={7}>
+                                <Box id={"exportDocument"}>
                                     <MarkdownContent post={exportDocument}/>
                                 </Box>
-                                <Box id={"printDocument"} number={8}>
+                                <Box id={"printDocument"}>
                                     <MarkdownContent post={printDocument}/>
                                 </Box>
                             </TitledSection>
@@ -306,6 +307,9 @@ class NodioDocumentation extends React.Component {
                                 <Box id={"fileEditor"}>
                                     <MarkdownContent post={fileEditor} />
                                 </Box>
+                                <Box id={"fileInformationPopup"}>
+                                    <MarkdownContent post={fileInformationPopup} />
+                                </Box>
                             </TitledSection>
                             <TitledSection id={"tags"} number={5}>
                                 <Box id={"tagsTools"}>
@@ -330,64 +334,64 @@ class NodioDocumentation extends React.Component {
                                 </Box>
                             </TitledSection>
                             <TitledSection id={"textStatistics"} number={7}>
-                                <Box number={14}>
+                                <Box>
                                     <MarkdownContent post={textStatistics}/>
                                 </Box>
-                                <Box id={"totalTextStatistics"} number={15}>
+                                <Box id={"totalTextStatistics"}>
                                     <MarkdownContent post={totalTextStatistics}/>
                                 </Box>
                             </TitledSection>
                             <TitledSection number={8}>
-                                <Box id={"previewWindow"} number={21}>
+                                <Box id={"previewWindow"}>
                                     <MarkdownContent post={previewWindow}/>
                                 </Box>
                             </TitledSection>
                             <TitledSection number={9}>
-                                <Box id={"markdownFormatting"} number={37}>
+                                <Box id={"markdownFormatting"}>
                                     <MarkdownContent post={markdownFormatting}/>
                                 </Box>
-                                <Box id={"headerLevel1"} number={38}>
+                                <Box id={"headerLevel1"}>
                                     <MarkdownContent post={headerLevel1}/>
                                 </Box>
-                                <Box id={"headerLevel2"} number={39}>
+                                <Box id={"headerLevel2"}>
                                     <MarkdownContent post={headerLevel2}/>
                                 </Box>
-                                <Box id={"headerLevel3"} number={40}>
+                                <Box id={"headerLevel3"}>
                                     <MarkdownContent post={headerLevel3}/>
                                 </Box>
-                                <Box id={"headerLevel4"} number={41}>
+                                <Box id={"headerLevel4"}>
                                     <MarkdownContent post={headerLevel4}/>
                                 </Box>
-                                <Box id={"headerLevel5"} number={42}>
+                                <Box id={"headerLevel5"}>
                                     <MarkdownContent post={headerLevel5}/>
                                 </Box>
-                                <Box id={"headerLevel6"} number={43}>
+                                <Box id={"headerLevel6"}>
                                     <MarkdownContent post={headerLevel6}/>
                                 </Box>
-                                <Box id={"blockquote"} number={44}>
+                                <Box id={"blockquote"}>
                                     <MarkdownContent post={blockquote}/>
                                 </Box>
-                                <Box id={"unorderedList"} number={45}>
+                                <Box id={"unorderedList"}>
                                     <MarkdownContent post={unorderedList}/>
                                 </Box>
-                                <Box id={"orderedList"} number={46}>
+                                <Box id={"orderedList"}>
                                     <MarkdownContent post={orderedList}/>
                                 </Box>
-                                <Box id={"bold"} number={47}>
+                                <Box id={"bold"}>
                                     <MarkdownContent post={bold}/>
                                 </Box>
-                                <Box id={"italic"} number={48}>
+                                <Box id={"italic"}>
                                     <MarkdownContent post={italic}/>
                                 </Box>
-                                <Box id={"strikethrough"} number={49}>
+                                <Box id={"strikethrough"}>
                                     <MarkdownContent post={strikethrough}/>
                                 </Box>
-                                <Box id={"link"} number={50}>
+                                <Box id={"link"}>
                                     <MarkdownContent post={link}/>
                                 </Box>
                             </TitledSection>
                             <TitledSection number={10}>
-                                <Box id={"keyboardShortcuts"} number={53}>
+                                <Box id={"keyboardShortcuts"}>
                                     <MarkdownContent post={keyboardShortcuts}/>
                                 </Box>
                             </TitledSection>
@@ -403,6 +407,20 @@ export default NodioDocumentation
 export const query = graphql`
 query {
 
+    fileInformationPopup: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC },
+        filter: {
+            fields: {
+                slug: { eq: "/fileInformationPopup/" }
+            }
+        }) {
+        edges {
+            node {
+                htmlAst
+            }
+        }
+    }
+    
     previewWindow: allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC },
         filter: {
