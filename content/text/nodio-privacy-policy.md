@@ -1,5 +1,5 @@
 
-This Privacy Policy is for the Nodio macOS App text editor by Index Inc. Nodio does not keep or use any user data other than crash reports provided by Apple Inc.</p>
+This Privacy Policy is for the Nodio macOS App text editor by Textually Inc. Nodio does not keep or use any user data other than crash reports provided by Apple Inc.</p>
         
 ## User Content
 
@@ -22,4 +22,4 @@ By using Nodio, you are consenting to the terms described in this policy.
 
 If you have any questions regarding privacy and Nodio or our practices, or if any aspect of this Privacy Policy is unclear, please [contact us](../contact). 
 
-### Last updated: December 20, 2019
+### Last updated: December 7, 2020
