@@ -50,7 +50,7 @@
     "react-visibility-sensor": "^5.1.1",
     "rebass": "^3.2.2",
     "rehype-react": "^3.1.0",
-    "sharp": "^0.23.4",
+    "sharp": "^0.30.5",
     "styled-components": "^4.4.1",
     "styled-normalize": "^8.0.7",
     "typeface-merriweather": "0.0.72",
